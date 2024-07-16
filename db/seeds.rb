@@ -31,7 +31,6 @@ end
 
 puts "10 users : OK"
 
-
 # Tous les débutants sont forcémcent Débutant.
 User.where(player_level: 'Debutant').update_all(game_master: false)
 
@@ -51,7 +50,6 @@ admin = User.create!(
 )
 
 puts "User Admin : OK"
-
 
 # CREATION DE 3 UNIVERS
 universes = [
@@ -116,7 +114,7 @@ end
 
 puts "Characters to parties : OK"
 
-# Create notes for each character
+# AJOUTER DES NOTES
 Character.all.each do |character|
     2.times do
         Note.create!(
