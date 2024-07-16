@@ -6,6 +6,8 @@ Note.destroy_all
 PartyCharacter.destroy_all
 Party.destroy_all
 Character.destroy_all
+Race.destroy_all
+UniversClass.destroy_all
 Universe.destroy_all
 Message.destroy_all
 User.destroy_all
