@@ -146,4 +146,4 @@ Character.all.each do |character|
 end
 
 puts "Notes : OK"
-puts "Seeding terminée!"
+puts "Le seeding est terminé !"
