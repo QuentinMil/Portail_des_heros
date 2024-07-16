@@ -70,7 +70,7 @@ puts "Univers OK"
 User.all.each do |user|
     3.times do |i|
       Character.create!(
-        name: Faker::Games::DnD.character,
+        name: Faker::Games::DnD.name,
         user: user,
         universe: Universe.all.sample,
         strength: rand(10..18).to_s,
@@ -89,7 +89,7 @@ puts "3 Characters par User : OK"
 # CREATION DE 6 PARTIES
 6.times do
   Party.create!(
-    name: Faker::Games::Tolkien.character,
+    name: Faker::Fantasy::Tolkien.location,
     universe: Universe.all.sample,
     user: User.where(game_master: true).sample
   )
@@ -118,13 +118,13 @@ puts "Characters to parties : OK"
 
 # Create notes for each character
 Character.all.each do |character|
-  2.times do
-    Note.create!(
-      user_notes: Faker::Games::WorldOfWarcraft.quote,
-      other_notes: Faker::Games::Overwatch.quote,
-      character: character
-    )
-  end
+    2.times do
+        Note.create!(
+            user_notes: Faker::Games::WorldOfWarcraft.quote,
+            other_notes: Faker::Fantasy::Tolkien.poem,
+            character: character
+        )
+    end
 end
 
 puts "Notes : OK"
