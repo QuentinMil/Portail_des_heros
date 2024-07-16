@@ -53,9 +53,9 @@ puts "User Admin : OK"
 
 # CREATION DE 3 UNIVERS
 universes = [
-  { name: 'D&D', description: 'Un monde dangereux avec des dragons' },
+  { name: 'Donjons et Dragons', description: 'Un monde dangereux avec des dragons' },
   { name: 'Call of Cthulhu', description: 'Un univers d’horreur cosmique' },
-  { name: 'Shadowrun', description: 'Un univers cyberpunk' }
+  { name: 'Runequest', description: 'Un univers galactique' }
 ]
 
 universes.each do |universe|
