@@ -1,13 +1,14 @@
 require 'faker'
 
 # EFFACER LES DONNEES EXISTANTES
-User.destroy_all
-Universe.destroy_all
-Character.destroy_all
-Party.destroy_all
-PartyCharacter.destroy_all
-Message.destroy_all
+# Attention, l'ordre compte à cause des dépendances
 Note.destroy_all
+PartyCharacter.destroy_all
+Party.destroy_all
+Character.destroy_all
+Universe.destroy_all
+Message.destroy_all
+User.destroy_all
 
 puts "les tables sont maintenant vides"
 
