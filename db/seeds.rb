@@ -6,6 +6,8 @@ Note.destroy_all
 PartyCharacter.destroy_all
 Party.destroy_all
 Character.destroy_all
+Race.destroy_all
+UniversClass.destroy_all
 Universe.destroy_all
 Message.destroy_all
 User.destroy_all
@@ -54,7 +56,7 @@ puts "User Admin : OK"
 # CREATION DE 3 UNIVERS
 universes = [
   { name: 'Donjons et Dragons', description: 'Un monde dangereux avec des dragons' },
-  { name: 'Call of Cthulhu', description: 'Un univers d’horreur cosmique' },
+  { name: 'Call of Cthulhu', description: "Un univers d’horreur cosmique" },
   { name: 'Runequest', description: 'Un univers galactique' }
 ]
 
@@ -62,25 +64,43 @@ universes.each do |universe|
   Universe.create!(universe)
 end
 
-puts "Univers OK"
+puts "3 Univers : OK"
+
+# CRÉATION DE RACES ET CLASSES PAR UNIVERS
+dnd = Universe.find_by(name: 'Donjons et Dragons')
+coc = Universe.find_by(name: 'Call of Cthulhu')
+rq = Universe.find_by(name: 'Runequest')
+
+dnd_races = ['Humain', 'Elfe', 'Nain', 'Halfelin'].map { |race| Race.create!(name: race, universe: dnd) }
+coc_races = ['Humain', 'Profond'].map { |race| Race.create!(name: race, universe: coc) }
+rq_races = ['Humain', 'Troll'].map { |race| Race.create!(name: race, universe: rq) }
+
+dnd_classes = ['Guerrier', 'Mage', 'Rogue'].map { |univers_class| UniversClass.create!(name: univers_class, universe: dnd) }
+coc_classes = ['Investigateur', 'Cultiste'].map { |univers_class| UniversClass.create!(name: univers_class, universe: coc) }
+rq_classes = ['Guerrier', 'Chaman'].map { |univers_class| UniversClass.create!(name: univers_class, universe: rq) }
+
+puts "Création des races et des classes : OK"
 
 # CRÉATION DE 3 CHARACTERS PAR USER
 User.all.each do |user|
-    3.times do |i|
-      Character.create!(
-        name: Faker::Games::DnD.name,
-        user: user,
-        universe: Universe.all.sample,
-        strength: rand(10..18).to_s,
-        dexterity: rand(10..18).to_s,
-        intelligence: rand(10..18).to_s,
-        constitution: rand(10..18).to_s,
-        wisdom: rand(10..18).to_s,
-        charisma: rand(10..18).to_s,
-        available_status: i < 2 ? 'Active' : 'Inactive'
-      )
-    end
+  3.times do |i|
+    universe = [dnd, coc, rq].sample
+    Character.create!(
+      name: Faker::Games::DnD.name,
+      user: user,
+      universe: universe,
+      race: universe.races.sample,
+      univers_class: universe.univers_classes.sample,
+      strength: rand(10..18),
+      dexterity: rand(10..18),
+      intelligence: rand(10..18),
+      constitution: rand(10..18),
+      wisdom: rand(10..18),
+      charisma: rand(10..18),
+      available_status: i < 2 ? 'Active' : 'Inactive'
+    )
   end
+end
 
 puts "3 Characters par User : OK"
 
@@ -126,4 +146,4 @@ Character.all.each do |character|
 end
 
 puts "Notes : OK"
-puts "Seeding terminée!"
+puts "Le seeding est terminé !"
