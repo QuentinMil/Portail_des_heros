@@ -91,12 +91,12 @@ User.all.each do |user|
       universe: universe,
       race: universe.races.sample,
       univers_class: universe.univers_classes.sample,
-      strength: rand(10..18).to_s,
-      dexterity: rand(10..18).to_s,
-      intelligence: rand(10..18).to_s,
-      constitution: rand(10..18).to_s,
-      wisdom: rand(10..18).to_s,
-      charisma: rand(10..18).to_s,
+      strength: rand(10..18),
+      dexterity: rand(10..18),
+      intelligence: rand(10..18),
+      constitution: rand(10..18),
+      wisdom: rand(10..18),
+      charisma: rand(10..18),
       available_status: i < 2 ? 'Active' : 'Inactive'
     )
   end
