@@ -11,4 +11,5 @@ class User < ApplicationRecord
 
   validates :first_name, :last_name, :pseudo, :player_level, presence: true
   validates :pseudo, uniqueness: true
+  validates :player_level, inclusion: { in: %w[Debutant Initié Expert], message: "%{value} is not a valid player level" }
 end
