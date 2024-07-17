@@ -1,0 +1,22 @@
+.banderolle-img-background {
+  background-image: url(asset-path('fond3.jpg'));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  width: 102%;
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.title-page {
+  font-size: 54px;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-shadow: -1px 0 rgb(124, 81, 0), 0 1px rgb(124, 81, 0), 1px 0 rgb(124, 81, 0), 0 -1px rgb(124, 81, 0);
+  font-family: 'Cinzel', serif;
+  opacity: 0.95;
+}
