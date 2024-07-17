@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_07_16_155322) do
+ActiveRecord::Schema[7.1].define(version: 2024_07_17_125915) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -121,6 +121,18 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_16_155322) do
     t.index ["universe_id"], name: "index_races_on_universe_id"
   end
 
+  create_table "tutorials", force: :cascade do |t|
+    t.string "title"
+    t.text "content"
+    t.string "video_url"
+    t.bigint "universe_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["universe_id"], name: "index_tutorials_on_universe_id"
+    t.index ["user_id"], name: "index_tutorials_on_user_id"
+  end
+
   create_table "univers_classes", force: :cascade do |t|
     t.string "name"
     t.bigint "universe_id", null: false
@@ -172,5 +184,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_16_155322) do
   add_foreign_key "party_characters", "parties"
   add_foreign_key "posts", "users"
   add_foreign_key "races", "universes"
+  add_foreign_key "tutorials", "universes"
+  add_foreign_key "tutorials", "users"
   add_foreign_key "univers_classes", "universes"
 end

@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many :parties
   has_many :messages
   has_many :posts
+  has_many :tutorials
 
   validates :first_name, :last_name, :pseudo, :player_level, presence: true
   validates :pseudo, uniqueness: true
