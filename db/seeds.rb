@@ -164,7 +164,6 @@ Character.all.each do |character|
 end
 
 puts "Notes : OK"
-puts "Le seeding est terminé !"
 
 # AJOUTER LES POSTS DEPUIS LE FICHIER YAML
 lexique = YAML.load_file('db/data/lexique.yml')
@@ -173,3 +172,6 @@ lexique.each do |post|
 end
 
 puts "Posts du lexique créés : OK"
+
+# ATTENTION, C'EST FORCEMENT LA DERNIERE LIGNE
+puts "Le seeding est terminé !"
