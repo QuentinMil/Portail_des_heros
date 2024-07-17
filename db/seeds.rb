@@ -51,20 +51,21 @@ admin = User.create!(
   completion_rate_characters: 100
 )
 
-puts "User Admin : OK"
+puts "Création de User Admin : OK"
 
 # CREATION DE 3 UNIVERS
+# CREATION DE 3 UNIVERS
 universes = [
-  { name: 'Donjons et Dragons', description: 'Un monde dangereux avec des dragons' },
-  { name: 'Call of Cthulhu', description: "Un univers d’horreur cosmique" },
-  { name: 'Runequest', description: 'Un univers galactique' }
+  { name: 'Donjons et Dragons', description: 'Donjons et Dragons est un univers de haute fantaisie peuplé de créatures mythiques. Les joueurs explorent des donjons mystérieux, combattent des dragons redoutables, et découvrent des trésors anciens tout en développant leurs compétences et leurs pouvoirs.' },
+  { name: 'Call of Cthulhu', description: 'Call of Cthulhu est un univers d’horreur cosmique inspiré des œuvres de H.P. Lovecraft. Les joueurs incarnent des investigateurs confrontés à des mystères surnaturels et des créatures indicibles, luttant pour maintenir leur santé mentale face à des horreurs inimaginables.' },
+  { name: 'Runequest', description: 'Runequest est un univers galactique mêlant science-fiction et mythologie. Les joueurs explorent des mondes lointains, découvrent des civilisations anciennes et utilisent des runes puissantes pour influencer leur destin dans un cosmos en perpétuelle évolution et conflit.' }
 ]
 
 universes.each do |universe|
   Universe.create!(universe)
 end
 
-puts "3 Univers : OK"
+puts "Création de 3 Univers : OK"
 
 # CRÉATION DE RACES ET CLASSES PAR UNIVERS
 dnd = Universe.find_by(name: 'Donjons et Dragons')
