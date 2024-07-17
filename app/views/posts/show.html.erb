@@ -1,2 +1,20 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<% content_for :title do %>
+  Lexique du JDR
+<% end %>
+
+<div class="lexique-container">
+  <div class="sections">
+    <h2>Sections</h2>
+    <ul>
+      <% @posts.each do |post| %>
+        <li>
+          <%= link_to post.title, post_path(post) %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="content">
+    <h2><%= @post.title %></h2>
+    <p><%= @post.content %></p>
+  </div>
+</div>
