@@ -1,17 +1,17 @@
 require 'faker'
 
-# Nous allons 
+# Nous allons
 # -> Creer des Users
 # -> Creer un admin
-# -> Créer 3 univers 
+# -> Créer 3 univers
 # -> Créer plusieurs races
 # -> Créer plusieurs Univers_Classes
 # -> Créer 3 characters par User
 # -> Créer 6 parties
-# -> Ajouter des characters dans les parties 
+# -> Ajouter des characters dans les parties
 # -> Ajouter des notes
 # -> Ajouter 50 Posts (le lexique)
-# -> 
+# ->
 
 # EFFACER LES DONNEES EXISTANTES
 # Attention, l'ordre compte à cause des dépendances
@@ -173,5 +173,14 @@ end
 
 puts "Posts du lexique créés : OK"
 
+# AJOUTER DES TUTORIELS
+# 1 univers par tuto
+# # AJOUTER LES TUTORIELS DEPUIS LE FICHIER YAML
+tutorials = YAML.load_file('db/data/tutorials.yml')
+tutorials.each do |tuto|
+  Tutorial.create!(title: tuto['title'], content: tuto['content'], universe: Universe.find_by(name: tuto['name']), video_url: tuto['video_url'], user: User.all.sample)
+end
+
+puts "Tutoriels créés : OK"
 # ATTENTION, C'EST FORCEMENT LA DERNIERE LIGNE
 puts "Le seeding est terminé !"
