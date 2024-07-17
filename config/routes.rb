@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
-  get 'posts/index'
-  get 'posts/show'
+  
   devise_for :users
   root to: "pages#home"
 
+  # Limiter le nombre de routes
+  resources :characters
 
   # Les routes pour notre lexique (Post)
   resources :posts, only: [:index, :show]
@@ -15,5 +16,6 @@ Rails.application.routes.draw do
     end
   end
   
+  # list des tutos
   resources :tutorials, only: [:index]
 end
