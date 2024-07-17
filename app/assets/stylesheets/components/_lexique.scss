@@ -1,12 +1,14 @@
 .lexique-container {
   display: flex;
   margin-top: 20px;
+  height: calc(100vh - 52px - 25vh);
 }
 
 .sections {
   width: 30%;
   background-color: #f0f0f0;
   padding: 10px;
+  overflow-y: auto;
 }
 
 .sections h2 {
@@ -39,4 +41,5 @@
 .lexique-content {
   width: 70%;
   padding: 10px;
+  overflow-y: auto;
 }
