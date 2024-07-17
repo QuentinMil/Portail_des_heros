@@ -1,5 +1,3 @@
 class Post < ApplicationRecord
-  belongs_to :user
-
-  validates :title, :content true
+  validates :title, :content, presence: true
 end

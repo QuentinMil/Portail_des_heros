@@ -1,5 +1,18 @@
 require 'faker'
 
+# Nous allons 
+# -> Creer des Users
+# -> Creer un admin
+# -> Créer 3 univers 
+# -> Créer plusieurs races
+# -> Créer plusieurs Univers_Classes
+# -> Créer 3 characters par User
+# -> Créer 6 parties
+# -> Ajouter des characters dans les parties 
+# -> Ajouter des notes
+# -> Ajouter 50 Posts (le lexique)
+# -> 
+
 # EFFACER LES DONNEES EXISTANTES
 # Attention, l'ordre compte à cause des dépendances
 Note.destroy_all
@@ -8,9 +21,11 @@ Party.destroy_all
 Character.destroy_all
 Race.destroy_all
 UniversClass.destroy_all
+Tutorial.destroy_all
 Universe.destroy_all
 Message.destroy_all
 User.destroy_all
+Post.destroy_all
 
 puts "les tables sont maintenant vides"
 
@@ -54,7 +69,6 @@ admin = User.create!(
 puts "Création de User Admin : OK"
 
 # CREATION DE 3 UNIVERS
-# CREATION DE 3 UNIVERS
 universes = [
   { name: 'Donjons et Dragons', description: 'Donjons et Dragons est un univers de haute fantaisie peuplé de créatures mythiques. Les joueurs explorent des donjons mystérieux, combattent des dragons redoutables, et découvrent des trésors anciens tout en développant leurs compétences et leurs pouvoirs.' },
   { name: 'Call of Cthulhu', description: 'Call of Cthulhu est un univers d’horreur cosmique inspiré des œuvres de H.P. Lovecraft. Les joueurs incarnent des investigateurs confrontés à des mystères surnaturels et des créatures indicibles, luttant pour maintenir leur santé mentale face à des horreurs inimaginables.' },
@@ -67,7 +81,7 @@ end
 
 puts "Création de 3 Univers : OK"
 
-# CRÉATION DE RACES ET CLASSES PAR UNIVERS
+# CRÉATION DE RACES PAR UNIVERS
 dnd = Universe.find_by(name: 'Donjons et Dragons')
 coc = Universe.find_by(name: 'Call of Cthulhu')
 rq = Universe.find_by(name: 'Runequest')
@@ -76,11 +90,14 @@ dnd_races = ['Humain', 'Elfe', 'Nain', 'Halfelin'].map { |race| Race.create!(nam
 coc_races = ['Humain', 'Profond'].map { |race| Race.create!(name: race, universe: coc) }
 rq_races = ['Humain', 'Troll'].map { |race| Race.create!(name: race, universe: rq) }
 
+puts "Création de races dans chaque univers : OK"
+
+# CRÉATION DE UNIVERS_CLASSES PAR UNIVERS
 dnd_classes = ['Guerrier', 'Mage', 'Rogue'].map { |univers_class| UniversClass.create!(name: univers_class, universe: dnd) }
 coc_classes = ['Investigateur', 'Cultiste'].map { |univers_class| UniversClass.create!(name: univers_class, universe: coc) }
 rq_classes = ['Guerrier', 'Chaman'].map { |univers_class| UniversClass.create!(name: univers_class, universe: rq) }
 
-puts "Création des races et des classes : OK"
+puts "Création de classes dans chaque univers : OK"
 
 # CRÉATION DE 3 CHARACTERS PAR USER
 User.all.each do |user|
@@ -147,4 +164,14 @@ Character.all.each do |character|
 end
 
 puts "Notes : OK"
+
+# AJOUTER LES POSTS DEPUIS LE FICHIER YAML
+lexique = YAML.load_file('db/data/lexique.yml')
+lexique.each do |post|
+  Post.create!(title: post['title'], content: post['content'])
+end
+
+puts "Posts du lexique créés : OK"
+
+# ATTENTION, C'EST FORCEMENT LA DERNIERE LIGNE
 puts "Le seeding est terminé !"
