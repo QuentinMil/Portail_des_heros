@@ -1,0 +1,19 @@
+<% content_for :title do %>
+  Lexique du JDR
+<% end %>
+
+<div class="lexique-container">
+  <div class="sections">
+    <h2>Lexique</h2>
+    <ul>
+      <% @posts.each do |post| %>
+        <li>
+          <%= link_to post.title, post_path(post) %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="lexique-content">
+    <h2>Sélectionnez un mot du lexique pour voir les explications</h2>
+  </div>
+</div>
