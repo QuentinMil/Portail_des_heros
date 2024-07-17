@@ -1,0 +1,3 @@
+class TutorialsController < ApplicationController
+
+end
