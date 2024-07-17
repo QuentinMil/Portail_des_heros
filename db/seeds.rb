@@ -10,7 +10,7 @@ require 'faker'
 # -> Créer 6 parties
 # -> Ajouter des characters dans les parties 
 # -> Ajouter des notes
-# -> Ajouter 50 Posts (le lexique)
+# -> Ajouter 44 Posts (le lexique)
 # -> 
 
 # EFFACER LES DONNEES EXISTANTES
