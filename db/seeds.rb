@@ -25,6 +25,7 @@ Tutorial.destroy_all
 Universe.destroy_all
 Message.destroy_all
 User.destroy_all
+Post.destroy_all
 
 puts "les tables sont maintenant vides"
 
