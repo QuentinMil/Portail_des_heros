@@ -1,0 +1,23 @@
+.button {
+  background: linear-gradient(to top, #808080, #a8a8a8);
+  color: rgb(255, 224, 51);
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  border-style: none;
+  font-weight: bold;
+  font-size: 30px;
+  cursor: pointer;
+  border-color: rgb(70, 70, 70);
+  font-family: 'Cinzel', serif;
+  margin: 10px;
+  transition-duration: 1s;
+}
+
+.button:hover {
+  background: linear-gradient(to top, #a8a8a8, #808080);
+  text-decoration: none;
+  color: yellow;
+  text-shadow: none;
+}
