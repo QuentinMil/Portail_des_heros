@@ -10,7 +10,7 @@ require 'faker'
 # -> Créer 6 parties
 # -> Ajouter des characters dans les parties 
 # -> Ajouter des notes
-# -> 
+# -> Ajouter 50 Posts (le lexique)
 # -> 
 
 # EFFACER LES DONNEES EXISTANTES
@@ -21,6 +21,7 @@ Party.destroy_all
 Character.destroy_all
 Race.destroy_all
 UniversClass.destroy_all
+Tutorial.destroy_all
 Universe.destroy_all
 Message.destroy_all
 User.destroy_all
@@ -163,3 +164,11 @@ end
 
 puts "Notes : OK"
 puts "Le seeding est terminé !"
+
+# AJOUTER LES POSTS DEPUIS LE FICHIER YAML
+lexique = YAML.load_file('db/data/lexique.yml')
+lexique.each do |post|
+  Post.create!(title: post['title'], content: post['content'])
+end
+
+puts "Posts du lexique créés : OK"
