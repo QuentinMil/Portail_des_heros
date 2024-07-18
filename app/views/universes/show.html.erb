@@ -6,8 +6,8 @@
       <h2><%= @tutorial.title %></h2>
       <p><%= @tutorial.content %></p>
       <% if @tutorial.video_url.present? %>
-        <div class="video-container">
-          <iframe width="560" height="315" src="<%= @tutorial.video_url %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="video">
+          <iframe src="<%= @tutorial.video_url %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
       <% end %>
     </div>
@@ -19,7 +19,7 @@
     <%= link_to 'Choisir un autre univers', universes_path, class: 'btn btn-secondary' %>
     <%= form_with url: characters_path, method: :post do |form| %>
       <%= hidden_field_tag :universe_id, @universe.id %>
-      <%= submit_tag 'Continuer dans cet univers', class: 'btn btn-primary' %>
+      <%= submit_tag 'Continuer dans cet univers', class: 'button' %>
     <% end %>
   </div>
 </div>
