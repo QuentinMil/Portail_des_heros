@@ -7,8 +7,4 @@ class Character < ApplicationRecord
   has_many :notes
   has_many :party_characters
   has_many :parties, through: :party_characters
-
-  validates :name, presence: true
-  validates :strength, :dexterity, :intelligence, :constitution, :wisdom, :charisma, numericality: { only_integer: true }
-  validates :available_status, presence: true
 end
