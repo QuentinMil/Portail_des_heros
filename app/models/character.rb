@@ -16,6 +16,9 @@ class Character < ApplicationRecord
     rate += 1 if self.strength.present?
     rate += 1 if self.dexterity.present?
     rate += 1 if self.intelligence.present?
+    rate += 1 if self.constitution.present?
+    rate += 1 if self.wisdom.present?
+    rate += 1 if self.charisma.present?
     self.update(completion_rate: rate)
   end
 end
