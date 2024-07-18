@@ -1,5 +1,50 @@
-<h1>Bienvenue sur la création de ton personnage</h1>
-<p>Nous allons t'accompagner à travers la création de ton personnage</p>
-<p>Pour commencer, il te faut choisir l'univers de jeux dans lequel tu veux vivre ton aventure</p>
-<%= link_to "Plonger dans les differents univers", link_path %>
-<button class="button" link_to>Plonger dans les differents univers</button>
+<% content_for :title do %>
+  Tous les Characters
+<% end %>
+
+<div class="characters-index">
+  <h1>Tous les Characters</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Nom</th>
+        <th>Utilisateur</th>
+        <th>Univers</th>
+        <th>Race</th>
+        <th>Classe</th>
+        <th>Strength</th>
+        <th>Dexterity</th>
+        <th>Intelligence</th>
+        <th>Constitution</th>
+        <th>Wisdom</th>
+        <th>Charisma</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @characters.each_with_index do |character, index| %>
+        <tr>
+          <td><%= index + 1 %></td>
+          <td><%= character.name %></td>
+          <td><%= character.user.pseudo %></td>
+          <td><%= character.universe.name %></td>
+          <td><%= character.race.name %></td>
+          <td><%= character.univers_class.name %></td>
+          <td><%= character.strength %></td>
+          <td><%= character.dexterity %></td>
+          <td><%= character.intelligence %></td>
+          <td><%= character.constitution %></td>
+          <td><%= character.wisdom %></td>
+          <td><%= character.charisma %></td>
+          <td>
+            <%= link_to 'Show', character_path(character) %>
+            <%= link_to 'Edit', edit_character_path(character) %>
+            <%= link_to 'Delete', character_path(character), method: :delete, data: { confirm: 'Are you sure?' } %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

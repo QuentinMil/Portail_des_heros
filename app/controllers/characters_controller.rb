@@ -2,6 +2,7 @@ class CharactersController < ApplicationController
   before_action :set_character, only: [:show, :edit, :update]
 
   def index
+    @characters = Character.all
   end
 
   def new
