@@ -120,7 +120,7 @@ User.all.each do |user|
   end
 end
 
-puts "3 Characters par User : OK"
+puts "3 Characters terminés par User : OK"
 
 # CREATION DE 6 PARTIES
 6.times do
@@ -175,12 +175,20 @@ puts "Posts du lexique créés : OK"
 
 # AJOUTER DES TUTORIELS
 # Nous avons besoin de 9 tutoriels par univers. 
-# # AJOUTER LES TUTORIELS DEPUIS LE FICHIER YAML
+# ON UTILISE AUSSI UN FICHIER YAML ICI
 tutorials = YAML.load_file('db/data/tutorials.yml')
 tutorials.each do |tuto|
-  Tutorial.create!(title: tuto['title'], content: tuto['content'], universe: Universe.find_by(name: tuto['name']), video_url: tuto['video_url'], user: User.all.sample)
+  Tutorial.create!(
+    title: tuto['title'],
+    content: tuto['content'],
+    universe: Universe.find_by(name: tuto['name']),
+    video_url: tuto['video_url'],
+    user: User.all.sample,
+    tuto_order: tuto['tuto_order']
+  )
 end
 
-puts "Tutoriels créés : OK"
-# ATTENTION, C'EST FORCEMENT LA DERNIERE LIGNE
+puts "9 tutoriels par univers créés : OK"
+
+# ATTENTION, CECI EST FORCEMENT LA DERNIERE LIGNE DE LA SEED - MERCI :)
 puts "Le seeding est terminé !"
