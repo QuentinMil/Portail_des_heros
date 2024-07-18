@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_07_17_134315) do
+ActiveRecord::Schema[7.1].define(version: 2024_07_18_104800) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -57,6 +57,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_17_134315) do
     t.datetime "updated_at", null: false
     t.bigint "race_id", null: false
     t.bigint "univers_class_id", null: false
+    t.integer "completion_rate"
     t.index ["race_id"], name: "index_characters_on_race_id"
     t.index ["univers_class_id"], name: "index_characters_on_univers_class_id"
     t.index ["universe_id"], name: "index_characters_on_universe_id"
@@ -125,6 +126,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_17_134315) do
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "tuto_order"
     t.index ["universe_id"], name: "index_tutorials_on_universe_id"
     t.index ["user_id"], name: "index_tutorials_on_user_id"
   end
