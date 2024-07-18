@@ -1,0 +1,16 @@
+if completion_rate == xx 
+alors tu affiches le input xxx
+avec le simple form for qui va bien. 
+
+tant que le completion_rate n'est pas égal à xx, tu affiches le completion_rate et le bouton suivant et tu renvoies l'édit. 
+Ensuite tu peux envoyer sur la show de mon character. 
+
+<%= simple_form_for @character do |f| %>
+    <% if @character.completion_rate == 1 %>    
+        <%= f.input :race, collection: @character.universe.races, as: :radio_buttons %>
+    <% end %>
+     <% if @character.completion_rate == 2 %>    
+        OK
+    <% end %>
+    <%= f.submit "next step"%>    
+<% end %>

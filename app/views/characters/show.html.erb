@@ -5,6 +5,7 @@
 <p>Ce character appartient à : <%= @character.user.pseudo %></p>
 <p>ID de ton character : <%= @character.id %></p>
 <p>Date de création : <%= @character.created_at.strftime("%d/%m/%Y %H:%M") %></p>
+<%= @character.completion_rate %>
 
 <h2>presentation des races</h2>
 

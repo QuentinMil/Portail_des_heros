@@ -30,8 +30,13 @@ class CharactersController < ApplicationController
   def update
     # l'action set_character est appelée par le before_action
     if @character.update(character_params)
-      @character.update_completion_rate
-      redirect_to @character, notice: 'Character was successfully updated.'
+      new_completion_rate = @character.completion_rate + 1
+      @character.update(completion_rate: new_completion_rate)
+      if @character.completion_rate == 9
+        redirect_to @character, notice: 'Le charater est terminé !'
+      else
+        redirect_to edit_character_path(@character)
+      end
     else
       render :edit
     end
