@@ -27,17 +27,17 @@
       <% @characters.each_with_index do |character, index| %>
         <tr>
           <td><%= index + 1 %></td>
-          <td><%= character.name %></td>
-          <td><%= character.user.pseudo %></td>
-          <td><%= character.universe.name %></td>
-          <td><%= character.race.name %></td>
-          <td><%= character.univers_class.name %></td>
-          <td><%= character.strength %></td>
-          <td><%= character.dexterity %></td>
-          <td><%= character.intelligence %></td>
-          <td><%= character.constitution %></td>
-          <td><%= character.wisdom %></td>
-          <td><%= character.charisma %></td>
+          <td><%= character.name.presence || 'Non défini' %></td>
+          <td><%= character.user.pseudo.presence || 'Non défini' %></td>
+          <td><%= character.universe&.name.presence || 'Non défini' %></td>
+          <td><%= character.race&.name.presence || 'Non défini' %></td>
+          <td><%= character.univers_class&.name.presence || 'Non défini' %></td>
+          <td><%= character.strength.presence || 'Non défini' %></td>
+          <td><%= character.dexterity.presence || 'Non défini' %></td>
+          <td><%= character.intelligence.presence || 'Non défini' %></td>
+          <td><%= character.constitution.presence || 'Non défini' %></td>
+          <td><%= character.wisdom.presence || 'Non défini' %></td>
+          <td><%= character.charisma.presence || 'Non défini' %></td>
           <td>
             <%= link_to 'Show', character_path(character) %>
             <%= link_to 'Edit', edit_character_path(character) %>

@@ -16,6 +16,6 @@
 <% end %>
 
 <div class="button-container">
-  <%= link_to 'Choisir un autre univers', universes_path, class: 'btn btn-secondary' %>
-  <%= link_to 'Continuer dans cet univers', new_character_path(universe_id: @universe.id), class: 'button' %>
+    <%= link_to 'Choisir un autre univers', universes_path, class: 'btn btn-secondary' %>
+    <%= link_to 'Continuer dans cet univers', characters_path(character: { universe_id: @universe.id }), method: :post, class: 'button' %>
 </div>
