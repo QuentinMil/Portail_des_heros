@@ -7,6 +7,19 @@ class CharactersController < ApplicationController
 
   def new
     @character = Character.new
+    @character.universe_id = params[:universe_id] if params[:universe_id].present?
+  end
+
+  def create
+    @character = Character.new(character_params)
+    @character.user = current_user
+    @character.universe_id = params[:universe_id]
+    if @character.save
+      @character.update_completion_rate
+      redirect_to @character, notice: 'Character was successfully created.'
+    else
+      render :new
+    end
   end
 
   def edit
