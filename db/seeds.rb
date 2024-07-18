@@ -165,7 +165,7 @@ end
 
 puts "Notes : OK"
 
-# AJOUTER LES POSTS DEPUIS LE FICHIER YAML
+# CREER DES POSTS DEPUIS LE FICHIER YAML
 lexique = YAML.load_file('db/data/lexique.yml')
 lexique.each do |post|
   Post.create!(title: post['title'], content: post['content'])
@@ -174,7 +174,7 @@ end
 puts "Posts du lexique créés : OK"
 
 # AJOUTER DES TUTORIELS
-# 1 univers par tuto
+# Nous avons besoin de 9 tutoriels par univers. 
 # # AJOUTER LES TUTORIELS DEPUIS LE FICHIER YAML
 tutorials = YAML.load_file('db/data/tutorials.yml')
 tutorials.each do |tuto|

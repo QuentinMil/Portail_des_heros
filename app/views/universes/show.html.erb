@@ -1,1 +1,16 @@
-<h1>definit ici description de l'univers + tuto</h1>
+<h1><%= @universe.name %></h1>
+<p><%= @universe.description %></p>
+
+<% if @tutorial %>
+  <div class="tutorial">
+    <h2><%= @tutorial.title %></h2>
+    <p><%= @tutorial.content %></p>
+    <% if @tutorial.video_url.present? %>
+      <div class="video">
+        <iframe width="560" height="315" src="<%= @tutorial.video_url %>" frameborder="0" allowfullscreen></iframe>
+      </div>
+    <% end %>
+  </div>
+<% else %>
+  <p>Aucun tutoriel disponible pour cet univers.</p>
+<% end %>
