@@ -4,14 +4,14 @@
 </div>
 
 <div class="cards_univers">
-  <% @universes.each do |universe| %>
-    <div class="cards_univer">
-      <div>
+  <% @universes.each_with_index do |universe, index| %>
+    <div class="cards_univer <%= index.even? ? 'left-image' : 'right-image' %>">
+      <div class="text">
         <h2><%= universe.name %></h2>
         <p><%= universe.description %></p>
         <button class="button-<%= universe.name.downcase.tr(" ", "-") %>">Découvrir</button>
       </div>
-      <div>
+      <div class="image">
         <%= image_tag universe.photo, alt: "image #{universe.name}" %>
       </div>
     </div>
