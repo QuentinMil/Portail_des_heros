@@ -32,7 +32,7 @@ class CharactersController < ApplicationController
     if @character.update(character_params)
       new_completion_rate = @character.completion_rate + 1
       @character.update(completion_rate: new_completion_rate)
-      if @character.completion_rate == 9
+      if @character.completion_rate == 10
         redirect_to @character, notice: 'Le charater est terminé !'
       else
         redirect_to edit_character_path(@character)

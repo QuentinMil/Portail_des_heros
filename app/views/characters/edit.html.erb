@@ -25,6 +25,8 @@
       <%= f.input :wisdom, as: :select, collection: (10..18).to_a, label: 'Sagesse' %>
     <% when 8 %>
       <%= f.input :charisma, as: :select, collection: (10..18).to_a, label: 'Charisme' %>
+    <% when 9 %>
+      <%= f.input :name, label: 'Nom du personnage' %>
     <% end %>
 
     <%= f.submit 'Continuer', class: 'button' %>
