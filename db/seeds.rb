@@ -76,7 +76,8 @@ universes = [
 ]
 
 universes.each do |universe|
-  Universe.create!(universe)
+  u = Universe.create!(name: universe[:name], description: universe[:description])
+  u.photo.attach(io: File.open(Rails.root.join(universe[:image_path])), filename: File.basename(universe[:image_path]))
 end
 
 puts "-> Création de 3 Univers : OK"
