@@ -70,9 +70,9 @@ puts "-> Création de User Admin : OK"
 
 # CREATION DE 3 UNIVERS
 universes = [
-  { name: 'Donjons et Dragons', description: 'Donjons et Dragons est un univers de haute fantaisie peuplé de créatures mythiques. Les joueurs explorent des donjons mystérieux, combattent des dragons redoutables, et découvrent des trésors anciens tout en développant leurs compétences et leurs pouvoirs.' },
-  { name: 'Call of Cthulhu', description: 'Call of Cthulhu est un univers d’horreur cosmique inspiré des œuvres de H.P. Lovecraft. Les joueurs incarnent des investigateurs confrontés à des mystères surnaturels et des créatures indicibles, luttant pour maintenir leur santé mentale face à des horreurs inimaginables.' },
-  { name: 'Runequest', description: 'Runequest est un univers galactique mêlant science-fiction et mythologie. Les joueurs explorent des mondes lointains, découvrent des civilisations anciennes et utilisent des runes puissantes pour influencer leur destin dans un cosmos en perpétuelle évolution et conflit.' }
+  { name: 'Donjons et Dragons', description: 'Donjons et Dragons est un univers de haute fantaisie peuplé de créatures mythiques. Les joueurs explorent des donjons mystérieux, combattent des dragons redoutables, et découvrent des trésors anciens tout en développant leurs compétences et leurs pouvoirs.', image_path: 'app/assets/images/dnd.jpg' },
+  { name: 'Call of Cthulhu', description: 'Call of Cthulhu est un univers d’horreur cosmique inspiré des œuvres de H.P. Lovecraft. Les joueurs incarnent des investigateurs confrontés à des mystères surnaturels et des créatures indicibles, luttant pour maintenir leur santé mentale face à des horreurs inimaginables.', image_path: 'app/assets/images/chtullu.jpg' },
+  { name: 'Runequest', description: 'Runequest est un univers galactique mêlant science-fiction et mythologie. Les joueurs explorent des mondes lointains, découvrent des civilisations anciennes et utilisent des runes puissantes pour influencer leur destin dans un cosmos en perpétuelle évolution et conflit.', image_path: 'app/assets/images/runequest.jpg' }
 ]
 
 universes.each do |universe|
