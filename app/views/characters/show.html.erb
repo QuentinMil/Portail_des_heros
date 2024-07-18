@@ -1,3 +1,4 @@
+
 <h1> Etape 2 du Tuto </h1>
 
 <p>Ce character a été créé dans l'univers : <%= @character.universe.name %></p>
@@ -6,3 +7,36 @@
 <p>Date de création : <%= @character.created_at.strftime("%d/%m/%Y %H:%M") %></p>
 
 <h2>presentation des races</h2>
+
+<p>mettre les images cotes a cotes sans les desription avec uniquement les titres et faire afficher un pop up au clic avec la description et deux bouttons suivant ou autre choix</p>
+
+<div class="container">
+  <div class="card-character">
+    <%= image_tag "humain.jpg", alt: "image humain" %>
+    <div class="card-character-infos">
+      <h2>Humain</h2>
+      <p>Les humains sont les personnes les plus aptes a s'adapter a toutes situations et les plus ambitieuses parmi les races communes. Quelle que soit leur motivation, les humains sont des innovateurs, et les pionniers du monde.</p>
+    </div>
+  </div>
+  <div class="card-character">
+    <%= image_tag "elfe.jpg", alt: "image elfe" %>
+    <div class="card-character-infos">
+      <h2>Elfe</h2>
+      <p>En tant qu'elfe, vous avez des sens et une intuition aiguisés, et vos pieds légers vous transportent rapidement et furtivement à travers vos forêts natales. Les elfes sont solitaires et se méfient des non-elfes.</p>
+    </div>
+  </div>
+  <div class="card-character">
+    <%= image_tag "nain.jpg", alt: "image nain" %>
+    <div class="card-character-infos">
+      <h2>Nain</h2>
+      <p>En tant que nain, vous êtes petit certes, mais également très fort et robuste, habitué à une vie difficile en terrain accidenté. Les nains sont connus comme d'habiles guerriers, mineurs et ouvriers de la pierre et du métal.</p>
+    </div>
+  </div>
+  <div class="card-character">
+    <%= image_tag "halfelin.jpg", alt: "image halfelin" %>
+    <div class="card-character-infos">
+      <h2>Halfelin</h2>
+      <p>Les petits halfelins survivent dans un monde rempli de créatures plus grandes en évitant d'être remarqués ou, à défaut, en évitant d'offenser. En tant que halfelin, vous pouvez facilement vous cacher, même en utilisant d'autres personnes comme couverture. Vous avez tendance à être affable et à bien vous entendre avec les autres.</p>
+    </div>
+  </div>
+</div>
