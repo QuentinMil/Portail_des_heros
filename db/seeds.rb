@@ -27,7 +27,7 @@ Message.destroy_all
 User.destroy_all
 Post.destroy_all
 
-puts "les tables sont maintenant vides"
+puts "-> Les tables sont maintenant vides"
 
 # Create 10 users
 10.times do |i|
@@ -46,7 +46,7 @@ puts "les tables sont maintenant vides"
   )
 end
 
-puts "10 users : OK"
+puts "-> 10 users : OK"
 
 # Tous les débutants sont forcémcent Débutant.
 User.where(player_level: 'Debutant').update_all(game_master: false)
@@ -66,7 +66,7 @@ admin = User.create!(
   completion_rate_characters: 100
 )
 
-puts "Création de User Admin : OK"
+puts "-> Création de User Admin : OK"
 
 # CREATION DE 3 UNIVERS
 universes = [
@@ -79,7 +79,7 @@ universes.each do |universe|
   Universe.create!(universe)
 end
 
-puts "Création de 3 Univers : OK"
+puts "-> Création de 3 Univers : OK"
 
 # CRÉATION DE RACES PAR UNIVERS
 dnd = Universe.find_by(name: 'Donjons et Dragons')
@@ -90,14 +90,14 @@ dnd_races = ['Humain', 'Elfe', 'Nain', 'Halfelin'].map { |race| Race.create!(nam
 coc_races = ['Humain', 'Profond'].map { |race| Race.create!(name: race, universe: coc) }
 rq_races = ['Humain', 'Troll'].map { |race| Race.create!(name: race, universe: rq) }
 
-puts "Création de races dans chaque univers : OK"
+puts "-> Création de races dans chaque univers : OK"
 
 # CRÉATION DE UNIVERS_CLASSES PAR UNIVERS
 dnd_classes = ['Guerrier', 'Mage', 'Rogue'].map { |univers_class| UniversClass.create!(name: univers_class, universe: dnd) }
 coc_classes = ['Investigateur', 'Cultiste'].map { |univers_class| UniversClass.create!(name: univers_class, universe: coc) }
 rq_classes = ['Guerrier', 'Chaman'].map { |univers_class| UniversClass.create!(name: univers_class, universe: rq) }
 
-puts "Création de classes dans chaque univers : OK"
+puts "-> Création de classes dans chaque univers : OK"
 
 # CRÉATION DE 3 CHARACTERS PAR USER
 User.all.each do |user|
@@ -120,7 +120,7 @@ User.all.each do |user|
   end
 end
 
-puts "3 Characters terminés par User : OK"
+puts "-> Création de 3 Characters par User : OK"
 
 # CREATION DE 6 PARTIES
 6.times do
@@ -150,7 +150,7 @@ Character.all.each do |character|
   end
 end
 
-puts "Characters to parties : OK"
+puts "-> Add characters to parties : OK"
 
 # AJOUTER DES NOTES
 Character.all.each do |character|
@@ -163,7 +163,7 @@ Character.all.each do |character|
     end
 end
 
-puts "Notes : OK"
+puts "-> Create Notes : OK"
 
 # CREATION D'UN CHARACTER PAR USER AVEC UNIVERSE ET RACE
 User.all.each do |user|
@@ -183,7 +183,7 @@ User.all.each do |user|
   )
 end
 
-puts "1 character en cours de création par User : OK"
+puts "-> Création d'1 character en cours de création par User : OK"
 
 # CREER DES POSTS DEPUIS LE FICHIER YAML
 lexique = YAML.load_file('db/data/lexique.yml')
@@ -191,7 +191,7 @@ lexique.each do |post|
   Post.create!(title: post['title'], content: post['content'])
 end
 
-puts "Posts du lexique créés : OK"
+puts "-> Posts du lexique créés : OK"
 
 # AJOUTER DES TUTORIELS
 # Nous avons besoin de 9 tutoriels par univers. 
@@ -208,7 +208,7 @@ tutorials.each do |tuto|
   )
 end
 
-puts "9 tutoriels par univers créés : OK"
+puts "-> 9 tutoriels par univers créés : OK"
 
 # ATTENTION, CECI EST FORCEMENT LA DERNIERE LIGNE DE LA SEED - MERCI :)
-puts "Le seeding est terminé !"
+puts "-> Le seeding est terminé !"
