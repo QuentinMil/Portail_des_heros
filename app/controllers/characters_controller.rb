@@ -9,11 +9,11 @@ class CharactersController < ApplicationController
   end
 
   def edit
-    set_character
+    # l'action set_character est appelée par le before_action
   end
 
   def update
-    set_character
+    # l'action set_character est appelée par le before_action
     if @character.update(character_params)
       @character.update_completion_rate
       redirect_to @character, notice: 'Character was successfully updated.'
