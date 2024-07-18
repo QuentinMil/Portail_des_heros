@@ -1,8 +1,8 @@
 class Character < ApplicationRecord
   belongs_to :user
   belongs_to :universe
-  belongs_to :race
-  belongs_to :univers_class
+  belongs_to :race, optional: true
+  belongs_to :univers_class, optional: true
 
   has_many :notes
   has_many :party_characters
