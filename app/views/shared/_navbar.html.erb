@@ -1,11 +1,11 @@
 <nav class="navbar-site d-flex justify-content-between">
     <div class="list-link-navbar">
         <ul class="ul-navbar">
-            <li class="list-navbar"><a class="link-navbar" href="#home">Accueil</a></li>
-            <li class="list-navbar"><a class="link-navbar" href="#news">Tutoriels</a></li>
+            <li class="list-navbar"><%= link_to 'Accueil', root_path, class: 'link-navbar' %></li>
+            <li class="list-navbar"><%= link_to 'Tutoriels', tutorials_path, class: 'link-navbar' %></li>
             <li class="list-navbar"><%= link_to 'Lexique', posts_path, class: 'link-navbar' %></li>
-            <li class="list-navbar"><a class="link-navbar" href="#contact">Univers</a></li>
-            <li class="list-navbar"><a class="link-navbar" href="characters">Créer personnage</a></li>
+            <li class="list-navbar"><%= link_to 'Univers', universes_path, class: 'link-navbar' %></li>
+            <li class="list-navbar"><%= link_to 'Créer mon personnage', characters_path, class: 'link-navbar' %></li>
             <li class="list-navbar"><a class="link-navbar" href="#contact">Tableau de bord</a></li>
         </ul>
     </div>
