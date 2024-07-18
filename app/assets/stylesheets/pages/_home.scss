@@ -1,1 +1,17 @@
 // Specific CSS for your home-page
+.hero-banner {
+  background-size: contain;
+  background-position: top;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.btn-cta {
+  position: absolute;
+  margin-bottom: 30px;
+  background-color: rgba(0, 0, 0, 0.329);
+  border-radius: 5px;
+  color: yellow;
+}
