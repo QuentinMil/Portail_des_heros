@@ -1,18 +1,32 @@
-J'ai besoin d'un simple form for qui va bien pour pouvoir éditer mon character par etape. 
+<div class="character-edit">
+  <h1>La découverte</h1>
 
+  <!-- Progress bar -->
+  <div class="progress-bar">
+    <div class="progress" style="width: <%= (@character.completion_rate.to_f / 9 * 100).round %>%;"></div>
+  </div>
+  <p>Progression: <%= (@character.completion_rate.to_f / 9 * 100).round %> %</p>
 
-tant que le completion_rate n'est pas égal à xx, tu affiches le completion_rate et le bouton suivant et tu renvoies l'édit. 
-Ensuite tu peux envoyer sur la show de mon character. 
-
-<%= simple_form_for @character do |f| %>
-    <% if @character.completion_rate == 1 %>    
-        <%= f.input :race, collection: @character.universe.races, as: :radio_buttons %>
+  <%= simple_form_for @character do |f| %>
+    <% case @character.completion_rate %>
+    <% when 1 %>
+      <%= f.input :race_id, collection: @character.universe.races, as: :radio_buttons, label: 'Choisissez une race' %>
+    <% when 2 %>
+      <%= f.input :univers_class_id, collection: @character.universe.univers_classes, as: :radio_buttons, label: 'Choisissez une classe' %>
+    <% when 3 %>
+      <%= f.input :strength, as: :select, collection: (10..18).to_a, label: 'Force' %>
+    <% when 4 %>
+      <%= f.input :dexterity, as: :select, collection: (10..18).to_a, label: 'Dextérité' %>
+    <% when 5 %>
+      <%= f.input :intelligence, as: :select, collection: (10..18).to_a, label: 'Intelligence' %>
+    <% when 6 %>
+      <%= f.input :constitution, as: :select, collection: (10..18).to_a, label: 'Constitution' %>
+    <% when 7 %>
+      <%= f.input :wisdom, as: :select, collection: (10..18).to_a, label: 'Sagesse' %>
+    <% when 8 %>
+      <%= f.input :charisma, as: :select, collection: (10..18).to_a, label: 'Charisme' %>
     <% end %>
-     <% if @character.completion_rate == 2 %>    
-        OK
-    <% end %>
-    <%= f.submit "next step"%>    
-<% end %>
 
-Le completion_rate varie de 0 à 9.
-est-ce que tu peux afficher un taux d'avancement sur 100% ? 
+    <%= f.submit 'Continuer', class: 'button' %>
+  <% end %>
+</div>
