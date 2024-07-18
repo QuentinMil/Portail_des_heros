@@ -14,8 +14,8 @@ button {
   margin: 10px;
   transition-duration: 0.5s;
   box-shadow: 15px 13px 16px -5px rgba(171,171,171,0.94);
--webkit-box-shadow: 15px 13px 16px -5px rgba(171,171,171,0.94);
--moz-box-shadow: 15px 13px 16px -5px rgba(171,171,171,0.94);
+  -webkit-box-shadow: 15px 13px 16px -5px rgba(171,171,171,0.94);
+  -moz-box-shadow: 15px 13px 16px -5px rgba(171,171,171,0.94);
   border-radius: 5px;
 }
 
@@ -26,7 +26,7 @@ button:hover {
   text-shadow: none;
 }
 
-.button-d-and-d {
+.button-coc {
   background:#6b6b6b;
   color: rgb(255, 255, 255);
   letter-spacing: 1px;
@@ -42,17 +42,18 @@ button:hover {
   margin: 10px;
   transition-duration: 0.5s;
   box-shadow: 15px 13px 16px -5px rgba(171,171,171,0.94);
--webkit-box-shadow: 15px 13px 16px -5px rgba(171,171,171,0.94);
--moz-box-shadow: 15px 13px 16px -5px rgba(171,171,171,0.94);
+  -webkit-box-shadow: 15px 13px 16px -5px rgba(171,171,171,0.94);
+  -moz-box-shadow: 15px 13px 16px -5px rgba(171,171,171,0.94);
   border-radius: 5px;
 }
 
-.button-d-and-d:hover {
+.button-coc:hover {
   color: rgb(207, 9, 9);
+  background-color: #252525;
 }
 
-.button-coc {
-  background:#3d3d3d;
+.button-d-and-d {
+  background:#6b6b6b;
   color: rgb(255, 255, 255);
   letter-spacing: 1px;
   padding: 5px 15px;
@@ -72,7 +73,7 @@ button:hover {
   border-radius: 5px;
 }
 
-.button-coc:hover {
+.button-d-and-d:hover {
   background-color: #252525;
   color: rgb(247, 231, 87)
 }
