@@ -8,6 +8,7 @@
   <table>
     <thead>
       <tr>
+        <th>#</th>
         <th>Nom</th>
         <th>Utilisateur</th>
         <th>Univers</th>
@@ -23,8 +24,9 @@
       </tr>
     </thead>
     <tbody>
-      <% @characters.each do |character| %>
+      <% @characters.each_with_index do |character, index| %>
         <tr>
+          <td><%= index + 1 %></td>
           <td><%= character.name %></td>
           <td><%= character.user.pseudo %></td>
           <td><%= character.universe.name %></td>
