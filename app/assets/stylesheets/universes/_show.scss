@@ -7,8 +7,9 @@
     h1 {
       font-size: 36px;
       color: #333;
-      margin-bottom: 20px;
-    }
+      margin-bottom: 30px; // Augmentez cette valeur pour plus d'air en dessous
+      margin-top: 30px;    // Ajoutez du margin-top si vous souhaitez également de l'air au-dessus
+      }
   
     .tutorial {
       margin: 30px;
@@ -16,8 +17,8 @@
       h2 {
         font-size: 28px;
         color: #555;
-        margin: 10px;
-      }
+        margin: 25px; // Ajoutez du margin-top et bottom pour espacer les titres
+    }
   
       p {
         font-size: 18px;

@@ -9,11 +9,11 @@ class CharactersController < ApplicationController
     @character = Character.new
     @character.user = current_user
     @character.universe_id = params[:universe_id] if params[:universe_id].present?
+    @character.completion_rate = 1
     @character.save!
 
     if @character.save
-      @character.update_completion_rate
-      redirect_to character_path(@character), notice: 'Tu viens de créer un nouveau Perso !'
+      redirect_to edit_character_path(@character), notice: 'Le character a été créé !'
     else
       render :new
     end
