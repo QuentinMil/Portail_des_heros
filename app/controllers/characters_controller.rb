@@ -5,18 +5,15 @@ class CharactersController < ApplicationController
     @characters = Character.all
   end
 
-  def new
-    @character = Character.new
-    @character.universe_id = params[:universe_id] if params[:universe_id].present?
-  end
-
   def create
-    @character = Character.new(character_params)
+    @character = Character.new
     @character.user = current_user
     @character.universe_id = params[:universe_id] if params[:universe_id].present?
+    @character.save!
+
     if @character.save
       @character.update_completion_rate
-      redirect_to @character, notice: 'Character was successfully created.'
+      redirect_to character_path(@character), notice: 'Tu viens de créer un nouveau Perso !'
     else
       render :new
     end

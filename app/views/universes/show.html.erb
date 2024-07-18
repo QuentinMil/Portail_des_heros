@@ -17,5 +17,9 @@
 
 <div class="button-container">
     <%= link_to 'Choisir un autre univers', universes_path, class: 'btn btn-secondary' %>
-    <%= link_to 'Continuer dans cet univers', characters_path(character: { universe_id: @universe.id }), method: :post, class: 'button' %>
+    <%= form_with url: characters_path, method: :post do |form| %>
+        <%= hidden_field_tag :universe_id, @universe.id %>
+        <%= submit_tag 'Continuer dans cet univers', class: 'button' %>
+    <% end %>
+
 </div>
