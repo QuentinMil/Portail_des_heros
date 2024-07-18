@@ -1,5 +1,5 @@
 class CharactersController < ApplicationController
-  before_action :set_character, only: [:show, :edit, :update, :destroy]
+  before_action :set_character, only: [:show, :edit, :update]
 
   def index
   end
@@ -10,6 +10,10 @@ class CharactersController < ApplicationController
 
   def edit
     # l'action set_character est appelée par le before_action
+  end
+
+  def show
+     # l'action set_character est appelée par le before_action
   end
 
   def update
