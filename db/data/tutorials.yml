@@ -1,7 +1,7 @@
 - title: Introduction à Donjons et Dragons
   content: Une introduction complète à l'univers de Donjons et Dragons.
   name: Donjons et Dragons
-  video_url: https://www.youtube.com/watch?reload=9&v=OK-LrV2eBQ8&list=PLvUjPK4gB9XftsBNQIxIDUx8TmmfovjW2
+  video_url: <iframe width="560" height="315" src="https://www.youtube.com/embed/OK-LrV2eBQ8?si=GjxCBhdI6ujNUepD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   tuto_order: 1
 
 - title: Races de Donjons et Dragons
