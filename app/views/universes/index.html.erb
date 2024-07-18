@@ -9,7 +9,9 @@
       <div class="text">
         <h2><%= universe.name %></h2>
         <p><%= universe.description %></p>
-        <button class="button-<%= universe.name.downcase.tr(" ", "-") %>">Découvrir</button>
+        <%= link_to universe_path(universe), class: "button-#{universe.name.downcase.tr(' ', '-')}" do %>
+          Découvrir
+        <% end %>
       </div>
       <div class="image">
         <%= image_tag universe.photo, alt: "image #{universe.name}" %>
