@@ -165,6 +165,26 @@ end
 
 puts "Notes : OK"
 
+# CREATION D'UN CHARACTER PAR USER AVEC UNIVERSE ET RACE
+User.all.each do |user|
+  universe = Universe.all.sample
+  Character.create!(
+    name: Faker::Games::DnD.name,
+    user: user,
+    universe: universe,
+    race: universe.races.sample,
+    strength: nil,
+    dexterity: nil,
+    intelligence: nil,
+    constitution: nil,
+    wisdom: nil,
+    charisma: nil,
+    available_status: 'Inactive'
+  )
+end
+
+puts "1 character en cours de création par User : OK"
+
 # CREER DES POSTS DEPUIS LE FICHIER YAML
 lexique = YAML.load_file('db/data/lexique.yml')
 lexique.each do |post|
