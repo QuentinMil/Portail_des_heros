@@ -14,8 +14,8 @@ button, .button {
   margin: 10px;
   transition-duration: 0.5s;
   box-shadow: 15px 13px 16px -5px rgba(171,171,171,0.94);
--webkit-box-shadow: 15px 13px 16px -5px rgba(171,171,171,0.94);
--moz-box-shadow: 15px 13px 16px -5px rgba(171,171,171,0.94);
+  -webkit-box-shadow: 15px 13px 16px -5px rgba(171,171,171,0.94);
+  -moz-box-shadow: 15px 13px 16px -5px rgba(171,171,171,0.94);
   border-radius: 5px;
 }
 
@@ -24,4 +24,82 @@ button:hover {
   text-decoration: none;
   color: rgb(255,222,35);
   text-shadow: none;
+}
+
+.button-coc {
+  background:#6b6b6b;
+  color: rgb(255, 255, 255);
+  letter-spacing: 1px;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  border-style: none;
+  font-weight: bold;
+  font-size: 24px;
+  cursor: pointer;
+  border: 4px double rgb(207, 9, 9);
+  font-family: 'Cinzel', serif;
+  margin: 10px;
+  transition-duration: 0.5s;
+  box-shadow: 15px 13px 16px -5px rgba(171,171,171,0.94);
+  -webkit-box-shadow: 15px 13px 16px -5px rgba(171,171,171,0.94);
+  -moz-box-shadow: 15px 13px 16px -5px rgba(171,171,171,0.94);
+  border-radius: 5px;
+}
+
+.button-coc:hover {
+  color: rgb(207, 9, 9);
+  background-color: #252525;
+}
+
+.button-d-and-d {
+  background:#6b6b6b;
+  color: rgb(255, 255, 255);
+  letter-spacing: 1px;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  border-style: none;
+  font-weight: bold;
+  font-size: 24px;
+  cursor: pointer;
+  border: 4px double rgb(255,222,35);
+  font-family: 'Cinzel', serif;
+  margin: 10px;
+  transition-duration: 0.5s;
+  box-shadow: 15px 13px 16px -5px rgba(171,171,171,0.94);
+-webkit-box-shadow: 15px 13px 16px -5px rgba(171,171,171,0.94);
+-moz-box-shadow: 15px 13px 16px -5px rgba(171,171,171,0.94);
+  border-radius: 5px;
+}
+
+.button-d-and-d:hover {
+  background-color: #252525;
+  color: rgb(247, 231, 87)
+}
+
+.button-runequest {
+  background:#6b6b6b;
+  color: rgb(255, 255, 255);
+  letter-spacing: 1px;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  border-style: none;
+  font-weight: bold;
+  font-size: 24px;
+  cursor: pointer;
+  border: 4px double rgb(86, 101, 185);
+  font-family: 'Cinzel', serif;
+  margin: 10px;
+  transition-duration: 0.5s;
+  box-shadow: 15px 13px 16px -5px rgba(171,171,171,0.94);
+  -webkit-box-shadow: 15px 13px 16px -5px rgba(171,171,171,0.94);
+  -moz-box-shadow: 15px 13px 16px -5px rgba(171,171,171,0.94);
+  border-radius: 5px;
+}
+
+.button-runequest:hover {
+  background-color: #252525;
+  color: rgb(86, 101, 185);
 }
