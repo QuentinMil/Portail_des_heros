@@ -95,5 +95,62 @@
         @extend .button;
       }
     }
+  
+    .sliders-container {
+      display: flex;
+      justify-content: space-around;
+      margin: 20px 0;
+  
+      .slider-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 10px;
+  
+        label {
+          font-size: 14px;
+          margin-bottom: 10px;
+        }
+  
+        input[type="range"] {
+          writing-mode: bt-lr; /* IE */
+          -webkit-appearance: slider-vertical; /* WebKit */
+          width: 8px;
+          height: 200px;
+          padding: 0;
+          margin: 0;
+          border-radius: 5px;
+          background: #76c7c0;
+          cursor: pointer;
+        }
+  
+        input[type="range"]::-webkit-slider-runnable-track {
+          background: #ddd;
+          border: none;
+          border-radius: 5px;
+          width: 8px;
+          height: 100%;
+        }
+  
+        input[type="range"]::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 20px;
+          height: 20px;
+          background: #76c7c0;
+          border-radius: 50%;
+          cursor: pointer;
+          margin-top: -6px; /* Adjust thumb position */
+        }
+  
+        input[type="range"]:focus {
+          outline: none;
+        }
+  
+        input[type="range"]:focus::-webkit-slider-runnable-track {
+          background: #ccc;
+        }
+      }
+    }
   }
   

@@ -39,18 +39,33 @@
           </div>
         <% end %>
       </div>
-    <% when 3 %>
-      <%= f.input :strength, as: :select, collection: (10..18).to_a, label: 'Force' %>
-    <% when 4 %>
-      <%= f.input :dexterity, as: :select, collection: (10..18).to_a, label: 'Dextérité' %>
-    <% when 5 %>
-      <%= f.input :intelligence, as: :select, collection: (10..18).to_a, label: 'Intelligence' %>
-    <% when 6 %>
-      <%= f.input :constitution, as: :select, collection: (10..18).to_a, label: 'Constitution' %>
-    <% when 7 %>
-      <%= f.input :wisdom, as: :select, collection: (10..18).to_a, label: 'Sagesse' %>
-    <% when 8 %>
-      <%= f.input :charisma, as: :select, collection: (10..18).to_a, label: 'Charisme' %>
+    <% when 3..8 %>
+      <div class="sliders-container">
+        <div class="slider-item">
+          <label for="strength">Force</label>
+          <%= f.input :strength, as: :range, input_html: { min: 10, max: 18 }, label: false %>
+        </div>
+        <div class="slider-item">
+          <label for="dexterity">Dextérité</label>
+          <%= f.input :dexterity, as: :range, input_html: { min: 10, max: 18 }, label: false %>
+        </div>
+        <div class="slider-item">
+          <label for="intelligence">Intelligence</label>
+          <%= f.input :intelligence, as: :range, input_html: { min: 10, max: 18 }, label: false %>
+        </div>
+        <div class="slider-item">
+          <label for="constitution">Constitution</label>
+          <%= f.input :constitution, as: :range, input_html: { min: 10, max: 18 }, label: false %>
+        </div>
+        <div class="slider-item">
+          <label for="wisdom">Sagesse</label>
+          <%= f.input :wisdom, as: :range, input_html: { min: 10, max: 18 }, label: false %>
+        </div>
+        <div class="slider-item">
+          <label for="charisma">Charisme</label>
+          <%= f.input :charisma, as: :range, input_html: { min: 10, max: 18 }, label: false %>
+        </div>
+      </div>
     <% when 9 %>
       <%= f.input :name, label: 'Nom du personnage' %>
     <% end %>
