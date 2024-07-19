@@ -57,7 +57,7 @@
 - title: Introduction à Call of Cthulhu
   content: Une introduction complète à l'univers de Call of Cthulhu.
   name: Call of Cthulhu
-  video_url: URL de la vidéo 10
+  video_url: "https://www.youtube.com/embed/OK-LrV2eBQ8?si=GjxCBhdI6ujNUepD"
   tuto_order: 1
 
 - title: Races de Call of Cthulhu
@@ -111,7 +111,7 @@
 - title: Introduction à Runequest
   content: Une introduction complète à l'univers de Runequest.
   name: Runequest
-  video_url: URL de la vidéo 19
+  video_url: "https://www.youtube.com/embed/OK-LrV2eBQ8?si=GjxCBhdI6ujNUepD"
   tuto_order: 1
 
 - title: Races de Runequest
