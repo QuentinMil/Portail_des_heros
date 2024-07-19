@@ -82,16 +82,53 @@ end
 
 puts "-> Création de 3 Univers : OK"
 
-# CRÉATION DE RACES PAR UNIVERS
+# CRÉATION DES VARIABLES POUR LES UNIVERS
 dnd = Universe.find_by(name: 'Donjons et Dragons')
 coc = Universe.find_by(name: 'Call of Cthulhu')
 rq = Universe.find_by(name: 'Runequest')
 
-dnd_races = ['Humain', 'Elfe', 'Nain', 'Halfelin'].map { |race| Race.create!(name: race, universe: dnd) }
-coc_races = ['Humain', 'Profond'].map { |race| Race.create!(name: race, universe: coc) }
-rq_races = ['Humain', 'Troll'].map { |race| Race.create!(name: race, universe: rq) }
+# CRÉATION DES ESPECES POUR DND
+dnd_races = [
+  { name: 'Humain', description: "Les humains sont les personnes les plus aptes a s'adapter a toutes situations et les plus ambitieuses parmi les races communes. Quelle que soit leur motivation, les humains sont des innovateurs, et les pionniers du monde.", image_path: 'app/assets/images/humain.jpg' },
+  { name: 'Elfe', description: "En tant qu'elfe, vous avez des sens et une intuition aiguisés, et vos pieds légers vous transportent rapidement et furtivement à travers vos forêts natales. Les elfes sont solitaires et se méfient des non-elfes.", image_path: 'app/assets/images/elf.jpg' },
+  { name: 'Nain', description: "En tant que nain, vous êtes petit certes, mais également très fort et robuste, habitué à une vie difficile en terrain accidenté. Les nains sont connus comme d'habiles guerriers, mineurs et ouvriers de la pierre et du métal.", image_path: 'app/assets/images/nain.jpg' },
+  { name: 'Halfelin', description: "Les petits halfelins survivent dans un monde rempli de créatures plus grandes en évitant d'être remarqués ou, à défaut, en évitant d'offenser. En tant que halfelin, vous pouvez facilement vous cacher, même en utilisant d'autres personnes comme couverture. Vous avez tendance à être affable et à bien vous entendre avec les autres.", image_path: 'app/assets/images/halfelin.jpg' }
+]
 
-puts "-> Création de races dans chaque univers : OK"
+# RACE CREATE + IMG ATTACH
+dnd_races.each do |race|
+  new_race = Race.create!(name: race[:name], description: race[:description], universe: dnd)
+  new_race.photo.attach(io: File.open(race[:image_path]), filename: File.basename(race[:image_path]))
+end
+
+puts "-> Création des espèces pour DND : OK"
+
+# CRÉATION DES ESPECES POUR COC
+
+coc_races = [
+  { name: 'Humain', description: 'Description pour la race Humain dans Call of Cthulhu.', image_path: 'app/assets/images/human.jpg' },
+  { name: 'Profond', description: 'Description pour la race Profond dans Call of Cthulhu.', image_path: 'app/assets/images/profond.jpg' }
+]
+
+coc_races.each do |race|
+  new_race = Race.create!(name: race[:name], description: race[:description], universe: coc)
+end
+
+puts "-> Création des espèces pour COC : OK"
+
+# CRÉATION DES ESPECES POUR RUNEQUEST
+
+rq_races = [
+  { name: 'Humain', description: 'Description pour la race Humain dans Runequest.', image_path: 'app/assets/images/human.jpg' },
+  { name: 'Troll', description: 'Description pour la race Troll dans Runequest.', image_path: 'app/assets/images/troll.jpg' }
+]
+
+rq_races.each do |race|
+  new_race = Race.create!(name: race[:name], description: race[:description], universe: rq)
+end
+
+puts "-> Création des espèces pour Runequest : OK"
+puts "-> Les créations de Races sont : OK"
 
 # CRÉATION DE UNIVERS_CLASSES PAR UNIVERS
 dnd_classes = ['Guerrier', 'Mage', 'Rogue'].map { |univers_class| UniversClass.create!(name: univers_class, universe: dnd) }
