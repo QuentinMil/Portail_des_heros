@@ -14,7 +14,7 @@
         <% end %>
       </div>
       <div class="image">
-        <%= image_tag universe.photo, alt: "image #{universe.name}" %>
+        <%= cl_image_tag universe.photo.key, alt: "image #{universe.name}" %>
       </div>
     </div>
   <% end %>
