@@ -1,0 +1,51 @@
+.cards_univers {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .cards_univer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  .cards_univer .text {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  .cards_univer .image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cards_univer .image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    width: 500px;
+    height: 300px;
+  }
+  
+  .cards_univer.left-image .text {
+    order: 1;
+  }
+  
+  .cards_univer.left-image .image {
+    order: 2;
+  }
+  
+  .cards_univer.right-image .text {
+    order: 2;
+  }
+  
+  .cards_univer.right-image .image {
+    order: 1;
+  }
+  

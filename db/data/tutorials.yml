@@ -1,89 +1,163 @@
-  - title: Tutoriel 1
-    content: Contenu du tutoriel 1
-    name: Donjons et Dragons
-    video_url: URL de la vidéo 1
+- title: Introduction à Donjons et Dragons
+  content: >
+    Donjons et Dragons, souvent abrégé en D&D, est le tout premier jeu de rôle sur table de genre médiéval-fantastique. Depuis sa création dans les années 1970, il a captivé des millions de joueurs à travers le monde avec ses histoires épiques et ses aventures palpitantes. Plongez dans un monde où la magie est omniprésente, où des créatures mythiques arpentent la terre, et où chaque décision que vous prenez peut changer le cours de l'histoire. Que vous soyez un guerrier valeureux, un mage puissant ou un voleur rusé, chaque partie de D&D promet des expériences uniques et mémorables. Découvrez les mécaniques de jeu, les différentes classes et races de personnages, ainsi que les vastes univers dans lesquels vos aventures se dérouleront. Préparez-vous à vivre des quêtes épiques, à affronter des dragons redoutables et à forger des alliances inoubliables.
+  name: Donjons et Dragons
+  video_url: "https://www.youtube.com/embed/OK-LrV2eBQ8?si=GjxCBhdI6ujNUepD"
+  tuto_order: 1
 
-  - title: Tutoriel 2
-    content: Contenu du tutoriel 2
-    name: Donjons et Dragons
-    video_url: URL de la vidéo 2
+- title: Races de Donjons et Dragons
+  content: >
+    Dans l'univers de Donjons et Dragons, les joueurs peuvent choisir parmi une variété de races fantastiques pour créer leurs personnages. Chaque race possède des caractéristiques uniques, des traits raciaux spécifiques, et des histoires riches qui influencent le développement et les capacités des personnages. Ce tutoriel vous guide à travers les races disponibles, en détaillant leurs forces, leurs faiblesses, et la manière dont elles peuvent enrichir vos aventures. Découvrez les fiers humains, les nobles elfes, les robustes nains, les curieux halfelins, et bien d'autres, et apprenez comment ces races peuvent interagir entre elles dans le monde fascinant de Donjons et Dragons.
+  name: Donjons et Dragons
+  video_url: "https://www.youtube.com/embed/rv-ejHo_bi8?si=c4QDW7v5XmLHJ3U3"
+  tuto_order: 2
 
-  - title: Tutoriel 3
-    content: Contenu du tutoriel 3
-    name: Donjons et Dragons
-    video_url: URL de la vidéo 3
+- title: Classes de Donjons et Dragons
+  content: Description des classes disponibles dans Donjons et Dragons.
+  name: Donjons et Dragons
+  video_url: URL de la vidéo 3
+  tuto_order: 3
 
-  - title: Tutoriel 4
-    content: Contenu du tutoriel 4
-    name: Donjons et Dragons
-    video_url: URL de la vidéo 4
+- title: Force dans Donjons et Dragons
+  content: Description de la force dans Donjons et Dragons.
+  name: Donjons et Dragons
+  video_url: URL de la vidéo 4
+  tuto_order: 4
 
-  - title: Tutoriel 5
-    content: Contenu du tutoriel 5
-    name: Donjons et Dragons
-    video_url: URL de la vidéo 5
+- title: Dextérité dans Donjons et Dragons
+  content: Description de la dextérité dans Donjons et Dragons.
+  name: Donjons et Dragons
+  video_url: URL de la vidéo 5
+  tuto_order: 5
 
-  - title: Tutoriel 6
-    content: Contenu du tutoriel 6
-    name: Donjons et Dragons
-    video_url: URL de la vidéo 6
+- title: Intelligence dans Donjons et Dragons
+  content: Description de l'intelligence dans Donjons et Dragons.
+  name: Donjons et Dragons
+  video_url: URL de la vidéo 6
+  tuto_order: 6
 
-  - title: Tutoriel 7
-    content: Contenu du tutoriel 7
-    name: Call of Cthulhu
-    video_url: URL de la vidéo 7
+- title: Constitution dans Donjons et Dragons
+  content: Description de la constitution dans Donjons et Dragons.
+  name: Donjons et Dragons
+  video_url: URL de la vidéo 7
+  tuto_order: 7
 
-  - title: Tutoriel 8
-    content: Contenu du tutoriel 8
-    name: Call of Cthulhu
-    video_url: URL de la vidéo 8
+- title: Sagesse dans Donjons et Dragons
+  content: Description de la sagesse dans Donjons et Dragons.
+  name: Donjons et Dragons
+  video_url: URL de la vidéo 8
+  tuto_order: 8
 
-  - title: Tutoriel 9
-    content: Contenu du tutoriel 9
-    name: Call of Cthulhu
-    video_url: URL de la vidéo 9
+- title: Charisme dans Donjons et Dragons
+  content: Description du charisme dans Donjons et Dragons.
+  name: Donjons et Dragons
+  video_url: URL de la vidéo 9
+  tuto_order: 9
 
-  - title: Tutoriel 10
-    content: Contenu du tutoriel 10
-    name: Call of Cthulhu
-    video_url: URL de la vidéo 10
+- title: Introduction à Call of Cthulhu
+  content: Une introduction complète à l'univers de Call of Cthulhu.
+  name: Call of Cthulhu
+  video_url: URL de la vidéo 10
+  tuto_order: 1
 
-  - title: Tutoriel 11
-    content: Contenu du tutoriel 11
-    name: Call of Cthulhu
-    video_url: URL de la vidéo 11
+- title: Races de Call of Cthulhu
+  content: Description des races disponibles dans Call of Cthulhu.
+  name: Call of Cthulhu
+  video_url: URL de la vidéo 11
+  tuto_order: 2
 
-  - title: Tutoriel 12
-    content: Contenu du tutoriel 12
-    name: Call of Cthulhu
-    video_url: URL de la vidéo 12
+- title: Classes de Call of Cthulhu
+  content: Description des classes disponibles dans Call of Cthulhu.
+  name: Call of Cthulhu
+  video_url: URL de la vidéo 12
+  tuto_order: 3
 
-  - title: Tutoriel 13
-    content: Contenu du tutoriel 13
-    name: Runequest
-    video_url: URL de la vidéo 13
+- title: Force dans Call of Cthulhu
+  content: Description de la force dans Call of Cthulhu.
+  name: Call of Cthulhu
+  video_url: URL de la vidéo 13
+  tuto_order: 4
 
-  - title: Tutoriel 14
-    content: Contenu du tutoriel 14
-    name: Runequest
-    video_url: URL de la vidéo 14
+- title: Dextérité dans Call of Cthulhu
+  content: Description de la dextérité dans Call of Cthulhu.
+  name: Call of Cthulhu
+  video_url: URL de la vidéo 14
+  tuto_order: 5
 
-  - title: Tutoriel 15
-    content: Contenu du tutoriel 15
-    name: Runequest
-    video_url: URL de la vidéo 15
+- title: Intelligence dans Call of Cthulhu
+  content: Description de l'intelligence dans Call of Cthulhu.
+  name: Call of Cthulhu
+  video_url: URL de la vidéo 15
+  tuto_order: 6
 
-  - title: Tutoriel 16
-    content: Contenu du tutoriel 16
-    name: Runequest
-    video_url: URL de la vidéo 16
+- title: Constitution dans Call of Cthulhu
+  content: Description de la constitution dans Call of Cthulhu.
+  name: Call of Cthulhu
+  video_url: URL de la vidéo 16
+  tuto_order: 7
 
-  - title: Tutoriel 17
-    content: Contenu du tutoriel 17
-    name: Runequest
-    video_url: URL de la vidéo 17
+- title: Sagesse dans Call of Cthulhu
+  content: Description de la sagesse dans Call of Cthulhu.
+  name: Call of Cthulhu
+  video_url: URL de la vidéo 17
+  tuto_order: 8
 
-  - title: Tutoriel 18
-    content: Contenu du tutoriel 18
-    name: Runequest
-    video_url: URL de la vidéo 18
+- title: Charisme dans Call of Cthulhu
+  content: Description du charisme dans Call of Cthulhu.
+  name: Call of Cthulhu
+  video_url: URL de la vidéo 18
+  tuto_order: 9
+
+- title: Introduction à Runequest
+  content: Une introduction complète à l'univers de Runequest.
+  name: Runequest
+  video_url: URL de la vidéo 19
+  tuto_order: 1
+
+- title: Races de Runequest
+  content: Description des races disponibles dans Runequest.
+  name: Runequest
+  video_url: URL de la vidéo 20
+  tuto_order: 2
+
+- title: Classes de Runequest
+  content: Description des classes disponibles dans Runequest.
+  name: Runequest
+  video_url: URL de la vidéo 21
+  tuto_order: 3
+
+- title: Force dans Runequest
+  content: Description de la force dans Runequest.
+  name: Runequest
+  video_url: URL de la vidéo 22
+  tuto_order: 4
+
+- title: Dextérité dans Runequest
+  content: Description de la dextérité dans Runequest.
+  name: Runequest
+  video_url: URL de la vidéo 23
+  tuto_order: 5
+
+- title: Intelligence dans Runequest
+  content: Description de l'intelligence dans Runequest.
+  name: Runequest
+  video_url: URL de la vidéo 24
+  tuto_order: 6
+
+- title: Constitution dans Runequest
+  content: Description de la constitution dans Runequest.
+  name: Runequest
+  video_url: URL de la vidéo 25
+  tuto_order: 7
+
+- title: Sagesse dans Runequest
+  content: Description de la sagesse dans Runequest.
+  name: Runequest
+  video_url: URL de la vidéo 26
+  tuto_order: 8
+
+- title: Charisme dans Runequest
+  content: Description du charisme dans Runequest.
+  name: Runequest
+  video_url: URL de la vidéo 27
+  tuto_order: 9

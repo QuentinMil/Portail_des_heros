@@ -1,33 +1,75 @@
-<h1>mettre les images cotes a cotes sans les desription avec uniquement les titres et faire afficher un pop up au clic avec la description et deux bouttons suivant ou autre choix</h1>
+<div class="character-edit">
+  <h1>La découverte</h1>
 
-<div class="container">
-  <div class="card-character">
-    <%= image_tag "humain.jpg", alt: "image humain" %>
-    <div class="card-character-infos">
-      <h2>Humain</h2>
-      <p>Les humains sont les personnes les plus aptes a s'adapter a toutes situations et les plus ambitieuses parmi les races communes. Quelle que soit leur motivation, les humains sont des innovateurs, et les pionniers du monde.</p>
-    </div>
+  <!-- Progress bar -->
+  <div class="progress-bar">
+    <div class="progress" style="width: <%= (@character.completion_rate.to_f / 10 * 100).round %>%;"></div>
   </div>
-  <div class="card-character">
-    <%= image_tag "elfe.jpg", alt: "image elfe" %>
-    <div class="card-character-infos">
-      <h2>Elfe</h2>
-      <p>En tant qu'elfe, vous avez des sens et une intuition aiguisés, et vos pieds légers vous transportent rapidement et furtivement à travers vos forêts natales. Les elfes sont solitaires et se méfient des non-elfes.</p>
-    </div>
-  </div>
-  <div class="card-character">
-    <%= image_tag "nain.jpg", alt: "image nain" %>
-    <div class="card-character-infos">
-      <h2>Nain</h2>
-      <p>En tant que nain, vous êtes petit certes, mais également très fort et robuste, habitué à une vie difficile en terrain accidenté. Les nains sont connus comme d'habiles guerriers, mineurs et ouvriers de la pierre et du métal.</p>
-    </div>
-  </div>
-  <div class="card-character">
-    <%= image_tag "halfelin.jpg", alt: "image halfelin" %>
-    <div class="card-character-infos">
-      <h2>Halfelin</h2>
-      <p>Les petits halfelins survivent dans un monde rempli de créatures plus grandes en évitant d'être remarqués ou, à défaut, en évitant d'offenser. En tant que halfelin, vous pouvez facilement vous cacher, même en utilisant d'autres personnes comme couverture. Vous avez tendance à être affable et à bien vous entendre avec les autres.</p>
-    </div>
-  </div>
+  <p>Progression: <%= (@character.completion_rate.to_f / 10 * 100).round %> %</p>
+
+  <%= simple_form_for @character do |f| %>
+    <% case @character.completion_rate %>
+    <% when 1 %>
+      <div class="options-wrapper">
+        <% @character.universe.races.each do |race| %>
+          <div class="option-item">
+            <%= f.radio_button :race_id, race.id %>
+            <label for="<%= f.object_name %>_race_id_<%= race.id %>">
+              <%= image_tag race.photo, alt: race.name %>
+              <div class="description">
+                <strong><%= race.name %></strong>
+                <p><%= race.description %></p>
+              </div>
+            </label>
+          </div>
+        <% end %>
+      </div>
+    <% when 2 %>
+      <div class="options-wrapper">
+        <% @character.universe.univers_classes.each do |univers_class| %>
+          <div class="option-item">
+            <%= f.radio_button :univers_class_id, univers_class.id %>
+            <label for="<%= f.object_name %>_univers_class_id_<%= univers_class.id %>">
+              <%= image_tag univers_class.photo, alt: univers_class.name %>
+              <div class="description">
+                <strong><%= univers_class.name %></strong>
+                <p><%= univers_class.description %></p>
+              </div>
+            </label>
+          </div>
+        <% end %>
+      </div>
+    <% when 3..8 %>
+      <div class="sliders-container">
+        <div class="slider-item">
+          <label for="<%= f.object_name %>_strength">Force</label>
+          <%= f.input :strength, as: :range, input_html: { min: 10, max: 18 }, label: false %>
+        </div>
+        <div class="slider-item">
+          <label for="<%= f.object_name %>_dexterity">Dextérité</label>
+          <%= f.input :dexterity, as: :range, input_html: { min: 10, max: 18 }, label: false %>
+        </div>
+        <div class="slider-item">
+          <label for="<%= f.object_name %>_intelligence">Intelligence</label>
+          <%= f.input :intelligence, as: :range, input_html: { min: 10, max: 18 }, label: false %>
+        </div>
+        <div class="slider-item">
+          <label for="<%= f.object_name %>_constitution">Constitution</label>
+          <%= f.input :constitution, as: :range, input_html: { min: 10, max: 18 }, label: false %>
+        </div>
+        <div class="slider-item">
+          <label for="<%= f.object_name %>_wisdom">Sagesse</label>
+          <%= f.input :wisdom, as: :range, input_html: { min: 10, max: 18 }, label: false %>
+        </div>
+        <div class="slider-item">
+          <label for="<%= f.object_name %>_charisma">Charisme</label>
+          <%= f.input :charisma, as: :range, input_html: { min: 10, max: 18 }, label: false %>
+        </div>
+      </div>
+    <% when 9 %>
+      <%= f.input :name, label: 'Nom du personnage' %>
+    <% end %>
+
+    <%= f.submit 'Continuer', class: 'button' %>
+  <% end %>
 </div>
-

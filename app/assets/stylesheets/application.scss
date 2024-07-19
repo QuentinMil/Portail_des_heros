@@ -8,11 +8,7 @@
 @import "font-awesome";
 
 // Your CSS partials
+@import "characters/index";
 @import "components/index";
 @import "pages/index";
-@import "characters/index";
-@import "components/content-site";
-@import "components/button";
-@import "pages/new_character";
-@import "components/lexique";
-@import "components/characters"
+@import "universes/index";

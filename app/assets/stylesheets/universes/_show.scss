@@ -1,0 +1,56 @@
+.universe-show {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  
+    h1 {
+      font-size: 36px;
+      color: #333;
+      margin-bottom: 30px; // Augmentez cette valeur pour plus d'air en dessous
+      margin-top: 30px;    // Ajoutez du margin-top si vous souhaitez également de l'air au-dessus
+      }
+  
+    .tutorial {
+      margin: 30px;
+  
+      h2 {
+        font-size: 28px;
+        color: #555;
+        margin: 25px; // Ajoutez du margin-top et bottom pour espacer les titres
+    }
+  
+      p {
+        font-size: 18px;
+        color: #666;
+        margin-bottom: 20px;
+        text-align: left;
+      }
+  
+      .video {
+        margin: 20px 0;
+        iframe {
+          width: 100%;
+          height: 315px;
+          max-width: 560px;
+          border: none;
+        }
+      }
+    }
+  
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+  
+      .btn-secondary {
+        @extend .button;
+      }
+  
+      .button {
+        @extend .button;
+      }
+    }
+  }
+  
