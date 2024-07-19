@@ -1,7 +1,6 @@
 .lexique-container {
   display: flex;
-  margin-top: 20px;
-  height: calc(100vh - 52px - 25vh);
+  height: 98vh;
 }
 
 .sections {
@@ -39,7 +38,8 @@
 }
 
 .lexique-content {
-  width: 70%;
-  padding: 10px;
+  flex-grow: 1; // Changez cette ligne pour prendre le reste de l'espace disponible
   overflow-y: auto;
+  padding-left: 20px; // Ajouter un padding à droite pour écarter le texte
+  color: #f0f0f0;
 }
