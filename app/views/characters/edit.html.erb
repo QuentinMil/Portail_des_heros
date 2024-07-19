@@ -70,7 +70,7 @@
         </div>
       </div>
     <% when 9 %>
-      <%= f.input :name, label: 'Nom du personnage' %>
+      <%= f.input :name, label: 'Nom du personnage', input_html: { class: 'nom_du_personnage_p' } %>
     <% end %>
     <%= f.submit 'Continuer', class: 'button' %>
   <% end %>
