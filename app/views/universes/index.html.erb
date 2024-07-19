@@ -1,18 +1,19 @@
 <div class="titre">
   <h1>BIENVENUE AVENTURIER</h1>
-  <h3>Choisis ton favori parmis nos univers disponibles</h3>
+  <h3>Choisis ton favori parmi nos univers disponibles</h3>
   <p>passe ta souris sur l'un d'eux pour découvrir son histoire</p>
 </div>
 
 <div class="container_universes">
   <% @universes.each do |universe| %>
-    <div class="universe" style="background-image:url(<%= cl_image_path(universe.photo.key)%>)">
+    <div class="universe" style="background-image:url(<%= cl_image_path(universe.photo.key) %>)">
       <h2 class="text"><%= universe.name %></h2>
       <div class="description">
-        <p><%= universe.description %> </p>
+        <p><%= universe.description %></p>
         <%= link_to universe_path(universe), class: "button-#{universe.name.downcase.tr(' ', '-')}" do %>
           Découvrir
         <% end %>
       </div>
     </div>
+  <% end %>
 </div>
