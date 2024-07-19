@@ -1,32 +1,54 @@
-<h1>mettre les images cotes a cotes sans les desription avec uniquement les titres et faire afficher un pop up au clic avec la description et deux bouttons suivant ou autre choix</h1>
+<div class="text-affichage-show-character-div">
+  <h3 class="text-affichage-show-character">Félicitation ! Vous venez de créer votre personnages !
+  Vous pouvez maintenant lancer une recherche de partie avec votre nouveau personnage ou décider de le garder pour plus tard. Retrouvez votre personnage dans votre Tableau De Bord.</h3>
+</div>
 
-<div class="container">
-  <div class="card-character">
-    <%= image_tag "humain.jpg", alt: "image humain" %>
-    <div class="card-character-infos">
-      <h2>Humain</h2>
-      <p>Les humains sont les personnes les plus aptes a s'adapter a toutes situations et les plus ambitieuses parmi les races communes. Quelle que soit leur motivation, les humains sont des innovateurs, et les pionniers du monde.</p>
+<div class="show-character-container">
+    <div class="show-character-img-content">
+        <div class="show-character-image-div">
+            <%= image_tag 'elfe.jpg', class: 'show-character-image' %>
+        </div>
+
+        <div class="show-character-content">
+            <div class="show-character-name-div">
+                <h1 class="show-character-name">NAME</h1>
+            </div>
+            <div class="show-character-univers-race-class-available">
+                <div class="show-character-univers-race-class-available-display">
+                    <p>Univers</p>
+                    <p>Race</p>
+                    <p>Classe</p>
+                    <p>Status</p>
+                </div>
+                <div class="show-character-univers-race-class-available-content">
+                    <p>Univers</p>
+                    <p>Race</p>
+                    <p>Classe</p>
+                    <p>Status</p>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="card-character">
-    <%= image_tag "elfe.jpg", alt: "image elfe" %>
-    <div class="card-character-infos">
-      <h2>Elfe</h2>
-      <p>En tant qu'elfe, vous avez des sens et une intuition aiguisés, et vos pieds légers vous transportent rapidement et furtivement à travers vos forêts natales. Les elfes sont solitaires et se méfient des non-elfes.</p>
+    <div class="show-character-caracteristic">
+        <div class="show-character-caracteristic-display">
+            <p>Force</p>
+            <p>Dextérité</p>
+            <p>Intelligence</p>
+            <p>Constitution</p>
+            <p>Sagesse</p>
+            <p>Charisme</p>
+        </div>
+        <div class="show-character-caracteristic-content">
+            <p>14</p>
+            <p>16</p>
+            <p>11</p>
+            <p>15</p>
+            <p>09</p>
+            <p>17</p>
+        </div>
     </div>
-  </div>
-  <div class="card-character">
-    <%= image_tag "nain.jpg", alt: "image nain" %>
-    <div class="card-character-infos">
-      <h2>Nain</h2>
-      <p>En tant que nain, vous êtes petit certes, mais également très fort et robuste, habitué à une vie difficile en terrain accidenté. Les nains sont connus comme d'habiles guerriers, mineurs et ouvriers de la pierre et du métal.</p>
-    </div>
-  </div>
-  <div class="card-character">
-    <%= image_tag "halfelin.jpg", alt: "image halfelin" %>
-    <div class="card-character-infos">
-      <h2>Halfelin</h2>
-      <p>Les petits halfelins survivent dans un monde rempli de créatures plus grandes en évitant d'être remarqués ou, à défaut, en évitant d'offenser. En tant que halfelin, vous pouvez facilement vous cacher, même en utilisant d'autres personnes comme couverture. Vous avez tendance à être affable et à bien vous entendre avec les autres.</p>
-    </div>
-  </div>
+</div>
+<div class="btn-show-container">
+    <button>Jouer plus tard</button>
+    <button>Trouver des joueurs !</button>
 </div>
