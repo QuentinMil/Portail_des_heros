@@ -1,18 +1,17 @@
-
 <div class="text-affichage-show-character-div">
-  <h3 class="text-affichage-show-character">Félicitation ! Vous venez de créer votre personnages !
+  <h3 class="text-affichage-show-character">Félicitation ! Vous venez de créer votre personnage !
   Vous pouvez maintenant lancer une recherche de partie avec votre nouveau personnage ou décider de le garder pour plus tard. Retrouvez votre personnage dans votre Tableau De Bord.</h3>
 </div>
 
 <div class="show-character-container">
     <div class="show-character-img-content">
         <div class="show-character-image-div">
-            <%= image_tag 'elfe.jpg', class: 'show-character-image' %>
+            <%= image_tag @character.univers_class.photo, alt: @character.univers_class.name, class: 'show-character-image', size: "200x200" %>
         </div>
 
         <div class="show-character-content">
             <div class="show-character-name-div">
-                <h1 class="show-character-name">NAME</h1>
+                <h1 class="show-character-name"><%= @character.name %></h1>
             </div>
             <div class="show-character-univers-race-class-available">
                 <div class="show-character-univers-race-class-available-display">
@@ -22,10 +21,9 @@
                     <p>Status</p>
                 </div>
                 <div class="show-character-univers-race-class-available-content">
-                    <p>Univers</p>
-                    <p>Race</p>
-                    <p>Classe</p>
-                    <p>Status</p>
+                    <p><%= @character.univers_class.name %></p>
+                    <p><%= @character.race.name %></p>
+                    <p><%= @character.univers_class.name %></p>
                 </div>
             </div>
         </div>
@@ -40,16 +38,21 @@
             <p>Charisme</p>
         </div>
         <div class="show-character-caracteristic-content">
-            <p>14</p>
-            <p>16</p>
-            <p>11</p>
-            <p>15</p>
-            <p>09</p>
-            <p>17</p>
+            <p><%= @character.strength %></p>
+            <p><%= @character.dexterity %></p>
+            <p><%= @character.intelligence %></p>
+            <p><%= @character.constitution %></p>
+            <p><%= @character.wisdom %></p>
+            <p><%= @character.charisma %></p>
         </div>
     </div>
 </div>
 <div class="btn-show-container">
     <button>Jouer plus tard</button>
     <button>Trouver des joueurs !</button>
+</div>
+
+<div class="character-backstory">
+    <h3>Son histoire</h3>
+    <p><%= @character.backstory %></p>
 </div>
