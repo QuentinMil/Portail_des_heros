@@ -9,7 +9,11 @@
       color: #ffffff;
       margin-bottom: 20px;
     }
-  
+
+    .nom_du_personnage_p {
+      color: white;
+    }
+      
     .progress-bar {
       background: #ffffff;
       border-radius: 5px;
@@ -110,6 +114,7 @@
         flex-direction: column;
         align-items: center;
         margin: 0 10px;
+        color: #ffffff;
   
         label {
           font-size: 14px;
