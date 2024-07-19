@@ -1,11 +1,14 @@
 <div class="character-edit">
   <h1>Création de votre personnage</h1>
-
   <!-- Progress bar -->
   <div class="progress-bar">
     <div class="progress" style="width: <%= (@character.completion_rate.to_f / 10 * 100).round %>%;"></div>
   </div>
-  <p>Progression: <%= (@character.completion_rate.to_f / 10 * 100).round %> %</p>
+
+  <!-- Ajout d'un div avec une classe pour la progression -->
+  <div class="progression-wrapper">
+    <p class="progression-text">Progression: <%= (@character.completion_rate.to_f / 10 * 100).round %> %</p>
+  </div>
 
   <%= simple_form_for @character do |f| %>
     <% case @character.completion_rate %>
@@ -67,9 +70,8 @@
         </div>
       </div>
     <% when 9 %>
-      <%= f.input :name, label: 'Nom du personnage' %>
+      <%= f.input :name, label: 'Nom du personnage', input_html: { class: 'nom_du_personnage_p' } %>
     <% end %>
-
     <%= f.submit 'Continuer', class: 'button' %>
   <% end %>
 </div>
