@@ -1,13 +1,15 @@
 - title: Introduction à Donjons et Dragons
-  content: Une introduction complète à l'univers de Donjons et Dragons.
+  content: >
+    Donjons et Dragons, souvent abrégé en D&D, est le tout premier jeu de rôle sur table de genre médiéval-fantastique. Depuis sa création dans les années 1970, il a captivé des millions de joueurs à travers le monde avec ses histoires épiques et ses aventures palpitantes. Plongez dans un monde où la magie est omniprésente, où des créatures mythiques arpentent la terre, et où chaque décision que vous prenez peut changer le cours de l'histoire. Que vous soyez un guerrier valeureux, un mage puissant ou un voleur rusé, chaque partie de D&D promet des expériences uniques et mémorables. Découvrez les mécaniques de jeu, les différentes classes et races de personnages, ainsi que les vastes univers dans lesquels vos aventures se dérouleront. Préparez-vous à vivre des quêtes épiques, à affronter des dragons redoutables et à forger des alliances inoubliables.
   name: Donjons et Dragons
-  video_url: https://www.youtube.com/watch?reload=9&v=OK-LrV2eBQ8&list=PLvUjPK4gB9XftsBNQIxIDUx8TmmfovjW2
+  video_url: "https://www.youtube.com/embed/OK-LrV2eBQ8?si=GjxCBhdI6ujNUepD"
   tuto_order: 1
 
 - title: Races de Donjons et Dragons
-  content: Description des races disponibles dans Donjons et Dragons.
+  content: >
+    Dans l'univers de Donjons et Dragons, les joueurs peuvent choisir parmi une variété de races fantastiques pour créer leurs personnages. Chaque race possède des caractéristiques uniques, des traits raciaux spécifiques, et des histoires riches qui influencent le développement et les capacités des personnages. Ce tutoriel vous guide à travers les races disponibles, en détaillant leurs forces, leurs faiblesses, et la manière dont elles peuvent enrichir vos aventures. Découvrez les fiers humains, les nobles elfes, les robustes nains, les curieux halfelins, et bien d'autres, et apprenez comment ces races peuvent interagir entre elles dans le monde fascinant de Donjons et Dragons.
   name: Donjons et Dragons
-  video_url: URL de la vidéo 2
+  video_url: "https://www.youtube.com/embed/rv-ejHo_bi8?si=c4QDW7v5XmLHJ3U3"
   tuto_order: 2
 
 - title: Classes de Donjons et Dragons

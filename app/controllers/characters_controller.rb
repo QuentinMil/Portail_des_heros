@@ -9,11 +9,11 @@ class CharactersController < ApplicationController
     @character = Character.new
     @character.user = current_user
     @character.universe_id = params[:universe_id] if params[:universe_id].present?
+    @character.completion_rate = 1
     @character.save!
 
     if @character.save
-      @character.update_completion_rate
-      redirect_to character_path(@character), notice: 'Tu viens de créer un nouveau Perso !'
+      redirect_to edit_character_path(@character), notice: 'Le character a été créé !'
     else
       render :new
     end
@@ -29,10 +29,16 @@ class CharactersController < ApplicationController
 
   def update
     # l'action set_character est appelée par le before_action
+
+    # Compter le nombre de paramètres mis à jour
+    updated_fields = character_params.keys.count
+
     if @character.update(character_params)
-      new_completion_rate = @character.completion_rate + 1
+      # Incrémenter le taux de complétion
+      new_completion_rate = @character.completion_rate + updated_fields
       @character.update(completion_rate: new_completion_rate)
-      if @character.completion_rate == 9
+
+      if @character.completion_rate >= 10
         redirect_to @character, notice: 'Le charater est terminé !'
       else
         redirect_to edit_character_path(@character)

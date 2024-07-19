@@ -1,16 +1,75 @@
-if completion_rate == xx 
-alors tu affiches le input xxx
-avec le simple form for qui va bien. 
+<div class="character-edit">
+  <h1>La découverte</h1>
 
-tant que le completion_rate n'est pas égal à xx, tu affiches le completion_rate et le bouton suivant et tu renvoies l'édit. 
-Ensuite tu peux envoyer sur la show de mon character. 
+  <!-- Progress bar -->
+  <div class="progress-bar">
+    <div class="progress" style="width: <%= (@character.completion_rate.to_f / 10 * 100).round %>%;"></div>
+  </div>
+  <p>Progression: <%= (@character.completion_rate.to_f / 10 * 100).round %> %</p>
 
-<%= simple_form_for @character do |f| %>
-    <% if @character.completion_rate == 1 %>    
-        <%= f.input :race, collection: @character.universe.races, as: :radio_buttons %>
+  <%= simple_form_for @character do |f| %>
+    <% case @character.completion_rate %>
+    <% when 1 %>
+      <div class="options-wrapper">
+        <% @character.universe.races.each do |race| %>
+          <div class="option-item">
+            <%= f.radio_button :race_id, race.id %>
+            <label for="<%= f.object_name %>_race_id_<%= race.id %>">
+              <%= image_tag race.photo, alt: race.name %>
+              <div class="description">
+                <strong><%= race.name %></strong>
+                <p><%= race.description %></p>
+              </div>
+            </label>
+          </div>
+        <% end %>
+      </div>
+    <% when 2 %>
+      <div class="options-wrapper">
+        <% @character.universe.univers_classes.each do |univers_class| %>
+          <div class="option-item">
+            <%= f.radio_button :univers_class_id, univers_class.id %>
+            <label for="<%= f.object_name %>_univers_class_id_<%= univers_class.id %>">
+              <%= image_tag univers_class.photo, alt: univers_class.name %>
+              <div class="description">
+                <strong><%= univers_class.name %></strong>
+                <p><%= univers_class.description %></p>
+              </div>
+            </label>
+          </div>
+        <% end %>
+      </div>
+    <% when 3..8 %>
+      <div class="sliders-container">
+        <div class="slider-item">
+          <label for="<%= f.object_name %>_strength">Force</label>
+          <%= f.input :strength, as: :range, input_html: { min: 10, max: 18 }, label: false %>
+        </div>
+        <div class="slider-item">
+          <label for="<%= f.object_name %>_dexterity">Dextérité</label>
+          <%= f.input :dexterity, as: :range, input_html: { min: 10, max: 18 }, label: false %>
+        </div>
+        <div class="slider-item">
+          <label for="<%= f.object_name %>_intelligence">Intelligence</label>
+          <%= f.input :intelligence, as: :range, input_html: { min: 10, max: 18 }, label: false %>
+        </div>
+        <div class="slider-item">
+          <label for="<%= f.object_name %>_constitution">Constitution</label>
+          <%= f.input :constitution, as: :range, input_html: { min: 10, max: 18 }, label: false %>
+        </div>
+        <div class="slider-item">
+          <label for="<%= f.object_name %>_wisdom">Sagesse</label>
+          <%= f.input :wisdom, as: :range, input_html: { min: 10, max: 18 }, label: false %>
+        </div>
+        <div class="slider-item">
+          <label for="<%= f.object_name %>_charisma">Charisme</label>
+          <%= f.input :charisma, as: :range, input_html: { min: 10, max: 18 }, label: false %>
+        </div>
+      </div>
+    <% when 9 %>
+      <%= f.input :name, label: 'Nom du personnage' %>
     <% end %>
-     <% if @character.completion_rate == 2 %>    
-        OK
-    <% end %>
-    <%= f.submit "next step"%>    
-<% end %>
+
+    <%= f.submit 'Continuer', class: 'button' %>
+  <% end %>
+</div>
