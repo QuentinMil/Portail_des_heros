@@ -17,14 +17,18 @@
       margin-bottom: 10px;
       .progress {
         height: 20px;
-        background: #b3735d;
+        background: #EBD18B;
         transition: width 0.4s ease;
       }
     }
+
+    .progression-text {
+      color: #EBD18B; /* changer la couleur du progession %tage */
+    }    
   
     p {
       font-size: 16px;
-      color: #ffffff;
+      color: black;
       margin-bottom: 20px;
     }
   
