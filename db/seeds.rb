@@ -90,7 +90,7 @@ rq = Universe.find_by(name: 'Runequest')
 # CRÉATION DES ESPECES POUR DND
 dnd_races = [
   { name: 'Humain', description: "Les humains sont les personnes les plus aptes a s'adapter a toutes situations et les plus ambitieuses parmi les races communes. Quelle que soit leur motivation, les humains sont des innovateurs, et les pionniers du monde.", image_path: 'app/assets/images/humain.jpg' },
-  { name: 'Elfe', description: "En tant qu'elfe, vous avez des sens et une intuition aiguisés, et vos pieds légers vous transportent rapidement et furtivement à travers vos forêts natales. Les elfes sont solitaires et se méfient des non-elfes.", image_path: 'app/assets/images/elf.jpg' },
+  { name: 'Elfe', description: "En tant qu'elfe, vous avez des sens et une intuition aiguisés, et vos pieds légers vous transportent rapidement et furtivement à travers vos forêts natales. Les elfes sont solitaires et se méfient des non-elfes.", image_path: 'app/assets/images/elfe.jpg' },
   { name: 'Nain', description: "En tant que nain, vous êtes petit certes, mais également très fort et robuste, habitué à une vie difficile en terrain accidenté. Les nains sont connus comme d'habiles guerriers, mineurs et ouvriers de la pierre et du métal.", image_path: 'app/assets/images/nain.jpg' },
   { name: 'Halfelin', description: "Les petits halfelins survivent dans un monde rempli de créatures plus grandes en évitant d'être remarqués ou, à défaut, en évitant d'offenser. En tant que halfelin, vous pouvez facilement vous cacher, même en utilisant d'autres personnes comme couverture. Vous avez tendance à être affable et à bien vous entendre avec les autres.", image_path: 'app/assets/images/halfelin.jpg' }
 ]
@@ -128,14 +128,41 @@ rq_races.each do |race|
 end
 
 puts "-> Création des espèces pour Runequest : OK"
-puts "-> Les créations de Races sont : OK"
+puts "-> Les créations de Races terminées : OK"
 
-# CRÉATION DE UNIVERS_CLASSES PAR UNIVERS
-dnd_classes = ['Guerrier', 'Mage', 'Rogue'].map { |univers_class| UniversClass.create!(name: univers_class, universe: dnd) }
-coc_classes = ['Investigateur', 'Cultiste'].map { |univers_class| UniversClass.create!(name: univers_class, universe: coc) }
-rq_classes = ['Guerrier', 'Chaman'].map { |univers_class| UniversClass.create!(name: univers_class, universe: rq) }
+# CRÉATION DES CLASSES PAR UNIVERS
+
+dnd_classes = [
+  { name: 'Guerrier', description: "Le Guerrier est la classe par excellence pour ceux qui aiment l'action et le combat. En tant que Guerrier, vous excellez dans l'utilisation des armes et des armures, ce qui vous permet de vous lancer au cœur des batailles sans crainte.", image_path: 'app/assets/images/warrior.jpg' },
+  { name: 'Mage', description: "Le Mage est la classe idéale pour ceux qui aiment la magie et les sortilèges. En tant que Mage, vous avez accès à une grande variété de sorts puissants qui vous permettent de manipuler les éléments, de soigner vos alliés ou d'attaquer vos ennemis à distance.", image_path: 'app/assets/images/mage.jpg' },
+  { name: 'Rogue', description: "Le Rogue, ou Voleur, est la classe parfaite pour ceux qui préfèrent la discrétion et la ruse. En tant que Rogue, vous excellez dans les compétences de furtivité et de vol.", image_path: 'app/assets/images/rogue.jpg' }
+]
+
+dnd_classes.each do |univers_class|
+  new_class = UniversClass.create!(name: univers_class[:name], description: univers_class[:description], universe: dnd)
+  new_class.photo.attach(io: File.open(univers_class[:image_path]), filename: File.basename(univers_class[:image_path]))
+end
+
+coc_classes = [
+  { name: 'Investigateur', description: 'Description pour la classe Investigateur dans Call of Cthulhu.', image_path: 'app/assets/images/investigateur.jpg' },
+  { name: 'Cultiste', description: 'Description pour la classe Cultiste dans Call of Cthulhu.', image_path: 'app/assets/images/cultiste.jpg' }
+]
+
+coc_classes.each do |univers_class|
+  new_class = UniversClass.create!(name: univers_class[:name], description: univers_class[:description], universe: coc)
+end
+
+rq_classes = [
+  { name: 'Guerrier', description: 'Description pour la classe Guerrier dans Runequest.', image_path: 'app/assets/images/warrior.jpg' },
+  { name: 'Chaman', description: 'Description pour la classe Chaman dans Runequest.', image_path: 'app/assets/images/chaman.jpg' }
+]
+
+rq_classes.each do |univers_class|
+  new_class = UniversClass.create!(name: univers_class[:name], description: univers_class[:description], universe: rq)
+end
 
 puts "-> Création de classes dans chaque univers : OK"
+
 
 # CRÉATION DE 3 CHARACTERS PAR USER
 User.all.each do |user|
