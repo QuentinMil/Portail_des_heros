@@ -30,13 +30,11 @@
   
     .options-wrapper {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      flex-direction: column;
     }
   
     .option-item {
       position: relative;
-      flex: 0 0 45%;
       margin-bottom: 20px;
       border: 1px solid #EAEAEA;
       border-radius: 4px;

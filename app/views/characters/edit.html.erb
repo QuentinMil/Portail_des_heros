@@ -16,9 +16,9 @@
             <%= f.radio_button :race_id, race.id %>
             <label for="<%= f.object_name %>_race_id_<%= race.id %>">
               <%= image_tag race.photo, alt: race.name %>
-              <div>
+              <div class="description">
                 <strong><%= race.name %></strong>
-                <div class="description"><%= race.description %></div>
+                <p><%= race.description %></p>
               </div>
             </label>
           </div>
@@ -31,9 +31,9 @@
             <%= f.radio_button :univers_class_id, univers_class.id %>
             <label for="<%= f.object_name %>_univers_class_id_<%= univers_class.id %>">
               <%= image_tag univers_class.photo, alt: univers_class.name %>
-              <div>
+              <div class="description">
                 <strong><%= univers_class.name %></strong>
-                <div class="description"><%= univers_class.description %></div>
+                <p><%= univers_class.description %></p>
               </div>
             </label>
           </div>
