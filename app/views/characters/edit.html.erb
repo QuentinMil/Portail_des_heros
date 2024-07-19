@@ -15,7 +15,7 @@
           <div class="option-item">
             <%= f.radio_button :race_id, race.id %>
             <label for="<%= f.object_name %>_race_id_<%= race.id %>">
-              <%= image_tag race.photo, alt: race.name %>
+              <%= cl_image_tag race.photo.key, alt: race.name %>
               <div class="description">
                 <strong><%= race.name %></strong>
                 <p><%= race.description %></p>
@@ -30,7 +30,7 @@
           <div class="option-item">
             <%= f.radio_button :univers_class_id, univers_class.id %>
             <label for="<%= f.object_name %>_univers_class_id_<%= univers_class.id %>">
-              <%= image_tag univers_class.photo, alt: univers_class.name %>
+              <%= cl_image_tag univers_class.photo.key, alt: univers_class.name %>
               <div class="description">
                 <strong><%= univers_class.name %></strong>
                 <p><%= univers_class.description %></p>
@@ -42,27 +42,27 @@
     <% when 3..8 %>
       <div class="sliders-container">
         <div class="slider-item">
-          <label for="<%= f.object_name %>_strength">Force</label>
+          <label for="<%= f.object_name %>_strength" data-tooltip-target="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="La Force représente la puissance physique et musculaire de votre personnage. Cette caractéristique est particulièrement importante pour les guerriers car elle les aide à s'imposer au combat">Force</label>
           <%= f.input :strength, as: :range, input_html: { min: 10, max: 18 }, label: false %>
         </div>
         <div class="slider-item">
-          <label for="<%= f.object_name %>_dexterity">Dextérité</label>
+          <label for="<%= f.object_name %>_dexterity" data-tooltip-target="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="La Dextérité mesure l'agilité, les réflexes et l'équilibre du personnage. C'est la caractéristique primordiale des voleurs">Dextérité</label>
           <%= f.input :dexterity, as: :range, input_html: { min: 10, max: 18 }, label: false %>
         </div>
         <div class="slider-item">
-          <label for="<%= f.object_name %>_intelligence">Intelligence</label>
+          <label for="<%= f.object_name %>_intelligence" data-tooltip-target="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="L'Intelligence symbolise les facilités d'apprentissage et de raisonnement de votre aventurier. Elle est vitale pour les magiciens, car elle détermine le nombre de sorts qu'ils peuvent jeter et la puissance de ces derniers.">Intelligence</label>
           <%= f.input :intelligence, as: :range, input_html: { min: 10, max: 18 }, label: false %>
         </div>
         <div class="slider-item">
-          <label for="<%= f.object_name %>_constitution">Constitution</label>
+          <label for="<%= f.object_name %>_constitution" data-tooltip-target="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="La Constitution représente la santé et l'endurance de votre personnage. Le bonus de Constitution d'un personnage augmente son total de points de vie, ce qui rend cette caractéristique très importante pour toutes les classes.">Constitution</label>
           <%= f.input :constitution, as: :range, input_html: { min: 10, max: 18 }, label: false %>
         </div>
         <div class="slider-item">
-          <label for="<%= f.object_name %>_wisdom">Sagesse</label>
+          <label for="<%= f.object_name %>_wisdom" data-tooltip-target="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="La Sagesse regroupe la volonté, le bon sens, le degré de perception et l'intuition du personnage. Alors que l'Intelligence représente la faculté à analyser les informations, la Sagesse définit la manière dont le personnage perçoit le monde qui l'entoure.">Sagesse</label>
           <%= f.input :wisdom, as: :range, input_html: { min: 10, max: 18 }, label: false %>
         </div>
         <div class="slider-item">
-          <label for="<%= f.object_name %>_charisma">Charisme</label>
+          <label for="<%= f.object_name %>_charisma" data-tooltip-target="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Le Charisme mesure la force de persuasion du personnage, son magnétisme, sa capacité à diriger les autres et sa beauté. Cette caractéristique représente une force de caractère réelle, pas seulement la façon dont on est perçu par autrui.">Charisme</label>
           <%= f.input :charisma, as: :range, input_html: { min: 10, max: 18 }, label: false %>
         </div>
       </div>
