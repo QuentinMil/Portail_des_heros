@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <title>Le Portail Des Heros : prenez part à l'aventure</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,9 +11,11 @@
     <%= javascript_importmap_tags %>
     <%= favicon_link_tag %>
   </head>
+
   <body class="<%= controller_name %>-<%= action_name %>">
     <%= render "shared/flashes" %>
     <div class="main-layout-container">
+    
       <% if action_name != "home"%>
         <%= render "shared/navbar" %>
       <% end %>
@@ -22,4 +25,5 @@
       </div>
     </div>
   </body>
+
 </html>
