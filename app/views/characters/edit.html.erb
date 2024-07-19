@@ -3,9 +3,9 @@
 
   <!-- Progress bar -->
   <div class="progress-bar">
-    <div class="progress" style="width: <%= (@character.completion_rate.to_f / 9 * 100).round %>%;"></div>
+    <div class="progress" style="width: <%= (@character.completion_rate.to_f / 10 * 100).round %>%;"></div>
   </div>
-  <p>Progression: <%= (@character.completion_rate.to_f / 9 * 100).round %> %</p>
+  <p>Progression: <%= (@character.completion_rate.to_f / 10 * 100).round %> %</p>
 
   <%= simple_form_for @character do |f| %>
     <% case @character.completion_rate %>
@@ -42,27 +42,27 @@
     <% when 3..8 %>
       <div class="sliders-container">
         <div class="slider-item">
-          <label for="strength">Force</label>
+          <label for="<%= f.object_name %>_strength">Force</label>
           <%= f.input :strength, as: :range, input_html: { min: 10, max: 18 }, label: false %>
         </div>
         <div class="slider-item">
-          <label for="dexterity">Dextérité</label>
+          <label for="<%= f.object_name %>_dexterity">Dextérité</label>
           <%= f.input :dexterity, as: :range, input_html: { min: 10, max: 18 }, label: false %>
         </div>
         <div class="slider-item">
-          <label for="intelligence">Intelligence</label>
+          <label for="<%= f.object_name %>_intelligence">Intelligence</label>
           <%= f.input :intelligence, as: :range, input_html: { min: 10, max: 18 }, label: false %>
         </div>
         <div class="slider-item">
-          <label for="constitution">Constitution</label>
+          <label for="<%= f.object_name %>_constitution">Constitution</label>
           <%= f.input :constitution, as: :range, input_html: { min: 10, max: 18 }, label: false %>
         </div>
         <div class="slider-item">
-          <label for="wisdom">Sagesse</label>
+          <label for="<%= f.object_name %>_wisdom">Sagesse</label>
           <%= f.input :wisdom, as: :range, input_html: { min: 10, max: 18 }, label: false %>
         </div>
         <div class="slider-item">
-          <label for="charisma">Charisme</label>
+          <label for="<%= f.object_name %>_charisma">Charisme</label>
           <%= f.input :charisma, as: :range, input_html: { min: 10, max: 18 }, label: false %>
         </div>
       </div>
