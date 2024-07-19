@@ -10,12 +10,16 @@
     <%= javascript_importmap_tags %>
     <link rel="shortcut icon" href="<%= asset_path 'favicon.png' %>">
   </head>
-  <body>
-    <% if action_name != "home"%>
-      <%= render "shared/navbar" %>
-    <% end %>
-
+  <body class="<%= controller_name %>-<%= action_name %>">
     <%= render "shared/flashes" %>
-    <%= yield %>
+    <div class="main-layout-container">
+      <% if action_name != "home"%>
+        <%= render "shared/navbar" %>
+      <% end %>
+
+      <div class="page-content">
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>
