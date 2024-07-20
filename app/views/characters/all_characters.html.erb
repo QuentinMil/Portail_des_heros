@@ -1,0 +1,52 @@
+<% content_for :title do %>
+  Tous les Characters
+<% end %>
+
+<div class="characters-index">
+  <h1>Tous les Characters</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Nom</th>
+        <th>Utilisateur</th>
+        <th>Univers</th>
+        <th>Race</th>
+        <th>Classe</th>
+        <th>Strength</th>
+        <th>Dexterity</th>
+        <th>Intelligence</th>
+        <th>Constitution</th>
+        <th>Wisdom</th>
+        <th>Charisma</th>
+        <th>Mis à jour le</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @characters.each_with_index do |character, index| %>
+        <tr>
+          <td><%= index + 1 %></td>
+          <td><%= character.name.presence || 'Non défini' %></td>
+          <td><%= character.user.pseudo.presence || 'Non défini' %></td>
+          <td><%= character.universe&.name.presence || 'Non défini' %></td>
+          <td><%= character.race&.name.presence || 'Non défini' %></td>
+          <td><%= character.univers_class&.name.presence || 'Non défini' %></td>
+          <td><%= character.strength.presence || 'Non défini' %></td>
+          <td><%= character.dexterity.presence || 'Non défini' %></td>
+          <td><%= character.intelligence.presence || 'Non défini' %></td>
+          <td><%= character.constitution.presence || 'Non défini' %></td>
+          <td><%= character.wisdom.presence || 'Non défini' %></td>
+          <td><%= character.charisma.presence || 'Non défini' %></td>
+          <td><%= character.updated_at.in_time_zone('Paris').strftime("%d/%m/%Y %H:%M") %></td>
+          <td>
+            <%= link_to 'Show', character_path(character) %>
+            <%= link_to 'Edit', edit_character_path(character) %>
+            <%= link_to 'Delete', character_path(character), method: :delete, data: { confirm: 'Are you sure?' } %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
