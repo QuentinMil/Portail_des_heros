@@ -1,4 +1,4 @@
-<div class="character-edit">
+<div class="character-edit <%= @character.universe.name.parameterize %>">
   <h1>Création de votre personnage</h1>
   <!-- Progress bar -->
   <div class="progress-bar">
@@ -72,6 +72,6 @@
     <% when 9 %>
       <%= f.input :name, label: 'Nom du personnage', input_html: { class: 'nom_du_personnage_p' } %>
     <% end %>
-    <%= f.submit 'Continuer', class: 'button' %>
+    <%= f.submit 'Continuer', class: "button button-#{@character.universe.name.parameterize}" %>
   <% end %>
 </div>
