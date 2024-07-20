@@ -34,7 +34,8 @@ class CharactersController < ApplicationController
   def update
     # l'action set_character est appelée par le before_action
 
-    
+    # Compter le nombre de paramètres mis à jour
+    updated_fields = character_params.keys.count
 
     if @character.update(character_params)
       # Incrémenter le taux de complétion + compter le nombre de paramètres mis à jour

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
   # A FAIRE : Limiter le nombre de routes pour des questions de sécurité
-  resources :characters, path: 'mes_personnages' do
+  resources :characters, path: 'mes_personnages'
 
   # création d'une route pour afficher tous les personnages créés sur le serveur
   get '/tous_les_personnages', to: 'characters#all_characters', as: 'tous_les_personnages'
