@@ -34,16 +34,17 @@ class CharactersController < ApplicationController
   def update
     # l'action set_character est appelée par le before_action
 
-    # Compter le nombre de paramètres mis à jour
-    updated_fields = character_params.keys.count
+    
 
     if @character.update(character_params)
-      # Incrémenter le taux de complétion
-      new_completion_rate = @character.completion_rate + updated_fields
+      # Incrémenter le taux de complétion + compter le nombre de paramètres mis à jour
+      new_completion_rate = [@character.completion_rate + updated_fields, 10].min
       @character.update(completion_rate: new_completion_rate)
 
       if @character.completion_rate >= 10
-        redirect_to @character, notice: 'Le charater est terminé !'
+        # Mettre à jour le statut du personnage = "Active"
+        @character.update(available_status: "Active")
+        redirect_to @character, notice: 'Votre personnage est terminé !'
       else
         redirect_to edit_character_path(@character)
       end
@@ -56,6 +57,8 @@ class CharactersController < ApplicationController
 
   def set_character
     @character = Character.find_by_id(params[:id])
+  rescue ActiveRecord::RecordNotFound
+    redirect_to characters_path, alert: 'Character not found'
   end
 
   def character_params
