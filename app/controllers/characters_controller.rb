@@ -1,5 +1,5 @@
 class CharactersController < ApplicationController
-  before_action :set_character, only: [:show, :edit, :update]
+  before_action :set_character, only: [:show, :edit, :update, :destroy]
 
   def index
     @characters = current_user.characters
@@ -52,6 +52,12 @@ class CharactersController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    # l'action set_character est appelée par le before_action
+    @character.destroy
+    redirect_to characters_path, notice: 'Character was successfully destroyed.'
   end
 
   private
