@@ -57,7 +57,7 @@ class CharactersController < ApplicationController
   private
 
   def set_character
-    @character = Character.find_by_id(params[:id])
+    @character = Character.find(params[:id])
   rescue ActiveRecord::RecordNotFound
     redirect_to characters_path, alert: 'Character not found'
   end
