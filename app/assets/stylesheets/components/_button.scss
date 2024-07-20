@@ -17,7 +17,7 @@ button, .button {
   border-radius: 18px;
 }
 
-button:hover {
+button:hover, .button:hover {
   background: #808080;
   text-decoration: none;
   color: rgb(255,222,35);
