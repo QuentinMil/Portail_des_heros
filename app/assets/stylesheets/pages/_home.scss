@@ -31,8 +31,8 @@ p {
 .btn-cta {
   padding: 9px;
   text-align: center;
-  width: 344px;
-  height: 45px;
+  width: auto; // Ajuste automatiquement la largeur en fonction du texte
+  height: auto; // Ajuste automatiquement la hauteur en fonction du texte
   background: rgba(0, 0, 0, 0.616);
   border-style: none;
   color: #d79c1f;
@@ -46,6 +46,7 @@ p {
   overflow: hidden;
   transition: all .5s;
   box-shadow: 0px 1px 2px rgba(0,0,0,.2);
+  white-space: nowrap; // Empêche le texte de se dérouler en plusieurs lignes
 }
 .btn-cta span {
   position: absolute;
@@ -53,9 +54,9 @@ p {
 }
 .btn-cta span:nth-child(1) {
   height: 3px;
-  width: 344px;
+  width: 100%; // Ajuste automatiquement la largeur en fonction du bouton
   top: 0px;
-  left: -344px;
+  left: -100%; // Ajuste la position en fonction de la nouvelle largeur
   background: linear-gradient(to right, rgba(0,0,0,0), #f6e58d);
   border-top-right-radius: 1px;
   border-bottom-right-radius: 1px;
@@ -65,16 +66,16 @@ p {
 
 @keyframes span1 {
   0% {
-    left: -344px;
+    left: -100%;
   }
   100% {
-    left: 344px;
+    left: 100%;
   }
 }
 .btn-cta span:nth-child(2) {
-  height: 45px;
+  height: 100%; // Ajuste automatiquement la hauteur en fonction du bouton
   width: 3px;
-  top: -45px;
+  top: -100%; // Ajuste la position en fonction de la nouvelle hauteur
   right: 0px;
   background: linear-gradient(to bottom, rgba(0,0,0,0), #f6e58d);
   border-bottom-left-radius: 1px;
@@ -84,16 +85,16 @@ p {
 }
 @keyframes span2 {
   0% {
-    top: -45px;
+    top: -100%;
   }
   100% {
-    top: 45px;
+    top: 100%;
   }
 }
 .btn-cta span:nth-child(3) {
   height: 3px;
-  width: 344px;
-  right: -344px;
+  width: 100%; // Ajuste automatiquement la largeur en fonction du bouton
+  right: -100%; // Ajuste la position en fonction de la nouvelle largeur
   bottom: 0px;
   background: linear-gradient(to left, rgba(0,0,0,0), #f6e58d);
   border-top-left-radius: 1px;
@@ -103,17 +104,17 @@ p {
 }
 @keyframes span3 {
   0% {
-    right: -344px;
+    right: -100%;
   }
   100% {
-    right: 344px;
+    right: 100%;
   }
 }
 
 .btn-cta span:nth-child(4) {
-  height: 45px;
+  height: 100%; // Ajuste automatiquement la hauteur en fonction du bouton
   width: 3px;
-  bottom: -45px;
+  bottom: -100%; // Ajuste la position en fonction de la nouvelle hauteur
   left: 0px;
   background: linear-gradient(to top, rgba(0,0,0,0), #f6e58d);
   border-top-right-radius: 1px;
@@ -123,10 +124,10 @@ p {
 }
 @keyframes span4 {
   0% {
-    bottom: -45px;
+    bottom: -100%;
   }
   100% {
-    bottom: 45px;
+    bottom: 100%;
   }
 }
 
