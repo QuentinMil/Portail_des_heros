@@ -17,6 +17,6 @@
   font-weight: bold;
   letter-spacing: 3px;
   text-shadow: -1px 0 rgb(124, 81, 0), 0 1px rgb(124, 81, 0), 1px 0 rgb(124, 81, 0), 0 -1px rgb(124, 81, 0);
-  font-family: 'Cinzel', serif;
+  font-family: $headers-font; // Utilisation de la variable pour la police des titres
   opacity: 0.95;
 }
