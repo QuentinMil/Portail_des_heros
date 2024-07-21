@@ -1,4 +1,4 @@
-<div class="universe-show">
+<div class="universe-show <%= @universe.name.parameterize %>">
   <h1>Bienvenue dans l'univers <%= @universe.name %></h1>
 
   <% if @tutorial %>
@@ -15,11 +15,12 @@
     <p>Aucun tutoriel disponible pour cet univers.</p>
   <% end %>
 
-  <div class="button-container">
-    <%= link_to 'Choisir un autre univers', universes_path, class: 'btn btn-secondary' %>
+ <div class="button-container">
+    <%= link_to 'Choisir un autre univers', universes_path, class: "button-#{@universe.name.parameterize}" %>
+
     <%= form_with url: characters_path, method: :post do |form| %>
       <%= hidden_field_tag :universe_id, @universe.id %>
-      <%= submit_tag 'Continuer dans cet univers', class: 'button' %>
+      <%= submit_tag 'Continuer dans cet univers', class: "button-#{@universe.name.parameterize}" %>
     <% end %>
   </div>
 </div>
