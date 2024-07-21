@@ -4,7 +4,7 @@
             <h3 class="navbar-portail-des-heros">Le portail des héros</h3>
             <ul class="ul-navbar">
                 <li class="list-navbar"><%= link_to 'Accueil', root_path, class: 'link-navbar' %></li>
-                <li class="list-navbar"><%= link_to 'Mes personnages', tutorials_path, class: 'link-navbar' %></li>
+                <li class="list-navbar"><%= link_to 'Mes personnages', characters_path, class: 'link-navbar' %></li>
                 <li class="list-navbar"><%= link_to 'Lexique', posts_path, class: 'link-navbar' %></li>
                 <li class="list-navbar"><%= link_to 'Univers', universes_path, class: 'link-navbar' %></li>
                 <li class="list-navbar"><%= link_to 'Créer mon personnage', universes_path, class: 'link-navbar' %></li>
@@ -12,7 +12,7 @@
             </ul>
         </div>
         <div class="div-avatar-pseudo">
-            <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
+            <%= image_tag "dice.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, aria: { haspopup: "true", expanded: "false" } %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="#">Action</a>
                 <a class="dropdown-item" href="#">Another action</a>

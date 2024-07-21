@@ -1,0 +1,37 @@
+.characters-index {
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;  // Police de caractères claire et lisible
+    color: #ffffff;  // Couleur de texte sombre pour un bon contraste
+  }
+
+  .inline-form {
+    display: inline;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;  // Couleur de fond blanche pour un look minimaliste
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  // Légère ombre pour une meilleure distinction
+
+    th, td {
+      border: 1px solid #eee;  // Bordure très claire pour minimiser les distractions
+      padding: 12px;  // Plus d'espace pour une meilleure lisibilité
+      text-align: left;
+      font-family: 'Arial', sans-serif;  // Police de caractères claire et lisible
+      color: #555;  // Couleur de texte légèrement plus claire
+    }
+
+    th {
+      background-color: #f5f5f5;  // Couleur de fond claire pour les en-têtes
+      font-weight: bold;  // Texte en gras pour les en-têtes
+    }
+
+    // Suppression de l'alternance de couleurs pour les lignes paires
+    tr:hover {
+      background-color: #f9f9f9;  // Légère surbrillance pour la ligne survolée
+    }
+  }
+}

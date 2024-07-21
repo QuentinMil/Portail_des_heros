@@ -4,23 +4,18 @@ class Character < ApplicationRecord
   belongs_to :race, optional: true
   belongs_to :univers_class, optional: true
 
-  has_many :notes
-  has_many :party_characters
+  has_many :notes, dependent: :destroy
+  has_many :party_characters, dependent: :destroy
   has_many :parties, through: :party_characters
 
   has_one_attached :photo
 
-  def update_completion_rate
-    rate = 0
-    rate += 1 if self.universe.present?
-    rate += 1 if self.race.present?
-    rate += 1 if self.univers_class.present?
-    rate += 1 if self.strength.present?
-    rate += 1 if self.dexterity.present?
-    rate += 1 if self.intelligence.present?
-    rate += 1 if self.constitution.present?
-    rate += 1 if self.wisdom.present?
-    rate += 1 if self.charisma.present?
-    self.update(completion_rate: rate)
+  # il faut effacer les notes de notre character avant de le supprimer. Autrement il y aura une erreur de clé étrangère
+  before_destroy :destroy_notes
+  
+  private 
+
+  def destroy_notes
+    notes.destroy_all
   end
 end
