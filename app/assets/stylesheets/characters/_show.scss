@@ -1,7 +1,7 @@
 .show-character-container {
   margin: 40px;
   height: 600px;
-  font-family: 'Cinzel', serif;
+  font-family: $headers-font; // Utilisation de Cinzel pour le conteneur principal
   padding: 20px;
   background-image: url('fond-show-character.jpg');
   background-size: cover;
@@ -23,7 +23,6 @@
   height: 100%;
   width: 35%;
   object-fit: cover;
-
 }
 
 .show-character-image {
@@ -36,6 +35,7 @@
 
 .show-character-content {
   width: 65%;
+  font-family: $text-font; // Utilisation de Spectral pour le contenu
 }
 
 .show-character-name-div {
@@ -69,7 +69,7 @@
 }
 
 .show-character-name {
-  font-family: 'Cinzel', serif;
+  font-family: $headers-font; // Utilisation de Cinzel pour le nom
   font-weight: bold;
 }
 
@@ -99,9 +99,10 @@
   display: flex;
   width: 100%;
   justify-content: space-evenly;
+  font-family: $text-font; // Utilisation de Spectral pour les boutons
 }
 
-.text-affichage-show-character-div{
+.text-affichage-show-character-div {
   text-align: center;
   margin: 20px;
   margin-top: 30px;
@@ -110,6 +111,7 @@
 .text-affichage-show-character {
   font-size: 20px;
   color: white;
+  font-family: $body-font; // Utilisation de Cardo pour les paragraphes
 }
 
 .character-backstory {
@@ -117,4 +119,5 @@
   height: 30%;
   font-size: 22px;
   color: white;
+  font-family: $body-font; // Utilisation de Cardo pour l'histoire du personnage
 }

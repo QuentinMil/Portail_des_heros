@@ -2,7 +2,7 @@
   h1 {
     text-align: center;
     margin-bottom: 20px;
-    font-family: 'Arial', sans-serif;  // Police de caractères claire et lisible
+    font-family: $headers-font;  // Utilisation de la variable pour la police des titres
     color: #ffffff;  // Couleur de texte sombre pour un bon contraste
   }
 
@@ -20,7 +20,7 @@
       border: 1px solid #eee;  // Bordure très claire pour minimiser les distractions
       padding: 12px;  // Plus d'espace pour une meilleure lisibilité
       text-align: left;
-      font-family: 'Arial', sans-serif;  // Police de caractères claire et lisible
+      font-family: $body-font;  // Utilisation de la variable pour la police du corps de texte
       color: #555;  // Couleur de texte légèrement plus claire
     }
 

@@ -1,7 +1,7 @@
 .page-content {
   margin: 1em;
   flex-grow: 1;
-  font-family: 'Cinzel', serif;
+  font-family: $headers-font; // Utilisation de la variable pour la police des titres
 }
 
 .navbar-site .ul-navbar {
@@ -14,7 +14,7 @@
 
 .navbar-site .list-navbar {
   float: left;
-  font-family: 'Cinzel', serif;
+  font-family: $headers-font; // Utilisation de la variable pour la police des titres
 }
 
 .navbar-site .list-navbar .link-navbar {
@@ -33,11 +33,11 @@
 }
 
 .link-navbar {
-  font-family: 'Cinzel', serif;
+  font-family: $headers-font; // Utilisation de la variable pour la police des titres
 }
 
 .navbar-site {
-  box-shadow: 15px 8px 45px 7px rgba(56,44,44,0.48);
+  box-shadow: 15px 8px 45px 7px rgba(56, 44, 44, 0.48);
   flex: 0 0 200px;
   height: 100vh;
   display: flex;
@@ -49,12 +49,12 @@
 }
 
 .div-avatar-pseudo {
-    width: 80%;
-    height: 110px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-top: 1px solid #838383;
+  width: 80%;
+  height: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #838383;
 }
 
 nav {
@@ -85,7 +85,7 @@ nav {
   color: #EBD18B;
   text-align: center;
   width: 80%;
-  font-family: Plate Gothic Two Four;
+  font-family: $headers-font; // Utilisation de la variable pour la police des titres
   display: grid;
   padding: 14px 16px;
   margin-top: 10px;
