@@ -1,0 +1,40 @@
+.party_full_page {
+  display: flex;
+  flex-wrap: nowrap;
+
+  .chatbox-container {
+      right: 0;
+      top: 0;
+      height: 100vh;
+      width: 300px;
+      background: #f8f9fa;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+
+
+    .chatbox {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 5px;
+    }
+
+    .chatbox .messages {
+      flex-grow: 1;
+      overflow-y: auto;
+      margin-bottom: 10px;
+    }
+
+    .chatbox .message {
+      margin-bottom: 10px;
+    }
+
+    .chatbox form {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+    }
+  }
+}
