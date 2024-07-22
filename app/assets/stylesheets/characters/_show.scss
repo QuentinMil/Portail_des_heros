@@ -1,15 +1,13 @@
 .show-character-container {
   margin: 40px;
   height: 600px;
-  font-family: $headers-font;
+  font-family: $headers-font; // Utilisation de la variable de police pour les titres
   padding: 20px;
   background-image: url('fond-show-character.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 7px;
   box-shadow: 14px 8px 45px 7px rgba(56,44,44,0.48);
-  -webkit-box-shadow: 14px 8px 45px 7px rgba(56,44,44,0.48);
-  -moz-box-shadow: 14px 8px 45px 7px rgba(56,44,44,0.48);
 
   &.dark-bg {
     p {
@@ -34,14 +32,12 @@
 .show-character-image {
   margin-left: 15%;
   box-shadow: 28px 16px 15px -3px rgba(56,44,44,0.49);
-  -webkit-box-shadow: 28px 16px 15px -3px rgba(56,44,44,0.49);
-  -moz-box-shadow: 28px 16px 15px -3px rgba(56,44,44,0.49);
   border-radius: 7px;
 }
 
 .show-character-content {
   width: 65%;
-  font-family: $text-font;
+  font-family: $text-font; // Utilisation de la variable de police pour les textes
 }
 
 .show-character-name-div {
