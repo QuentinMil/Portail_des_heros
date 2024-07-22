@@ -51,6 +51,7 @@ class CharactersController < ApplicationController
         # Mettre à jour le statut du personnage = "Active"
         @character.update(available_status: "Active")
         assign_to_party(@character)
+        generate_backstory
         redirect_to @character, notice: 'Votre personnage est terminé !'
       else
         redirect_to edit_character_path(@character)
