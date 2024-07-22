@@ -33,11 +33,20 @@
               <%# modal content %>
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="race_modalLabel">Modal title</h5>
+                  <h5 class="modal-title" id="race_modalLabel">Tutoriel: <%= race.name %></h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                  <p><%= race.description %></p>
-                  <%# Tuto a mettre %>
+                  <% tutorial = @tutorials.find_by(tuto_order: @character.completion_rate + 1) %>
+                  <% if tutorial %>
+                    <h5><%= tutorial.title %></h5>
+                    <p><%= tutorial.content %></p>
+                    <% if tutorial.video_url.present? %>
+                      <video src="<%= tutorial.video_url %>" controls></video>
+                    <% end %>
+                  <% else %>
+                    <p>Aucun tutoriel disponible pour cette section.</p>
+                  <% end %>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

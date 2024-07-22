@@ -29,6 +29,7 @@ class CharactersController < ApplicationController
 
   def edit
     # l'action set_character est appelée par le before_action
+    @tutorials = @character.universe.tutorials.order(:tuto_order)
   end
 
   def show
