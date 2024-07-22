@@ -29,7 +29,17 @@
       font-weight: bold;  // Texte en gras pour les en-têtes
     }
 
+    tr.dark-bg {
+      td {
+        color: white;
+      }
+    }
+
     // Suppression de l'alternance de couleurs pour les lignes paires
+    // tr:nth-child(even) {
+    //   background-color: #f9f9f9;
+    // }
+
     tr:hover {
       background-color: #f9f9f9;  // Légère surbrillance pour la ligne survolée
     }
