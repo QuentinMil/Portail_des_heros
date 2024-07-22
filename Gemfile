@@ -54,6 +54,7 @@ gem 'faker'
 gem "cloudinary"
 gem 'jwt'
 gem "httparty"
+gem 'ruby-openai'
 
 group :development, :test do
   gem "dotenv-rails"

@@ -18,13 +18,13 @@ require 'yaml'
 # Attention, l'ordre compte à cause des dépendances
 Note.destroy_all
 PartyCharacter.destroy_all
+Message.destroy_all # il faut supprimer les messages avant les parties
 Party.destroy_all
 Character.destroy_all
 Race.destroy_all
 UniversClass.destroy_all
 Tutorial.destroy_all
 Universe.destroy_all
-Message.destroy_all
 User.destroy_all
 Post.destroy_all
 
@@ -279,6 +279,25 @@ tutorials.each do |tuto|
 end
 
 puts "-> 9 tutoriels par univers créés : OK"
+
+# Charger les messages à partir du fichier YAML
+messages_data = YAML.load_file(Rails.root.join('db/data/messages.yml'))['messages']
+party = Party.first
+
+if party
+  party.characters.each do |character|
+    messages_data.each do |message_data|
+      Message.create!(
+        content: message_data['content'],
+        user: character.user,
+        party: party
+      )
+    end
+  end
+  puts "-> 30 messages ajoutés à la première party : OK"
+else
+  puts "-> Aucune party trouvée pour ajouter les messages."
+end
 
 # ATTENTION, CECI EST FORCEMENT LA DERNIERE LIGNE DE LA SEED - MERCI :)
 puts "-> Le seeding est terminé !"
