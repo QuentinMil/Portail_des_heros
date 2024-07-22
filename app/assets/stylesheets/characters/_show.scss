@@ -1,7 +1,7 @@
 .show-character-container {
   margin: 40px;
   height: 600px;
-  font-family: $headers-font; // Utilisation de la variable de police pour les titres
+  font-family: $headers-font;
   padding: 20px;
   background-image: url('fond-show-character.jpg');
   background-size: cover;
@@ -41,7 +41,7 @@
 
 .show-character-content {
   width: 65%;
-  font-family: $text-font; // Utilisation de la variable de police pour les textes
+  font-family: $text-font;
 }
 
 .show-character-name-div {
@@ -75,7 +75,7 @@
 }
 
 .show-character-name {
-  font-family: $headers-font; // Utilisation de la variable de police pour les titres
+  font-family: $headers-font;
   font-weight: bold;
 }
 
@@ -105,7 +105,7 @@
   display: flex;
   width: 100%;
   justify-content: space-evenly;
-  font-family: $text-font; // Utilisation de la variable de police pour les textes
+  font-family: $text-font;
 }
 
 .text-affichage-show-character-div {
@@ -117,13 +117,24 @@
 .text-affichage-show-character {
   font-size: 20px;
   color: white;
-  font-family: $body-font; // Utilisation de la variable de police pour le textes
+  font-family: $body-font;
 }
 
-.character-backstory {
+.show-character-backstory {
   margin: 40px;
-  height: 30%;
-  font-size: 22px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.205);
+  border-radius: 7px;
   color: white;
-  font-family: $body-font; // Utilisation de la variable de police pour les textes
+  font-family: $body-font;
+
+  h2 {
+    font-family: $headers-font;
+    margin-bottom: 20px;
+  }
+
+  p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
 }

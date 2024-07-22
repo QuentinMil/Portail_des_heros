@@ -30,7 +30,7 @@ class Character < ApplicationRecord
       )
     rescue Faraday::TooManyRequestsError => e
       puts "Rate limit exceeded. Retrying after delay..."
-      sleep(60) # Attendez 60 secondes avant de réessayer
+      sleep(10) # Attendez 10 secondes avant de réessayer
       retry
     end
   
