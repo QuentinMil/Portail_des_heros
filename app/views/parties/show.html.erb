@@ -2,7 +2,7 @@
 <div class="container-fluid">
   <div class="row">
     <!-- Main Content -->
-    <div class="col-md-9">
+    <div class="col-md-8">
       <h1><%= @party.name %></h1>
       <p>Univers: <%= @party.universe.name %></p>
       <p>Maître de jeu: <%= @party.user.pseudo %></p>
@@ -16,7 +16,7 @@
     </div>
 
     <!-- Chatbox -->
-    <div class="col-md-3 chatbox-container" data-controller="chatroom-subscription" data-chatroom-subscription-party-id-value="<%= @party.id %>">
+    <div class="col-md-4 chatbox-container" data-controller="chatroom-subscription" data-chatroom-subscription-party-id-value="<%= @party.id %>">
       <div class="chatbox">
         <h2>Chat</h2>
         <div class="messages" data-chatroom-subscription-target="messages">
