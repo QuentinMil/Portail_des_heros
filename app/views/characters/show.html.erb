@@ -1,4 +1,4 @@
-<div class="text-affichage-show-character-div">
+<div class="text-affichage-show-character-div <%= @character.universe.name.parameterize %>">
   <h3 class="text-affichage-show-character">Félicitation ! Vous venez de créer votre personnage !
   Vous pouvez maintenant lancer une recherche de partie avec votre nouveau personnage ou décider de le garder pour plus tard. Retrouvez votre personnage dans votre Tableau De Bord.</h3>
 </div>
@@ -47,7 +47,6 @@
     </div>
 </div>
 <div class="btn-show-container">
-    <button>Jouer plus tard</button>
-    <button>Trouver des joueurs !</button>
+    <button class="button-<%= @character.universe.name.parameterize %>">Jouer plus tard</button>
+    <button class="button-<%= @character.universe.name.parameterize %>">Trouver des joueurs !</button>
 </div>
-
