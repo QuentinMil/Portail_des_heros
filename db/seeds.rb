@@ -1,7 +1,17 @@
 require 'faker'
 require 'yaml'
 
-# Nous allons
+# Chargement des templates de backstories depuis le fichier YAML
+backstory_templates = YAML.load_file(Rails.root.join('db/data/backstories.yml'))['backstories']
+
+# Fonction pour générer une backstory
+def generate_backstory(name, race, univers_class, universe, templates)
+  template = templates.sample['template']
+  template % { name: name, race: race, univers_class: univers_class, universe: universe }
+end
+
+
+# Nous allons ensuite : 
 # -> Creer des Users
 # -> Creer un admin
 # -> Créer 3 univers
@@ -171,6 +181,8 @@ puts "-> Création de classes dans chaque univers : OK"
 User.all.each do |user|
   3.times do |i|
     universe = [dnd, coc, rq].sample
+    backstory = generate_backstory(name, race.name, univers_class.name, universe.name, backstory_templates)
+
     Character.create!(
       name: Faker::Games::DnD.name,
       user: user,
@@ -184,6 +196,7 @@ User.all.each do |user|
       wisdom: rand(10..18),
       charisma: rand(10..18),
       available_status: i < 2 ? 'Active' : 'Inactive'
+      backstory: backstory
     )
   end
 end
