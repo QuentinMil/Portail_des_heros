@@ -1,4 +1,4 @@
-<div class="characters-index">
+<div class="characters-index dark-bg">
   <h1>Tous les personnages du serveur</h1>
   <p>Attention, cet espace vous donne accès à tous les personnages du serveur. Vous pouvez les consulter, les modifier ou les supprimer.</p>
 
@@ -18,6 +18,7 @@
         <th>Wisdom</th>
         <th>Charisma</th>
         <th>Mis à jour le</th>
+        <th>Mes parties</th>
         <th>Actions</th>
       </tr>
     </thead>
@@ -37,6 +38,15 @@
           <td><%= character.wisdom.presence || 'Non défini' %></td>
           <td><%= character.charisma.presence || 'Non défini' %></td>
           <td><%= character.updated_at.in_time_zone('Paris').strftime("%d/%m/%Y %H:%M") %></td>
+          <td>
+            <% if character.available_status == 'Active' %>
+              <% character.parties.each do |party| %>
+                <%= link_to party.id, party_path(party) %><br>
+              <% end %>
+            <% else %>
+              <p>Pas de partie active</p>
+            <% end %>
+          </td>
           <td>
             <%= link_to 'Show', character_path(character) %>
             <%= link_to 'Edit', edit_character_path(character) %>

@@ -1,15 +1,10 @@
-.pages-home {
-  .page-content {
-    margin: 0;
-    font-family: $body-font; // Utilisation de la police pour le corps du texte
-  }
-}
 
-.main-layout-container {
-  display: flex;
+.pages-content{
+  background-color: #000000d5;
+  width: 100vw;
 }
-
 .hero-banner {
+  width: 100%;
   background-size: cover;
   background-position: top;
   height: 100vh;
@@ -18,124 +13,125 @@
   align-items: flex-end;
   padding-bottom: 100px;
   font-family: $body-font; // Utilisation de la police pour le corps du texte
-}
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: $headers-font; // Utilisation de la police pour les en-têtes
-}
 
-p {
-  font-family: $text-font; // Utilisation de la police pour les paragraphes
-}
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $headers-font; // Utilisation de la police pour les en-têtes
+  }
 
-.btn-cta {
-  padding: 9px;
-  text-align: center;
-  width: auto; // Ajuste automatiquement la largeur en fonction du texte
-  height: auto; // Ajuste automatiquement la hauteur en fonction du texte
-  background: rgba(0, 0, 0, 0.616);
-  border-style: none;
-  color: #d79c1f;
-  font-size: 19px;
-  letter-spacing: 3px;
-  font-family: $headers-font; // Utilisation de la police Cinzel
-  font-weight: 600;
-  outline: none;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  transition: all .5s;
-  box-shadow: 0px 1px 2px rgba(0,0,0,.2);
-  white-space: nowrap; // Empêche le texte de se dérouler en plusieurs lignes
-}
-.btn-cta span {
-  position: absolute;
-  display: block;
-}
-.btn-cta span:nth-child(1) {
-  height: 3px;
-  width: 100%; // Ajuste automatiquement la largeur en fonction du bouton
-  top: 0px;
-  left: -100%; // Ajuste la position en fonction de la nouvelle largeur
-  background: linear-gradient(to right, rgba(0,0,0,0), #f6e58d);
-  border-top-right-radius: 1px;
-  border-bottom-right-radius: 1px;
-  animation: span1 2s linear infinite;
-  animation-delay: 2.3s;
-}
+  p {
+    font-family: $text-font; // Utilisation de la police pour les paragraphes
+  }
 
-@keyframes span1 {
-  0% {
-    left: -100%;
+  .btn-cta {
+    padding: 9px;
+    text-align: center;
+    width: auto; // Ajuste automatiquement la largeur en fonction du texte
+    height: auto; // Ajuste automatiquement la hauteur en fonction du texte
+    background: rgba(0, 0, 0, 0.616);
+    border-style: none;
+    color: #d79c1f;
+    font-size: 19px;
+    letter-spacing: 3px;
+    font-family: $headers-font; // Utilisation de la police Cinzel
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all .5s;
+    box-shadow: 0px 1px 2px rgba(0,0,0,.2);
+    white-space: nowrap; // Empêche le texte de se dérouler en plusieurs lignes
   }
-  100% {
-    left: 100%;
+  .btn-cta span {
+    position: absolute;
+    display: block;
   }
-}
-.btn-cta span:nth-child(2) {
-  height: 100%; // Ajuste automatiquement la hauteur en fonction du bouton
-  width: 3px;
-  top: -100%; // Ajuste la position en fonction de la nouvelle hauteur
-  right: 0px;
-  background: linear-gradient(to bottom, rgba(0,0,0,0), #f6e58d);
-  border-bottom-left-radius: 1px;
-  border-bottom-right-radius: 1px;
-  animation: span2 2s linear infinite;
-  animation-delay: 3.3s;
-}
-@keyframes span2 {
-  0% {
-    top: -100%;
+  .btn-cta span:nth-child(1) {
+    height: 3px;
+    width: 100%; // Ajuste automatiquement la largeur en fonction du bouton
+    top: 0px;
+    left: -100%; // Ajuste la position en fonction de la nouvelle largeur
+    background: linear-gradient(to right, rgba(0,0,0,0), #f6e58d);
+    border-top-right-radius: 1px;
+    border-bottom-right-radius: 1px;
+    animation: span1 2s linear infinite;
+    animation-delay: 2.3s;
   }
-  100% {
-    top: 100%;
-  }
-}
-.btn-cta span:nth-child(3) {
-  height: 3px;
-  width: 100%; // Ajuste automatiquement la largeur en fonction du bouton
-  right: -100%; // Ajuste la position en fonction de la nouvelle largeur
-  bottom: 0px;
-  background: linear-gradient(to left, rgba(0,0,0,0), #f6e58d);
-  border-top-left-radius: 1px;
-  border-bottom-left-radius: 1px;
-  animation: span3 2s linear infinite;
-  animation-delay: 4.3s;
-}
-@keyframes span3 {
-  0% {
-    right: -100%;
-  }
-  100% {
-    right: 100%;
-  }
-}
 
-.btn-cta span:nth-child(4) {
-  height: 100%; // Ajuste automatiquement la hauteur en fonction du bouton
-  width: 3px;
-  bottom: -100%; // Ajuste la position en fonction de la nouvelle hauteur
-  left: 0px;
-  background: linear-gradient(to top, rgba(0,0,0,0), #f6e58d);
-  border-top-right-radius: 1px;
-  border-top-left-radius: 1px;
-  animation: span4 2s linear infinite;
-  animation-delay: 5.3s;
-}
-@keyframes span4 {
-  0% {
-    bottom: -100%;
+  @keyframes span1 {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 100%;
+    }
   }
-  100% {
-    bottom: 100%;
+  .btn-cta span:nth-child(2) {
+    height: 100%; // Ajuste automatiquement la hauteur en fonction du bouton
+    width: 3px;
+    top: -100%; // Ajuste la position en fonction de la nouvelle hauteur
+    right: 0px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0), #f6e58d);
+    border-bottom-left-radius: 1px;
+    border-bottom-right-radius: 1px;
+    animation: span2 2s linear infinite;
+    animation-delay: 3.3s;
   }
-}
+  @keyframes span2 {
+    0% {
+      top: -100%;
+    }
+    100% {
+      top: 100%;
+    }
+  }
+  .btn-cta span:nth-child(3) {
+    height: 3px;
+    width: 100%; // Ajuste automatiquement la largeur en fonction du bouton
+    right: -100%; // Ajuste la position en fonction de la nouvelle largeur
+    bottom: 0px;
+    background: linear-gradient(to left, rgba(0,0,0,0), #f6e58d);
+    border-top-left-radius: 1px;
+    border-bottom-left-radius: 1px;
+    animation: span3 2s linear infinite;
+    animation-delay: 4.3s;
+  }
+  @keyframes span3 {
+    0% {
+      right: -100%;
+    }
+    100% {
+      right: 100%;
+    }
+  }
 
-.btn-cta:hover {
-  transition: all .5s;
-  transform: scale(1.1);
-  box-shadow: 0px 3px 5px rgba(0,0,0,.4);
-}
-.btn-cta:hover span {
-  animation-play-state: paused;
+  .btn-cta span:nth-child(4) {
+    height: 100%; // Ajuste automatiquement la hauteur en fonction du bouton
+    width: 3px;
+    bottom: -100%; // Ajuste la position en fonction de la nouvelle hauteur
+    left: 0px;
+    background: linear-gradient(to top, rgba(0,0,0,0), #f6e58d);
+    border-top-right-radius: 1px;
+    border-top-left-radius: 1px;
+    animation: span4 2s linear infinite;
+    animation-delay: 5.3s;
+  }
+  @keyframes span4 {
+    0% {
+      bottom: -100%;
+    }
+    100% {
+      bottom: 100%;
+    }
+  }
+
+  .btn-cta:hover {
+    transition: all .5s;
+    transform: scale(1.1);
+    box-shadow: 0px 3px 5px rgba(0,0,0,.4);
+  }
+  .btn-cta:hover span {
+    animation-play-state: paused;
+  }
 }

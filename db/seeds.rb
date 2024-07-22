@@ -1,4 +1,5 @@
 require 'faker'
+require 'yaml'
 
 # Nous allons
 # -> Creer des Users
@@ -17,13 +18,13 @@ require 'faker'
 # Attention, l'ordre compte à cause des dépendances
 Note.destroy_all
 PartyCharacter.destroy_all
+Message.destroy_all # il faut supprimer les messages avant les parties
 Party.destroy_all
 Character.destroy_all
 Race.destroy_all
 UniversClass.destroy_all
 Tutorial.destroy_all
 Universe.destroy_all
-Message.destroy_all
 User.destroy_all
 Post.destroy_all
 
@@ -136,7 +137,7 @@ puts "-> Les créations de Races terminées : OK"
 dnd_classes = [
   { name: 'Guerrier', description: "Le Guerrier est la classe par excellence pour ceux qui aiment l'action et le combat. En tant que Guerrier, vous excellez dans l'utilisation des armes et des armures, ce qui vous permet de vous lancer au cœur des batailles sans crainte.", image_path: 'app/assets/images/warrior.jpg' },
   { name: 'Mage', description: "Le Mage est la classe idéale pour ceux qui aiment la magie et les sortilèges. En tant que Mage, vous avez accès à une grande variété de sorts puissants qui vous permettent de manipuler les éléments, de soigner vos alliés ou d'attaquer vos ennemis à distance.", image_path: 'app/assets/images/mage.jpg' },
-  { name: 'Rogue', description: "Le Rogue, ou Voleur, est la classe parfaite pour ceux qui préfèrent la discrétion et la ruse. En tant que Rogue, vous excellez dans les compétences de furtivité et de vol.", image_path: 'app/assets/images/rogue.jpg' }
+  { name: 'Voleur', description: "Le Voleur, est la classe parfaite pour ceux qui préfèrent la discrétion et la ruse. En tant que Voleur, vous excellez dans les compétences de furtivité et de vol.", image_path: 'app/assets/images/rogue.jpg' }
 ]
 
 dnd_classes.each do |univers_class|
@@ -165,7 +166,6 @@ rq_classes.each do |univers_class|
 end
 
 puts "-> Création de classes dans chaque univers : OK"
-
 
 # CRÉATION DE 3 CHARACTERS PAR USER
 User.all.each do |user|
@@ -272,11 +272,32 @@ tutorials.each do |tuto|
     universe: Universe.find_by(name: tuto['name']),
     video_url: tuto['video_url'],
     user: User.all.sample,
-    tuto_order: tuto['tuto_order']
+    tuto_order: tuto['tuto_order'],
+    race: tuto['race'],
+    univers_class: tuto['univers_class']
   )
 end
 
 puts "-> 9 tutoriels par univers créés : OK"
+
+# Charger les messages à partir du fichier YAML
+messages_data = YAML.load_file(Rails.root.join('db/data/messages.yml'))['messages']
+party = Party.first
+
+if party
+  party.characters.each do |character|
+    messages_data.each do |message_data|
+      Message.create!(
+        content: message_data['content'],
+        user: character.user,
+        party: party
+      )
+    end
+  end
+  puts "-> 30 messages ajoutés à la première party : OK"
+else
+  puts "-> Aucune party trouvée pour ajouter les messages."
+end
 
 # ATTENTION, CECI EST FORCEMENT LA DERNIERE LIGNE DE LA SEED - MERCI :)
 puts "-> Le seeding est terminé !"

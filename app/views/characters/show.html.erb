@@ -1,6 +1,7 @@
-<div class="text-affichage-show-character-div <%= @character.universe.name.parameterize %>">
-  <h3 class="text-affichage-show-character">Félicitation ! Vous venez de créer votre personnage !
-  Vous pouvez maintenant lancer une recherche de partie avec votre nouveau personnage ou décider de le garder pour plus tard. Retrouvez votre personnage dans votre Tableau De Bord.</h3>
+<!-- app/views/characters/show.html.erb -->
+<div class="text-affichage-show-character-div">
+  <h3 class="text-affichage-show-character">Félicitations ! Vous venez de créer votre personnage !
+    Vous pouvez maintenant lancer une recherche de partie avec votre nouveau personnage ou décider de le garder pour plus tard. Retrouvez votre personnage dans votre tableau de bord.</h3>
 </div>
 
 <div class="show-character-container">
@@ -46,7 +47,19 @@
         </div>
     </div>
 </div>
+
+<!-- Backstory section -->
+<div class="show-character-backstory">
+    <h2>Backstory</h2>
+    <p><%= @character.backstory.html_safe %></p>
+</div>
+
+<!-- Action Utilisateur -->
 <div class="btn-show-container">
-    <button class="button-<%= @character.universe.name.parameterize %>">Jouer plus tard</button>
-    <button class="button-<%= @character.universe.name.parameterize %>">Trouver des joueurs !</button>
+    <%= link_to 'Découvrir le lexique', posts_path, class: "button-#{@character.universe.name.downcase.tr(' ', '-')}" %>
+    <% if active_party = @character.parties.where('party_characters.status = ?', 'active').first %>
+        <%= link_to 'Rejoindre ma partie', party_path(active_party), class: "button-#{@character.universe.name.downcase.tr(' ', '-')}" %>
+    <% else %>
+        <%= link_to 'Rejoindre ma partie', parties_path, class: "button-#{@character.universe.name.downcase.tr(' ', '-')}" %>
+    <% end %>
 </div>

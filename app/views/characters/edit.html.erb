@@ -1,11 +1,8 @@
 <div class="character-edit <%= @character.universe.name.parameterize %>">
   <h1>Création de votre personnage</h1>
-  <!-- Progress bar -->
   <div class="progress-bar">
     <div class="progress" style="width: <%= (@character.completion_rate.to_f / 10 * 100).round %>%;"></div>
   </div>
-
-  <!-- Ajout d'un div avec une classe pour la progression -->
   <div class="progression-wrapper">
     <p class="progression-text">Progression: <%= (@character.completion_rate.to_f / 10 * 100).round %> %</p>
   </div>
@@ -22,8 +19,34 @@
               <div class="description">
                 <strong><%= race.name %></strong>
                 <p><%= race.description %></p>
+                <span data-bs-toggle="modal" data-bs-target="#race-modal-<%= race.id %>">?</span>
               </div>
             </label>
+          </div>
+          <div class="modal fade" id="race-modal-<%= race.id %>" tabindex="-1" aria-labelledby="race_modalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="race_modalLabel">Tutoriel: <%= race.name %></h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <% tutorial = @character.universe.tutorials.find_by(race: race.name) %>
+                  <% if tutorial %>
+                    <h5><%= tutorial.title %></h5>
+                    <p><%= tutorial.content %></p>
+                    <% if tutorial.video_url.present? %>
+                      <video src="<%= tutorial.video_url %>" controls></video>
+                    <% end %>
+                  <% else %>
+                    <p>Aucun tutoriel disponible pour cette race.</p>
+                  <% end %>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
           </div>
         <% end %>
       </div>
@@ -37,8 +60,34 @@
               <div class="description">
                 <strong><%= univers_class.name %></strong>
                 <p><%= univers_class.description %></p>
+                <span data-bs-toggle="modal" data-bs-target="#class-modal-<%= univers_class.id %>">?</span>
               </div>
             </label>
+          </div>
+          <div class="modal fade" id="class-modal-<%= univers_class.id %>" tabindex="-1" aria-labelledby="class_modalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="class_modalLabel">Tutoriel: <%= univers_class.name %></h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <% tutorial = @character.universe.tutorials.find_by(univers_class: univers_class.name) %>
+                  <% if tutorial %>
+                    <h5><%= tutorial.title %></h5>
+                    <p><%= tutorial.content %></p>
+                    <% if tutorial.video_url.present? %>
+                      <video src="<%= tutorial.video_url %>" controls></video>
+                    <% end %>
+                  <% else %>
+                    <p>Aucun tutoriel disponible pour cette classe.</p>
+                  <% end %>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
           </div>
         <% end %>
       </div>

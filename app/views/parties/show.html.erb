@@ -1,0 +1,35 @@
+<!-- app/views/parties/show.html.erb -->
+<div class="container-fluid">
+  <div class="party_full_page">
+    <!-- Main Content -->
+    <div class="col-md-8">
+      <h1><%= @party.name %></h1>
+      <p>Univers: <%= @party.universe.name %></p>
+      <p>Maître de jeu: <%= @party.user.pseudo %></p>
+
+      <h2>Personnages actifs dans cette partie</h2>
+      <ul>
+        <% @party.characters.where(available_status: 'Active').each do |character| %>
+          <li><%= link_to character.name, character_path(character) %></li>
+        <% end %>
+      </ul>
+    </div>
+
+    <!-- Chatbox -->
+    <div class="col-md-4 chatbox-container" data-controller="chatroom-subscription" data-chatroom-subscription-party-id-value="<%= @party.id %>">
+      <div class="chatbox">
+        <h2>Chat</h2>
+        <div class="messages" data-chatroom-subscription-target="messages">
+          <% @party.messages.each do |message| %>
+            <%= render 'messages/message', message: message %>
+          <% end %>
+        </div>
+        <%= simple_form_for [@party, @party.messages.build],
+          html: { data: { action: "turbo:submit-end->chatroom-subscription#resetForm" } } do |f| %>
+          <%= f.input :content, label: false, placeholder: "Message", wrapper_html: { class: "flex-grow-1" } %>
+          <%= f.submit "Envoyer", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

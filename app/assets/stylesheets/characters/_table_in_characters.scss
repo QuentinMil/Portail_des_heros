@@ -9,7 +9,7 @@
   .inline-form {
     display: inline;
   }
-  
+
   table {
     width: 100%;
     border-collapse: collapse;
@@ -30,8 +30,28 @@
     }
 
     // Suppression de l'alternance de couleurs pour les lignes paires
+    // tr:nth-child(even) {
+    //   background-color: #f9f9f9;
+    // }
+
     tr:hover {
       background-color: #f9f9f9;  // Légère surbrillance pour la ligne survolée
+    }
+  }
+
+  // Styles pour le texte blanc sur fond sombre
+  .dark-bg {
+    background-color: var(--lt-color-gray-900);  // Utilisation de la variable de couleur pour un fond sombre
+    color: var(--lt-color-white);  // Texte blanc pour contraster avec le fond sombre
+
+    p, th, td, a {
+      color: var(--lt-color-white);
+    }
+
+    a {
+      &:hover {
+        color: var(--lt-color-gray-200);
+      }
     }
   }
 }

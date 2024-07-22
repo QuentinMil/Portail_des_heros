@@ -14,13 +14,13 @@
 
   <body class="<%= controller_name %>-<%= action_name %>">
     <%= render "shared/flashes" %>
-    <div class="main-layout-container">
-    
+    <div class="main-layout-container"style="display: flex">
+
       <% if action_name != "home"%>
         <%= render "shared/navbar" %>
       <% end %>
 
-      <div class="page-content">
+      <div class="pages-content">
         <%= yield %>
       </div>
     </div>
