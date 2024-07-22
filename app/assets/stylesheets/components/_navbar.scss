@@ -1,38 +1,6 @@
-.navbar-site .ul-navbar {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #494949;
-}
-
-.navbar-site .list-navbar {
-  float: left;
-  font-family: $headers-font; // Utilisation de la variable pour la police des titres
-}
-
-.navbar-site .list-navbar .link-navbar {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  transition: 1s;
-}
-
-.navbar-site .list-navbar .link-navbar:hover {
-  background-color: #616161;
-  text-decoration: none;
-  color: rgb(255, 176, 7);
-}
-
-.link-navbar {
-  font-family: $headers-font; // Utilisation de la variable pour la police des titres
-}
-
 .navbar-site {
   box-shadow: 15px 8px 45px 7px rgba(56, 44, 44, 0.48);
-  flex: 0 0 200px;
+  flex: 0  0 231px;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -40,53 +8,81 @@
   transition: top 0.3s;
   position: sticky;
   top: 0;
-}
-
-.div-avatar-pseudo {
-  width: 80%;
-  height: 110px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-top: 1px solid #838383;
-}
-
-nav {
   background-color: #494949;
-  width: 100%;
-}
 
-.list-link-navbar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+  .ul-navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #494949;
+    display: flex;
+    flex-direction: column;
+  }
 
-.ul-navbar {
-  display: flex;
-  flex-direction: column;
-}
+  .list-navbar {
+    float: left;
+    font-family: $headers-font; // Utilisation de la variable pour la police des titres
 
-.navbar-content {
-  height: 100%;
-  align-content: space-between;
-  flex-wrap: wrap;
-  display: flex;
-  justify-content: center;
-}
+    .link-navbar {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      transition: 1s;
+      font-family: $headers-font;
 
-.navbar-portail-des-heros {
-  color: #EBD18B;
-  text-align: center;
-  width: 80%;
-  font-family: $headers-font; // Utilisation de la variable pour la police des titres
-  display: grid;
-  padding: 14px 16px;
-  margin-top: 10px;
-  border-bottom: 1px solid #838383;
-}
+      .link-navbar:hover {
+        background-color: #616161;
+        text-decoration: none;
+        color: rgb(255, 176, 7);
+      }
+    }
 
-.avatar {
-  height: 60px;
-  width: 60px;
+  }
+
+  .div-avatar-pseudo {
+    width: 80%;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #838383;
+  }
+
+  nav {
+    background-color: #494949;
+    width: 100%;
+  }
+
+  .list-link-navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-content {
+    height: 100%;
+    align-content: space-between;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+  }
+
+  .navbar-portail-des-heros {
+    color: #EBD18B;
+    text-align: center;
+    width: 80%;
+    font-family: $headers-font; // Utilisation de la variable pour la police des titres
+    display: grid;
+    padding: 14px 16px;
+    margin-top: 10px;
+    border-bottom: 1px solid #838383;
+  }
+
+  .avatar {
+    height: 60px;
+    width: 60px;
+  }
 }
