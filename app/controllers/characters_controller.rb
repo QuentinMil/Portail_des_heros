@@ -10,7 +10,7 @@ class CharactersController < ApplicationController
   end
 
   def all_characters
-    @characters = Character.all
+    @characters = Character.order(updated_at: :desc)
   end
   
   def create
@@ -49,6 +49,7 @@ class CharactersController < ApplicationController
       if @character.completion_rate >= 10
         # Mettre à jour le statut du personnage = "Active"
         @character.update(available_status: "Active")
+        assign_to_party(@character)
         redirect_to @character, notice: 'Votre personnage est terminé !'
       else
         redirect_to edit_character_path(@character)
@@ -74,5 +75,11 @@ class CharactersController < ApplicationController
 
   def character_params
     params.require(:character).permit(:name, :universe_id, :race_id, :univers_class_id, :strength, :dexterity, :intelligence, :constitution, :wisdom, :charisma, :available_status)
+  end
+
+  def assign_to_party(character)
+    # Attribuer le personnage à la première partie trouvée
+    first_party = Party.first
+    PartyCharacter.create!(character: character, party: first_party, status: 'accepted') if first_party
   end
 end

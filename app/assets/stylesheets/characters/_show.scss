@@ -1,7 +1,7 @@
 .show-character-container {
   margin: 40px;
   height: 600px;
-  font-family: $headers-font; // Utilisation de Cinzel pour le conteneur principal
+  font-family: $headers-font; // Utilisation de la variable de police pour les titres
   padding: 20px;
   background-image: url('fond-show-character.jpg');
   background-size: cover;
@@ -10,6 +10,12 @@
   box-shadow: 14px 8px 45px 7px rgba(56,44,44,0.48);
   -webkit-box-shadow: 14px 8px 45px 7px rgba(56,44,44,0.48);
   -moz-box-shadow: 14px 8px 45px 7px rgba(56,44,44,0.48);
+
+  &.dark-bg {
+    p {
+      color: white;
+    }
+  }
 }
 
 .show-character-img-content {
@@ -35,7 +41,7 @@
 
 .show-character-content {
   width: 65%;
-  font-family: $text-font; // Utilisation de Spectral pour le contenu
+  font-family: $text-font; // Utilisation de la variable de police pour les textes
 }
 
 .show-character-name-div {
@@ -69,7 +75,7 @@
 }
 
 .show-character-name {
-  font-family: $headers-font; // Utilisation de Cinzel pour le nom
+  font-family: $headers-font; // Utilisation de la variable de police pour les titres
   font-weight: bold;
 }
 
@@ -99,7 +105,7 @@
   display: flex;
   width: 100%;
   justify-content: space-evenly;
-  font-family: $text-font; // Utilisation de Spectral pour les boutons
+  font-family: $text-font; // Utilisation de la variable de police pour les textes
 }
 
 .text-affichage-show-character-div {
@@ -111,7 +117,7 @@
 .text-affichage-show-character {
   font-size: 20px;
   color: white;
-  font-family: $body-font; // Utilisation de Cardo pour les paragraphes
+  font-family: $body-font; // Utilisation de la variable de police pour le textes
 }
 
 .character-backstory {
@@ -119,5 +125,5 @@
   height: 30%;
   font-size: 22px;
   color: white;
-  font-family: $body-font; // Utilisation de Cardo pour l'histoire du personnage
+  font-family: $body-font; // Utilisation de la variable de police pour les textes
 }
