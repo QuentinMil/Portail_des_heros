@@ -18,7 +18,7 @@
 
   <div class="col-md-4 chatbox-container" data-controller="chatroom-subscription" data-chatroom-subscription-party-id-value="<%= @party.id %>">
     <div class="d-flex">
-      <%= image_tag("border-bois.jpg",class="border-chat", alt: 'bordure bois') %>
+      <%= image_tag("border-bois.png", class: "border-chat", alt: 'bordure bois') %>
       <div class="chatbox">
         <h2>Chat</h2>
         <div class="messages" data-chatroom-subscription-target="messages">
@@ -32,6 +32,7 @@
           <%= f.submit "Envoyer", class: "btn btn-primary" %>
         <% end %>
       </div>
+      <%= image_tag("border-bois-right.png", class: "border-chat", alt: 'bordure bois') %>
     </div>
   </div>
 </div>
