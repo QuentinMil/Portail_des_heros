@@ -1,3 +1,4 @@
+<!-- app/views/characters/show.html.erb -->
 <div class="text-affichage-show-character-div">
   <h3 class="text-affichage-show-character">Félicitations ! Vous venez de créer votre personnage !
     Vous pouvez maintenant lancer une recherche de partie avec votre nouveau personnage ou décider de le garder pour plus tard. Retrouvez votre personnage dans votre tableau de bord.</h3>
@@ -46,6 +47,14 @@
         </div>
     </div>
 </div>
+
+<!-- Backstory section -->
+<div class="show-character-backstory">
+    <h2>Backstory</h2>
+    <p><%= @character.backstory.html_safe %></p>
+</div>
+
+<!-- Action Utilisateur -->
 <div class="btn-show-container">
     <%= link_to 'Découvrir le lexique', posts_path, class: "button-#{@character.universe.name.downcase.tr(' ', '-')}" %>
     <% if active_party = @character.parties.where('party_characters.status = ?', 'active').first %>

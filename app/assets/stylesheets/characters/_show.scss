@@ -8,8 +8,6 @@
   background-repeat: no-repeat;
   border-radius: 7px;
   box-shadow: 14px 8px 45px 7px rgba(56,44,44,0.48);
-  -webkit-box-shadow: 14px 8px 45px 7px rgba(56,44,44,0.48);
-  -moz-box-shadow: 14px 8px 45px 7px rgba(56,44,44,0.48);
 
   &.dark-bg {
     p {
@@ -34,8 +32,6 @@
 .show-character-image {
   margin-left: 15%;
   box-shadow: 28px 16px 15px -3px rgba(56,44,44,0.49);
-  -webkit-box-shadow: 28px 16px 15px -3px rgba(56,44,44,0.49);
-  -moz-box-shadow: 28px 16px 15px -3px rgba(56,44,44,0.49);
   border-radius: 7px;
 }
 
@@ -75,7 +71,7 @@
 }
 
 .show-character-name {
-  font-family: $headers-font; // Utilisation de la variable de police pour les titres
+  font-family: $headers-font;
   font-weight: bold;
 }
 
@@ -105,7 +101,7 @@
   display: flex;
   width: 100%;
   justify-content: space-evenly;
-  font-family: $text-font; // Utilisation de la variable de police pour les textes
+  font-family: $text-font;
 }
 
 .text-affichage-show-character-div {
@@ -117,13 +113,24 @@
 .text-affichage-show-character {
   font-size: 20px;
   color: white;
-  font-family: $body-font; // Utilisation de la variable de police pour le textes
+  font-family: $body-font;
 }
 
-.character-backstory {
+.show-character-backstory {
   margin: 40px;
-  height: 30%;
-  font-size: 22px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.205);
+  border-radius: 7px;
   color: white;
-  font-family: $body-font; // Utilisation de la variable de police pour les textes
+  font-family: $body-font;
+
+  h2 {
+    font-family: $headers-font;
+    margin-bottom: 20px;
+  }
+
+  p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
 }
