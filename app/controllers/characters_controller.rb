@@ -10,7 +10,7 @@ class CharactersController < ApplicationController
   end
 
   def all_characters
-    @characters = Character.all
+    @characters = Character.order(updated_at: :desc)
   end
   
   def create
