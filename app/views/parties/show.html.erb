@@ -1,6 +1,5 @@
 <!-- app/views/parties/show.html.erb -->
 <div class="party_full_page">
-  
   <!-- Main Content -->
   <div class="party-page">
     <h1><%= @party.name %></h1>
@@ -8,15 +7,14 @@
     <p>Maître de jeu: <%= @party.user.pseudo %></p>
 
     <h2>Personnages actifs dans cette partie</h2>
-    <ul>
+    <div class="character-cards-container">
       <% @party.characters.where(available_status: 'Active').each do |character| %>
-        <li><%= link_to character.name, character_path(character) %></li>
+        <%= render 'characters/character_card', character: character %>
       <% end %>
-    </ul>
+    </div>
   </div>
 
   <!-- Chatbox -->
-
   <div class="col-md-4 chatbox-container" data-controller="chatroom-subscription" data-chatroom-subscription-party-id-value="<%= @party.id %>">
     <div class="d-flex">
       <%= image_tag("border-bois.png", class: "border-chat", alt: 'bordure bois') %>
