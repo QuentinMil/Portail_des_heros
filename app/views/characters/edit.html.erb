@@ -22,8 +22,28 @@
               <div class="description">
                 <strong><%= race.name %></strong>
                 <p><%= race.description %></p>
+                <%# trigger modal %>
+                <span data-bs-toggle="modal" data-bs-target="#race-modal-<%= race.id %>">?</span>
               </div>
             </label>
+          </div>
+          <%# modal %>
+          <div class="modal fade" id="race-modal-<%= race.id %>" tabindex="-1" aria-labelledby="race_modalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+              <%# modal content %>
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="race_modalLabel">Modal title</h5>
+                </div>
+                <div class="modal-body">
+                  <p><%= race.description %></p>
+                  <%# Tuto a mettre %>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
           </div>
         <% end %>
       </div>

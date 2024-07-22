@@ -8,6 +8,7 @@
 
   <% @universes.each do |universe| %>
     <div class="universe" style="background-image:url(<%= cl_image_path(universe.photo.key) %>)">
+      <div class="background-opacity"></div>
       <h2 class="text"><%= universe.name %></h2>
       <div class="description">
         <p><%= universe.description %></p>
