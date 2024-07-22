@@ -48,6 +48,13 @@
     </div>
 </div>
 
+<!-- Backstory section -->
+<div class="show-character-backstory">
+    <h2>Backstory</h2>
+    <p><%= @character.backstory.html_safe %></p>
+</div>
+
+<!-- Action Utilisateur -->
 <div class="btn-show-container">
     <%= link_to 'Découvrir le lexique', posts_path, class: "button-#{@character.universe.name.downcase.tr(' ', '-')}" %>
     <% if active_party = @character.parties.where('party_characters.status = ?', 'active').first %>
@@ -55,10 +62,4 @@
     <% else %>
         <%= link_to 'Rejoindre ma partie', parties_path, class: "button-#{@character.universe.name.downcase.tr(' ', '-')}" %>
     <% end %>
-</div>
-
-<!-- Backstory section -->
-<div class="show-character-backstory">
-    <h2>Backstory</h2>
-    <p><%= @character.backstory %></p>
 </div>

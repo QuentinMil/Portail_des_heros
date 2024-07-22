@@ -137,7 +137,7 @@ puts "-> Les créations de Races terminées : OK"
 dnd_classes = [
   { name: 'Guerrier', description: "Le Guerrier est la classe par excellence pour ceux qui aiment l'action et le combat. En tant que Guerrier, vous excellez dans l'utilisation des armes et des armures, ce qui vous permet de vous lancer au cœur des batailles sans crainte.", image_path: 'app/assets/images/warrior.jpg' },
   { name: 'Mage', description: "Le Mage est la classe idéale pour ceux qui aiment la magie et les sortilèges. En tant que Mage, vous avez accès à une grande variété de sorts puissants qui vous permettent de manipuler les éléments, de soigner vos alliés ou d'attaquer vos ennemis à distance.", image_path: 'app/assets/images/mage.jpg' },
-  { name: 'Rogue', description: "Le Rogue, ou Voleur, est la classe parfaite pour ceux qui préfèrent la discrétion et la ruse. En tant que Rogue, vous excellez dans les compétences de furtivité et de vol.", image_path: 'app/assets/images/rogue.jpg' }
+  { name: 'Voleur', description: "Le Voleur, est la classe parfaite pour ceux qui préfèrent la discrétion et la ruse. En tant que Voleur, vous excellez dans les compétences de furtivité et de vol.", image_path: 'app/assets/images/rogue.jpg' }
 ]
 
 dnd_classes.each do |univers_class|
