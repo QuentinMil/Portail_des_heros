@@ -4,7 +4,7 @@
   right: 0;
   top: 0;
   height: 100%;
-  width: 33.33%; /* Updated width to match col-md-4 (1/3 of the width) */
+  width: 23%; /* Adjusted width for col-md-4 */
   background: #f8f9fa;
   border-left: 1px solid #dee2e6;
   display: flex;
@@ -16,16 +16,19 @@
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .chatbox .messages {
   flex-grow: 1;
   overflow-y: auto;
   margin-bottom: 10px;
+  width: 100%;
 }
 
 .chatbox .message {
   margin-bottom: 10px;
+  width: 100%;
 }
 
 .chatbox form {
@@ -40,4 +43,5 @@
 
 .chatbox form .flex-grow-1 {
   flex-grow: 1;
+  width: 100%;
 }
