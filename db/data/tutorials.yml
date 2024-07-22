@@ -12,47 +12,61 @@
   video_url: "https://www.youtube.com/embed/rv-ejHo_bi8?si=c4QDW7v5XmLHJ3U3"
   tuto_order: 2
 
-- title: Classes de Donjons et Dragons
-  content: Description des classes disponibles dans Donjons et Dragons.
+- title: Race Humain D&D
+  content: >
+    Les humains sont les personnes les plus aptes a s'adapter a toutes situations et les plus ambitieuses parmi les races communes.
   name: Donjons et Dragons
-  video_url: URL de la vidéo 3
+  video_url: "https://example.com/human_video"
   tuto_order: 3
+  race: Humain
 
-- title: Force dans Donjons et Dragons
-  content: Description de la force dans Donjons et Dragons.
+- title: Race Elfe D&D
+  content: >
+    En tant qu'elfe, vous avez des sens et une intuition aiguisés.
   name: Donjons et Dragons
-  video_url: URL de la vidéo 4
+  video_url: "https://example.com/elf_video"
   tuto_order: 4
+  race: Elfe
 
-- title: Dextérité dans Donjons et Dragons
-  content: Description de la dextérité dans Donjons et Dragons.
+- title: Race Nain D&D
+  content: >
+    En tant que nain, vous êtes petit certes, mais également très fort et robuste.
   name: Donjons et Dragons
-  video_url: URL de la vidéo 5
+  video_url: "https://example.com/dwarf_video"
   tuto_order: 5
+  race: Nain
 
-- title: Intelligence dans Donjons et Dragons
-  content: Description de l'intelligence dans Donjons et Dragons.
+- title: Race Halfelins D&D
+  content: >
+    Les petits halfelins survivent dans un monde rempli de créatures plus grandes.
   name: Donjons et Dragons
-  video_url: URL de la vidéo 6
+  video_url: "https://example.com/halfling_video"
   tuto_order: 6
+  race: Halfelin
 
-- title: Constitution dans Donjons et Dragons
-  content: Description de la constitution dans Donjons et Dragons.
+- title: Classe Guerrier D&D
+  content: >
+    Le Guerrier est la classe par excellence pour ceux qui aiment l'action et le combat.
   name: Donjons et Dragons
-  video_url: URL de la vidéo 7
+  video_url: "https://example.com/warrior_video"
   tuto_order: 7
+  univers_class: Guerrier
 
-- title: Sagesse dans Donjons et Dragons
-  content: Description de la sagesse dans Donjons et Dragons.
+- title: Classe Mage D&D
+  content: >
+    Le Mage est la classe idéale pour ceux qui aiment la magie et les sortilèges.
   name: Donjons et Dragons
-  video_url: URL de la vidéo 8
+  video_url: "https://example.com/mage_video"
   tuto_order: 8
+  univers_class: Mage
 
-- title: Charisme dans Donjons et Dragons
-  content: Description du charisme dans Donjons et Dragons.
+- title: Classe Voleur D&D
+  content: >
+    Le Rogue, ou Voleur, est la classe parfaite pour ceux qui préfèrent la discrétion et la ruse.
   name: Donjons et Dragons
-  video_url: URL de la vidéo 9
+  video_url: "https://example.com/rogue_video"
   tuto_order: 9
+  univers_class: Voleur
 
 - title: Introduction à Call of Cthulhu
   content: Une introduction complète à l'univers de Call of Cthulhu.

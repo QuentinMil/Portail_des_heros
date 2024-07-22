@@ -1,4 +1,5 @@
 require 'faker'
+require 'yaml'
 
 # Nous allons
 # -> Creer des Users
@@ -166,7 +167,6 @@ end
 
 puts "-> Création de classes dans chaque univers : OK"
 
-
 # CRÉATION DE 3 CHARACTERS PAR USER
 User.all.each do |user|
   3.times do |i|
@@ -272,7 +272,9 @@ tutorials.each do |tuto|
     universe: Universe.find_by(name: tuto['name']),
     video_url: tuto['video_url'],
     user: User.all.sample,
-    tuto_order: tuto['tuto_order']
+    tuto_order: tuto['tuto_order'],
+    race: tuto['race'],
+    univers_class: tuto['univers_class']
   )
 end
 
