@@ -1,8 +1,12 @@
 class CharactersController < ApplicationController
+  before_action :authenticate_user! # Assure que l'utilisateur est connecté
   before_action :set_character, only: [:show, :edit, :update, :destroy]
 
   def index
     @characters = current_user.characters
+    if @characters.empty?
+      redirect_to universes_path, notice: 'Vous devez créer un personnage avant de continuer.'
+    end
   end
 
   def all_characters
