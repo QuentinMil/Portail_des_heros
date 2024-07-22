@@ -1,5 +1,6 @@
 <!-- app/views/parties/show.html.erb -->
 <div class="party_full_page">
+  
   <!-- Main Content -->
   <div class="party-page">
     <h1><%= @party.name %></h1>
@@ -20,7 +21,7 @@
     <div class="d-flex">
       <%= image_tag("border-bois.png", class: "border-chat", alt: 'bordure bois') %>
       <div class="chatbox">
-        <h2>Chat</h2>
+        <h2>Le Conclave</h2>
         <div class="messages" data-chatroom-subscription-target="messages">
           <% @party.messages.each do |message| %>
             <%= render 'messages/message', message: message %>
