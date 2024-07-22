@@ -31,6 +31,12 @@
       flex-direction: column;
       padding: 5px;
       background-color: burlywood;
+
+      .input-group {
+        width: 100%;
+        display: inline-grid;
+        align-items: stretch;
+      }
     }
 
     .chatbox .messages {
