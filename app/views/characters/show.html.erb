@@ -47,7 +47,11 @@
     </div>
 </div>
 <div class="btn-show-container">
-    <button>Jouer plus tard</button>
-    <button>Trouver des joueurs !</button>
+    <%= link_to 'Découvrir le lexique', posts_path, class: 'btn btn-secondary' %>
+    <% if active_party = @character.parties.where('party_characters.status = ?', 'active').first %>
+        <%= link_to 'Rejoindre ma partie', party_path(active_party), class: 'btn btn-primary' %>
+    <% else %>
+        <%= link_to 'Rejoindre ma partie', parties_path, class: 'btn btn-primary' %>
+    <% end %>
 </div>
 
