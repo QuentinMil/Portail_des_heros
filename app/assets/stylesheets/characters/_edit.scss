@@ -15,6 +15,14 @@
       margin-bottom: 20px;
     }
 
+    h3 {
+      color: #ffffff;
+    }
+
+    h5 {
+      color: #ffffff;
+    }
+
 
 
     .nom_du_personnage_p {
@@ -177,3 +185,36 @@
       }
     }
   }
+
+.caracteristiques-manager {
+    display: flex;
+    justify-content: space-around;
+}
+
+.aleatoire {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.caracteristiques-builder {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.builder-label {
+  display: flex;
+}
+
+.caracteristiques-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.caracteristique-label {
+  color: #ffffff;
+}
