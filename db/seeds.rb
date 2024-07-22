@@ -191,12 +191,22 @@ end
 puts "-> Création de 3 Characters par User : OK"
 
 # CREATION DE 6 PARTIES
-6.times do
-  Party.create!(
-    name: Faker::Fantasy::Tolkien.location,
-    universe: Universe.all.sample,
-    user: User.where(game_master: true).sample
-  )
+6.times do |i|
+  if i == 0    
+    # Pour la première partie, définir l'univers à D&D explicitement
+    Party.create!(
+      name: Faker::Fantasy::Tolkien.location,
+      universe: dnd, # Utilisez : pour l'assignation
+      user: User.where(game_master: true).sample
+    )
+  else
+    # Pour les autres parties, sélectionner un univers aléatoire
+    Party.create!(
+      name: Faker::Fantasy::Tolkien.location,
+      universe: Universe.all.sample,
+      user: User.where(game_master: true).sample
+    )
+  end
 end
 
 # NOUS AJOUTONS DES CHARACTERS AUX PARTIES
