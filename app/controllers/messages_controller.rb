@@ -8,8 +8,10 @@ class MessagesController < ApplicationController
     @message.user = current_user
     if @message.save
       # Diffuser le message via ActionCable
-      ActionCable.server.broadcast "party_#{@party.id}_channel",
-                                   message: render_message(@message)
+      PartyChannel.broadcast_to(
+        @party,
+        message: render_message(@message)
+      )
       head :ok
     else
       redirect_to party_path(@party), alert: 'Votre message ne peut pas être vide.'
