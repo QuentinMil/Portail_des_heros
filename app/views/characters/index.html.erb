@@ -37,8 +37,12 @@
           <td><%= character.charisma.presence || 'Non défini' %></td>
           <td><%= character.updated_at.in_time_zone('Paris').strftime("%d/%m/%Y %H:%M") %></td>
           <td>
-            <% character.parties.each do |party| %>
-              <%= link_to party.id, party_path(party) %><br>
+            <% if character.available_status == 'Active' %>
+              <% character.parties.each do |party| %>
+                <%= link_to party.id, party_path(party) %><br>
+              <% end %>
+            <% else %>
+              <p>Pas de partie active</p>
             <% end %>
           </td>
           <td>
