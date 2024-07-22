@@ -47,11 +47,10 @@
     </div>
 </div>
 <div class="btn-show-container">
-    <%= link_to 'Découvrir le lexique', posts_path, class: 'btn btn-secondary' %>
+    <%= link_to 'Découvrir le lexique', posts_path, class: "button-#{@character.universe.name.downcase.tr(' ', '-')}" %>
     <% if active_party = @character.parties.where('party_characters.status = ?', 'active').first %>
-        <%= link_to 'Rejoindre ma partie', party_path(active_party), class: 'btn btn-primary' %>
+        <%= link_to 'Rejoindre ma partie', party_path(active_party), class: "button-#{@character.universe.name.downcase.tr(' ', '-')}" %>
     <% else %>
-        <%= link_to 'Rejoindre ma partie', parties_path, class: 'btn btn-primary' %>
+        <%= link_to 'Rejoindre ma partie', parties_path, class: "button-#{@character.universe.name.downcase.tr(' ', '-')}" %>
     <% end %>
 </div>
-
