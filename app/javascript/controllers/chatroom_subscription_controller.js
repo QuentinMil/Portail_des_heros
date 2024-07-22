@@ -20,7 +20,8 @@ export default class extends Controller {
   }
 
   #insertMessageAndScrollDown(data) {
-    this.messagesTarget.insertAdjacentHTML("beforeend", data)
+    const messageHTML = data.message
+    this.messagesTarget.insertAdjacentHTML("beforeend", messageHTML)
     this.messagesTarget.scrollTo(0, this.messagesTarget.scrollHeight)
   }
 
