@@ -76,4 +76,10 @@ class CharactersController < ApplicationController
   def character_params
     params.require(:character).permit(:name, :universe_id, :race_id, :univers_class_id, :strength, :dexterity, :intelligence, :constitution, :wisdom, :charisma, :available_status)
   end
+
+  def assign_to_party(character)
+    # Attribuer le personnage à la première partie trouvée
+    first_party = Party.first
+    PartyCharacter.create!(character: character, party: first_party, status: 'accepted') if first_party
+  end
 end
