@@ -4,7 +4,10 @@ class PostsController < ApplicationController
   end
 
   def show
-    @posts = Post.all
     @post = Post.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.json { render json: { title: @post.title, content: @post.content } }
+    end
   end
 end

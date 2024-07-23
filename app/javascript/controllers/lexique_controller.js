@@ -16,9 +16,9 @@ export default class extends Controller {
         'Accept': 'text/vnd.turbo-stream.html'
       }
     })
-      .then(response => response.text())
-      .then(html => {
-        this.contentTarget.innerHTML = html;
-      });
+    .then(response => response.json())
+    .then(data => {
+      this.contentTarget.innerHTML = `<h2>${data.title}</h2><p>${data.content}</p>`;
+    });
   }
 }
