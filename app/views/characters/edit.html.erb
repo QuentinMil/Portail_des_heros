@@ -36,7 +36,7 @@
                 <div class="modal-body">
                   <% tutorial = @character.universe.tutorials.find_by(race: race.name) %>
                   <% if tutorial %>
-                    <p><%= tutorial.content %></p>
+                    <p><%= tutorial.content.html_safe %></p>
                     <% if tutorial.video_url.present? %>
                       <video src="<%= tutorial.video_url %>" controls></video>
                     <% end %>
@@ -122,7 +122,7 @@
         </div>
       <div class="aleatoire">
         <h5>ou bien laisse l'aleatoire choisir...</h5>
-        <button class="button-destin" onclick="toggle_text('span1', 'span2', 'span3', 'span4', 'span5', 'span6')">Ta Destinée !</button>
+        <button class="button-destin" data-action="click->character#random">Ta Destinée !</button>
       </div>
     </div>
     <% when 9 %>
