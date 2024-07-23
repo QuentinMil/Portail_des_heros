@@ -6,6 +6,7 @@
   background-image: url('fond-show-character.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed; // Add this line to make the background image fixed
   border-radius: 7px;
   box-shadow: 14px 8px 45px 7px rgba(56,44,44,0.48);
 
@@ -37,7 +38,7 @@
 
 .show-character-content {
   width: 65%;
-  font-family: $text-font; // Utilisation de la variable de police pour les textes
+  font-family: $text-font;
 }
 
 .show-character-name-div {

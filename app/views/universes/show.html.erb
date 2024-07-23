@@ -1,26 +1,29 @@
+<%# l'image de background est définie dans le fichier SCSS _backgrounds-by-universe.scss %>
 <div class="universe-show <%= @universe.name.parameterize %>">
-  <h1>Bienvenue dans l'univers <%= @universe.name %></h1>
 
+  <%# le titre H1 est après le if @tutorial %>
   <% if @tutorial %>
     <div class="tutorial">
+      <h1>Bienvenue dans l'univers <%= @universe.name %></h1>
       <h2><%= @tutorial.title %></h2>
       <p><%= @tutorial.content %></p>
       <% if @tutorial.video_url.present? %>
         <div class="video">
           <iframe src="<%= @tutorial.video_url %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
+        <div class="button-container">
+          <%= link_to 'Choisir un autre univers', universes_path, class: "button-#{@universe.name.parameterize}" %>
+          <%= form_with url: characters_path, method: :post do |form| %>
+            <%= hidden_field_tag :universe_id, @universe.id %>
+            <%= submit_tag 'Continuer dans cet univers', class: "button-#{@universe.name.parameterize}" %>
+          <% end %>
+        </div>
       <% end %>
     </div>
+  
+  <%# si aucun tutorial, alors pas de button pour continuer. %>  
   <% else %>
+    <h1>Bienvenue sur les univers du portail</h1>
     <p>Aucun tutoriel disponible pour cet univers.</p>
   <% end %>
-
- <div class="button-container">
-    <%= link_to 'Choisir un autre univers', universes_path, class: "button-#{@universe.name.parameterize}" %>
-
-    <%= form_with url: characters_path, method: :post do |form| %>
-      <%= hidden_field_tag :universe_id, @universe.id %>
-      <%= submit_tag 'Continuer dans cet univers', class: "button-#{@universe.name.parameterize}" %>
-    <% end %>
-  </div>
 </div>

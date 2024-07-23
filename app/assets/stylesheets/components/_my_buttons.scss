@@ -1,5 +1,5 @@
-
-.button-call-of-cthulhu {
+// Define the base button styles
+.button-base {
   background: #6b6b6b;
   color: rgb(255, 255, 255);
   letter-spacing: 1px;
@@ -8,76 +8,49 @@
   text-decoration: none;
   border-style: none;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 19px !important;
   cursor: pointer;
-  border: 4px double rgb(207, 9, 9);
   font-family: $headers-font;  // Utilisation de la variable pour la police des titres
   margin: 10px;
   transition-duration: 0.5s;
   box-shadow: 15px 13px 16px -5px rgba(171, 171, 171, 0.94);
-  -webkit-box-shadow: 15px 13px 16px -5px rgba(171, 171, 171, 0.94);
-  -moz-box-shadow: 15px 13px 16px -5px rgba(171, 171, 171, 0.94);
   border-radius: 5px;
+
+  &:hover {
+    background-color: #252525;
+  }
 }
 
-.button-call-of-cthulhu:hover {
-  color: rgb(207, 9, 9);
-  background-color: #252525;
+// Define specific styles for each button type
+.button-call-of-cthulhu {
+  @extend .button-base;
+  border: 4px double rgb(207, 9, 9);
+
+  &:hover {
+    color: rgb(207, 9, 9);
+  }
 }
 
 .button-donjons-et-dragons {
-  background: #6b6b6b;
-  color: rgb(255, 255, 255);
-  letter-spacing: 1px;
-  padding: 5px 15px;
-  text-align: center;
-  text-decoration: none;
-  border-style: none;
-  font-weight: bold;
-  font-size: 24px;
-  cursor: pointer;
+  @extend .button-base;
   border: 4px double rgb(255, 222, 35);
-  font-family: $headers-font;  // Utilisation de la variable pour la police des titres
-  margin: 10px;
-  transition-duration: 0.5s;
-  box-shadow: 15px 13px 16px -5px rgba(171, 171, 171, 0.94);
-  -webkit-box-shadow: 15px 13px 16px -5px rgba(171, 171, 171, 0.94);
-  -moz-box-shadow: 15px 13px 16px -5px rgba(171, 171, 171, 0.94);
-  border-radius: 5px;
-}
 
-.button-donjons-et-dragons:hover {
-  background-color: #252525;
-  color: rgb(247, 231, 87);
+  &:hover {
+    color: rgb(247, 231, 87);
+  }
 }
 
 .button-runequest {
-  background: #6b6b6b;
-  color: rgb(255, 255, 255);
-  letter-spacing: 1px;
-  padding: 5px 15px;
-  text-align: center;
-  text-decoration: none;
-  border-style: none;
-  font-weight: bold;
-  font-size: 24px;
-  cursor: pointer;
+  @extend .button-base;
   border: 4px double rgb(86, 101, 185);
-  font-family: $headers-font;  // Utilisation de la variable pour la police des titres
-  margin: 10px;
-  transition-duration: 0.5s;
-  box-shadow: 15px 13px 16px -5px rgba(171, 171, 171, 0.94);
-  -webkit-box-shadow: 15px 13px 16px -5px rgba(171, 171, 171, 0.94);
-  -moz-box-shadow: 15px 13px 16px -5px rgba(171, 171, 171, 0.94);
-  border-radius: 5px;
+
+  &:hover {
+    color: rgb(86, 101, 185);
+  }
 }
 
-.button-runequest:hover {
-  background-color: #252525;
-  color: rgb(86, 101, 185);
-}
-
-.button-destin{
+// Specific button with different styles
+.button-destin {
   margin-left: 250px;
   margin-right: 250px;
   background: #6b6b6b;
@@ -88,11 +61,15 @@
   text-decoration: none;
   border-style: none;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 19px;
   cursor: pointer;
   border: 4px double #ffde238f;
   font-family: $headers-font;  // Utilisation de la variable pour la police des titres
   transition-duration: 0.5s;
   box-shadow: 10px 9px 5px -5px rgba(255, 255, 255, 0.377);
   border-radius: 18px;
+
+  &:hover {
+    background-color: #252525;
+  }
 }
