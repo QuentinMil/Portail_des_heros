@@ -9,10 +9,14 @@
   padding: 20px;
   height: 100vh; /* Prend toute la hauteur de la fenêtre */
   overflow-y: auto; /* Permet le défilement vertical à l'intérieur de cette div */
+  background-color: #f0f0f0;
 }
 
 .search-bar {
-  margin-bottom: 20px;
+  position: sticky;
+  top: 10px;
+  padding: initial;
+  z-index: 1; /* S'assure que la barre de recherche reste au-dessus du reste du contenu */
 }
 
 .sections h2 {
