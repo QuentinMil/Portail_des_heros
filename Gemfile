@@ -57,6 +57,8 @@ gem "httparty"
 gem 'ruby-openai'
 gem 'openai'
 gem "faraday"
+gem 'pg_search'
+
 
 group :development, :test do
   gem "dotenv-rails"

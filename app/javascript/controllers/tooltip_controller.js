@@ -5,7 +5,8 @@ export default class extends Controller {
   static targets = [ "tooltip" ]
 
   connect() {
-    this.tooltipTargets.map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    new bootstrap.Tooltip(this.element)
+
 
   }
 }

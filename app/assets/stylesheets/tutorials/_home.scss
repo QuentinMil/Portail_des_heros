@@ -1,13 +1,31 @@
 .lexique-container {
   display: flex;
-  height: 98vh;
+  height: 100vh; /* S'assure que la container prend toute la hauteur de la fenêtre */
 }
 
 .sections {
-  width: 30%;
+  flex: 0 0 25%; /* La largeur est fixée à 25% et ne changera pas */
   background-color: #f0f0f0;
+  padding: 20px;
+  height: 100vh; /* Prend toute la hauteur de la fenêtre */
+  overflow-y: auto; /* Permet le défilement vertical à l'intérieur de cette div */
+  position: relative; /* Assure que la position sticky fonctionne correctement */
+}
+
+.search-bar {
+  position: sticky;
+  top: 0;
   padding: 10px;
-  overflow-y: auto;
+  z-index: 1; /* S'assure que la barre de recherche reste au-dessus du reste du contenu */
+  transition: background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out, padding 0.5s ease-in-out; /* Durée de transition augmentée et effet plus fluide */
+}
+
+.search-bar.sticky {
+  background-color: white;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Ajouter une ombre pour plus de visibilité */
+  padding: 20px 10px; /* Padding ajusté pour une transition plus fluide */
+  border-radius: 5px;
+
 }
 
 .sections h2 {
@@ -38,8 +56,8 @@
 }
 
 .lexique-content {
-  flex-grow: 1; // Changez cette ligne pour prendre le reste de l'espace disponible
+  flex-grow: 1; /* Prend le reste de l'espace disponible */
   overflow-y: auto;
-  padding-left: 20px; // Ajouter un padding à droite pour écarter le texte
+  padding: 20px; // Ajouter un padding autour de la div du content
   color: #f0f0f0;
 }

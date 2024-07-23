@@ -14,15 +14,33 @@
 
 - title: Race Humain D&D
   content: >
-    Les humains sont les personnes les plus aptes a s'adapter a toutes situations et les plus ambitieuses parmi les races communes.
+    <h4>Ce sont les histoires d'un peuple agité qui, il y a longtemps, a pris la mer et les rivières dans des chaloupes, d'abord pour piller et terroriser, puis pour s'installer. Pourtant, il y avait une énergie, un amour de l'aventure, qui chantait à chaque page.
+    Liriel lut longtemps dans la nuit, allumant bougie après bougie.Elle n'avait jamais pensé aux humains, mais ces histoires la fascinaient. Ces pages jaunies contenaient des récits de héros audacieux, d'animaux étranges et féroces, de puissants dieux primitifs et d'une magie qui faisait partie intégrante de cette terre lointaine.</h4>
+    <h2>Un éventail de possibilités</h2>
+    <p>Dans la plupart des mondes, les humains sont les plus jeunes des races communes.
+    Ils sont arrivés tardivement sur la scène mondiale et ont vécu peu de temps par rapport aux nains, aux elfes et aux dragons.
+    C'est peut-être parce qu'ils vivent moins longtemps qu'ils s'efforcent d'accomplir tout ce qu'ils peuvent pendant les années qui leur sont imparties.
+    Ou peut-être pensent-ils qu'ils ont quelque chose à prouver aux races plus anciennes, et c'est pourquoi ils bâtissent leurs puissants empires sur la base de la conquête et du commerce.
+    Quelles que soient leurs motivations, les humains sont les innovateurs, les réalisateurs et les pionniers du monde. Avec leur penchant pour la migration et la conquête, les humains sont plus diversifiés physiquement que les autres races communes.
+    Il n'y a pas d'humain type. Beaucoup d'humains ont un peu de sang non-humain, révélant des traces d'elfes, d'orcs ou d'autres lignées. Les humains atteignent l'âge adulte à la fin de l'adolescence et vivent rarement plus d'un siècle.</p>
+    <h2>La diversité en toutes choses</h2>
+    <p>Parmi les races communes, les humains sont les plus adaptables et les plus ambitieux. Leurs goûts, leurs mœurs et leurs coutumes varient considérablement d'un pays à l'autre. Mais lorsqu'ils s'installent, ils restent : ils construisent des villes qui durent à travers les âges et de grands royaumes qui peuvent persister pendant de longs siècles. Un humain peut avoir une durée de vie relativement courte, mais une nation ou une culture humaine préserve des traditions dont les origines dépassent de loin la mémoire d'un seul humain. Ils vivent pleinement le présent, ce qui les rend bien adaptés à la vie d'aventurier, mais ils planifient également l'avenir, s'efforçant de laisser un héritage durable. Individuellement et en groupe, les humains sont des opportunistes capables de s'adapter, et ils restent attentifs à l'évolution des dynamiques politiques et sociales.</p>
+    <h2>Des institutions durables</h2>
+    <p>Alors qu'un elfe ou un nain peut assumer la responsabilité de la garde d'un lieu spécial ou d'un secret puissant, les humains ont créé des ordres et des institutions sacrés à cette fin. Alors que les clans nains et les anciens halflings transmettent les anciennes traditions à chaque nouvelle génération, les temples humains, les gouvernements, les bibliothèques et les codes de loi fixent leurs traditions dans le socle de l'histoire. Les humains rêvent d'immortalité, mais ils y parviennent en s'assurant que l'on se souviendra d'eux lorsqu'ils auront disparu. Bien que certains humains puissent être xénophobes, leurs sociétés sont en général ouvertes à tous. Les terres humaines accueillent un grand nombre de non-humains par rapport à la proportion d'humains qui vivent dans les terres non humaines.</p>
   name: Donjons et Dragons
-  video_url: "https://example.com/human_video"
+  video_url:
   tuto_order: 3
   race: Humain
 
 - title: Race Elfe D&D
   content: >
-    En tant qu'elfe, vous avez des sens et une intuition aiguisés.
+    <h4>"Je n'avais jamais imaginé qu'une telle beauté existait", dit doucement Goldmoon. La journée de marche avait été difficile, mais la récompense à la fin dépassait leurs rêves. Les compagnons se tenaient sur une haute falaise surplombant la légendaire cité de Qualinost.</h4>
+    <h2>Sveltes et Gracieux</h2>
+    <p>Les elfes sont un peuple magique d'une grâce extraordinaire, qui vit dans le monde mais n'en fait pas entièrement partie. Les elfes aiment la nature et la magie, la musique et la poésie, et les bonnes choses de la vie.</p>
+    <h2>Une perspective intemporelle</h2>
+    <p>Les elfes peuvent vivre plus de 700 ans, ce qui leur permet d'avoir une vue d'ensemble des événements qui pourraient troubler plus profondément les races à la longévité plus courte. Ils sont plus souvent curieux qu'avides. Ils ont tendance à rester distants et à ne pas se laisser impressionner par les petites circonstances. Cependant, lorsqu'ils poursuivent un but ils se montrent concentrés et acharnés. Comme les branches d'un jeune arbre, les elfes sont flexibles face au danger. Ils font confiance à la diplomatie et aux compromis pour résoudre les différends avant qu'ils ne dégénèrent en violence. </p>
+    <h2>Les royaumes cachés</h2>
+    <p>La plupart des elfes vivent dans de petits villages forestiers cachés parmi les arbres. Les elfes chassent le gibier, cueillent de la nourriture et cultivent. Leurs compétences et leur magie leur permettent de subvenir à leurs besoins sans avoir à défricher et à labourer la terre. Ce sont des artisans talentueux, qui fabriquent des vêtements et des objets d'art finement ouvragés. Leurs contacts avec les étrangers sont généralement limités. Les elfes rencontrés en dehors de leurs terres sont généralement des ménestrels, des artistes ou des sages itinérants. </p>
   name: Donjons et Dragons
   video_url: "https://example.com/elf_video"
   tuto_order: 4
@@ -30,41 +48,89 @@
 
 - title: Race Nain D&D
   content: >
-    En tant que nain, vous êtes petit certes, mais également très fort et robuste.
+    <h4>"Tu es en retard, Elfe!" Vint le ton rugueux d'une voix familière. Bruenor Battlehammer marchait sur le dos de son ennemi mort.</h4>
+    <h2>Petits mais Costauds</h2>
+    <p>Audacieux et robustes, les nains sont connus pour leurs talents de guerriers, de mineurs et de travailleurs de la pierre et du métal. Bien qu'ils mesurent moins d'un mètre cinquante, les nains sont si larges et si compacts qu'ils peuvent peser autant qu'un humain. Leur courage et leur endurance n'ont rien à envier à ceux des plus grands qu'eux.</p>
+    <h2>Ils se souviennent...</h2>
+    <p>Les nains peuvent vivre plus de 400 ans, et les plus vieux d'entre eux se rappellent souvent d'un monde très différent. Cette longévité leur confère une perspective sur le monde que n'ont pas les races à vie plus courte. Les nains sont solides et endurants comme les montagnes qu'ils aiment, traversant les siècles avec une endurance stoïque et peu de changements. Ils respectent les traditions de leurs clans, remontant jusqu'à la fondation de leurs plus anciennes forteresses. Ils sont déterminés et loyaux, ils sont lents à oublier les torts qu'ils ont subis. Un tort causé à un nain est un tort causé à tout son clan, et ce qui commence comme une chasse à la vengeance peut devenir une véritable querelle de clan.</p>
+    <h2>Les royaumes</h2>
+    <p>Les royaumes nains s'étendent profondément sous les montagnes d'où ils extraient des pierres et métaux précieux avec lesquels ils forgent des objets merveilleux. Ils aiment la beauté artisanale et artistique. L'unité principale de la société naine est le clan, et les nains accordent une grande importance à leur statut social. Même les nains qui vivent loin de leurs royaumes chérissent l'identité et l'appartenance à leur clan, et invoquent le nom de leurs ancêtres dans leurs serments et malédictions.</p>
   name: Donjons et Dragons
-  video_url: "https://example.com/dwarf_video"
+  video_url:
   tuto_order: 5
   race: Nain
 
 - title: Race Halfelins D&D
   content: >
-    Les petits halfelins survivent dans un monde rempli de créatures plus grandes.
+    <h4>Regis le halfling, le seul de son espèce à des centaines de kilomètres à la ronde, bloqua ses doigts derrière sa tête et s'adossa à la couverture moussue du tronc d'arbre. Regis était petit, même selon les critères de sa race diminuée, le duvet de ses mèches brunes bouclées dépassant à peine le mètre quatre-vingt, mais son ventre était amplement épaissi par son amour d'un bon repas, ou de plusieurs, lorsque l'occasion s'en présentait. Le bâton tordu qui lui servait de canne à pêche s'élevait au-dessus de lui, serré entre deux de ses orteils, et pendait au-dessus du lac tranquille, se reflétant parfaitement dans la surface vitreuse de Maer Dualdon.</h4>
+    <h2>Petit et débrouillard</h2>
+    <p>Le confort d'un foyer est le but de la vie de la plupart des halflings, un endroit où s'installer en paix et au calme, loin des monstres en maraude et des armées qui s'affrontent, un feu de bois et un repas copieux, de bonnes boissons et de bonnes conversations. Les halflings de petite taille survivent dans un monde peuplé de créatures plus grandes en évitant de se faire remarquer ou, à défaut, en évitant d'offenser. Mesurant environ un mètre cinquante, ils semblent relativement inoffensifs et ont ainsi réussi à survivre pendant des siècles dans l'ombre des empires et en marge des guerres et des conflits politiques. L'esprit pratique des Halflings ne se limite pas à leurs vêtements. Ils se préoccupent des besoins essentiels et des plaisirs simples et n'ont que faire de l'ostentation. Même les halflings les plus riches gardent leurs trésors enfermés dans une cave plutôt que de les exposer à la vue de tous. Ils ont le don de trouver la solution la plus simple à un problème et n'ont guère de patience pour les tergiversations.</p>
+    <h2>Bienveillants et curieux</h2>
+    <p>Les halflings sont un peuple affable et joyeux. Ils chérissent les liens de la famille et de l'amitié, ainsi que le confort de la maison et du foyer, et ne rêvent guère d'or ou de gloire. Les halflings sont facilement pris de pitié et détestent voir un être vivant souffrir. Ils sont généreux et partagent volontiers ce qu'ils ont, même en période de disette.</p>
+    <h2>Se fondre dans la masse</h2>
+    <p>Les halflings sont capables de s'intégrer dans une communauté d'humains, de nains ou d'elfes, et de se rendre utiles et bienvenus. La combinaison de leur furtivité inhérente et de leur nature discrète permet aux halflings d'éviter l'attention non désirée. Les halflings travaillent volontiers avec les autres et sont loyaux envers leurs amis, qu'ils soient halflings ou non. Ils peuvent faire preuve d'une férocité remarquable lorsque leurs amis, leur famille ou leur communauté sont menacés.</p>
   name: Donjons et Dragons
-  video_url: "https://example.com/halfling_video"
+  video_url:
   tuto_order: 6
   race: Halfelin
 
 - title: Classe Guerrier D&D
   content: >
-    Le Guerrier est la classe par excellence pour ceux qui aiment l'action et le combat.
+    <h4>Un grand homme de la tribu humaine avance à grands pas dans le blizzard, drapé de fourrure et brandissant son épée. Il rit en fonçant sur le géant de givre qui a osé braconner le troupeau d'élans de son peuple.
+    Une demi-orque grogne contre le dernier contestataire de son autorité sur leur tribu, prête à lui briser le cou à mains nues comme elle l'a fait pour les six derniers rivaux.
+    L'écume à la bouche, un nain assène un coup de casque au visage de son ennemi, puis se retourne pour enfoncer son coude blindé dans le ventre d'un autre.
+    Ces barbares, aussi différents soient-ils, se définissent par leur rage, une fureur débridée, inextinguible et irréfléchie. Plus qu'une simple émotion, leur colère est la férocité d'un prédateur acculé, l'assaut incessant d'une tempête, les remous de la mer.
+    Pour certains, la rage naît d'une communion avec des esprits animaux féroces. D'autres puisent dans un réservoir de colère contre un monde plein de souffrance. Pour chaque guerriers, la rage est un pouvoir qui alimente non seulement la frénésie du combat, mais aussi des réflexes étonnants, la résistance et des exploits de force.</h4>
+    <h2>L'instinct primitif</h2>
+    <p>Pour un guerrier, une vie sédentaire n'est pas une vertu, mais un signe de faiblesse. Les forts embrassent la nature, valorisant les instincts aiguisés, le physique primitif et la rage féroce. Les guerriers se sentent mal à l'aise lorsqu'ils sont entourés de murs et de foules. Ils s'épanouissent dans la nature sauvage de leur pays d'origine, la jungle ou les prairies où leurs tribus vivent et chassent.
+    Les guerriers s'animent dans le chaos du combat. Ils peuvent entrer dans un état berserk où la rage prend le dessus, ce qui leur donne une force et une résistance surhumaines. Un guerrier ne peut puiser dans ce réservoir de fureur que quelques fois sans se reposer, mais ces quelques colères suffisent généralement à vaincre les menaces qui se présentent.</p>
+    <h2>Une vie de dangers</h2>
+    <p>Le guerrier joue un rôle important en tant que protecteur de son peuple et chef en temps de guerre. La vie dans les régions sauvages du monde est semée d'embûches. Tribus rivales, intempéries mortelles et monstres terrifiants. Les guerriers foncent tête baissée pour éviter à leur peuple d'avoir à le faire.
+    Leur courage face au danger fait que les guerriers sont parfaitement adaptés à l'aventure. L'errance est souvent un mode de vie pour leurs tribus d'origine, et la vie sans racines de l'aventurier n'est guère difficile pour un guerrier. Certains guerriers regrettent les structures familiales très unies de leur tribu, mais finissent par les remplacer par les liens tissés entre les membres de leur groupe d'aventuriers.</p>
+    <h2>Créer un guerrier</h2>
+    <p>Lorsque vous créez un personnage guerrier, réfléchissez à ses origines et à sa place dans le monde.
+    Qu'est-ce qui vous a poussé à vous lancer dans l'aventure ? Avez-vous été attiré vers des terres colonisées par la promesse de richesses ? Avez-vous joint vos forces à celles des soldats de ces terres pour faire face à une menace commune ? Des monstres ou une horde d'envahisseurs vous ont-ils chassé de votre patrie, faisant de vous un réfugié sans racines ? Vous avez peut-être été prisonnier de guerre, enchaîné dans un autre pays et n'avez pu gagner votre liberté qu'aujourd'hui. Ou bien vous avez été chassé de votre peuple à cause d'un crime que vous avez commis, d'un tabou que vous avez violé ou d'un coup d'État qui vous a écarté d'une position d'autorité.</p>
   name: Donjons et Dragons
-  video_url: "https://example.com/warrior_video"
+  video_url:
   tuto_order: 7
   univers_class: Guerrier
 
 - title: Classe Mage D&D
   content: >
-    Le Mage est la classe idéale pour ceux qui aiment la magie et les sortilèges.
+    <h4>Vêtue de la robe argentée qui indique son rang, une elfe ferme les yeux pour se soustraire aux distractions du champ de bataille et entame un chant silencieux. Ses doigts s'agitent devant elle, puis elle achève son sort et lance une minuscule perle de feu vers les rangs ennemis, où elle éclate en une conflagration qui engloutit les soldats.
+    Vérifiant et revérifiant son travail, un humain trace un cercle magique complexe à la craie sur le sol de pierre nu, puis saupoudre de poudre de fer chaque ligne et chaque courbe gracieuse. Lorsque le cercle est terminé, il prononce une longue incantation. Un trou s'ouvre dans l'espace à l'intérieur du cercle, apportant une bouffée de soufre en provenance de l'autre monde.
+    Accroupi sur le sol à l'intersection d'un donjon, un gnome jette une poignée de petits os gravés de symboles mystiques, marmonnant quelques mots de pouvoir sur eux. Fermant les yeux pour mieux voir les visions, il hoche lentement la tête, puis ouvre les yeux et indique le passage à sa gauche.
+    Les sorciers sont des utilisateurs suprêmes de la magie, définis et unis en tant que classe par les sorts qu'ils lancent. Puisant dans la trame subtile de la magie qui imprègne le cosmos, les sorciers lancent des sorts de feu explosif, d'éclairs, de tromperie subtile et de contrôle brutal de l'esprit. Leur magie fait apparaître des monstres d'autres plans d'existence, entrevoit l'avenir ou transforme les ennemis tués en zombies. Leurs sorts les plus puissants transforment une substance en une autre, font tomber des météores du ciel ou ouvrent des portails vers d'autres mondes.</h4>
+    <h2>Les érudits des arcanes</h2>
+    <p>Sauvage et énigmatique, varié dans ses formes et ses fonctions, le pouvoir de la magie attire les étudiants qui cherchent à en maîtriser les mystères. Certains aspirent à devenir comme les dieux, à façonner la réalité elle-même. Bien que le lancement d'un sort typique ne nécessite que la prononciation de quelques mots étranges, des gestes fugaces et parfois une pincée ou un amas de matériaux exotiques, ces composantes superficielles laissent à peine entrevoir l'expertise acquise après des années d'apprentissage et d'innombrables heures d'étude.
+    Les sorciers vivent et meurent de leurs sorts. Tout le reste est secondaire. Ils apprennent de nouveaux sorts au fur et à mesure qu'ils expérimentent et acquièrent de l'expérience. Ils peuvent également les apprendre auprès d'autres sorciers, de tomes ou d'inscriptions anciens, et de créatures anciennes qui sont imprégnées de magie.</p>
+    <h2>L'appât du savoir</h2>
+    <p>La vie des sorciers est rarement banale. Le plus proche d'une vie ordinaire est de travailler comme sage ou conférencier dans une bibliothèque ou une université, pour enseigner aux autres les secrets du multivers.
+    Mais l'attrait du savoir et du pouvoir pousse même les sorciers les moins aventureux à quitter la sécurité de leurs bibliothèques et de leurs laboratoires pour se rendre dans les ruines et les cités perdues. La plupart des sorciers pensent que leurs homologues des civilisations anciennes connaissaient des secrets magiques perdus depuis des siècles, et que la découverte de ces secrets pourrait ouvrir la voie à un pouvoir plus grand que n'importe quelle magie disponible à l'époque actuelle.</p>
+    <h2>Créer un sorcier</h2>
+    <p>La création d'un personnage de sorcier exige une histoire dominée par au moins un événement extraordinaire. Comment votre personnage est-il entré en contact avec la magie pour la première fois ? Comment avez-vous découvert que vous aviez des aptitudes pour la magie ? Avez-vous un talent naturel, ou avez-vous simplement étudié et pratiqué sans relâche ? Avez-vous rencontré une créature magique ou un ancien tome qui vous a enseigné les bases de la magie ?
+    Qu'est-ce qui vous a poussé à sortir de votre vie d'études ? Votre premier contact avec le savoir magique vous a-t-il laissé sur votre faim ? Avez-vous entendu parler d'un dépôt secret de connaissances qui n'a pas encore été pillé par d'autres sorciers ? Peut-être êtes-vous simplement impatient de mettre à l'épreuve vos nouvelles compétences magiques face au danger.</p>
   name: Donjons et Dragons
-  video_url: "https://example.com/mage_video"
+  video_url:
   tuto_order: 8
   univers_class: Mage
 
 - title: Classe Voleur D&D
   content: >
-    Le Voleur est la classe parfaite pour ceux qui préfèrent la discrétion et la ruse.
+    <h4>Faisant signe à ses compagnons d'attendre, une halfling s'avance dans le hall du donjon. Elle colle son oreille à la porte, puis sort un ensemble d'outils et crochète la serrure en un clin d'œil. Elle disparaît ensuite dans l'ombre tandis que son ami combattant s'avance pour ouvrir la porte à coups de pied.
+    Un humain se tapit dans l'ombre d'une ruelle pendant que sa complice se prépare à jouer son rôle dans l'embuscade. Lorsque leur cible - un esclavagiste notoire - passe dans la ruelle, la complice crie, l'esclavagiste vient enquêter et la lame de l'assassin lui tranche la gorge avant qu'il ne puisse émettre le moindre son.
+    Réprimant un rire, une gnome remue les doigts et soulève magiquement le trousseau de clés de la ceinture du garde. En un instant, les clés sont dans sa main, la porte de la cellule est ouverte, et elle et ses compagnons sont libres de s'enfuir.
+    Les voleurs s'appuient sur leur habileté, leur discrétion et les faiblesses de leurs adversaires pour prendre le dessus dans n'importe quelle situation. Ils ont le don de trouver la solution à n'importe quel problème, faisant preuve d'une ingéniosité et d'une polyvalence qui sont la pierre angulaire de tout groupe d'aventuriers qui se respecte.</h4>
+    <h2>Habileté et précision</h2>
+    <p>Les voleurs consacrent autant d'efforts à maîtriser l'utilisation de diverses compétences qu'à perfectionner leurs aptitudes au combat, ce qui leur confère une expertise étendue que peu d'autres personnages peuvent égaler. De nombreux voleurs se concentrent sur la furtivité et la tromperie, tandis que d'autres affinent les compétences qui leur sont utiles dans un environnement de donjon, comme l'escalade, la recherche et le désamorçage de pièges et l'ouverture de serrures.
+    En matière de combat, les voleurs privilégient la ruse à la force brute. Il préfère porter un coup précis, en le plaçant exactement là où il fera le plus mal à la cible, plutôt que d'épuiser l'adversaire par un déluge d'attaques. Les voleurs ont un don presque surnaturel pour éviter le danger, et certains apprennent des tours de magie pour compléter leurs autres capacités.</p>
+    <h2>Une vie dans l'ombre</h2>
+    <p>Chaque ville a son lot de voyous. La plupart d'entre eux incarnent les pires stéréotypes de la classe, gagnant leur vie comme cambrioleurs, assassins, coupeurs de gorge et escrocs. Ces crapules sont souvent organisées en guildes de voleurs ou en familles du crime. De nombreux voleurs opèrent de manière indépendante, mais même eux recrutent parfois des apprentis pour les aider dans leurs escroqueries et leurs casses. Quelques voleurs gagnent honnêtement leur vie en tant que serruriers, enquêteurs ou exterminateurs.</p>
+    <h2>Créer un voleur</h2>
+    <p>Lorsque vous créez votre personnage de voleur, réfléchissez à sa relation avec la loi. Avez-vous un passé ou un présent criminel ? Êtes-vous en fuite pour échapper à la loi ou à un maître de guilde de voleurs en colère ? Ou avez-vous quitté votre guilde à la recherche de plus grands risques et de plus grandes récompenses ? Est-ce l'appât du gain qui vous pousse dans vos aventures, ou un autre désir ou idéal ?
+    Quel a été l'élément déclencheur qui vous a éloigné de votre vie antérieure ? Une arnaque ou un casse qui a mal tourné vous ont-ils poussé à réévaluer votre carrière ? Vous avez peut-être eu de la chance et un vol réussi vous a permis d'obtenir l'argent dont vous aviez besoin pour échapper à la misère de votre vie. L'envie de voyager vous a-t-elle finalement poussé à quitter votre foyer ? Peut-être vous êtes-vous retrouvé soudainement coupé de votre famille ou de votre mentor, et vous avez dû trouver un nouveau moyen de subsistance. Ou peut-être vous êtes-vous fait un nouvel ami - un autre membre de votre groupe d'aventuriers - qui vous a montré de nouvelles possibilités de gagner votre vie et d'utiliser vos talents particuliers.</p>
   name: Donjons et Dragons
-  video_url: "https://example.com/rogue_video"
+  video_url:
   tuto_order: 9
   univers_class: Voleur
 
