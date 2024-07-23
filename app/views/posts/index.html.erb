@@ -6,7 +6,7 @@
         <%= text_field_tag :query, params[:query], class: 'form-control', placeholder: 'Rechercher un mot...', data: { lexique_target: 'searchInput', action: 'keyup->lexique#update' } %>
       <% end %>
     </div>
-    <div class="lexique-dictionnary"> 
+    <div class="lexique-dictionnary" data-lexique-target="dictionary">
       <h2>Lexique</h2>
       <ul data-lexique-target="list">
         <% @posts.each do |post| %>
@@ -15,7 +15,7 @@
           </li>
         <% end %>
       </ul>
-    </div>  
+    </div>
   </div>
   <div class="lexique-content" data-lexique-target="content">
     <h2>Sélectionnez un mot du lexique pour voir les explications</h2>
