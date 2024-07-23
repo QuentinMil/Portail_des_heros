@@ -9,6 +9,7 @@ export default class extends Controller {
   }
 
   disabled(event) {
+    console.log("coucou")
     const inputValue = event.currentTarget.value
     const otherInputs = this.inputTargets.filter(input => input !== event.currentTarget)
     otherInputs.forEach(input => {
