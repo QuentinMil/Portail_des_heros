@@ -9,7 +9,6 @@
   padding: 20px;
   height: 100vh; /* Prend toute la hauteur de la fenêtre */
   overflow-y: auto; /* Permet le défilement vertical à l'intérieur de cette div */
-  background-color: #f0f0f0;
 }
 
 .search-bar {
@@ -21,7 +20,8 @@
 
 .search-bar.sticky {
   background-color: white;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Optionnel: ajouter une ombre pour plus de visibilité */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Ajouter une ombre pour plus de visibilité */
+  padding: 20px;
 }
 
 .sections h2 {
