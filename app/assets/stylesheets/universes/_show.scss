@@ -1,8 +1,9 @@
 .universe-show {
-    max-width: 800px;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
+    position: sticky; /* Pour s'assurer que les ::after sont positionnés correctement */
+
 
     h1 {
       font-size: 36px;
@@ -12,7 +13,9 @@
       }
 
     .tutorial {
-      margin: 30px;
+      margin: 30px auto;
+      max-width: 800px;
+
 
       h2 {
         font-size: 28px;
@@ -60,8 +63,6 @@
         margin: 10px;
         transition-duration: 0.5s;
         box-shadow: 15px 13px 16px -5px rgba(171, 171, 171, 0.94);
-        -webkit-box-shadow: 15px 13px 16px -5px rgba(171, 171, 171, 0.94);
-        -moz-box-shadow: 15px 13px 16px -5px rgba(171, 171, 171, 0.94);
         border-radius: 5px;
       }
 
@@ -86,8 +87,6 @@
         margin: 10px;
         transition-duration: 0.5s;
         box-shadow: 15px 13px 16px -5px rgba(171, 171, 171, 0.94);
-        -webkit-box-shadow: 15px 13px 16px -5px rgba(171, 171, 171, 0.94);
-        -moz-box-shadow: 15px 13px 16px -5px rgba(171, 171, 171, 0.94);
         border-radius: 5px;
       }
 
@@ -112,8 +111,6 @@
         margin: 10px;
         transition-duration: 0.5s;
         box-shadow: 15px 13px 16px -5px rgba(171, 171, 171, 0.94);
-        -webkit-box-shadow: 15px 13px 16px -5px rgba(171, 171, 171, 0.94);
-        -moz-box-shadow: 15px 13px 16px -5px rgba(171, 171, 171, 0.94);
         border-radius: 5px;
       }
 
