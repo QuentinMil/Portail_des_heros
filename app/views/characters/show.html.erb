@@ -50,8 +50,10 @@
 
 <!-- Backstory section -->
 <div class="show-character-backstory">
-    <h2>L'histoire de <%= @character.name %></h2>
-    <p><%= @character.backstory.html_safe %></p>
+  <h2>L'histoire de <%= @character.name %></h2>
+  <p>
+    <%= @character.backstory.present? ? @character.backstory.html_safe : "L'histoire n'a pas encore été générée." %>
+  </p>
 </div>
 
 <!-- Action Utilisateur -->
