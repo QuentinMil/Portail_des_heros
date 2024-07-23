@@ -1,24 +1,26 @@
+<div class="portal"></div>
 <div class="container_universes">
-
   <div id="carousel-universes" class="carousel slide carousel-fade">
-      <div class="carousel-inner">
-        <% @universes.each_with_index do |universe, index| %>
-          <div class="carousel-item universe <%= 'active' if index.zero? %>" style="background-image:url(<%= cl_image_path(universe.photo.key) %>)">
-            <div class="background-opacity"></div>
-            <h2 class="text"><%= universe.name %></h2>
-            <div class="description">
-              <p><%= universe.description %></p>
+    <div class="carousel-inner">
+      <% @universes.each_with_index do |universe, index| %>
+        <div class="carousel-item <%= 'active' if index.zero? %>" >
+          <div class="universe" style="background-image:url(<%= cl_image_path(universe.photo.key) %>)">
+            <div class="opacity-universes-cards"></div>
+            <div class="text">
+             <h2 ><%= universe.name %></h2>
+             <p><%= universe.description %></p>
             </div>
           </div>
-        <% end %>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carousel-universes" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carousel-universes" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+        </div>
+      <% end %>
     </div>
-    </div>
+    <button class="carousel-control-prev  control-" type="button" data-bs-target="#carousel-universes" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carousel-universes" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
