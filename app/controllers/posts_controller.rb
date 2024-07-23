@@ -7,7 +7,8 @@ class PostsController < ApplicationController
     end
 
     respond_to do |format|
-      format.html # Follow regular flow of Rails
+      format.html
+      format.json { render json: @posts }
       format.text { render partial: 'posts/list', locals: { posts: @posts } }
     end
   end
