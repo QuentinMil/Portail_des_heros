@@ -9,19 +9,21 @@
   padding: 20px;
   height: 100vh; /* Prend toute la hauteur de la fenêtre */
   overflow-y: auto; /* Permet le défilement vertical à l'intérieur de cette div */
+  position: relative; /* Assure que la position sticky fonctionne correctement */
 }
 
 .search-bar {
   position: sticky;
-  top: 10px;
-  padding: initial;
+  top: 0;
+  padding: 10px;
   z-index: 1; /* S'assure que la barre de recherche reste au-dessus du reste du contenu */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease; /* Ajouter des transitions pour un changement en douceur */
 }
 
 .search-bar.sticky {
   background-color: white;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Ajouter une ombre pour plus de visibilité */
-  padding: 20px;
+  padding: 20px 5px;
 }
 
 .sections h2 {

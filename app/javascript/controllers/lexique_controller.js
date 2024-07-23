@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
-  static targets = ["content", "form", "searchInput", "list", "dictionary", "searchResults", "searchBar"];
+  static targets = ["content", "form", "searchInput", "list", "dictionary", "searchBar", "sections"];
 
   connect() {
     console.log("Lexique controller connected");

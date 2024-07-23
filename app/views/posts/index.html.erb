@@ -1,8 +1,8 @@
 <!-- app/views/posts/index.html.erb -->
 <div class="lexique-container" data-controller="lexique">
-  <div class="sections">
+  <div class="sections" data-lexique-target="sections">
     <div class="search-bar" data-lexique-target="searchBar">
-      <%= form_with url: posts_path, method: :get, html: { class: 'mb-5', data: { lexique_target: 'form' } } do %>
+      <%= form_with url: posts_path, method: :get, html: { data: { lexique_target: 'form' } } do %>
         <%= text_field_tag :query, params[:query], class: 'form-control', placeholder: 'Rechercher un mot...', data: { lexique_target: 'searchInput', action: 'keyup->lexique#update' } %>
       <% end %>
     </div>
