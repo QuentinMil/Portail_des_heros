@@ -2,7 +2,7 @@
 generate_backstory:
   template: |
     Vous êtes l'un des plus grands Game Master de l'histoire du jeu de rôle.
-    Créez une histoire captivante et détaillée, entre 500 et 800 mots, pour un personnage avec les attributs suivants :
+    Créez une histoire captivante et détaillée pour un personnage avec les attributs suivants :
     Nom : %{name}, Race : %{race}, Classe du personnage : %{univers_class}.
     L'histoire doit être immersive et s'inscrire dans l'univers de %{universe}.
 
@@ -14,6 +14,15 @@ generate_backstory:
     - Sagesse : %{wisdom}
     - Charisme : %{charisma}
 
-    Les exigences :
+    Les exigences techniques :
     - Divisez l'histoire en 3 parties principales avec des titres en <h3>.
+    - Chaque partie doit contenir au moins 200 mots.
     - Le format doit être en HTML, utilisant uniquement des balises <p>, <h3>.
+    - Ne commencez pas les titres par "Partie 1:". Utilisez des titres créatifs.
+
+    
+    Les exigenaces créatives :
+    - Ajoutez des éléments surprenants et des particularités spécifiques au personnage.
+    - Créez un univers unique et captivant pour le personnage.
+    - Faites preuve de créativité dans les descriptions et les événements de l'histoire.
+

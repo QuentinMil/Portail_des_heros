@@ -25,7 +25,8 @@ class GenerateBackstoryJob < ApplicationJob
         parameters: {
           model: "gpt-3.5-turbo",
           messages: [{ role: "user", content: prompt }],
-          temperature: 0.7
+          temperature: 0.7,
+          max_tokens: 4096, # Ajustez ce nombre selon vos besoins, mais assurez-vous qu'il est inférieur à 4096.
         }
       )
     rescue Faraday::TooManyRequestsError => e
