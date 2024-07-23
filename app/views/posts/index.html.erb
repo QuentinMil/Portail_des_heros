@@ -1,14 +1,10 @@
-<% content_for :title do %>
-  Lexique du JDR
-<% end %>
-
 <div class="lexique-container" data-controller="lexique">
   <div class="sections">
     <h2>Lexique</h2>
     <ul>
       <% @posts.each do |post| %>
         <li>
-          <%= link_to post.title, post_path(post, format: :json), data: { action: "lexique#load" } %>
+          <%= link_to post.title, post_path(post, format: :json), data: { action: "lexique#load" }, class: "lexique-button" %>
         </li>
       <% end %>
     </ul>
