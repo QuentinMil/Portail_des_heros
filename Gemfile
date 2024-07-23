@@ -55,6 +55,8 @@ gem "cloudinary"
 gem 'jwt'
 gem "httparty"
 gem 'ruby-openai'
+gem 'openai'
+gem "faraday"
 
 group :development, :test do
   gem "dotenv-rails"

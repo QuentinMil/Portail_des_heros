@@ -1,6 +1,6 @@
 class CharactersController < ApplicationController
   before_action :authenticate_user! # Assure que l'utilisateur est connecté
-  before_action :set_character, only: [:show, :edit, :update, :destroy]
+  before_action :set_character, only: [:show, :edit, :update, :destroy, :image]
 
   def index
     @characters = current_user.characters
@@ -12,7 +12,7 @@ class CharactersController < ApplicationController
   def all_characters
     @characters = Character.order(updated_at: :desc)
   end
-  
+
   def create
     @character = Character.new
     @character.user = current_user
@@ -37,28 +37,31 @@ class CharactersController < ApplicationController
   end
 
   def update
-    # l'action set_character est appelée par le before_action
-
-    # Compter le nombre de paramètres mis à jour
     updated_fields = character_params.keys.count
 
     if @character.update(character_params)
-      # Incrémenter le taux de complétion + compter le nombre de paramètres mis à jour
       new_completion_rate = [@character.completion_rate + updated_fields, 10].min
       @character.update(completion_rate: new_completion_rate)
 
       if @character.completion_rate >= 10
-        # Mettre à jour le statut du personnage = "Active"
         @character.update(available_status: "Active")
         assign_to_party(@character)
-        @character.generate_backstory # Appel de la méthode generate_backstory
-        redirect_to @character, notice: 'Votre personnage est terminé !'
+        @character.generate_backstory # Générer l'histoire
+
+        # Appel pour générer l'image
+        @image_url = @character.generate_image
+
+        redirect_to image_character_path(@character), notice: 'Votre personnage est terminé et l\'image de votre personnage a été générée avec succès.'
       else
         redirect_to edit_character_path(@character)
       end
     else
       render :edit
     end
+  end
+
+  def image
+    # Extraire l'URL de l'image depuis les paramètres
   end
 
   def destroy
