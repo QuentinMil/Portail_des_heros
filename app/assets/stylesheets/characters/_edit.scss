@@ -23,7 +23,11 @@
       color: #ffffff;
     }
 
-
+    .caracteristique {
+      p {
+        color: #ffffff;
+      }
+    }
 
     .nom_du_personnage_p {
       color: rgb(0, 0, 0);
@@ -128,8 +132,17 @@
       }
     }
 
-    .modal-body {
+    .modal-content {
+
+      color: #000000;
+
+      h5 {
         color: #000000;
+      }
+
+      p {
+        color: #000000;
+      }
     }
 
     .sliders-container {
