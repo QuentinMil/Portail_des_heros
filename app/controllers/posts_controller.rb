@@ -1,11 +1,11 @@
 # app/controllers/posts_controller.rb
 class PostsController < ApplicationController
   def index
-    if params[:query].present?
-      @posts = Post.where("title ILIKE ?", "%#{params[:query]}%")
-    else
-      @posts = Post.all
-    end
+    @posts = if params[:query].present?
+               Post.search_by_title(params[:query])
+             else
+               Post.all
+             end
 
     respond_to do |format|
       format.html # Follow regular flow of Rails
