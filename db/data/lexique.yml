@@ -1,70 +1,182 @@
 - title: "Alignement"
-  content: "Concept dans D&D déterminant la morale et l'éthique d'un personnage, influençant ses décisions et son comportement."
+  content: "<h3>Concept d'Alignement</h3><p>L'alignement dans Dungeons & Dragons détermine la moralité et l'éthique d'un personnage. Il est représenté par une grille avec deux axes : bien contre mal et légal contre chaotique. Ce système aide à guider les actions du personnage selon des principes éthiques définis, influençant ses décisions dans des situations complexes et ajoutant une dimension morale à ses aventures.</p>"
+
 - title: "Arcanes"
-  content: "Magie mystérieuse et secrète utilisée par les mages et sorciers dans les univers de JDR."
+  content: "<h3>Magie des Arcanes</h3><p>Les arcanes représentent une forme de magie mystérieuse utilisée par des mages et des sorciers dans les univers de JDR. Ces pratiques secrètes permettent d'invoquer des sorts puissants et de manipuler les forces mystiques. Chaque sortilège nécessite une compréhension profonde des mystères magiques, souvent accompagnée de composants et d'incantations spécifiques.</p>"
+
 - title: "Background"
-  content: "L'histoire et les origines d'un personnage, influençant ses compétences et motivations."
+  content: "<h3>Histoire Personnelle</h3><p>Le background d'un personnage détaille son histoire et ses origines, fournissant un contexte riche pour ses compétences, comportements et motivations. Cette biographie influence directement le développement du personnage dans le jeu, enrichissant sa narration et ses interactions avec le monde et les autres joueurs.</p>"
+
 - title: "Campagne"
-  content: "Série de scénarios connectés formant une grande aventure dans un univers de JDR."
+  content: "<h3>Structure d'une Campagne</h3><p>Une campagne de JDR est une série de scénarios connectés qui forment une grande aventure. Ce format permet aux joueurs de développer leurs personnages au fil de diverses quêtes et de construire une histoire continue, souvent riche en développements complexes et en retournements de situation majeurs.</p>"
+
 - title: "Classe"
-  content: "Catégorie définissant les compétences et le rôle d'un personnage, comme guerrier, mage, ou voleur."
+  content: "<h3>Rôle de la Classe</h3><p>La classe d'un personnage définit ses compétences principales et son rôle dans le groupe, comme guerrier, mage ou voleur. Chaque classe offre un ensemble unique de compétences et de pouvoirs qui influencent la manière dont le personnage interagit avec le jeu et ses participants.</p>"
+
 - title: "Compétence"
-  content: "Capacité spécifique que possède un personnage, comme crochetage ou persuasion."
+  content: "<h3>Capacités Spécifiques</h3><p>Les compétences sont des capacités spécifiques que chaque personnage peut posséder, telles que le crochetage de serrures ou la persuasion. Elles sont cruciales pour résoudre des défis et des énigmes tout au long de l'aventure, affectant directement les possibilités d'interaction du personnage avec son environnement.</p>"
+
 - title: "Critique"
-  content: "Jet de dé exceptionnellement réussi ou raté, ayant des conséquences majeures."
+  content: "<h3>Résultats de Jets de Dé Critiques</h3><p>Un jet de dé critique représente un succès ou un échec exceptionnel dans un jeu de rôle, générant des conséquences significatives pour l'action en cours. Ces moments sont souvent mémorables, influençant fortement le déroulement de l'histoire et les interactions entre les personnages.</p>"
+
 - title: "Don"
-  content: "Avantage ou talent spécial qu'un personnage peut acquérir, offrant des compétences ou pouvoirs supplémentaires."
+  content: "<h3>Talents Spéciaux</h3><p>Un don est un avantage ou talent spécial que les personnages peuvent choisir, offrant des compétences ou des pouvoirs supplémentaires qui enrichissent leurs capacités et diversifient leurs stratégies durant le jeu.</p>"
+
 - title: "Dungeon Master"
-  content: "Personne dirigeant le jeu et racontant l'histoire, connue sous le nom de Maître de Donjon (MD) dans D&D."
+  content: "<h3>Rôle du Maître de Donjon</h3><p>Le Maître de Donjon (Dungeon Master) est la personne qui dirige le jeu et raconte l'histoire dans D&D. Cette fonction inclut la responsabilité de maintenir l'équilibre du jeu, de développer l'intrigue, et de gérer les interactions entre les personnages et l'univers de jeu.</p>"
+
 - title: "Enquête"
-  content: "Scénario dans Call of Cthulhu où les joueurs doivent résoudre des mystères souvent liés à des horreurs surnaturelles."
+  content: "<h3>Dynamique d'Enquête</h3><p>Les scénarios d'enquête, typiques du jeu Call of Cthulhu, demandent aux joueurs de résoudre des mystères liés à des horreurs surnaturelles. Ces aventures mettent souvent en avant la collecte d'indices, la déduction et la gestion du stress psychologique des personnages face à l'inconnu.</p>"
+
 - title: "Équipement"
-  content: "Objets et armes que possède un personnage, influençant ses capacités et stratégies."
+  content: "<h3>Importance de l'Équipement</h3><p>L'équipement d'un personnage inclut tous les objets et armes qu'il possède, jouant un rôle crucial dans la détermination de ses capacités et de ses stratégies en jeu. Les choix d'équipement affectent non seulement les statistiques de combat du personnage, mais aussi ses interactions avec l'environnement et sa capacité à accomplir diverses tâches.</p>"
+
 - title: "Experience"
-  content: "Points gagnés par les personnages pour accomplir des actions, leur permettant de monter de niveau."
+  content: "<h3>Acquisition d'Expérience</h3><p>Les points d'expérience (XP) sont gagnés par les personnages lorsqu'ils accomplissent des actions, des quêtes ou des défis. Accumuler de l'expérience permet aux personnages de monter en niveau, ce qui se traduit par une augmentation de leurs compétences, de leurs points de vie et de leurs capacités, reflétant leur croissance et leur adaptation au fil des aventures.</p>"
+
 - title: "Fumble"
-  content: "Échec critique dans un jet de dé, souvent avec des résultats humoristiques ou désastreux."
+  content: "<h3>Échecs Critiques</h3><p>Un fumble est un échec critique survenant lors d'un jet de dé, entraînant souvent des conséquences inattendues ou désastreuses. Ces moments ajoutent un élément de surprise et de tension au jeu, mettant à l'épreuve la capacité des joueurs à gérer les revers de fortune de manière créative.</p>"
+
 - title: "Initiative"
-  content: "Ordre des actions en combat, déterminé par un jet de dé ou une statistique spécifique."
+  content: "<h3>Détermination de l'Initiative</h3><p>L'initiative détermine l'ordre des actions des personnages durant les combats. Un jet de dé est souvent utilisé pour établir cet ordre, influençant la tactique et la stratégie des affrontements. La rapidité d'action peut être cruciale pour prendre l'avantage sur les adversaires.</p>"
+
 - title: "Investigateur"
-  content: "Personnage dans Call of Cthulhu spécialisé dans la résolution de mystères et confronté aux horreurs cosmiques."
+  content: "<h3>Le Rôle de l'Investigateur</h3><p>Dans le jeu Call of Cthulhu, les investigateurs sont des personnages spécialisés dans la résolution de mystères et confrontés aux horreurs cosmiques. Ils utilisent leurs compétences pour découvrir des indices, déchiffrer des énigmes et survivre à des rencontres terrifiantes, souvent au péril de leur santé mentale.</p>"
+
 - title: "Jet de sauvegarde"
-  content: "Jet de dé pour éviter ou réduire les effets d'une attaque ou d'un piège."
+  content: "<h3>Jets de Sauvegarde</h3><p>Un jet de sauvegarde est un jet de dé utilisé pour déterminer si un personnage peut éviter ou réduire les effets d'une attaque ou d'un piège. Ces jets sont essentiels pour la survie des personnages, influençant directement les conséquences des menaces qu'ils rencontrent.</p>"
+
 - title: "Lieu"
-  content: "Endroit spécifique où se déroule une partie de l'aventure, comme une ville, un donjon, ou une planète."
+  content: "<h3>Importance des Lieux</h3><p>Les lieux dans un JDR définissent les environnements où les aventures se déroulent, tels que des villes, des donjons, ou des mondes étranges. Chaque lieu possède des caractéristiques uniques qui influencent la narration et les interactions des personnages, enrichissant l'expérience de jeu.</p>"
+
 - title: "Magie"
-  content: "Usage de pouvoirs surnaturels dans un univers de JDR, souvent régulé par des règles spécifiques."
+  content: "<h3>Utilisation de la Magie</h3><p>La magie est une composante essentielle de nombreux JDR, permettant aux personnages d'utiliser des pouvoirs surnaturels. Les règles de magie varient selon les jeux mais impliquent généralement l'apprentissage de sorts et la gestion de ressources magiques pour effectuer des actions extraordinaires.</p>"
+
 - title: "Monstre"
-  content: "Créature affrontée par les joueurs, possédant des compétences et des caractéristiques uniques."
+  content: "<h3>Créatures et Monstres</h3><p>Les monstres sont des adversaires que les joueurs doivent souvent affronter dans les JDR. Chaque monstre possède des compétences et des caractéristiques uniques qui nécessitent des stratégies spécifiques pour les surmonter, ajoutant de la variété et du défi aux rencontres de jeu.</p>"
+
 - title: "Niveau"
-  content: "Rang d'un personnage, déterminant ses compétences, points de vie, et capacités."
+  content: "<h3>Progression des Niveaux</h3><p>Le niveau d'un personnage représente son rang et son expérience dans le jeu. Chaque niveau supérieur gagné augmente les compétences, les points de vie, et les capacités du personnage, symbolisant son évolution et sa maîtrise croissantes au sein de l'univers du jeu.</p>"
+
 - title: "PNJ"
-  content: "Personnage non-joueur contrôlé par le maître du jeu pour interagir avec les joueurs."
+  content: "<h3>Personnages Non-Joueurs (PNJ)</h3><p>Les PNJ sont des personnages contrôlés par le Maître du Jeu (MJ) plutôt que par les joueurs. Ils jouent divers rôles tels que des alliés, adversaires, ou simples passants, enrichissant le monde du jeu et facilitant la progression de l'histoire. Ils sont essentiels pour donner vie à l'univers du jeu et pour dynamiser les interactions narratives.</p>"
+
 - title: "Point de vie"
-  content: "Mesure de la santé d'un personnage, déterminant sa capacité à survivre aux blessures."
+  content: "<h3>Points de Vie</h3><p>Les points de vie (PV) mesurent la santé et la vitalité d'un personnage. Une réduction de ces points reflète les blessures subies lors des combats ou autres situations dangereuses. Les PV sont cruciaux pour la survie des personnages, déterminant combien de dégâts ils peuvent supporter avant d'être incapacités ou tués.</p>"
+
 - title: "Pouvoir"
-  content: "Compétence spéciale ou sort qu'un personnage peut utiliser."
+  content: "<h3>Capacités et Pouvoirs Spéciaux</h3><p>Les pouvoirs spéciaux d'un personnage peuvent inclure des sorts magiques, des capacités de combat uniques, ou d'autres talents extraordinaires. Ces pouvoirs sont souvent ce qui distingue les personnages les uns des autres et permettent des tactiques et des stratégies variées lors des confrontations ou des défis.</p>"
+
 - title: "Quête"
-  content: "Mission ou objectif donné aux personnages, souvent impliquant des défis et des récompenses."
+  content: "<h3>Missions et Objectifs</h3><p>Une quête est une mission ou un objectif assigné aux personnages, qui les guide à travers des défis spécifiques pour obtenir des récompenses. Les quêtes sont le moteur principal de l'aventure dans de nombreux JDR, fournissant des buts et des motivations claires aux joueurs tout en avançant la trame narrative.</p>"
+
 - title: "Race"
-  content: "Origine et type biologique d'un personnage, influençant ses compétences et son apparence."
+  content: "<h3>Races et Ethnies</h3><p>La race d'un personnage détermine son origine ethnique ou biologique dans l'univers du jeu, influençant ses compétences, ses aptitudes et son apparence. Chaque race possède des traits distincts qui peuvent conférer des avantages et des inconvénients, enrichissant la diversité des personnages et des interactions.</p>"
+
 - title: "Rune"
-  content: "Symbole magique utilisé dans Runequest pour lancer des sorts ou influencer le destin."
+  content: "<h3>Magie des Runes</h3><p>Les runes sont des symboles magiques qui confèrent des pouvoirs ou influencent le monde de manière surnaturelle. Utilisées dans des jeux comme RuneQuest, elles permettent de lancer des sorts ou de modifier le destin. Chaque rune a une signification et un pouvoir spécifique, ajoutant une couche de profondeur magique au gameplay.</p>"
+
 - title: "Sanity"
-  content: "Statistique dans Call of Cthulhu représentant la santé mentale d'un personnage, affectée par les horreurs rencontrées."
+  content: "<h3>Santé Mentale</h3><p>La santé mentale, souvent appelée 'Sanity', est une mesure dans des jeux comme Call of Cthulhu, qui quantifie l'état psychologique d'un personnage. Confrontés à des horreurs inimaginables, les personnages peuvent perdre leur santé mentale, affectant leur comportement et leurs capacités, ce qui peut mener à des conséquences dramatiques durant le jeu.</p>"
+
 - title: "Scénario"
-  content: "Histoire ou mission spécifique jouée lors d'une session de JDR."
+  content: "<h3>Histoire et Missions</h3><p>Un scénario est une aventure spécifique, souvent une mission ou une histoire, que les personnages vivent et jouent. Il sert de cadre pour les sessions de jeu, guidant les joueurs à travers une série de développements narratifs et de défis basés sur les décisions et actions des joueurs.</p>"
+
 - title: "Sort"
-  content: "Formule magique utilisée par les personnages pour produire des effets surnaturels."
+  content: "<h3>Magie et Sortilèges</h3><p>Un sort est une formule magique ou un rituel qui permet à un personnage de produire des effets surnaturels. Les sorts peuvent avoir des effets variés, comme infliger des dégâts, protéger des alliés, ou manipuler l'environnement. Ils nécessitent généralement une certaine préparation et ressource, comme la mémorisation ou des composants magiques.</p>"
+
 - title: "Statistique"
-  content: "Valeur numérique représentant une caractéristique d'un personnage, comme la force ou l'intelligence."
+  content: "<h3>Caractéristiques Fondamentales</h3><p>Les statistiques sont des valeurs numériques qui définissent les caractéristiques fondamentales d'un personnage, telles que la force, l'intelligence, et la dextérité. Ces chiffres influencent directement la capacité du personnage à effectuer des actions, réussir des tests et interagir avec le monde de jeu.</p>"
+
 - title: "Table des critiques"
-  content: "Tableau utilisé pour déterminer les effets d'un coup critique."
+  content: "<h3>Effets des Coups Critiques</h3><p>La table des critiques est un outil utilisé pour déterminer les effets spécifiques d'un coup critique réussi. Elle peut contenir des détails sur des dégâts supplémentaires ou des effets particuliers, ajoutant un élément d'incertitude et d'excitation aux combats.</p>"
+
 - title: "Univers"
-  content: "Monde ou cadre dans lequel se déroule le jeu de rôle, avec ses propres règles et histoires."
+  content: "<h3>Cadre du Jeu de Rôle</h3><p>L'univers d'un JDR est le monde dans lequel l'histoire et les aventures se déroulent. Chaque univers possède ses propres règles, sa géographie, ses cultures et ses histoires, fournissant un fond riche pour les aventures des personnages et les intrigues développées par le MJ.</p>"
+
 - title: "Valeur de difficulté"
-  content: "Nombre cible que les joueurs doivent atteindre ou dépasser avec un jet de dé pour réussir une action."
+  content: "<h3>Niveau de Défi</h3><p>La valeur de difficulté (DV) est le nombre que les joueurs doivent atteindre ou dépasser avec leurs jets de dés pour réussir une action. Elle mesure la difficulté d'une tâche, influençant directement les chances de succès ou d'échec des personnages dans leurs entreprises.</p>"
+
 - title: "Vitesse"
-  content: "Statistique déterminant la rapidité d'un personnage à se déplacer ou à agir."
+  content: "<h3>Rapidité d'Action</h3><p>La vitesse d'un personnage détermine à quelle fréquence il peut agir pendant un tour de combat, influençant ses déplacements et sa capacité à réagir aux menaces. C'est une statistique cruciale dans les scénarios de combat, où la rapidité peut souvent signifier la différence entre la victoire et la défaite.</p>"
+
 - title: "XP"
-  content: "Abréviation de points d'expérience, utilisés pour mesurer les progrès et niveaux des personnages."
+  content: "<h3>Points d'Expérience</h3><p>XP est l'abréviation pour points d'expérience, qui sont utilisés pour mesurer les progrès et le développement des personnages au fil du jeu. Accumuler des XP permet aux personnages de monter en niveau, améliorant leurs capacités et leurs chances de réussite dans des aventures futures.</p>"
+
+- title: "Altération de la réalité"
+  content: "<h3>Modification de la Réalité</h3><p>Ce concept englobe les pouvoirs ou les sorts qui permettent de modifier temporairement ou de façon permanente la réalité environnante. Utilisés dans des contextes de haute magie, ces pouvoirs offrent aux personnages la capacité de dépasser les lois naturelles de l'univers pour créer ou altérer des éléments, des situations ou même des timelines.</p>"
+
+- title: "Barde"
+  content: "<h3>Le Rôle du Barde</h3><p>Le barde est une classe de personnage qui utilise ses talents musicaux et ses connaissances pour influencer les autres et manipuler les émotions. Capable de renforcer ses alliés ou de démoraliser ses ennemis, le barde est aussi un excellent conteur et un diplomate naturel.</p>"
+
+- title: "Catacombes"
+  content: "<h3>Exploration de Catacombes</h3><p>Les catacombes sont des lieux de sépulture souterrains, souvent peuplés de créatures et de pièges. Explorer ces labyrinthes obscurs est un élément classique des quêtes dans les JDR, offrant à la fois des défis physiques et des opportunités de découvrir des trésors cachés et des secrets anciens.</p>"
+
+- title: "Démonologie"
+  content: "<h3>Étude des Démons</h3><p>La démonologie est la pratique qui consiste à invoquer, contrôler ou repousser des démons. Dans les JDR, cette pratique peut être hautement dangereuse mais aussi extrêmement puissante, offrant des connaissances et des capacités qui touchent aux forces occultes.</p>"
+
+- title: "Élémentaire"
+  content: "<h3>Creatures Élémentaires</h3><p>Les créatures élémentaires sont des êtres composés d'un des éléments primaires comme le feu, l'eau, l'air ou la terre. Chacun possède des capacités uniques basées sur son élément, jouant souvent un rôle vital dans les combats et les énigmes environnementales dans les JDR.</p>"
+
+- title: "Forgeron"
+  content: "<h3>Le Métier de Forgeron</h3><p>Le forgeron est un artisan spécialisé dans la fabrication d'armes, d'armures et d'autres objets métalliques. Dans les JDR, les forgerons jouent un rôle crucial en fournissant l'équipement nécessaire aux aventuriers et en offrant des services de réparation et d'amélioration d'objets.</p>"
+
+- title: "Glyphe"
+  content: "<h3>Usage des Glyphes</h3><p>Les glyphes sont des symboles magiques gravés ou dessinés qui possèdent des effets activés sous certaines conditions. Utilisés pour protéger, piéger ou renforcer des zones, ils ajoutent une dimension stratégique aux préparations de combat ou aux défenses de lieux importants.</p>"
+
+- title: "Hérésie"
+  content: "<h3>Conflits d'Hérésie</h3><p>L'hérésie fait référence à des croyances ou des pratiques qui vont à l'encontre des doctrines établies dans un contexte religieux ou culturel du jeu. Cela peut mener à des conflits dramatiques, des quêtes pour purger ou défendre des idées, et explorer des thèmes de conviction et de foi.</p>"
+
+- title: "Illusion"
+  content: "<h3>Magie Illusoire</h3><p>L'illusion est une branche de la magie qui crée des images, des sons, ou d'autres perceptions sensorielles qui ne sont pas réelles. Les illusionnistes peuvent manipuler leurs ennemis, masquer des présences ou modifier l'apparence des choses, créant des opportunités pour l'ingéniosité et la tromperie.</p>"
+
+- title: "Joute"
+  content: "<h3>Compétitions de Joute</h3><p>La joute est une compétition de chevalerie où deux adversaires montés et armés de lances s'affrontent dans un duel. Populaire dans les settings médiévaux, elle offre une façon dramatique et festive de résoudre des conflits et de gagner du prestige.</p>"
+
+- title: "Karma"
+  content: "<h3>Système de Karma</h3><p>Le karma dans les JDR peut se référer à un système où les actions des personnages influencent directement leur fortune ou leur destin. Les bonnes actions peuvent mener à des bénéfices tandis que les mauvaises actions pourraient entraîner des conséquences négatives, reflétant un équilibre moral et cosmique.</p>"
+
+- title: "Légende"
+  content: "<h3>Importance des Légendes</h3><p>Les légendes sont des histoires transmises qui souvent contiennent des grains de vérité historique ou mystique. Dans les JDR, découvrir la vérité derrière une légende peut mener à des quêtes, des trésors cachés, ou des rencontres avec des êtres de pouvoir ancien.</p>"
+
+- title: "Métamorphose"
+  content: "<h3>Magie de Métamorphose</h3><p>La métamorphose permet aux personnages de changer de forme, adoptant les apparences et parfois les capacités de différentes créatures ou personnes. Cette capacité peut être utilisée pour l'infiltration, l'exploration ou la fuite, offrant une polyvalence exceptionnelle en jeu.</p>"
+
+- title: "Nécromancie"
+  content: "<h3>Pratiques Nécromantiques</h3><p>La nécromancie est la magie qui invoque et contrôle les morts. Utilisée pour animer des cadavres ou communiquer avec les esprits, elle est souvent vue avec suspicion ou terreur dans les mondes de JDR, mais offre des capacités puissantes pour ceux qui osent l'explorer.</p>"
+
+- title: "Oasis"
+  content: "<h3>Refuges dans le Désert</h3><p>Une oasis est un havre dans des environnements désertiques, offrant de l'eau et un refuge contre les conditions extérieures dures. Dans les JDR, les oasis peuvent servir de points de repos cruciaux ou de lieux de rencontres inattendues dans des quêtes à travers des terres arides.</p>"
+
+- title: "Pacte"
+  content: "<h3>Accords et Pactes</h3><p>Un pacte dans un JDR peut être un accord entre un personnage et une entité plus puissante, souvent en échange de pouvoirs ou de connaissances. Ces accords peuvent avoir des conséquences à long terme, affectant la trame narrative et le développement du personnage.</p>"
+
+- title: "Quorum"
+  content: "<h3>Décisions de Groupe</h3><p>Un quorum fait référence au nombre minimum de membres d'un groupe nécessaires pour prendre des décisions valides. Dans les JDR, cela peut être utilisé pour des décisions de guildes, de conseils ou d'autres corps collectifs, influençant les politiques ou les actions de l'organisation.</p>"
+
+- title: "Rituel"
+  content: "<h3>Cérémonies Rituelles</h3><p>Les rituels sont des procédures ou des cérémonies qui ont une signification magique ou culturelle. Dans les JDR, effectuer un rituel peut nécessiter des composants spéciaux, des connaissances occultes, et du temps, mais offre des résultats souvent puissants ou miraculeux.</p>"
+
+- title: "Sanctuaire"
+  content: "<h3>Lieux de Refuge</h3><p>Un sanctuaire est un lieu sacré ou protégé, souvent associé à une divinité ou à une force magique. Ces lieux peuvent offrir sécurité, guérison, ou d'autres bénéfices aux personnages qui les respectent et les maintiennent.</p>"
+
+- title: "Talisman"
+  content: "<h3>Objets de Pouvoir</h3><p>Un talisman est un objet qui est censé apporter de la chance ou des pouvoirs magiques à celui qui le porte. Dans les JDR, les talismans peuvent servir de catalyseurs pour des sorts, de protection contre des malédictions, ou d'amplificateurs de pouvoirs.</p>"
+
+- title: "Utopie"
+  content: "<h3>Sociétés Idéales</h3><p>Une utopie est une société ou une communauté qui possède les qualités idéales d'harmonie et de justice. Dans les JDR, explorer ou défendre une utopie peut impliquer des défis sociaux et éthiques, testant les idéaux des personnages contre des réalités complexes.</p>"
+
+- title: "Vestige"
+  content: "<h3>Reliques du Passé</h3><p>Les vestiges sont des restes ou des artefacts d'époques révolues, porteurs d'histoire et de pouvoir. La recherche et la récupération de ces objets peuvent mener à des aventures dans des ruines anciennes ou des lieux oubliés, offrant des aperçus dans le passé du monde du jeu.</p>"
+
+- title: "Wendigo"
+  content: "<h3>Creatures Mythiques</h3><p>Le wendigo est une créature légendaire souvent associée à la famine et à l'hiver. Dans les JDR, rencontrer un wendigo peut être une expérience terrifiante et dangereuse, mettant à l'épreuve la survie et la morale des personnages.</p>"
+
+- title: "Xénologie"
+  content: "<h3>Étude des Cultures Étrangères</h3><p>La xénologie est l'étude des cultures non humaines ou extraterrestres. Dans les JDR de science-fiction ou de fantasy, comprendre la xénologie peut aider les personnages à naviguer dans des interactions complexes avec des espèces différentes, enrichissant les quêtes diplomatiques ou les missions d'exploration.</p>"
+
+- title: "Yggdrasil"
+  content: "<h3>L'Arbre Monde</h3><p>Yggdrasil est un immense arbre cosmique qui connecte différents mondes ou réalités dans la mythologie nordique. Dans les JDR, voyager à travers ses branches peut mener à des aventures entre différents plans d'existence, offrant des défis et des découvertes uniques.</p>"
+
+- title: "Zéphyr"
+  content: "<h3>Vents et Voyages</h3><p>Le zéphyr est un vent doux et agréable. Dans les JDR, il peut symboliser des changements, des nouveaux débuts ou des voyages. Les personnages peuvent suivre un zéphyr lors d'une quête, menant à des découvertes inattendues ou des rencontres fortuites.</p>"

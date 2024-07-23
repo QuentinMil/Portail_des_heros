@@ -4,7 +4,7 @@
 }
 
 .sections {
-  width: 30%;
+  flex: 0 0 25%; /* La largeur est fixée à 25% et ne changera pas */
   background-color: #f0f0f0;
   padding: 20px;
   height: 100vh; /* Prend toute la hauteur de la fenêtre */
