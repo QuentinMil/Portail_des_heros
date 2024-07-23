@@ -1,0 +1,4 @@
+backstories:
+  - template: "L'histoire de %{name}, %{race}, %{univers_class} : %{name} était connu pour être un %{univers_class} exceptionnel. Né dans une famille de %{race}s, %{name} a toujours montré des compétences incroyables dans l'art de %{univers_class}. Un jour, %{name} a décidé de partir à l'aventure dans le monde de %{universe}."
+  - template: "Les aventures de %{name}, %{race} %{univers_class} : %{name} est un %{univers_class} qui a grandi parmi les %{race}s. Ayant un fort sens de l'aventure, %{name} a toujours cherché à explorer les moindres recoins de %{universe}. Sa bravoure et son intelligence l'ont souvent sauvé des situations dangereuses."
+  - template: "Chroniques de %{name}, %{univers_class} %{race} : %{name} est un %{race} avec un talent inné pour être %{univers_class}. Depuis son enfance dans %{universe}, %{name} a été entraîné dans l'art de %{univers_class} par les anciens de sa tribu. Maintenant, %{name} est prêt à affronter tous les défis."
