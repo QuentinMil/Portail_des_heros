@@ -55,6 +55,8 @@ gem "cloudinary"
 gem 'jwt'
 gem "httparty"
 gem 'ruby-openai'
+gem 'pg_search'
+
 
 group :development, :test do
   gem "dotenv-rails"
