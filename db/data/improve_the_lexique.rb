@@ -3,9 +3,14 @@ require 'openai'
 require 'dotenv/load'
 
 # Configuration de l'API OpenAI
-OpenAI.api_key = ENV['OPENAI_API_KEY']
+OpenAI.configure do |config|
+  config.access_token = ENV.fetch("OPENAI_ACCESS_TOKEN")
+  config.log_errors = true # Highly recommended in development, so you can see what errors OpenAI is returning. Not recommended in production because it could leak private data to your logs.
+end
 
-def improve_content(title, content)
+client = OpenAI::Client.new
+
+def improve_content(client, title, content)
   prompt = <<~PROMPT
     Améliorez le contenu suivant pour atteindre environ 500 mots, divisé en trois sections avec des titres <h3> :
 
@@ -23,7 +28,7 @@ def improve_content(title, content)
     Assurez-vous que chaque section commence par un titre <h3>.
   PROMPT
 
-  response = OpenAI::Client.new.completions(
+  response = client.chat(
     parameters: {
       model: "gpt-3.5-turbo",
       messages: [{ role: "user", content: prompt }],
@@ -36,7 +41,7 @@ def improve_content(title, content)
 end
 
 # Lire le fichier YAML
-file_path = 'lexique.yml'
+file_path = 'db/data/lexique.yml'
 lexique = YAML.load_file(file_path)
 
 puts "-> fichier YML trouvé."
@@ -50,7 +55,7 @@ lexique.each_with_index do |entry, index|
   content = entry['content']
   puts "Amélioration du contenu pour le titre : #{title} (#{index + 1}/#{total_entries})"
   
-  improved_content = improve_content(title, content)
+  improved_content = improve_content(client, title, content)
   entry['content'] = improved_content
   entry['improved_by_gpt'] = 'done'
 
