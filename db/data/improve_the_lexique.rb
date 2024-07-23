@@ -12,7 +12,7 @@ client = OpenAI::Client.new
 
 def improve_content(client, title, content)
   prompt = <<~PROMPT
-    Améliorez le contenu suivant pour atteindre environ 500 mots, divisé en trois sections avec des titres <h3> :
+    Améliorez le contenu suivant pour atteindre environ 300 mots, divisé en trois sections avec des titres <h3> :
 
     Titre : #{title}
 
@@ -24,6 +24,7 @@ def improve_content(client, title, content)
     - Écrivez une introduction approfondie.
     - Développez le contenu existant en ajoutant des détails, des exemples et des explications supplémentaires.
     - Concluez avec une section récapitulative ou des implications plus larges.
+    - N'ajoutez pas de "Conclusion" ou de partie avec "En conclusion"
 
     Assurez-vous que chaque section commence par un titre <h3>.
   PROMPT

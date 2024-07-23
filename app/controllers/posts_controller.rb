@@ -5,7 +5,7 @@ class PostsController < ApplicationController
                Post.search_by_title(params[:query])
              else
                Post.all
-             end
+             end.order(:title)
 
     respond_to do |format|
       format.html # Follow regular flow of Rails
