@@ -51,8 +51,8 @@ class Character < ApplicationRecord
       model: "dall-e-3",
       prompt: prompt,
       size: "1024x1024",
-      quality: "standard"-
-    })
+      quality: "standard"
+      })
     image = response.dig("data", 0, "url")
 
     file = URI.open(image)
