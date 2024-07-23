@@ -14,7 +14,14 @@
 
 - title: Race Humain D&D
   content: >
-    Les humains sont les personnes les plus aptes a s'adapter a toutes situations et les plus ambitieuses parmi les races communes.
+    <h3>Adaptabilité Exceptionnelle</h3>
+    <p>Les humains sont les personnes les plus aptes à s'adapter à toutes situations. Ils possèdent une grande flexibilité et peuvent s'intégrer dans divers environnements et cultures. Cette adaptabilité leur permet de survivre et de prospérer dans des conditions variées, faisant d'eux une race particulièrement résiliente.</p>
+    
+    <h3>Ambition Inébranlable</h3>
+    <p>Les humains sont connus pour leur ambition sans bornes. Ils cherchent constamment à améliorer leur sort et à atteindre de nouveaux sommets. Cette ambition se manifeste souvent par une quête de pouvoir, de connaissance et de développement personnel, les poussant à explorer et à conquérir de nouvelles frontières.</p>
+    
+    <h3>Diversité et Culture</h3>
+    <p>En raison de leur nature adaptable, les humains ont développé une riche diversité culturelle. Chaque région habitée par des humains a ses propres coutumes, traditions et modes de vie uniques. Cette diversité enrichit le monde de Donjons et Dragons, offrant une multitude de perspectives et d'expériences variées pour les joueurs.</p>
   name: Donjons et Dragons
   video_url: "https://example.com/human_video"
   tuto_order: 3

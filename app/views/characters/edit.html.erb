@@ -36,7 +36,7 @@
                 <div class="modal-body">
                   <% tutorial = @character.universe.tutorials.find_by(race: race.name) %>
                   <% if tutorial %>
-                    <p><%= tutorial.content %></p>
+                    <p><%= tutorial.content.html_safe %></p>
                     <% if tutorial.video_url.present? %>
                       <video src="<%= tutorial.video_url %>" controls></video>
                     <% end %>
