@@ -12,16 +12,16 @@ class Character < ApplicationRecord
 
   # il faut effacer les notes de notre character avant de le supprimer. Autrement il y aura une erreur de clé étrangère
   before_destroy :destroy_notes
-  
-  private 
-
-  def destroy_notes
-    notes.destroy_all
-  end
 
   def generate_backstory_async
     if completion_rate == 10
       GenerateBackstoryJob.perform_later(id)
     end
+  end
+  
+  private 
+
+  def destroy_notes
+    notes.destroy_all
   end
 end
