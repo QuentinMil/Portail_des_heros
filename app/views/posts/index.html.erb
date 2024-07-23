@@ -9,11 +9,7 @@
     <div class="lexique-dictionnary" data-lexique-target="dictionary">
       <h2>Lexique</h2>
       <ul data-lexique-target="list">
-        <% @posts.each do |post| %>
-          <li>
-            <%= link_to post.title, post_path(post, format: :json), data: { action: "lexique#load" } %>
-          </li>
-        <% end %>
+        <%= render "list", posts: @posts %>
       </ul>
     </div>
   </div>
