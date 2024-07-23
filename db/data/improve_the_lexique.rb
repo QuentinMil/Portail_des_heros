@@ -19,9 +19,10 @@ def improve_content(client, title, content)
     Contenu existant : #{content}
 
     Instructions :
-    - Il s'agit d'un lexique pour un site Web éducatif autour du jeu de role. 
+    - Il s'agit d'un lexique pour un site Web éducatif autour du jeu de rôle.
     - Ce lexique explique les termes techniques aux débutants.
-    - Écrivez une introduction approfondie.
+    - Écrivez une introduction approfondie mais ne pas commencer cette partie par le nom "Introduction". Soyez créatif.
+    - N'ajoutez pas de "Introduction" ou de partie avec "Dans cet article"
     - Développez le contenu existant en ajoutant des détails, des exemples et des explications supplémentaires.
     - Concluez avec une section récapitulative ou des implications plus larges.
     - N'ajoutez pas de "Conclusion" ou de partie avec "En conclusion"
@@ -46,6 +47,15 @@ file_path = 'db/data/lexique.yml'
 lexique = YAML.load_file(file_path)
 
 puts "-> fichier YML trouvé."
+
+# Demander à l'utilisateur s'il souhaite réinitialiser les améliorations
+puts "Souhaitez-vous réinitialiser toutes les améliorations précédentes (yes/no) ?"
+reset_choice = gets.chomp.downcase
+
+if reset_choice == 'yes'
+  lexique.each { |entry| entry.delete('improved_by_gpt') }
+  puts "-> Tous les indicateurs 'improved_by_gpt' ont été réinitialisés."
+end
 
 # Mettre à jour le contenu
 total_entries = lexique.size
