@@ -14,7 +14,13 @@
 
 - title: Race Humain D&D
   content: >
-    Les humains sont les personnes les plus aptes a s'adapter a toutes situations et les plus ambitieuses parmi les races communes.
+    <h3>"Tu es en retard, Elfe!" Vint le ton rugueux d'une voix familière. Bruenor Battlehammer marchait sur le dos de son ennemi mort.</h3>
+    <h2>Petits mais Costauds</h2>
+    <p>Audacieux et robustes, les nains sont connus pour leurs talents de guerriers, de mineurs et de travailleurs de la pierre et du métal. Bien qu'ils mesurent moins d'un mètre cinquante, les nains sont si larges et si compacts qu'ils peuvent peser autant qu'un humain. Leur courage et leur endurance n'ont rien à envier à ceux des plus grands qu'eux.</p>
+    <h2>Ils se souviennent...</h2>
+    <p>Les nains peuvent vivre plus de 400 ans, et les plus vieux d'entre eux se rappellent souvent d'un monde très différent. Cette longévité leur confère une perspective sur le monde que n'ont pas les races à vie plus courte. Les nains sont solides et endurants comme les montagnes qu'ils aiment, traversant les siècles avec une endurance stoïque et peu de changements. Ils respectent les traditions de leurs clans, remontant jusqu'à la fondation de leurs plus anciennes forteresses. Ils sont déterminés et loyaux, ils sont lents à oublier les torts qu'ils ont subis. Un tort causé à un nain est un tort causé à tout son clan, et ce qui commence comme une chasse à la vengeance peut devenir une véritable querelle de clan.</p>
+    <h2>Les royaumes</h2>
+    <p>Les royaumes nains s'étendent profondément sous les montagnes d'où ils extraient des pierres et métaux précieux avec lesquels ils forgent des objets merveilleux. Ils aiment la beauté artisanale et artistique. L'unité principale de la société naine est le clan, et les nains accordent une grande importance à leur statut social. Même les nains qui vivent loin de leurs royaumes chérissent l'identité et l'appartenance à leur clan, et invoquent le nom de leurs ancêtres dans leurs serments et malédictions. </p>
   name: Donjons et Dragons
   video_url: "https://example.com/human_video"
   tuto_order: 3
@@ -30,7 +36,13 @@
 
 - title: Race Nain D&D
   content: >
-    En tant que nain, vous êtes petit certes, mais également très fort et robuste.
+    <h3>"Tu es en retard, Elfe!" Vint le ton rugueux d'une voix familière. Bruenor Battlehammer marchait sur le dos de son ennemi mort.</h3>
+    <h2>Petits mais Costauds</h2>
+    <p>Audacieux et robustes, les nains sont connus pour leurs talents de guerriers, de mineurs et de travailleurs de la pierre et du métal. Bien qu'ils mesurent moins d'un mètre cinquante, les nains sont si larges et si compacts qu'ils peuvent peser autant qu'un humain. Leur courage et leur endurance n'ont rien à envier à ceux des plus grands qu'eux.</p>
+    <h2>Ils se souviennent...</h2>
+    <p>Les nains peuvent vivre plus de 400 ans, et les plus vieux d'entre eux se rappellent souvent d'un monde très différent. Cette longévité leur confère une perspective sur le monde que n'ont pas les races à vie plus courte. Les nains sont solides et endurants comme les montagnes qu'ils aiment, traversant les siècles avec une endurance stoïque et peu de changements. Ils respectent les traditions de leurs clans, remontant jusqu'à la fondation de leurs plus anciennes forteresses. Ils sont déterminés et loyaux, ils sont lents à oublier les torts qu'ils ont subis. Un tort causé à un nain est un tort causé à tout son clan, et ce qui commence comme une chasse à la vengeance peut devenir une véritable querelle de clan.</p>
+    <h2>Les royaumes</h2>
+    <p>Les royaumes nains s'étendent profondément sous les montagnes d'où ils extraient des pierres et métaux précieux avec lesquels ils forgent des objets merveilleux. Ils aiment la beauté artisanale et artistique. L'unité principale de la société naine est le clan, et les nains accordent une grande importance à leur statut social. Même les nains qui vivent loin de leurs royaumes chérissent l'identité et l'appartenance à leur clan, et invoquent le nom de leurs ancêtres dans leurs serments et malédictions.</p>
   name: Donjons et Dragons
   video_url: "https://example.com/dwarf_video"
   tuto_order: 5
