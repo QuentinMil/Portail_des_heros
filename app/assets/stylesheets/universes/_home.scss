@@ -1,15 +1,15 @@
 .container_universes {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 20px;
-  justify-content: space-around;
-  padding-top: 20px;
-  padding-bottom: 10px;
+  height: 100vh;
+
+#carousel-universes{
+  width: min-content;
+}
 
   .universe {
-    position: relative;
     width: 600px;
     height: 400px;
     background-size: auto;
@@ -17,7 +17,6 @@
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    gap: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
@@ -70,21 +69,21 @@
       opacity: 0;
     }
   }
-  .titre {
-    color: white;
-    font-size: 30px;
-    text-align: center;
-    margin-top: 50px;
-    text-shadow: 1px 1px 2px #0000008e;
+  // .titre {
+  //   color: white;
+  //   font-size: 30px;
+  //   text-align: center;
+  //   margin-top: 50px;
+  //   text-shadow: 1px 1px 2px #0000008e;
 
-    p {
-      font-size: 15px;
-      margin-bottom: 50px;
-    }
+  //   p {
+  //     font-size: 15px;
+  //     margin-bottom: 50px;
+  //   }
 
-    h1 {
-      font-size: 40px;
-    }
-  }
+  //   h1 {
+  //     font-size: 40px;
+  //   }
+  // }
 
 }

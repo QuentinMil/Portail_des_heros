@@ -1,21 +1,24 @@
 <div class="container_universes">
 
-<div class="titre">
-  <h1>Bienvenue, aventurier intrépide !</h1>
-  <h3>Plonge dans l'un de nos mondes fantastiques</h3>
-  <p>Survole les univers pour découvrir leurs mystères et leurs légendes...</p>
-</div>
-
-  <% @universes.each do |universe| %>
-    <div class="universe" style="background-image:url(<%= cl_image_path(universe.photo.key) %>)">
-      <div class="background-opacity"></div>
-      <h2 class="text"><%= universe.name %></h2>
-      <div class="description">
-        <p><%= universe.description %></p>
-        <%= link_to universe_path(universe), class: "button-#{universe.name.downcase.tr(' ', '-')}" do %>
-          Découvrir
+  <div id="carousel-universes" class="carousel slide carousel-fade">
+      <div class="carousel-inner">
+        <% @universes.each_with_index do |universe, index| %>
+          <div class="carousel-item universe <%= 'active' if index.zero? %>" style="background-image:url(<%= cl_image_path(universe.photo.key) %>)">
+            <div class="background-opacity"></div>
+            <h2 class="text"><%= universe.name %></h2>
+            <div class="description">
+              <p><%= universe.description %></p>
+            </div>
+          </div>
         <% end %>
       </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carousel-universes" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carousel-universes" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-  <% end %>
-</div>
+    </div>
