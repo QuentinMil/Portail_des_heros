@@ -13,20 +13,14 @@ class Character < ApplicationRecord
   # il faut effacer les notes de notre character avant de le supprimer. Autrement il y aura une erreur de clé étrangère
   before_destroy :destroy_notes
   
-  # génerer une histoire pour notre personnage avec sidekiq (il faut lancer le serveur sidekiq)
-  after_commit :async_generate_backstory, on: [:create, :update]
-
   def generate_backstory_async
-    GenerateBackstoryJob.perform_later(id)
+    if completion_rate == 10
+      GenerateBackstoryJob.perform_later(id)
   end
   
   private 
 
   def destroy_notes
     notes.destroy_all
-  end
-
-  def async_generate_backstory
-    GenerateBackstoryJob.perform_later(self.id)
   end
 end

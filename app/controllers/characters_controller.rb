@@ -51,7 +51,9 @@ class CharactersController < ApplicationController
         # Mettre à jour le statut du personnage = "Active"
         @character.update(available_status: "Active")
         assign_to_party(@character)
-        @character.generate_backstory # Appel de la méthode generate_backstory
+        
+        # génerer une histoire pour notre personnage avec sidekiq (il faut lancer le serveur sidekiq)
+        @character.generate_backstory_async
         redirect_to @character, notice: 'Votre personnage est terminé !'
       else
         redirect_to edit_character_path(@character)
