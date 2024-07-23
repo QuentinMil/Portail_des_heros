@@ -41,19 +41,25 @@ lexique = YAML.load_file(file_path)
 
 puts "-> fichier YML trouvé."
 
-
 # Mettre à jour le contenu
-lexique.each do |entry|
+total_entries = lexique.size
+lexique.each_with_index do |entry, index|
+  next if entry['improved_by_gpt'] == 'done'
+
   title = entry['title']
   content = entry['content']
-  puts "Amélioration du contenu pour le titre : #{title}"
+  puts "Amélioration du contenu pour le titre : #{title} (#{index + 1}/#{total_entries})"
+  
   improved_content = improve_content(title, content)
   entry['content'] = improved_content
-end
+  entry['improved_by_gpt'] = 'done'
 
-# Sauvegarder les modifications dans le fichier YAML
-File.open(file_path, 'w') do |file|
-  file.write(lexique.to_yaml)
+  # Sauvegarder les modifications après chaque mise à jour pour ne pas perdre les progrès
+  File.open(file_path, 'w') do |file|
+    file.write(lexique.to_yaml)
+  end
+
+  puts "-> Contenu amélioré pour le titre : #{title} (#{index + 1}/#{total_entries})"
 end
 
 puts "-> Mise à jour du fichier lexique.yml terminée."
