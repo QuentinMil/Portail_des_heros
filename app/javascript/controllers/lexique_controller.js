@@ -5,7 +5,7 @@ export default class extends Controller {
 
   connect() {
     console.log("Lexique controller connected");
-    window.addEventListener("scroll", this.handleScroll.bind(this));
+    this.sectionsTarget.addEventListener("scroll", this.handleScroll.bind(this));
   }
 
   disconnect() {
@@ -16,9 +16,14 @@ export default class extends Controller {
     const searchBar = this.searchBarTarget;
     const isSticky = searchBar.classList.contains("sticky");
 
-    if (window.scrollY > 0 && !isSticky) {
+    console.log("Scroll position:", this.sectionsTarget.scrollTop);
+    console.log("Search bar sticky status:", isSticky);
+
+    if (this.sectionsTarget.scrollTop > 0 && !isSticky) {
+      console.log("Adding sticky class to search bar");
       searchBar.classList.add("sticky");
-    } else if (window.scrollY === 0 && isSticky) {
+    } else if (this.sectionsTarget.scrollTop === 0 && isSticky) {
+      console.log("Removing sticky class from search bar");
       searchBar.classList.remove("sticky");
     }
   }
