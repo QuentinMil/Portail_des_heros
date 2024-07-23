@@ -1,3 +1,35 @@
 # config/prompts.yml
 generate_backstory:
-  template: "Créez une histoire pour un personnage ayant les attributs suivants : Nom : %{name}, Race: %{race}, Classe du perso: %{univers_class}. L'histoire doit être intéressante et s'inscrire dans l'univers de %{universe}. Le texte doit faire maximum 200 mots sur 3 parties distinctes avec un titre h3 par parties. fais moi une réponse au format html. Uniquement avec des baslises p et des h3. Commence par une balise h3 pour le titre."
+  template: |
+    Créez une histoire captivante et détaillée pour un personnage avec les attributs suivants :
+    Nom : %{name}, Race : %{race}, Classe du personnage : %{univers_class}.
+    L'histoire doit être immersive et s'inscrire dans l'univers de %{universe}.
+
+    Les exigences :
+    - La longueur de l'histoire doit être d'environ 500 mots.
+    - Divisez l'histoire en 5 parties principales avec des titres en <h3> et 2 sous-parties avec des titres en <h4>.
+    - Commencez par une balise <h3> pour le titre de la première partie.
+    - Ajoutez des éléments surprenants et des particularités spécifiques au personnage.
+    - Utilisez des détails créatifs et engageants pour enrichir l'histoire.
+    - Le format doit être en HTML, utilisant uniquement des balises <p>, <h3>, et <h4>.
+
+    Exemple de structure :
+    <h3>Partie 1: [Titre]</h3>
+    <p>[Paragraphe]</p>
+    <h3>Partie 2: [Titre]</h3>
+    <p>[Paragraphe]</p>
+    <h4>Sous-partie 1: [Titre]</h4>
+    <p>[Paragraphe]</p>
+    <h3>Partie 3: [Titre]</h3>
+    <p>[Paragraphe]</p>
+    <h4>Sous-partie 2: [Titre]</h4>
+    <p>[Paragraphe]</p>
+    <h3>Partie 4: [Titre]</h3>
+    <p>[Paragraphe]</p>
+    <h3>Partie 5: [Titre]</h3>
+    <p>[Paragraphe]</p>
+
+    Instructions :
+    - Utilisez des détails spécifiques et des éléments de surprise pour rendre l'histoire unique.
+    - Intégrez des aspects de l'univers de %{universe} pour renforcer l'immersion.
+    - Faites preuve de créativité dans les descriptions et les événements de l'histoire.
