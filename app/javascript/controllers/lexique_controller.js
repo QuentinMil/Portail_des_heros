@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
-  static targets = ["content", "form", "searchInput", "list"];
+  static targets = ["content", "form", "searchInput", "list", "dictionary"];
 
   connect() {
     console.log("Lexique controller connected");
@@ -34,7 +34,7 @@ export default class extends Controller {
       })
       .then(data => {
         console.log("Data received for list update:", data);
-        this.listTarget.outerHTML = data;
+        this.dictionaryTarget.innerHTML = data;
       })
       .catch(error => {
         console.error("Error updating list:", error);
