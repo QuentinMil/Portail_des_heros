@@ -1,5 +1,5 @@
 <!-- app/views/posts/_list.html.erb -->
-<ul data-lexique-target="list">
+<ul>
   <% posts.each do |post| %>
     <li>
       <%= link_to post.title, post_path(post, format: :json), data: { action: "lexique#load" } %>
