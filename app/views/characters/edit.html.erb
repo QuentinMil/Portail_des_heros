@@ -34,7 +34,7 @@
                   <% tutorial = @character.universe.tutorials.find_by(race: race.name) %>
                   <% if tutorial %>
                     <h5><%= tutorial.title %></h5>
-                    <p><%= tutorial.content %></p>
+                    <p><%= tutorial.content.html_safe %></p>
                     <% if tutorial.video_url.present? %>
                       <video src="<%= tutorial.video_url %>" controls></video>
                     <% end %>
@@ -75,7 +75,7 @@
                   <% tutorial = @character.universe.tutorials.find_by(univers_class: univers_class.name) %>
                   <% if tutorial %>
                     <h5><%= tutorial.title %></h5>
-                    <p><%= tutorial.content %></p>
+                    <p><%= tutorial.content.html_safe %></p>
                     <% if tutorial.video_url.present? %>
                       <video src="<%= tutorial.video_url %>" controls></video>
                     <% end %>
