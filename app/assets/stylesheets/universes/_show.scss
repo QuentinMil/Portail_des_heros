@@ -1,9 +1,8 @@
 .universe-show {
-    max-width: 800px;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
-    position: relative; /* Pour s'assurer que les ::after sont positionnés correctement */
+    position: sticky; /* Pour s'assurer que les ::after sont positionnés correctement */
 
 
     h1 {

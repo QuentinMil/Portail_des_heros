@@ -1,8 +1,9 @@
 <div class="universe-show <%= @universe.name.parameterize %>">
-  <h1>Bienvenue dans l'univers <%= @universe.name %></h1>
 
+  <%# le titre H1 est après le if @tutorial %>
   <% if @tutorial %>
     <div class="tutorial">
+      <h1>Bienvenue dans l'univers <%= @universe.name %></h1>
       <h2><%= @tutorial.title %></h2>
       <p><%= @tutorial.content %></p>
       <% if @tutorial.video_url.present? %>
@@ -12,6 +13,7 @@
       <% end %>
     </div>
   <% else %>
+    <h1>Bienvenue sur les univers du portail</h1>
     <p>Aucun tutoriel disponible pour cet univers.</p>
   <% end %>
 
