@@ -1,11 +1,14 @@
 .lexique-container {
   display: flex;
+  height: 100vh; /* S'assure que la container prend toute la hauteur de la fenêtre */
 }
 
 .sections {
   width: 30%;
   background-color: #f0f0f0;
   padding: 20px;
+  height: 100vh; /* Prend toute la hauteur de la fenêtre */
+  overflow-y: auto; /* Permet le défilement vertical à l'intérieur de cette div */
 }
 
 .sections h2 {
@@ -36,8 +39,8 @@
 }
 
 .lexique-content {
-  flex-grow: 1; // Changez cette ligne pour prendre le reste de l'espace disponible
+  flex-grow: 1; /* Prend le reste de l'espace disponible */
   overflow-y: auto;
-  padding-left: 20px; // Ajouter un padding à droite pour écarter le texte
+  padding: 20px; // Ajouter un padding autour de la div du content
   color: #f0f0f0;
 }
