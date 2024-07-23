@@ -11,7 +11,7 @@ def generate_simple_backstory(name, race, univers_class, universe, templates)
 end
 
 
-# Nous allons ensuite : 
+# Nous allons ensuite :
 # -> Creer des Users
 # -> Creer un admin
 # -> Créer 3 univers
@@ -81,9 +81,9 @@ puts "-> Création de User Admin : OK"
 
 # CREATION DE 3 UNIVERS
 universes = [
-  { name: 'Donjons et Dragons', description: 'Donjons et Dragons est un univers de haute fantaisie peuplé de créatures mythiques. Les joueurs explorent des donjons mystérieux, combattent des dragons redoutables, et découvrent des trésors anciens tout en développant leurs compétences et leurs pouvoirs.', image_path: 'app/assets/images/dnd.jpg' },
-  { name: 'Call of Cthulhu', description: 'Call of Cthulhu est un univers d’horreur cosmique inspiré des œuvres de H.P. Lovecraft. Les joueurs incarnent des investigateurs confrontés à des mystères surnaturels et des créatures indicibles, luttant pour maintenir leur santé mentale face à des horreurs inimaginables.', image_path: 'app/assets/images/chtullu.jpg' },
-  { name: 'Runequest', description: 'Runequest est un univers galactique mêlant science-fiction et mythologie. Les joueurs explorent des mondes lointains, découvrent des civilisations anciennes et utilisent des runes puissantes pour influencer leur destin dans un cosmos en perpétuelle évolution et conflit.', image_path: 'app/assets/images/runequest.jpg' }
+  { name: 'Donjons et Dragons', description: 'Donjons et Dragons est un univers de haute fantaisie peuplé de créatures mythiques. Les joueurs explorent des donjons mystérieux, combattent des dragons redoutables, et découvrent des trésors anciens tout en développant leurs compétences et leurs pouvoirs.', image_path: 'app/assets/images/background-dnd.jpg' },
+  { name: 'Call of Cthulhu', description: 'Call of Cthulhu est un univers d’horreur cosmique inspiré des œuvres de H.P. Lovecraft. Les joueurs incarnent des investigateurs confrontés à des mystères surnaturels et des créatures indicibles, luttant pour maintenir leur santé mentale face à des horreurs inimaginables.', image_path: 'app/assets/images/background-cthulhu.jpg' },
+  { name: 'Runequest', description: 'Runequest est un univers galactique mêlant science-fiction et mythologie. Les joueurs explorent des mondes lointains, découvrent des civilisations anciennes et utilisent des runes puissantes pour influencer leur destin dans un cosmos en perpétuelle évolution et conflit.', image_path: 'app/assets/images/background-runequest.jpg' }
 ]
 
 universes.each do |universe|
@@ -208,7 +208,7 @@ puts "-> Création de 3 Characters par User : OK"
 
 # CREATION DE 6 PARTIES
 6.times do |i|
-  if i == 0    
+  if i == 0
     # Pour la première partie, définir l'univers à D&D explicitement
     Party.create!(
       name: Faker::Fantasy::Tolkien.location,
@@ -288,7 +288,7 @@ end
 puts "-> Posts du lexique créés : OK"
 
 # AJOUTER DES TUTORIELS
-# Nous avons besoin de 9 tutoriels par univers. 
+# Nous avons besoin de 9 tutoriels par univers.
 # ON UTILISE AUSSI UN FICHIER YAML ICI
 tutorials = YAML.load_file('db/data/tutorials.yml')
 tutorials.each do |tuto|
