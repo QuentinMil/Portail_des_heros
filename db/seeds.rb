@@ -1,7 +1,17 @@
 require 'faker'
 require 'yaml'
 
-# Nous allons
+# Chargement des templates de backstories depuis le fichier YAML
+backstory_templates = YAML.load_file(Rails.root.join('db/data/backstories.yml'))['backstories']
+
+# Fonction pour générer une backstory
+def generate_simple_backstory(name, race, univers_class, universe, templates)
+  template = templates.sample['template']
+  template % { name: name, race: race, univers_class: univers_class, universe: universe }
+end
+
+
+# Nous allons ensuite : 
 # -> Creer des Users
 # -> Creer un admin
 # -> Créer 3 univers
@@ -171,19 +181,25 @@ puts "-> Création de classes dans chaque univers : OK"
 User.all.each do |user|
   3.times do |i|
     universe = [dnd, coc, rq].sample
+    race = universe.races.sample
+    univers_class = universe.univers_classes.sample
+    name = Faker::Games::DnD.name
+    backstory = generate_simple_backstory(name, race.name, univers_class.name, universe.name, backstory_templates)
+
     Character.create!(
-      name: Faker::Games::DnD.name,
+      name: name,
       user: user,
       universe: universe,
-      race: universe.races.sample,
-      univers_class: universe.univers_classes.sample,
+      race: race,
+      univers_class: univers_class,
       strength: rand(10..18),
       dexterity: rand(10..18),
       intelligence: rand(10..18),
       constitution: rand(10..18),
       wisdom: rand(10..18),
       charisma: rand(10..18),
-      available_status: i < 2 ? 'Active' : 'Inactive'
+      available_status: i < 2 ? 'Active' : 'Inactive',
+      backstory: backstory,
     )
   end
 end
@@ -191,12 +207,22 @@ end
 puts "-> Création de 3 Characters par User : OK"
 
 # CREATION DE 6 PARTIES
-6.times do
-  Party.create!(
-    name: Faker::Fantasy::Tolkien.location,
-    universe: Universe.all.sample,
-    user: User.where(game_master: true).sample
-  )
+6.times do |i|
+  if i == 0    
+    # Pour la première partie, définir l'univers à D&D explicitement
+    Party.create!(
+      name: Faker::Fantasy::Tolkien.location,
+      universe: dnd, # Utilisez : pour l'assignation
+      user: User.where(game_master: true).sample
+    )
+  else
+    # Pour les autres parties, sélectionner un univers aléatoire
+    Party.create!(
+      name: Faker::Fantasy::Tolkien.location,
+      universe: Universe.all.sample,
+      user: User.where(game_master: true).sample
+    )
+  end
 end
 
 # NOUS AJOUTONS DES CHARACTERS AUX PARTIES
@@ -285,16 +311,16 @@ messages_data = YAML.load_file(Rails.root.join('db/data/messages.yml'))['message
 party = Party.first
 
 if party
-  party.characters.each do |character|
-    messages_data.each do |message_data|
-      Message.create!(
-        content: message_data['content'],
-        user: character.user,
-        party: party
-      )
-    end
+  messages_data.each do |message_data|
+    # Sélectionner un utilisateur aléatoire parmi les personnages de la partie
+    random_user = party.characters.sample.user
+    Message.create!(
+      content: message_data['content'],
+      user: random_user,
+      party: party
+    )
   end
-  puts "-> 30 messages ajoutés à la première party : OK"
+  puts "-> Messages distribués aléatoirement aux utilisateurs de la première party : OK"
 else
   puts "-> Aucune party trouvée pour ajouter les messages."
 end

@@ -44,6 +44,7 @@
 
 
 
+
     .progression-text {
       color: #EBD18B; /* changer la couleur du progession %tage */
     }
@@ -56,22 +57,25 @@
     }
 
     .options-wrapper {
+      gap: 10px;
       display: flex;
       flex-direction: column;
     }
 
     .option-item {
+      border-radius: 5px;
       position: relative;
-      margin-bottom: 20px;
-      border: 1px solid #EAEAEA;
-      border-radius: 4px;
       background-color: white;
-      padding: 10px;
-      cursor: pointer;
       transition: border-color 0.3s, background-color 0.3s;
       display: flex;
       align-items: center;
+
+      label{
+          padding: 5px 5px 0 5px;
+          cursor: pointer;
+        }
     }
+
 
     .option-item:hover {
       border-color: #76c7c0;
@@ -104,7 +108,8 @@
     }
 
     .option-item input[type="radio"]:checked + label {
-      border: 2px solid #76c7c0;
+      border-color: #000000a1;
+      box-shadow: inset 0px 0px 4px 2px #000000d9;
       background-color: #f0f8f8;
     }
 
@@ -187,6 +192,17 @@
           background: #ccc;
         }
       }
+    }
+    .toggle-modal{
+    margin: -30px 10px 10px 0px;
+    border-width: medium;
+    border-radius: 20px;
+    align-self: flex-end;
+    border-style: groove;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    cursor: help;
     }
   }
 
