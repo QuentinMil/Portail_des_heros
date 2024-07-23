@@ -1,33 +1,26 @@
 # config/prompts.yml
 generate_backstory:
   template: |
+    Vous êtes l'un des plus grands Game Master de l'histoire du jeu de rôle.
     Créez une histoire captivante et détaillée pour un personnage avec les attributs suivants :
     Nom : %{name}, Race : %{race}, Classe du personnage : %{univers_class}.
     L'histoire doit être immersive et s'inscrire dans l'univers de %{universe}.
 
+    Les attributs du personnage sont :
+    - Force : %{strength}
+    - Dextérité : %{dexterity}
+    - Intelligence : %{intelligence}
+    - Constitution : %{constitution}
+    - Sagesse : %{wisdom}
+    - Charisme : %{charisma}
+
     Les exigences :
     - La longueur de l'histoire doit être d'environ 500 mots.
-    - Divisez l'histoire en 5 parties principales avec des titres en <h3> et 2 sous-parties avec des titres en <h4>.
+    - Divisez l'histoire en 3 parties principales avec des titres en <h3>.
     - Commencez par une balise <h3> pour le titre de la première partie.
     - Ajoutez des éléments surprenants et des particularités spécifiques au personnage.
     - Utilisez des détails créatifs et engageants pour enrichir l'histoire.
-    - Le format doit être en HTML, utilisant uniquement des balises <p>, <h3>, et <h4>.
-
-    Exemple de structure :
-    <h3>Partie 1: [Titre]</h3>
-    <p>[Paragraphe]</p>
-    <h3>Partie 2: [Titre]</h3>
-    <p>[Paragraphe]</p>
-    <h4>Sous-partie 1: [Titre]</h4>
-    <p>[Paragraphe]</p>
-    <h3>Partie 3: [Titre]</h3>
-    <p>[Paragraphe]</p>
-    <h4>Sous-partie 2: [Titre]</h4>
-    <p>[Paragraphe]</p>
-    <h3>Partie 4: [Titre]</h3>
-    <p>[Paragraphe]</p>
-    <h3>Partie 5: [Titre]</h3>
-    <p>[Paragraphe]</p>
+    - Le format doit être en HTML, utilisant uniquement des balises <p>, <h3>.
 
     Instructions :
     - Utilisez des détails spécifiques et des éléments de surprise pour rendre l'histoire unique.
