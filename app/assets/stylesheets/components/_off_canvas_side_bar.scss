@@ -40,14 +40,19 @@
   }
   
   .list-link-navbar {
-    list-style-type: none;
+    list-style-type: none; // Supprime les puces des éléments li
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
   }
-  
+
+  .ul-navbar {
+    list-style-type: none;
+    padding: 0;
+  }
+
   .list-navbar {
     width: 100%;
     .link-navbar {
