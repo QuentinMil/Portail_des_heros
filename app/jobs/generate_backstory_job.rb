@@ -19,6 +19,9 @@ class GenerateBackstoryJob < ApplicationJob
       puts "Rate limit exceeded. Retrying after delay..."
       sleep(10)
       retry
+    rescue => e
+      puts "An error occurred: #{e.message}"
+      return
     end
 
     backstory_content = response.dig("choices", 0, "message", "content")
