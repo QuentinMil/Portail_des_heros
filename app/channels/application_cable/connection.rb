@@ -8,6 +8,12 @@ module ApplicationCable
       logger.add_tags 'ActionCable', current_user.email
     end
 
+    def disconnect
+      # Code pour gérer la déconnexion
+      logger.add_tags 'ActionCable', "Disconnected user: #{current_user.email}"
+      # Vous pouvez ajouter ici tout autre code nécessaire lors de la déconnexion
+    end
+
     protected
 
     def find_verified_user

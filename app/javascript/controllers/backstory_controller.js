@@ -13,7 +13,7 @@ export default class extends Controller {
     console.log("Connecting to ActionCable channel: CharacterChannel");
     this.channel = consumer.subscriptions.create("CharacterChannel", {
       received: (data) => {
-        console.log("Received data from ActionCable:", data);
+        // console.log("Received data from ActionCable:", data);
         if (data.character_id === parseInt(this.data.get("characterId"))) {
           this.updateCharacter(data)
         }
@@ -30,17 +30,17 @@ export default class extends Controller {
   }
 
   updateCharacter(data) {
-    console.log("Updating character with data:", data);
+    // console.log("Updating character with data:", data);
     alert(data.message);
 
     // Met à jour la photo
     this.photoTarget.src = data.photo_url;
 
     // Récupère le contenu HTML de la partial backstory et remplace le contenu actuel
-    fetch(`/characters/${data.character_id}/backstory_partial`)
+    fetch(`/mes_personnages/${data.character_id}/backstory_partial`)
       .then(response => response.text())
       .then(html => {
-        this.backstoryTarget.innerHTML = html;
+        this.backstoryTarget.outerHTML = html;
       })
       .catch(error => {
         console.error("Error fetching backstory partial:", error);
