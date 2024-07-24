@@ -1,0 +1,7 @@
+<!-- app/views/characters/_backstory.html.erb -->
+<div class="show-character-backstory" data-backstory-target="backstory">
+  <h2>L'histoire de <%= @character.name %></h2>
+  <p>
+    <%= @character.backstory.present? ? @character.backstory.html_safe : "L'histoire n'a pas encore été générée." %>
+  </p>
+</div>
