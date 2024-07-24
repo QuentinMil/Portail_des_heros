@@ -53,6 +53,17 @@
     padding: 0;
   }
 
+  .navbar-portail-des-heros {
+    color: #EBD18B;
+    text-align: center;
+    width: 80%;
+    font-family: $headers-font; // Utilisation de la variable pour la police des titres
+    display: grid;
+    padding: 14px 16px;
+    margin-top: 10px;
+    border-bottom: 1px solid #838383;
+  }
+
   .list-navbar {
     width: 100%;
     .link-navbar {
