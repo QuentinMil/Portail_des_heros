@@ -71,10 +71,10 @@ class GenerateBackstoryJob < ApplicationJob
     client = OpenAI::Client.new
   
     response = client.images.generate(parameters: {
-      model: "dall-e-3",
+      model: "dall-e-2",
       prompt: prompt,
-      size: "1024x1024",
-      quality: "standard"
+      size: "512x512",  # Taille plus petite pour réduire les ressources à la place de 1024x1024
+      quality: "fast"
     })
     
     image_url = response.dig("data", 0, "url")
