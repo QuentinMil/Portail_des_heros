@@ -1,19 +1,4 @@
-<div class="portal"></div>
-<div class="container_universes">
-  <div id="carousel-universes" class="carousel slide carousel-fade">
-    <div class="carousel-inner">
-      <% @universes.each_with_index do |universe, index| %>
-        <div class="carousel-item <%= 'active' if index.zero? %>" >
-          <div class="universe" style="background-image:url(<%= cl_image_path(universe.photo.key) %>)">
-            <div class="opacity-universes-cards"></div>
-            <div class="text">
-             <h2 ><%= universe.name %></h2>
-             <p><%= universe.description %></p>
-            </div>
-          </div>
-        </div>
-      <% end %>
-    </div>
+    <%# bouton a placer %>
     <button class="carousel-control-prev  control-" type="button" data-bs-target="#carousel-universes" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
@@ -22,5 +7,27 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
-  </div>
+
+
+    <%# contenu de la page %>
+<div class="portal"></div>
+<div class="container_universes">
+  <div id="carousel-universes" class="carousel slide carousel-fade">
+    <div class="carousel-inner">
+      <% @universes.each_with_index do |universe, index| %>
+        <div class="carousel-item <%= 'active' if index.zero? %>" data-controller="carousel-universe" data-carousel-universe-universe-value=<%=universe.name%>>
+          <div class="universe" style="background-image:url(<%= cl_image_path(universe.photo.key) %>)">
+            <div class="opacity-universes-cards"></div>
+            <div class="text">
+              <h2><%= universe.name %></h2>
+              <p><%= universe.description %></p>
+              <%=  link_to universe_path(universe) do %>
+              <button class="btn btn-primary">Découvrir</button>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        <% end %>
+        </div>
+    </div>
 </div>

@@ -56,25 +56,5 @@
         align-items: stretch;
       }
     }
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 1px;
-      height: 100%;
-      background-image: url("border-bois-top.png");
-    }
-
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 1px;
-      height: 100%;
-      background-image: url("border-bois-bot.png");
-    }
   }
 }
