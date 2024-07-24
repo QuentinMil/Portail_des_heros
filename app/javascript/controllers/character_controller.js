@@ -30,7 +30,7 @@ export default class extends Controller {
   }
 
   disabled(event) {
-    console.log("Disabled event triggered");
+    console.log("coucou")
     const inputValue = event.currentTarget.value
     const otherInputs = this.inputTargets.filter(input => input !== event.currentTarget)
     otherInputs.forEach(input => {
@@ -38,16 +38,17 @@ export default class extends Controller {
       options.forEach(option => {
         option.disabled = false
       })
-      const inputOtherInputs = this.inputTargets.filter(inputable => inputable !== input)
-      const inputOtherInputsValues = inputOtherInputs.map(input => input.value)
-      inputOtherInputsValues.forEach(value => {
-        const targetedOption = options.find(option => {
-          return option.value === value
-        })
-        targetedOption.disabled = "disabled"
+    const inputOtherInputs = this.inputTargets.filter(inputable => inputable !== input)
+    const inputOtherInputsValues = inputOtherInputs.map(input => input.value)
+    inputOtherInputsValues.forEach(value => {
+      const targetedOption = options.find(option => {
+        return option.value === value
+      })
+      targetedOption.disabled = "disabled"
       })
     })
   }
+
 
   random(event) {
     console.log("Random event triggered");
