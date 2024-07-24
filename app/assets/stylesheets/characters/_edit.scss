@@ -76,7 +76,6 @@
 
       label{
           padding: 5px 5px 0 5px;
-          cursor: pointer;
         }
     }
 
@@ -175,7 +174,6 @@
           margin: 0;
           border-radius: 5px;
           background: #76c7c0;
-          cursor: pointer;
         }
 
         input[type="range"]::-webkit-slider-runnable-track {
@@ -193,7 +191,6 @@
           height: 20px;
           background: #76c7c0;
           border-radius: 50%;
-          cursor: pointer;
           margin-top: -6px; /* Adjust thumb position */
         }
 
@@ -215,7 +212,6 @@
     width: 30px;
     height: 30px;
     text-align: center;
-    cursor: help;
     }
   }
 

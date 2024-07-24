@@ -9,7 +9,6 @@
   border-style: none;
   font-weight: 400;
   font-size: 19px !important;
-  cursor: pointer;
   font-family: "Cinzel", serif;
   margin: 10px;
   transition-duration: 0.5s;
@@ -66,7 +65,6 @@
   border-style: none;
   font-weight: bold;
   font-size: 19px;
-  cursor: pointer;
   border: 4px double #ffde238f;
   font-family: $headers-font;  // Utilisation de la variable pour la police des titres
   transition-duration: 0.5s;

@@ -1,12 +1,21 @@
 body {
-  cursor: url('auto.png'), auto;
+  cursor: url('auto.png'), url('pointer.png'), url('help.png'), auto;
 }
-
-body:hover {
+div {
+  cursor: url('auto.png'), url('pointer.png'), url('help.png'), auto;
+}
+a {
+  cursor: url('pointer.png'), pointer;
+}
+button {
+  cursor: url('pointer.png'), pointer;
+}
+input {
+  cursor: url('pointer.png'), pointer;
+}
+.toggle-modal {
   cursor: url('help.png'), help;
 }
-
-body:active,
-body:focus {
+form {
   cursor: url('pointer.png'), pointer;
 }
