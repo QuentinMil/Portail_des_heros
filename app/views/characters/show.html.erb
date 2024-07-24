@@ -1,11 +1,11 @@
 <!-- app/views/characters/show.html.erb -->
-<div data-controller="backstory">
+<div data-controller="backstory" data-backstory-character-id-value="<%= @character.id %>">
   <div class="text-affichage-show-character-div">
     <h3 class="text-affichage-show-character">Félicitations ! Vous venez de créer votre personnage !
       Vous pouvez maintenant lancer une recherche de partie avec votre nouveau personnage ou décider de le garder pour plus tard. Retrouvez votre personnage dans votre tableau de bord.</h3>
   </div>
 
-  <div class="show-character-container" data-controller="backstory" data-backstory-character-id="<%= @character.id %>">
+  <div class="show-character-container">
     <div class="show-character-img-content">
       <div class="show-character-image-div">
         <%= cl_image_tag @character.photo.key, alt: @character.univers_class.name, class: 'show-character-image', size: "200x200", data: { backstory_target: "photo" } %>
