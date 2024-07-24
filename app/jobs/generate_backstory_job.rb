@@ -30,6 +30,13 @@ class GenerateBackstoryJob < ApplicationJob
     if backstory_content.present?
       character.update(backstory: backstory_content)
       puts "Backstory updated for character #{character.name}"
+
+      # Broadcast the update to the user via Action Cable
+      CharacterChannel.broadcast_to(
+        character.user,
+        character: character,
+        message: "Your character's backstory has been updated!"
+      )
     else
       puts "No backstory was generated for character #{character.name}"
     end
