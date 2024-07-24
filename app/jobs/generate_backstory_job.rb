@@ -34,7 +34,8 @@ class GenerateBackstoryJob < ApplicationJob
       # Broadcast the update to the user via Action Cable
       CharacterChannel.broadcast_to(
         character.user,
-        character: character,
+        character_id: character.id,
+        backstory: character.backstory,
         message: "Your character's backstory has been updated!"
       )
     else
