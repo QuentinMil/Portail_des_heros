@@ -25,6 +25,14 @@ class GenerateBackstoryJob < ApplicationJob
     end
 
     backstory_content = response.dig("choices", 0, "message", "content")
+
+    # Update the character backstory if any content was generated
+    if backstory_content.present?
+      character.update(backstory: backstory_content)
+      puts "Backstory updated for character #{character.name}"
+    else
+      puts "No backstory was generated for character #{character.name}"
+    end
   end
 
   private
