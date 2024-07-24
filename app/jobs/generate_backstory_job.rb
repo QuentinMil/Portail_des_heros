@@ -39,6 +39,12 @@ class GenerateBackstoryJob < ApplicationJob
     character.update(backstory: backstory_content) if backstory_content.present?
 
     generate_image(character) if backstory_content.present?
+
+    # Diffuser un message via Action Cable
+    CharacterChannel.broadcast_to(
+      character.user,
+      { message: "Votre personnage #{character.name} est prêt", character_id: character.id }
+    )
   end
 
   private
