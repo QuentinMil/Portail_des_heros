@@ -22,7 +22,7 @@
               <h2><%= universe.name %></h2>
               <p><%= universe.description %></p>
               <%=  link_to universe_path(universe) do %>
-              <button class="btn btn-primary">Découvrir</button>
+              <button class="button-<%= universe.name.parameterize %>">Découvrir</button>
               <% end %>
             </div>
           </div>

@@ -4,6 +4,8 @@
   width: 100vw;
   background-attachment: fixed;
   position: relative;
+  height: 100vh;
+
 }
 
 
@@ -42,7 +44,6 @@
     font-family: $headers-font; // Utilisation de la police Cinzel
     font-weight: 600;
     outline: none;
-    cursor: pointer;
     position: relative;
     overflow: hidden;
     transition: all .5s;

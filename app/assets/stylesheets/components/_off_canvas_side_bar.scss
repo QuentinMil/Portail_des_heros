@@ -4,14 +4,13 @@
     position: fixed;
     bottom: 20px;
     left: 20px;
-    background-color: #EBD18B; // Couleur dorée utilisée dans le style de l'ancienne navbar pour le contraste
+    background-color: transparent; // Couleur dorée utilisée dans le style de l'ancienne navbar pour le contraste
     color: #494949; // Couleur de fond de l'ancienne navbar pour le texte du bouton
     border: none;
-    cursor: pointer;
     font-size: 24px;
     z-index: 1000; /* Assurez-vous que le bouton est au-dessus des autres éléments */
   }
-  
+
   .off-canvas {
     transform: translateX(-100%);
     transition: transform 0.3s ease;
@@ -26,19 +25,23 @@
     flex-direction: column;
     justify-content: start;
     box-shadow: 15px 8px 45px 7px rgba(56, 44, 44, 0.48); // Ombre pour donner de la profondeur
+
+    .off-canvas-toggle{
+      display: none;
+    }
   }
-  
+
   .off-canvas.show {
     transform: translateX(0);
   }
-  
+
   .navbar-content {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
-  
+
   .list-link-navbar {
     list-style-type: none; // Supprime les puces des éléments li
     padding: 0;
@@ -79,7 +82,7 @@
       }
     }
   }
-  
+
   .div-avatar-pseudo {
     width: 100%;
     padding: 10px 0;
@@ -88,10 +91,9 @@
     align-items: center;
     border-top: 1px solid #838383;
   }
-  
+
   .avatar {
     height: 60px;
     width: 60px;
     margin: 5px;
   }
-  
