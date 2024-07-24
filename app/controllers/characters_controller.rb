@@ -69,6 +69,11 @@ class CharactersController < ApplicationController
     redirect_to characters_path, notice: 'Character was successfully destroyed.'
   end
 
+  def backstory_partial
+    @character = Character.find(params[:id])
+    render partial: 'backstory', locals: { character: @character }
+  end
+
   private
 
   def set_character
