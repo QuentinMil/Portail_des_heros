@@ -42,7 +42,7 @@ export default class extends Controller {
   }
 
   updateCharacter(data) {
-    console.log("Updating character with data:", data);
+    // console.log("Updating character with data:", data);
     alert(data.message);
 
     // Met à jour la photo

@@ -43,21 +43,22 @@ class CharactersController < ApplicationController
       new_completion_rate = [@character.completion_rate + updated_fields, 10].min
       @character.update(completion_rate: new_completion_rate)
 
-      if @character.completion_rate >= 10
+      if @character.completion_rate == 10
         @character.update(available_status: "Active")
         assign_to_party(@character)
-
         
-        # génerer une histoire pour notre personnage avec sidekiq (il faut lancer le serveur sidekiq)
-        @character. 
-        redirect_to @character, notice: 'Votre personnage est terminé !'
+        # Générer une backstory pour le personnage si le taux de complétion est complet
+        GenerateBackstoryJob.perform_later(@character.id)
+        
+        redirect_to @character, notice: 'Votre personnage est maintenant complet et prêt !'
       else
-        redirect_to edit_character_path(@character)
+        redirect_to edit_character_path(@character), notice: 'Mise à jour du personnage effectuée. Continuez à remplir les informations.'
       end
     else
       render :edit
     end
   end
+
 
   def image
     # Extraire l'URL de l'image depuis les paramètres
