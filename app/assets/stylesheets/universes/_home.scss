@@ -9,6 +9,9 @@
   background-position: center;
   z-index: 2;
 }
+.carousel-control-next, .carousel-control-prev{
+  z-index: 4;
+ }
 .container_universes {
   display: flex;
   flex-direction: column;
@@ -21,9 +24,15 @@
   #carousel-universes{
     width: 80vh;
   }
- .carousel-control-next, .carousel-control-prev{
-  z-index: 4;
- }
+  .universe-selector{
+    position: relative;
+    z-index: 4
+  }
+
+  .carousel-unset{
+    position: unset;
+  }
+
 
   .universe {
     height: 80vh;
