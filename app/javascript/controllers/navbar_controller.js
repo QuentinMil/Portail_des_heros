@@ -5,7 +5,7 @@ export default class extends Controller {
   static targets = ["toggle", "navbar"]
 
   connect() {
-    console.log('Navbar controller connected');
+    // console.log('Navbar controller connected');
     // console.log('Toggle target:', this.toggleTarget);
     // console.log('Navbar target:', this.navbarTarget);
     this.toggleTarget.addEventListener('click', this.toggleNavbar.bind(this));
