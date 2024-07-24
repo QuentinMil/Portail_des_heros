@@ -2,7 +2,6 @@
 import { Controller } from "@hotwired/stimulus"
 import consumer from "../channels/consumer"
 
-// Connects to data-controller="backstory"
 export default class extends Controller {
   static targets = ["backstory", "photo"]
 
@@ -31,14 +30,14 @@ export default class extends Controller {
 
   async updateCharacter(data) {
     console.log("Updating character with data:", data);
-    alert(data.message)
+    alert(data.message);
 
     // Met à jour la photo
-    this.photoTarget.src = data.photo_url
+    this.photoTarget.src = data.photo_url;
 
     // Récupère le contenu HTML de la partial backstory et remplace le contenu actuel
-    const response = await fetch(`/characters/${data.character_id}/backstory_partial`)
-    const html = await response.text()
-    this.backstoryTarget.innerHTML = html
+    const response = await fetch(`/characters/${data.character_id}/backstory_partial`);
+    const html = await response.text();
+    this.backstoryTarget.innerHTML = html;
   }
 }
