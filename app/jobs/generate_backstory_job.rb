@@ -42,6 +42,9 @@ class GenerateBackstoryJob < ApplicationJob
 
     generate_image(character) if backstory_content.present?
 
+    # Log message to console
+    puts "Image generated for character: #{character.name}" if backstory_content.present?
+
     # Diffuser un message via Action Cable
     CharacterChannel.broadcast_to(
       character.user,
