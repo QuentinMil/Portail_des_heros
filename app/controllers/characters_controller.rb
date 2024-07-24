@@ -51,12 +51,6 @@ class CharactersController < ApplicationController
         # génerer une histoire pour notre personnage avec sidekiq (il faut lancer le serveur sidekiq)
         @character.generate_backstory_async
         redirect_to @character, notice: 'Votre personnage est terminé !'
-
-        # Appel pour générer l'image
-        @image_url = @character.generate_image
-
-        redirect_to image_character_path(@character), notice: 'Votre personnage est terminé et l\'image de votre personnage a été générée avec succès.'
-
       else
         redirect_to edit_character_path(@character)
       end
@@ -73,6 +67,11 @@ class CharactersController < ApplicationController
     # l'action set_character est appelée par le before_action
     @character.destroy
     redirect_to characters_path, notice: 'Character was successfully destroyed.'
+  end
+
+  def backstory_partial
+    @character = Character.find(params[:id])
+    render partial: 'backstory', locals: { character: @character }
   end
 
   private

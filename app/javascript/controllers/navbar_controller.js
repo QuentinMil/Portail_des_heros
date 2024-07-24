@@ -6,27 +6,27 @@ export default class extends Controller {
 
   connect() {
     console.log('Navbar controller connected');
-    console.log('Toggle target:', this.toggleTarget);
-    console.log('Navbar target:', this.navbarTarget);
+    // console.log('Toggle target:', this.toggleTarget);
+    // console.log('Navbar target:', this.navbarTarget);
     this.toggleTarget.addEventListener('click', this.toggleNavbar.bind(this));
     document.addEventListener('click', this.closeNavbar.bind(this));
   }
 
   disconnect() {
-    console.log('Navbar controller disconnected');
+    // console.log('Navbar controller disconnected');  
     this.toggleTarget.removeEventListener('click', this.toggleNavbar.bind(this));
     document.removeEventListener('click', this.closeNavbar.bind(this));
   }
 
   toggleNavbar(event) {
     event.stopPropagation();
-    console.log('Toggling navbar');
+    // console.log('Toggling navbar');
     this.navbarTarget.classList.toggle('show');
   }
 
   closeNavbar(event) {
     if (!this.navbarTarget.contains(event.target) && !this.toggleTarget.contains(event.target)) {
-      console.log('Closing navbar');
+      // console.log('Closing navbar');
       this.navbarTarget.classList.remove('show');
     }
   }
