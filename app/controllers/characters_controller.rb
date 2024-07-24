@@ -49,7 +49,7 @@ class CharactersController < ApplicationController
 
         
         # génerer une histoire pour notre personnage avec sidekiq (il faut lancer le serveur sidekiq)
-        @character.generate_backstory_async
+        @character. 
         redirect_to @character, notice: 'Votre personnage est terminé !'
       else
         redirect_to edit_character_path(@character)
