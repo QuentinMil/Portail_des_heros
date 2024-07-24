@@ -1,4 +1,6 @@
 class GenerateBackstoryJob < ApplicationJob
+  include Rails.application.routes.url_helpers
+
   queue_as :default
 
   def perform(character_id)
@@ -37,5 +39,37 @@ class GenerateBackstoryJob < ApplicationJob
 
     backstory_content = response.dig("choices", 0, "message", "content")
     character.update(backstory: backstory_content) if backstory_content.present?
+
+    generate_image(character) if backstory_content.present?
+
+    # Diffuser un message via Action Cable
+    CharacterChannel.broadcast_to(
+      character.user,
+      {
+        message: "Votre personnage #{character.name} est prêt",
+        character_id: character.id,
+        backstory: character.backstory,
+        photo_url: url_for(character.photo)
+      }
+    )
+  end
+
+  private
+
+  def generate_image(character)
+    prompt = "Je veux une image épique d'un seul personnage qui s'appelle #{character.name}, de l'univers de #{character.universe.name}. Ce personnage est de la race #{character.race.name} et sa classe est la suivante : #{character.univers_class.name}. Je veux un personnage original en entier dans la nature."
+
+    client = OpenAI::Client.new
+
+    response = client.images.generate(parameters: {
+      model: "dall-e-3",
+      prompt: prompt,
+      size: "1024x1024",
+      quality: "standard"
+    })
+    image = response.dig("data", 0, "url")
+
+    file = URI.open(image)
+    character.photo.attach(io: file, filename: "#{character.name.parameterize}.png", content_type: "image/png")
   end
 end
