@@ -60,19 +60,30 @@ class GenerateBackstoryJob < ApplicationJob
   private
 
   def generate_image(character)
-    prompt = "Je veux une image épique d'un seul personnage qui s'appelle #{character.name}, de l'univers de #{character.universe.name}. Ce personnage est de la race #{character.race.name} et sa classe est la suivante : #{character.univers_class.name}. Je veux un personnage original en entier dans la nature."
-
+    prompt = <<~PROMPT
+      Créez un portrait épique en pied d'un personnage nommé #{character.name} de l'univers de #{character.universe.name}. 
+      Ce personnage appartient à la race #{character.race.name} et a la classe #{character.univers_class.name}. 
+      Le personnage doit être dans une pose dynamique et héroïque, mettant en valeur ses attributs et son équipement uniques. 
+      L'arrière-plan doit être entièrement blanc pour mettre en évidence les détails et le design du personnage. 
+      Le style doit être très détaillé et vibrant, capturant l'essence et la personnalité de #{character.name}.
+    PROMPT
+    
     client = OpenAI::Client.new
-
+  
     response = client.images.generate(parameters: {
       model: "dall-e-3",
       prompt: prompt,
       size: "1024x1024",
       quality: "standard"
     })
-    image = response.dig("data", 0, "url")
-
-    file = URI.open(image)
-    character.photo.attach(io: file, filename: "#{character.name.parameterize}.png", content_type: "image/png")
-  end
+    
+    image_url = response.dig("data", 0, "url")
+  
+    if image_url
+      file = URI.open(image_url)
+      character.photo.attach(io: file, filename: "#{character.name.parameterize}.png", content_type: "image/png")
+    else
+      Rails.logger.error "Failed to generate image for character #{character.id}"
+    end
+  end  
 end
