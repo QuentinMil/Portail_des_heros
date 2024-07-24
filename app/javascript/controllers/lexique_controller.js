@@ -1,10 +1,31 @@
 import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
-  static targets = ["content", "form", "searchInput", "list", "dictionary", "searchResults"];
+  static targets = ["content", "form", "searchInput", "list", "dictionary", "searchBar", "sections"];
 
   connect() {
     console.log("Lexique controller connected");
+    this.sectionsTarget.addEventListener("scroll", this.handleScroll.bind(this));
+  }
+
+  disconnect() {
+    window.removeEventListener("scroll", this.handleScroll.bind(this));
+  }
+
+  handleScroll() {
+    const searchBar = this.searchBarTarget;
+    const isSticky = searchBar.classList.contains("sticky");
+
+    console.log("Scroll position:", this.sectionsTarget.scrollTop);
+    console.log("Search bar sticky status:", isSticky);
+
+    if (this.sectionsTarget.scrollTop > 0 && !isSticky) {
+      console.log("Adding sticky class to search bar");
+      searchBar.classList.add("sticky");
+    } else if (this.sectionsTarget.scrollTop === 0 && isSticky) {
+      console.log("Removing sticky class from search bar");
+      searchBar.classList.remove("sticky");
+    }
   }
 
   load(event) {

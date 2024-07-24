@@ -1,5 +1,4 @@
 # config/initializers/openai.rb
 OpenAI.configure do |config|
-    config.access_token = ENV.fetch("OPENAI_ACCESS_TOKEN")
-  end
-  
+  config.access_token = ENV.fetch("OPENAI_ACCESS_TOKEN")
+end
