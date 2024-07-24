@@ -86,3 +86,11 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+group :production do
+  gem 'pg'
+  gem 'puma'
+  gem 'rails_12factor'
+  gem 'redis'
+  gem 'sidekiq'
+end
