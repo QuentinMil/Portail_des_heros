@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
+<head>
     <title>Le Portail Des Heros : prenez part à l'aventure</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
     <%= favicon_link_tag %>
-  </head>
+</head>
 
-  <body class="<%= controller_name %>-<%= action_name %>">
+<body class="<%= controller_name %>-<%= action_name %>">
     <%= render "shared/flashes" %>
-    <div class="main-layout-container"style="display: flex">
+    <div class="main-layout-container" style="display: flex">
 
-      <% if action_name != "home"%>
+        <% if action_name != "home" %>
         <%= render "shared/navbar" %>
-      <% end %>
+        <% end %>
 
-      <div class="pages-content">
-        <%= yield %>
-      </div>
+        <div class="pages-content">
+            <%= yield %>
+        </div>
     </div>
-  </body>
+
+    <!-- Scripts importés à la fin du body pour un chargement correct après le contenu HTML -->
+    <%= javascript_importmap_tags %>
+</body>
 
 </html>
