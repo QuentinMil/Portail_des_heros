@@ -43,7 +43,12 @@ class GenerateBackstoryJob < ApplicationJob
     # Diffuser un message via Action Cable
     CharacterChannel.broadcast_to(
       character.user,
-      { message: "Votre personnage #{character.name} est prêt", character_id: character.id }
+      {
+        message: "Votre personnage #{character.name} est prêt",
+        character_id: character.id,
+        backstory: character.backstory,
+        photo_url: url_for(character.photo)
+      }
     )
   end
 
