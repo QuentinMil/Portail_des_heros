@@ -1,34 +1,45 @@
-# script/test_image_generator_job.rb
+# script/test_full_character_creation.rb
 
-# Trouver un personnage existant ou en créer un nouveau pour le test
-character = Character.find_by(name: "TestHero") || Character.create(
-    name: "TestHero",
-    user: User.first,
-    universe: Universe.first,
-    race: Race.first,
-    univers_class: UniversClass.first,
-    strength: "10",
-    dexterity: "10",
-    intelligence: "10",
-    constitution: "10",
-    wisdom: "10",
-    charisma: "10",
-    completion_rate: 10
-  )
-  
-  # Assurez-vous que le personnage n'a pas déjà une image attachée
-  character.photo.purge_later if character.photo.attached?
-  
-  # Exécuter le job ImageGeneratorJob directement
+# Charger l'environnement Rails
+# require_relative '../config/environment'
+
+# Trouver ou créer les objets nécessaires
+user = User.first
+universe = Universe.first
+race = Race.first
+univers_class = UniversClass.first
+
+# Créer un personnage
+character = Character.create(
+  name: "TestHero",
+  user: user,
+  universe: universe,
+  race: race,
+  univers_class: univers_class,
+  strength: "10",
+  dexterity: "10",
+  intelligence: "10",
+  constitution: "10",
+  wisdom: "10",
+  charisma: "10",
+  completion_rate: 10
+)
+
+# Vérifier si le personnage a été créé et est valide
+if character.persisted? && character.completion_rate == 10
+  # Lancer le job de génération d'image
   ImageGeneratorJob.perform_now(character.id)
-  
-  # Recharger l'objet character pour voir les changements
+
+  # Recharger le personnage pour obtenir les données mises à jour
   character.reload
-  
-  # Afficher les résultats, vérifier si l'image a été attachée
+
+  # Vérifier et afficher l'URL de l'image attachée
   if character.photo.attached?
-    puts "Image attachée avec succès : #{character.photo.filename}"
+    url = Rails.application.routes.url_helpers.url_for(character.photo)
+    puts "Image générée et attachée avec succès : #{url}"
   else
-    puts "Échec de l'attachement de l'image."
+    puts "Échec de la génération ou de l'attachement de l'image."
   end
-  
+else
+  puts "Échec de la création du personnage ou problème de validation."
+end
