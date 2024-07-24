@@ -7,6 +7,7 @@ export default class extends Controller {
 
   connect() {
     // Abonnement au canal ActionCable
+    console.log("connecté au canal")
     this.channel = consumer.subscriptions.create("CharacterChannel", {
       received: (data) => {
         if (data.character_id === parseInt(this.data.get("characterId"))) {

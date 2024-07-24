@@ -1,4 +1,6 @@
 class GenerateBackstoryJob < ApplicationJob
+  include Rails.application.routes.url_helpers
+
   queue_as :default
 
   def perform(character_id)
