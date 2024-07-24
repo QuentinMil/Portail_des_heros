@@ -46,12 +46,17 @@ class CharactersController < ApplicationController
       if @character.completion_rate >= 10
         @character.update(available_status: "Active")
         assign_to_party(@character)
-        @character.generate_backstory # Générer l'histoire
+
+        
+        # génerer une histoire pour notre personnage avec sidekiq (il faut lancer le serveur sidekiq)
+        @character.generate_backstory_async
+        redirect_to @character, notice: 'Votre personnage est terminé !'
 
         # Appel pour générer l'image
         @image_url = @character.generate_image
 
         redirect_to image_character_path(@character), notice: 'Votre personnage est terminé et l\'image de votre personnage a été générée avec succès.'
+
       else
         redirect_to edit_character_path(@character)
       end

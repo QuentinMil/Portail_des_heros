@@ -1,3 +1,29 @@
 # config/prompts.yml
 generate_backstory:
-  template: "Créez une histoire pour un personnage ayant les attributs suivants : Nom : %{name}, Race: %{race}, Classe du perso: %{univers_class}. L'histoire doit être intéressante et s'inscrire dans l'univers de %{universe}. Le texte doit faire maximum 200 mots sur 3 parties distinctes avec un titre h3 par parties. fais moi une réponse au format html. Uniquement avec des baslises p et des h3. Commence par une balise h3 pour le titre."
+  template: |
+    Vous êtes l'un des plus grands compteur de l'histoire du jeu de rôle.
+    Créez une histoire captivante et détaillée pour un personnage avec les attributs suivants :
+    Nom : %{name}, Race : %{race}, Classe du personnage : %{univers_class}.
+    L'histoire doit être immersive et s'inscrire dans l'univers de %{universe}.
+
+    Ses attributs (noté sur 20) sont :
+    - Force : %{strength}
+    - Dextérité : %{dexterity}
+    - Intelligence : %{intelligence}
+    - Constitution : %{constitution}
+    - Sagesse : %{wisdom}
+    - Charisme : %{charisma}
+
+    Les exigences techniques :
+    - Divisez l'histoire en 3 parties principales avec des titres en <h3>.
+    - Chaque partie doit contenir au moins 200 mots.
+    - Le format doit être en HTML, utilisant uniquement des balises <p>, <h3>.
+    - Le contenu va être remis en forme pour être intégré dans un site web.
+    - Ne commencez pas les titres par "Partie 1:". Utilisez des titres créatifs.
+    - Attention de ne pas commencer le Html par ```html
+  q
+    Les exigenaces créatives :
+    - Ajoutez des éléments surprenants et des particularités spécifiques au personnage.
+    - Créez un univers unique et captivant pour le personnage.
+    - Faites preuve de créativité dans les descriptions et les événements de l'histoire.
+

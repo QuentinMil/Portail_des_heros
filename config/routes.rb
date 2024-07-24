@@ -1,4 +1,11 @@
+# config/routes.rb
+require 'sidekiq/web'
+
 Rails.application.routes.draw do
+  authenticate :user, ->(user) { user.admin? } do
+    mount Sidekiq::Web => '/sidekiq'
+  end
+
   devise_for :users
   root to: "pages#home"
 
