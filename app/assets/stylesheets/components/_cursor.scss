@@ -1,0 +1,12 @@
+body {
+  cursor: url('auto.png'), auto;
+}
+
+body:hover {
+  cursor: url('help.png'), help;
+}
+
+body:active,
+body:focus {
+  cursor: url('pointer.png'), pointer;
+}

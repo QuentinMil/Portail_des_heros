@@ -1,39 +1,41 @@
 // Define the base button styles
 .button-base {
-  background: #6b6b6b;
-  color: rgb(255, 255, 255);
+  background: #00000069;
+  color: white;
   letter-spacing: 1px;
   padding: 5px 15px;
   text-align: center;
   text-decoration: none;
   border-style: none;
-  font-weight: bold;
+  font-weight: 400;
   font-size: 19px !important;
   cursor: pointer;
-  font-family: $headers-font;  // Utilisation de la variable pour la police des titres
+  font-family: "Cinzel", serif;
   margin: 10px;
   transition-duration: 0.5s;
-  box-shadow: 15px 13px 16px -5px rgba(171, 171, 171, 0.94);
+
   border-radius: 5px;
 
   &:hover {
-    background-color: #252525;
+    background-color: #14141494;
   }
 }
 
 // Define specific styles for each button type
 .button-call-of-cthulhu {
   @extend .button-base;
-  border: 4px double rgb(207, 9, 9);
-
+  border: 2px solid #cf0909;
+  box-shadow: 4px 5px 10px -6px #cf090983;
   &:hover {
-    color: rgb(207, 9, 9);
+    color: #d3b4b4;
   }
 }
 
 .button-donjons-et-dragons {
   @extend .button-base;
-  border: 4px double rgb(255, 222, 35);
+  border: 2px solid;
+  border-color: #edd86459;
+  box-shadow: 4px 5px 10px -6px #edd86459;
 
   &:hover {
     color: rgb(247, 231, 87);
@@ -42,10 +44,12 @@
 
 .button-runequest {
   @extend .button-base;
-  border: 4px double rgb(86, 101, 185);
+  border:  2px solid ;
+  border-color:#7a84bbcc;
+  box-shadow: 4px 5px 10px -6px #7a84bb7a;
 
   &:hover {
-    color: rgb(86, 101, 185);
+    color: #a8aab4;
   }
 }
 
@@ -73,3 +77,8 @@
     background-color: #252525;
   }
 }
+
+// <!-- HTML !-->
+// <button class="button-85" role="button">Button 85</button>
+
+/* CSS */
