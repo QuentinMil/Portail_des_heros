@@ -3,11 +3,18 @@ import consumer from "../channels/consumer"
 
 // Connects to data-controller="character"
 export default class extends Controller {
-  static targets = [ "input", "click" ]
+  static targets = [ "input", "click","backstory", "photo"]
 
   connect() {
-    // console.log(this.inputTargets)
+    this.channel = consumer.subscriptions.create("CharacterChannel", {
+      received: (data) => {
+        if (data.character_id === this.data.get("characterId")) {
+          this.updateCharacter(data)
+        }
+      }
+    })
   }
+
 
   disabled(event) {
     console.log("coucou")
@@ -47,5 +54,11 @@ export default class extends Controller {
       [array[i], array[j]] = [array[j], array[i]]; // échange des éléments
     }
     return array;
+  }
+
+  updateCharacter(data) {
+    alert(data.message)
+    this.backstoryTarget.innerHTML = data.backstory
+    this.photoTarget.src = data.photo_url
   }
 }
