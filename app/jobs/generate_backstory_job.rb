@@ -19,12 +19,27 @@ class GenerateBackstoryJob < ApplicationJob
       puts "Rate limit exceeded. Retrying after delay..."
       sleep(10)
       retry
+    rescue => e
+      puts "An error occurred: #{e.message}"
+      return
     end
 
     backstory_content = response.dig("choices", 0, "message", "content")
+
+    # Update the character backstory if any content was generated
     if backstory_content.present?
       character.update(backstory: backstory_content)
-      ImageGeneratorJob.perform_later(character.id)
+      puts "Backstory updated for character #{character.name}"
+
+      # Broadcast the update to the user via Action Cable
+      CharacterChannel.broadcast_to(
+        character.user,
+        character_id: character.id,
+        backstory: character.backstory,
+        message: "Your character's backstory has been updated!"
+      )
+    else
+      puts "No backstory was generated for character #{character.name}"
     end
   end
 

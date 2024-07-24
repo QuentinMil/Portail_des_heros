@@ -17,8 +17,11 @@ export default class extends Controller {
         { channel: "CharacterChannel", character_id: this.characterIdValue }, {
         received: (data) => {
           console.log("Received data from ActionCable:", data);
-          if (data.character_id === this.characterIdValue) {
-            this.updateCharacter(data);
+          // Verify the character ID matches and that backstory is present
+          if (data.character_id === this.characterIdValue && data.backstory) {
+            this.updateCharacterBackstory(data);
+          } else {
+            console.log("Data received does not meet the required conditions.");
           }
         },
         connected: () => {
@@ -41,21 +44,21 @@ export default class extends Controller {
     }
   }
 
-  updateCharacter(data) {
-    console.log("Updating character with data:", data);
-    alert(data.message);
-
-    // Met à jour la photo
-    this.photoTarget.src = data.photo_url;
-
-    // Récupère le contenu HTML de la partial backstory et remplace le contenu actuel
-    fetch(`/mes_personnages/${data.character_id}/backstory_partial`)
-      .then(response => response.text())
-      .then(html => {
-        this.backstoryTarget.outerHTML = html;
-      })
-      .catch(error => {
-        console.error("Error fetching backstory partial:", error);
-      });
+  updateCharacterBackstory(data) {
+    console.log("Updating character backstory with data:", data);
+  
+    if (data.character_id === this.characterIdValue) {
+      fetch(`/mes_personnages/${data.character_id}/backstory_partial`)
+        .then(response => response.text())
+        .then(html => {
+          this.backstoryTarget.outerHTML = html;
+          console.log("Backstory updated successfully.");
+        })
+        .catch(error => {
+          console.error("Error fetching backstory partial:", error);
+        });
+    } else {
+      console.log("Received data for another character:", data.character_id);
+    }
   }
 }
