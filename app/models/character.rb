@@ -1,3 +1,8 @@
+# app/models/character.rb
+require 'faraday'
+require 'json'
+require "open-uri"
+
 class Character < ApplicationRecord
   belongs_to :user
   belongs_to :universe
@@ -21,7 +26,26 @@ class Character < ApplicationRecord
   
   private 
 
-  def destroy_notes
-    notes.destroy_all
+  def generate_image
+    prompt = "Je veux une image épique d'un seul personnage qui s'appelle #{name}, de l'univers de #{universe.name}. Ce personnage est de la race #{race.name} et sa classe est la suivante : #{univers_class.name}. Je veux un personnage original en entier dans la nature."
+
+    client = OpenAI::Client.new
+
+    response = client.images.generate(parameters: {
+      model: "dall-e-3",
+      prompt: prompt,
+      size: "1024x1024",
+      quality: "standard"
+      })
+    image = response.dig("data", 0, "url")
+
+    file = URI.open(image)
+    self.photo.attach(io: file, filename: "#{name.parameterize}.png", content_type: "image/png")
   end
+
+      private
+
+      def destroy_notes
+        notes.destroy_all
+      end
 end

@@ -55,6 +55,8 @@ gem "cloudinary"
 gem 'jwt'
 gem "httparty"
 gem 'ruby-openai'
+gem 'openai'
+gem "faraday"
 gem 'pg_search'
 gem "sidekiq", "~> 7"
 gem "sidekiq-failures"
