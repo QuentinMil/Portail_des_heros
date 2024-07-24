@@ -1,4 +1,5 @@
 <!-- app/views/characters/show.html.erb -->
+<div data-controller="backstory">
 <div class="text-affichage-show-character-div">
   <h3 class="text-affichage-show-character">Félicitations ! Vous venez de créer votre personnage !
     Vous pouvez maintenant lancer une recherche de partie avec votre nouveau personnage ou décider de le garder pour plus tard. Retrouvez votre personnage dans votre tableau de bord.</h3>
@@ -64,4 +65,5 @@
       <%= link_to 'Rejoindre ma partie', parties_path, class: "button-#{@character.universe.name.downcase.tr(' ', '-')}" %>
     <% end %>
   </div>
+</div>
 </div>
