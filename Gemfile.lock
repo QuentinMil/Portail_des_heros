@@ -208,6 +208,7 @@ GEM
       racc (~> 1.4)
     nokogiri (1.16.6-x86_64-linux)
       racc (~> 1.4)
+    openai (0.3.0)
     orm_adapter (0.5.0)
     pg (1.5.6)
     pg_search (2.3.6)
@@ -291,6 +292,14 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    sidekiq (7.3.0)
+      concurrent-ruby (< 2)
+      connection_pool (>= 2.3.0)
+      logger
+      rack (>= 2.2.4)
+      redis-client (>= 0.22.2)
+    sidekiq-failures (1.0.4)
+      sidekiq (>= 4.0.0)
     sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -345,11 +354,13 @@ DEPENDENCIES
   dotenv-rails
   error_highlight (>= 0.4.0)
   faker
+  faraday
   font-awesome-sass (~> 6.1)
   httparty
   importmap-rails
   jbuilder
   jwt
+  openai
   pg (~> 1.1)
   pg_search
   puma (>= 5.0)
@@ -358,6 +369,8 @@ DEPENDENCIES
   ruby-openai
   sassc-rails
   selenium-webdriver
+  sidekiq (~> 7)
+  sidekiq-failures
   simple_form!
   sprockets-rails
   stimulus-rails
