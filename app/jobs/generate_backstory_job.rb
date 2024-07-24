@@ -22,10 +22,6 @@ class GenerateBackstoryJob < ApplicationJob
     end
 
     backstory_content = response.dig("choices", 0, "message", "content")
-    if backstory_content.present?
-      character.update(backstory: backstory_content)
-      ImageGeneratorJob.perform_later(character.id)
-    end
   end
 
   private

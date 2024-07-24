@@ -42,11 +42,11 @@ export default class extends Controller {
   }
 
   updateCharacter(data) {
-    // console.log("Updating character with data:", data);
-    alert(data.message);
+    console.log("Updating character with data:", data);
+    // alert(data.message);
 
     // Met à jour la photo
-    this.photoTarget.src = data.photo_url;
+    // this.photoTarget.src = data.photo_url;
 
     // Récupère le contenu HTML de la partial backstory et remplace le contenu actuel
     fetch(`/mes_personnages/${data.character_id}/backstory_partial`)
