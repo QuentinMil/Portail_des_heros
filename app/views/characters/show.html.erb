@@ -8,7 +8,11 @@
   <div class="show-character-container">
     <div class="show-character-img-content">
       <div class="show-character-image-div">
-        <%= cl_image_tag @character.photo.key, alt: @character.univers_class.name, class: 'show-character-image', size: "200x200", data: { backstory_target: "photo" } %>
+        <% if @character.photo.attached? %>
+          <%= cl_image_tag @character.photo.key, alt: @character.univers_class.name, class: 'show-character-image', size: "200x200", data: { backstory_target: "photo" } %>
+        <% else %>
+          <i class="fa-solid fa-dragon" style="font-size: 200px; color: #ffffff;"></i>
+        <% end %>
       </div>
 
       <div class="show-character-content">

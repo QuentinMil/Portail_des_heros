@@ -1,111 +1,102 @@
 .show-character-container {
-  margin: 40px;
-  height: 600px;
-  font-family: $headers-font; // Utilisation de la variable de police pour les titres
+  margin: 40px auto; /* Center align the container */
+  max-width: 90%; /* Limit the width to avoid overly wide elements on large screens */
+  height: auto; /* Adjust height automatically based on content */
+  font-family: $headers-font; /* Use variable for font consistency */
   padding: 20px;
   background-image: url('fond-show-character.jpg');
   background-size: cover;
+  background-position: center; /* Ensure the background is centered */
   background-repeat: no-repeat;
-  background-attachment: fixed; // Add this line to make the background image fixed
   border-radius: 7px;
-  box-shadow: 14px 8px 45px 7px rgba(56,44,44,0.48);
-
-  &.dark-bg {
-    p {
-      color: white;
-    }
-  }
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* More subtle shadow for better UI integration */
+  color: #ffffff; /* Ensures text is readable on potentially dark backgrounds */
 }
 
 .show-character-img-content {
-  height: 70%;
-  width: 100%;
   display: flex;
+  flex-wrap: wrap; /* Allows items to wrap to the next line if needed */
+  gap: 20px; /* Space between items */
   letter-spacing: 1px;
 }
 
 .show-character-image-div {
-  height: 100%;
-  width: 35%;
+  flex: 1;
+  min-width: 200px; /* Ensures a minimum width for the image container */
   object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .show-character-image {
-  margin-left: 15%;
-  box-shadow: 28px 16px 15px -3px rgba(56,44,44,0.49);
+  max-width: 100%; /* Ensures the image does not overflow its container */
+  height: auto;
+  box-shadow: 28px 16px 15px -3px rgba(56, 44, 44, 0.49);
   border-radius: 7px;
 }
 
 .show-character-content {
-  width: 65%;
-  font-family: $text-font;
+  flex: 2;
+  padding: 20px;
+  background: rgba(21, 21, 21, 0.5);
+  border-radius: 7px;
+  color: #ffffff;
 }
 
 .show-character-name-div {
   text-align: center;
-  height: 15%;
-}
-
-.show-character-univers-race-class-available {
-  display: flex;
-  height: 85%;
-  overflow: auto;
-  text-align: center;
-  padding: 20px;
-  font-size: 22px;
-}
-
-.show-character-univers-race-class-available-display {
-  width: 35%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.show-character-univers-race-class-available-content {
-  width: 65%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  height: auto;
+  margin-bottom: 20px;
 }
 
 .show-character-name {
   font-family: $headers-font;
   font-weight: bold;
+  color: #ffffff;
+}
+
+.show-character-univers-race-class-available {
+  display: grid; /* Utilisation de grid pour une meilleure organisation */
+  grid-template-columns: repeat(3, 1fr); /* Trois colonnes pour univers, race, classe */
+  gap: 20px; /* Espace entre les colonnes */
+  padding: 20px;
+  text-align: center;
+  color: #000000; /* Texte noir pour ces éléments */
+  background: rgba(255, 255, 255, 0.5); /* Fond clair semi-transparent pour lisibilité */
+  border-radius: 5px;
+}
+
+.show-character-univers-race-class-available-display,
+.show-character-univers-race-class-available-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .show-character-caracteristic {
   margin: 40px;
-  height: 30%;
   font-size: 22px;
+  color: #000000; /* Changement de la couleur de texte en noir */
 }
 
-.show-character-caracteristic-display {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
+.show-character-caracteristic-display,
 .show-character-caracteristic-content {
-  display: flex;
-  justify-content: space-around;
-  font-size: 26px;
-  font-weight: bold;
+  display: grid; /* Utilisation de grid pour une meilleure organisation */
+  grid-template-columns: repeat(6, 1fr); /* Crée six colonnes de taille égale */
+  gap: 20px; /* Espace entre les colonnes */
   text-align: center;
 }
 
-.btn-show-container {
-  display: flex;
-  width: 100%;
-  justify-content: space-evenly;
-  font-family: $text-font;
+.show-character-caracteristic-display p,
+.show-character-caracteristic-content p {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 5px;
 }
 
-.text-affichage-show-character-div {
+.text-affichage-show-character-div h3 {
+  color: #ffffff; /* Texte blanc pour le titre */
   text-align: center;
   margin: 20px;
   margin-top: 30px;
@@ -113,7 +104,6 @@
 
 .text-affichage-show-character {
   font-size: 20px;
-  color: white;
   font-family: $body-font;
 }
 
@@ -134,4 +124,11 @@
     margin-bottom: 15px;
     line-height: 1.6;
   }
+}
+
+.btn-show-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  font-family: $text-font;
 }
