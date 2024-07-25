@@ -39,7 +39,7 @@
 .show-character-content {
   flex: 2;
   padding: 20px;
-  background: rgba(21, 21, 21, 0.5);
+  background: #cebe776b;
   border-radius: 7px;
   color: #ffffff;
 }
@@ -63,7 +63,7 @@
   padding: 20px;
   text-align: center;
   color: #000000; /* Texte noir pour ces éléments */
-  background: rgba(255, 255, 255, 0.5); /* Fond clair semi-transparent pour lisibilité */
+  background: #f2e49038; /* Fond clair semi-transparent pour lisibilité */
   border-radius: 5px;
 }
 
@@ -100,6 +100,15 @@
   text-align: center;
   margin: 20px;
   margin-top: 30px;
+}
+
+.text-affichage-description {
+  font-size: 16px;
+  text-align: center;
+  color: #dddddd;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .text-affichage-show-character {
