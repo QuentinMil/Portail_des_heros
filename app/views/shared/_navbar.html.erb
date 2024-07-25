@@ -6,12 +6,10 @@
       <h3 class="navbar-portail-des-heros">Le portail des héros</h3>
       <ul class="ul-navbar">
         <li class="list-navbar"><%= link_to 'Accueil', root_path, class: 'link-navbar' %></li>
-        <li class="list-navbar"><%= link_to 'Mes personnages', characters_path, class: 'link-navbar' %></li>
-        <li class="list-navbar"><%= link_to 'Mes parties', parties_path, class: 'link-navbar' %></li>
         <li class="list-navbar"><%= link_to 'Lexique', posts_path, class: 'link-navbar' %></li>
         <li class="list-navbar"><%= link_to 'Univers', universes_path, class: 'link-navbar' %></li>
         <li class="list-navbar"><%= link_to 'Créer mon personnage', universes_path, class: 'link-navbar' %></li>
-        <li class="list-navbar"><a class="link-navbar" href="#contact">Tableau de bord</a></li>
+        <li class="list-navbar"><%= link_to 'Tableau de bord', dashboard_index_path, class: 'link-navbar' %></li>
       </ul>
     </div>
     <div class="div-avatar-pseudo">
