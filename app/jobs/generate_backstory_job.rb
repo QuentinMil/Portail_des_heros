@@ -31,19 +31,27 @@ class GenerateBackstoryJob < ApplicationJob
       character.update(backstory: backstory_content)
       puts "Backstory updated for character #{character.name}"
 
-      # Broadcast the update to the user via Action Cable
-      CharacterChannel.broadcast_to(
-        character.user.id,
-        character_id: character.id,
-        backstory: character.backstory,
-        message: "Your character's backstory has been updated!"
-      )
+      # Broadcast la MAJ vers le USER via Action Cable
+      notify_user(character)
+
+      # Lancer la création d'image pour le personnage
+      ImageGeneratorJob.perform_later(character.id)
+
     else
       puts "No backstory was generated for character #{character.name}"
     end
   end
 
   private
+
+  def notify_user(character)
+    CharacterChannel.broadcast_to(
+      character.user.id,
+      character_id: character.id,
+      backstory: character.backstory,
+      message: "Your character's backstory has been updated!"
+    )
+  end
 
   def generate_prompt(character)
     YAML.load_file(Rails.root.join('config/prompts.yml'))['generate_backstory']['template'] % {
