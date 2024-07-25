@@ -1,3 +1,4 @@
+// _fonts.scss
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=IM+Fell+English&family=Merriweather:wght@400;700&display=swap');
 
@@ -17,4 +18,5 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   font-family: $text-font;
+  font-size: 23px;
 }
