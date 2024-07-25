@@ -32,7 +32,7 @@ class GenerateBackstoryJob < ApplicationJob
       puts "Backstory updated for character #{character.name}"
 
       # Broadcast la MAJ vers le USER via Action Cable
-      notify_user(character)
+      # notify_user(character)
 
       # Lancer la création d'image pour le personnage
       ImageGeneratorJob.perform_later(character.id)

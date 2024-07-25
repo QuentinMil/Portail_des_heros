@@ -1,15 +1,15 @@
 .the_loader {
   position: relative;
-  width: 48px;
-  height: 48px;
+  width: 60px;
+  height: 60px;
 }
 
 .loader {
   transform: rotateZ(45deg);
   perspective: 1000px;
   border-radius: 50%;
-  width: 48px;
-  height: 48px;
+  width: 60px;
+  height: 60px;
   color: #fff;
   position: absolute;
   top: 50%;

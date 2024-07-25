@@ -76,7 +76,7 @@ class CharactersController < ApplicationController
       format.html
       format.json { render json: {
           html: render_to_string(partial: "backstory", locals: { character: @character }, formats: :html),
-          image_url: @character.photo.url
+          photo_url: url_for(@character.photo) # Utilisez url_for pour ActiveStorage
         }
       }
     end
