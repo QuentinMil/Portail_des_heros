@@ -53,7 +53,7 @@ export default class extends Controller {
         .then(response => response.json())
         .then(data => {
           this.backstoryTarget.innerHTML = data.html;
-          this.pictureTarget.innerHTML = data.photo_url;
+          this.pictureTarget.innerHTML = data.photo_url ? `<img src="${data.photo_url}" alt="Character Image" class="show-character-image" />` : '';
           console.log("Backstory updated successfully.");
         })
         .catch(error => {

@@ -13,12 +13,14 @@
 
   <div class="show-character-container">
     <div class="show-character-img-content">
-      <div class="show-character-image-div">
-
-        <!-- Utilisation de la partial loader en attendant l'arrivée de l'image -->
-        <div id="character-picture" data-backstory-target='picture'>
-          <%= render @character.photo ? "picture" : "loader" %>
-        </div>
+<!-- Utilisation de la partial loader en attendant l'arrivée de l'image -->
+<div class="show-character-image-div" data-backstory-target="picture">
+  <% if @character.photo.attached? %>
+    <%= render "picture" %>
+  <% else %>
+    <%= render "loader" %>
+  <% end %>
+</div>
 
       <div class="show-character-content">
         <div class="show-character-name-div">
