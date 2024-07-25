@@ -1,3 +1,11 @@
+#backstory-content {
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  height: 100%; /* Assure que le conteneur a une hauteur */
+  position: relative; /* Positionnement relatif pour centrer correctement */
+}
+
 .show-character-container {
   margin: 40px auto; /* Centrer le conteneur */
   max-width: 90%; /* Limiter la largeur pour éviter des éléments trop larges sur les grands écrans */
