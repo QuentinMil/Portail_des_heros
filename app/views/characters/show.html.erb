@@ -1,9 +1,12 @@
 <!-- app/views/characters/show.html.erb -->
 <div data-controller="backstory" data-backstory-character-id-value="<%= @character.id %>">
   <div class="text-affichage-show-character-div">
-    <h3 class="text-affichage-show-character">Félicitations ! Vous venez de créer votre personnage !
-      Vous pouvez maintenant lancer une recherche de partie avec votre nouveau personnage ou décider de le garder pour plus tard. Retrouvez votre personnage dans votre tableau de bord.</h3>
-  </div>
+    <h3 class="text-affichage-show-character">
+      Félicitations ! Votre personnage est prêt !
+    </h3>
+    <p class="text-affichage-description">
+        Lancez une recherche de partie ou conservez-le pour plus tard. Retrouvez-le dans votre tableau de bord.
+    </p>
 
   <div class="show-character-container">
     <div class="show-character-img-content">
@@ -21,9 +24,9 @@
         </div>
         <div class="show-character-univers-race-class-available">
           <div class="show-character-univers-race-class-available-display">
-            <p>Univers</p>
-            <p>Race</p>
-            <p>Classe</p>
+              <p><i class="fas fa-globe"></i></p>
+              <p><i class="fas fa-paw"></i></p>
+              <p><i class="fas fa-user-shield"></i></p>
           </div>
           <div class="show-character-univers-race-class-available-content">
             <p><%= @character.universe.name %></p>
@@ -53,7 +56,9 @@
     </div>
 
     <!-- Utilisation de la partial pour la backstory -->
-    <%= render 'backstory', character: @character %>
+    <div class="the_backstory_area">
+      <%= render 'backstory', character: @character %>
+    </div>
 
     <!-- Action Utilisateur -->
     <div class="btn-show-container">
