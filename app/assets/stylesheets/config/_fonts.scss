@@ -1,7 +1,20 @@
 // Import Google fonts
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Spectral:wght@400;700&family=Cardo:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=IM+Fell+English&family=Merriweather:wght@400;700&display=swap');
 
 // Define fonts for body and headers
-$body-font: 'Cardo', serif;
-$headers-font: 'Cinzel', serif;
-$text-font: 'Spectral', serif;
+$body-font: 'Merriweather', serif;
+$headers-font: 'Uncial Antiqua', cursive;
+$text-font: 'IM Fell English', serif;
+
+// Apply fonts to elements
+body {
+  font-family: $body-font;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headers-font;
+}
+
+p {
+  font-family: $text-font;
+}

@@ -59,7 +59,7 @@
     }
 
     .options-wrapper {
-      gap: 10px;
+      gap: 20px;
       display: flex;
       flex-direction: column;
     }
@@ -90,6 +90,7 @@
       width: 100px;
       height: 100px;
       object-fit: cover;
+      object-position: center;
       margin-right: 10px;
       border-radius: 4px;
     }
