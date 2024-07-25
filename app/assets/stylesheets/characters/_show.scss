@@ -58,9 +58,9 @@
 
 .show-character-univers-race-class-available {
   display: grid; /* Utilisation de grid pour une meilleure organisation */
-  grid-template-columns: repeat(3, 1fr); /* Trois colonnes pour univers, race, classe */
-  gap: 20px; /* Espace entre les colonnes */
-  padding: 20px;
+  grid-template-columns: 1fr 3fr; /* Deux colonnes : la première étroite et la deuxième large */
+  gap: 30px; /* Espace entre les colonnes */
+  padding: 25px;
   text-align: center;
   color: #000000; /* Texte noir pour ces éléments */
   background: rgba(255, 255, 255, 0.64); /* Fond clair semi-transparent pour lisibilité */
@@ -71,8 +71,7 @@
 .show-character-univers-race-class-available-content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center; /* Centrer les éléments horizontalement */
+  align-items: center; 
 }
 
 .show-character-univers-race-class-available-display p,
@@ -82,11 +81,12 @@
 
 .show-character-univers-race-class-available-display p {
   font-size: 24px; /* Taille des icônes */
-  margin-bottom: 10px; /* Ajouter un peu d'espace sous les icônes */
+  margin-bottom: 0; /* Pas d'espace sous les icônes */
 }
 
 .show-character-univers-race-class-available-content p {
   font-size: 18px; /* Taille du texte */
+  margin-top: 0; /* Pas d'espace au-dessus du texte */
 }
 
 .show-character-caracteristic {
@@ -111,7 +111,7 @@
 }
 
 .text-affichage-show-character-div h3 {
-  color: #000000; /* Texte noir pour le titre */
+  color: white;
   text-align: center;
   margin: 20px;
   margin-top: 30px;
@@ -120,7 +120,7 @@
 .text-affichage-description {
   font-size: 16px;
   text-align: center;
-  color: #000000;
+  color: rgb(228, 227, 227);
   margin-bottom: 20px;
   line-height: 1.5;
 }
