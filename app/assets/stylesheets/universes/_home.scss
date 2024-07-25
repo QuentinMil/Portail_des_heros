@@ -1,5 +1,5 @@
 .portal{
-  background-image: url("portail-empty-center.png");
+  background-image: url("Portail-univers.png");
   top: 0;
   position: absolute;
   left: 0;
@@ -12,7 +12,15 @@
 }
 .carousel-control-next, .carousel-control-prev{
   z-index: 4;
- }
+  color: transparent;
+  background-size: cover;
+  opacity: 1;
+  img{
+    height: 160px;
+    filter: opacity(0.9)
+  }
+
+}
 .container_universes {
   display: flex;
   flex-direction: column;

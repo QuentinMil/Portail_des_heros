@@ -1,11 +1,19 @@
     <%# bouton a placer %>
-    <button class="carousel-control-prev  control-" type="button" data-bs-target="#carousel-universes" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
+    <button class="carousel-control-prev postion  control-" type="button" data-bs-target="#carousel-universes" data-bs-slide="prev" style="
+    height: fit-content;
+    margin-top: 29%;
+    margin-left: 31rem;
+    opacity: 0.9;
+">
+      <span class="carousel-control-prev"><%= image_tag 'left.png', alt: 'image de fleche  a gauche' %></span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carousel-universes" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
+    <button class="carousel-control-next position" type="button" data-bs-target="#carousel-universes" data-bs-slide="next"style="
+    height: fit-content;
+    margin-top: 29%;
+    margin-right: 33rem;
+    opacity: 0.9;
+">
+      <span class="carousel-control-next"><%= image_tag 'right.png', alt: 'image  de fleche a droite' %></span>
     </button>
 
 
