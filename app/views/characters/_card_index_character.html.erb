@@ -2,21 +2,23 @@
   <div class="character_card_container_content_and_photo">
     <div class="character_card_container_content">
       <div class="character_card_container_content_name">
-        <h1><%= character.name %></h1>
+        <h4><%= character.name %></h4>
       </div>
       <div class="character_card_container_content_race_class">
-        <h2><%= character.race.name %></h2>
-        <h2><%= character.universe.name %></h2>
+        <h5><%= character.race.name %></h5>
+        <h5> <%= character.universe_class.name %> </h5>
+        <h5><%= character.universe.name %></h5>
       </div>
     </div>
 
-    <div class="character_card_container_photo">
-       <img src="" alt="image perso">
+    <div class="character_card_container_photo" >
+        <%= cl_image_tag character.photo.key, alt: character.name %>
     </div>
+
   </div>
 
   <div class="show-character-btn">
-    <button>Afficher personnage</button>
+    <button class="button-donjons-et-dragons">Afficher personnage</button>
   </div>
 
 </div>
