@@ -13,9 +13,13 @@
 .carousel-control-next, .carousel-control-prev{
   z-index: 4;
   color: transparent;
-   .icone{
-   display: none;
- }
+  background-size: cover;
+  opacity: 1;
+  img{
+    height: 160px;
+    filter: opacity(0.9)
+  }
+
 }
 .container_universes {
   display: flex;
