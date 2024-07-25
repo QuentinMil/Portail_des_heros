@@ -25,7 +25,7 @@ environment ENV.fetch("RAILS_ENV") { "development" }
 pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
 
 # Use a single worker in production
-workers ENV.fetch("WEB_CONCURRENCY") { 1 }
+# workers ENV.fetch("WEB_CONCURRENCY") { 1 }
 
 # Allow puma to be restarted by `bin/rails restart` command.
 plugin :tmp_restart
