@@ -10,7 +10,7 @@
   background-repeat: no-repeat;
   border-radius: 7px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* More subtle shadow for better UI integration */
-  color: #ffffff; /* Ensures text is readable on potentially dark backgrounds */
+  color: #000000; /* Ensures text is readable on potentially dark backgrounds */
 }
 
 .show-character-img-content {
@@ -39,9 +39,9 @@
 .show-character-content {
   flex: 2;
   padding: 20px;
-  background: #cebe776b;
+  background: rgba(255, 255, 255, 0.8); /* Background clair */
   border-radius: 7px;
-  color: #ffffff;
+  color: #000000; /* Texte noir */
 }
 
 .show-character-name-div {
@@ -53,7 +53,7 @@
 .show-character-name {
   font-family: $headers-font;
   font-weight: bold;
-  color: #ffffff;
+  color: #000000; /* Texte noir */
 }
 
 .show-character-univers-race-class-available {
@@ -63,7 +63,7 @@
   padding: 20px;
   text-align: center;
   color: #000000; /* Texte noir pour ces éléments */
-  background: #f2e49038; /* Fond clair semi-transparent pour lisibilité */
+  background: rgba(255, 255, 255, 0.64); /* Fond clair semi-transparent pour lisibilité */
   border-radius: 5px;
 }
 
@@ -90,13 +90,13 @@
 
 .show-character-caracteristic-display p,
 .show-character-caracteristic-content p {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.1);
   padding: 10px;
   border-radius: 5px;
 }
 
 .text-affichage-show-character-div h3 {
-  color: #ffffff; /* Texte blanc pour le titre */
+  color: #000000; /* Texte noir pour le titre */
   text-align: center;
   margin: 20px;
   margin-top: 30px;
@@ -105,33 +105,35 @@
 .text-affichage-description {
   font-size: 16px;
   text-align: center;
-  color: #dddddd;
+  color: #000000;
   margin-bottom: 20px;
   line-height: 1.5;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .text-affichage-show-character {
   font-size: 20px;
   font-family: $body-font;
+  color: #000000; /* Texte noir */
 }
 
 .show-character-backstory {
   margin: 40px;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.205);
+  background-color: rgba(255, 255, 255, 0.8); /* Fond clair */
   border-radius: 7px;
-  color: white;
+  color: #000000; /* Texte noir */
   font-family: $body-font;
 
   h2 {
     font-family: $headers-font;
     margin-bottom: 20px;
+    color: #000000; /* Texte noir */
   }
 
   p {
     margin-bottom: 15px;
     line-height: 1.6;
+    color: #000000; /* Texte noir */
   }
 }
 
@@ -140,4 +142,5 @@
   width: 100%;
   justify-content: space-evenly;
   font-family: $text-font;
+  color: #000000; /* Texte noir */
 }
