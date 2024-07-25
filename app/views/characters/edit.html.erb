@@ -19,18 +19,18 @@
               <div class="description">
                 <strong><%= race.name %></strong>
                 <p><%= race.description %></p>
-                 <%# toggle modal %>
-                <span class="toggle-modal"data-bs-toggle="modal" data-bs-target="#race-modal-<%= race.id %>" data-bs-toggle="tooltip" data-bs-placement="bottom" title="En savoir plus sur les <%= race.name %>s">?</span>
+                <%# toggle modal %>
+                <span class="toggle-modal" data-bs-toggle="modal" data-bs-target="#race-modal-<%= race.id %>" data-bs-toggle="tooltip" data-bs-placement="bottom" title="En savoir plus sur les <%= race.name %>s">?</span>
               </div>
             </label>
           </div>
-          <div class="modal fade " id="race-modal-<%= race.id %>" tabindex="-1" aria-labelledby="race_modalLabel" aria-hidden="true">
+          <div class="modal fade" id="race-modal-<%= race.id %>" tabindex="-1" aria-labelledby="race_modalLabel" aria-hidden="true">
             <%# modal %>
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
               <%# modal content %>
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="race_modalLabel"> Les <%= race.name %>s</h5>
+                  <h5 class="modal-title" id="race_modalLabel">Les <%= race.name %>s</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -63,8 +63,8 @@
               <div class="description">
                 <strong><%= univers_class.name %></strong>
                 <p><%= univers_class.description %></p>
-                <%# toggle  modal %>
-                <span class="toggle-modal" data-bs-toggle="modal" data-bs-target="#class-modal-<%= univers_class.id  %>" data-bs-toggle="tooltip" data-bs-placement="bottom" title="En savoir plus sur la classe <%= univers_class.name %>">?</span>
+                <%# toggle modal %>
+                <span class="toggle-modal" data-bs-toggle="modal" data-bs-target="#class-modal-<%= univers_class.id %>" data-bs-toggle="tooltip" data-bs-placement="bottom" title="En savoir plus sur la classe <%= univers_class.name %>">?</span>
               </div>
             </label>
           </div>
@@ -98,42 +98,46 @@
         <% end %>
       </div>
     <% when 3..8 %>
-      <h3>Il est maintenant temps de definir les caracteristiques de ton héros</h3>
-      <h5>Pour chacune d'entre elles choisis un valeur unique</h5>
-      <div class="caracteristiques-container" data-controller="character">
-        <div class="caracteristiques-manager">
-          <div class="caracteristique">
-            <p class="caracteristique-label" data-controller="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="La Force représente la puissance physique et musculaire de votre personnage. Cette caractéristique est particulièrement importante pour les guerriers car elle les aide à s'imposer au combat">Force</p>
-            <%= f.input :strength, collection:[8, 10, 12, 13, 14, 15], label: false, input_html:{data:{character_target:"input", action:"change->character#disabled"}} %>
+      <div class="options-wrapper">
+        <h3>Il est maintenant temps de definir les caracteristiques de ton héros</h3>
+        <h5>Pour chacune d'entre elles choisis un valeur unique</h5>
+        <div class="caracteristiques-container" data-controller="character">
+          <div class="caracteristiques-manager">
+            <div class="caracteristique">
+              <p class="caracteristique-label" data-controller="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="La Force représente la puissance physique et musculaire de votre personnage. Cette caractéristique est particulièrement importante pour les guerriers car elle les aide à s'imposer au combat">Force</p>
+              <%= f.input :strength, collection:[8, 10, 12, 13, 14, 15], label: false, input_html:{data:{character_target:"input", action:"change->character#disabled"}} %>
+            </div>
+            <div class="caracteristique">
+              <p class="caracteristique-label" data-controller="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="La Dextérité mesure l'agilité, les réflexes et l'équilibre du personnage. C'est la caractéristique primordiale des voleurs">Dexterité</p>
+              <%= f.input :dexterity, collection:[8, 10, 12, 13, 14, 15], label: false, input_html:{data:{character_target:"input", action:"change->character#disabled"}} %>
+            </div>
+            <div class="caracteristique">
+              <p class="caracteristique-label" data-controller="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="L'Intelligence symbolise les facilités d'apprentissage et de raisonnement de votre aventurier. Elle est vitale pour les magiciens, car elle détermine le nombre de sorts qu'ils peuvent jeter et la puissance de ces derniers.">Intelligence</p>
+              <%= f.input :intelligence, collection:[8, 10, 12, 13, 14, 15], label: false, input_html:{data:{character_target:"input", action:"change->character#disabled"}} %>
+            </div>
+            <div class="caracteristique">
+              <p class="caracteristique-label" data-controller="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="La Constitution représente la santé et l'endurance de votre personnage. Le bonus de Constitution d'un personnage augmente son total de points de vie, ce qui rend cette caractéristique très importante pour toutes les classes.">Constitution</p>
+              <%= f.input :constitution, collection:[8, 10, 12, 13, 14, 15], label: false, input_html:{data:{character_target:"input", action:"change->character#disabled"}} %>
+            </div>
+            <div class="caracteristique">
+              <p class="caracteristique-label" data-controller="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="La Sagesse regroupe la volonté, le bon sens, le degré de perception et l'intuition du personnage. Alors que l'Intelligence représente la faculté à analyser les informations, la Sagesse définit la manière dont le personnage perçoit le monde qui l'entoure.">Sagesse</p>
+              <%= f.input :wisdom, collection:[8, 10, 12, 13, 14, 15], label: false, input_html:{data:{character_target:"input", action:"change->character#disabled"}} %>
+            </div>
+            <div class="caracteristique">
+              <p class="caracteristique-label" data-controller="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Le Charisme mesure la force de persuasion du personnage, son magnétisme, sa capacité à diriger les autres et sa beauté. Cette caractéristique représente une force de caractère réelle, pas seulement la façon dont on est perçu par autrui.">Charisme</p>
+              <%= f.input :charisma, collection:[8, 10, 12, 13, 14, 15], label: false, input_html:{data:{character_target:"input", action:"change->character#disabled"}} %>
+            </div>
           </div>
-          <div class="caracteristique">
-            <p class="caracteristique-label" data-controller="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="La Dextérité mesure l'agilité, les réflexes et l'équilibre du personnage. C'est la caractéristique primordiale des voleurs">Dexterité</p>
-            <%= f.input :dexterity, collection:[8, 10, 12, 13, 14, 15], label: false, input_html:{data:{character_target:"input", action:"change->character#disabled"}} %>
-          </div>
-          <div class="caracteristique">
-            <p class="caracteristique-label" data-controller="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="L'Intelligence symbolise les facilités d'apprentissage et de raisonnement de votre aventurier. Elle est vitale pour les magiciens, car elle détermine le nombre de sorts qu'ils peuvent jeter et la puissance de ces derniers.">Intelligence</p>
-            <%= f.input :intelligence, collection:[8, 10, 12, 13, 14, 15], label: false, input_html:{data:{character_target:"input", action:"change->character#disabled"}} %>
-          </div>
-          <div class="caracteristique">
-            <p class="caracteristique-label" data-controller="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="La Constitution représente la santé et l'endurance de votre personnage. Le bonus de Constitution d'un personnage augmente son total de points de vie, ce qui rend cette caractéristique très importante pour toutes les classes.">Constitution</p>
-            <%= f.input :constitution, collection:[8, 10, 12, 13, 14, 15], label: false, input_html:{data:{character_target:"input", action:"change->character#disabled"}} %>
-          </div>
-          <div class="caracteristique">
-            <p class="caracteristique-label" data-controller="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="La Sagesse regroupe la volonté, le bon sens, le degré de perception et l'intuition du personnage. Alors que l'Intelligence représente la faculté à analyser les informations, la Sagesse définit la manière dont le personnage perçoit le monde qui l'entoure.">Sagesse</p>
-            <%= f.input :wisdom, collection:[8, 10, 12, 13, 14, 15], label: false, input_html:{data:{character_target:"input", action:"change->character#disabled"}} %>
-          </div>
-          <div class="caracteristique">
-            <p class="caracteristique-label" data-controller="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Le Charisme mesure la force de persuasion du personnage, son magnétisme, sa capacité à diriger les autres et sa beauté. Cette caractéristique représente une force de caractère réelle, pas seulement la façon dont on est perçu par autrui.">Charisme</p>
-            <%= f.input :charisma, collection:[8, 10, 12, 13, 14, 15], label: false, input_html:{data:{character_target:"input", action:"change->character#disabled"}} %>
+          <div class="aleatoire">
+            <h5>Laisse le hasard choisir pour toi..  </h5>
+            <button class="button-destin" data-action="click->character#random">LANCER LES DÉS!</button>
           </div>
         </div>
-      <div class="aleatoire">
-        <h5>Laisse le hasard choisir pour toi..  </h5>
-        <button class="button-destin" data-action="click->character#random">LANCER LES DÉS!</button>
       </div>
-    </div>
     <% when 9 %>
-      <%= f.input :name, label: 'Nom du personnage', input_html: { class: 'nom_du_personnage_p' } %>
+      <div class="options-wrapper">
+        <%= f.input :name, label: 'Nom du personnage', input_html: { class: 'nom_du_personnage_p' } %>
+      </div>
     <% end %>
     <%= f.submit 'Continuer', class: "button button-#{@character.universe.name.parameterize}" %>
   <% end %>
