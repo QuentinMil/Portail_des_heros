@@ -13,6 +13,14 @@
   color: #000000; /* Assurer la lisibilité du texte sur des fonds potentiellement sombres */
 }
 
+.text-affichage-show-character-div h1 {
+  font-family: $headers-font;
+  color: #ffffff;
+  text-align: center;
+  margin: 20px;
+  margin-top: 30px;
+}
+
 .show-character-img-content {
   display: flex;
   flex-wrap: wrap; /* Permettre aux éléments de se répartir sur la ligne suivante si nécessaire */
@@ -113,7 +121,7 @@
 }
 
 .text-affichage-show-character-div h3 {
-  color: white;
+  color: black;
   text-align: center;
   margin: 20px;
   margin-top: 30px;

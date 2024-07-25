@@ -1,12 +1,15 @@
 <!-- app/views/characters/show.html.erb -->
 <div data-controller="backstory" data-backstory-character-id-value="<%= @character.id %>">
   <div class="text-affichage-show-character-div">
-    <h3 class="text-affichage-show-character">
-      Félicitations ! Votre personnage est prêt !
-    </h3>
+    <div class="other_title_color">
+      <h1 class="text-affichage-show-character">
+        Félicitations ! Votre personnage est prêt !
+      </h1>
+    </div>
     <p class="text-affichage-description">
-        Lancez une recherche de partie ou conservez-le pour plus tard. Retrouvez-le dans votre tableau de bord.
+      Lancez une recherche de partie ou conservez-le pour plus tard. Retrouvez-le dans votre tableau de bord.
     </p>
+  </div>
 
   <div class="show-character-container">
     <div class="show-character-img-content">
@@ -24,9 +27,9 @@
         </div>
         <div class="show-character-univers-race-class-available">
           <div class="show-character-univers-race-class-available-display">
-              <p><i class="fas fa-globe"></i></p>
-              <p><i class="fas fa-paw"></i></p>
-              <p><i class="fas fa-user-shield"></i></p>
+            <p><i class="fas fa-globe"></i></p>
+            <p><i class="fas fa-paw"></i></p>
+            <p><i class="fas fa-user-shield"></i></p>
           </div>
           <div class="show-character-univers-race-class-available-content">
             <p><%= @character.universe.name %></p>
