@@ -6,5 +6,4 @@
   - mailers
   - active_storage_analysis
   - active_storage_purge
-:redis:
-  url: <%= ENV['REDIS_URL'] %>
+
