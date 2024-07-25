@@ -1,5 +1,4 @@
 .navbar-site {
-  box-shadow: 15px 8px 45px 7px rgba(56, 44, 44, 0.48);
   flex: 0  0 231px;
   height: 100vh;
   display: flex;
@@ -8,14 +7,12 @@
   transition: top 0.3s;
   position: sticky;
   top: 0;
-  background-color: #494949;
 
   .ul-navbar {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #494949;
     display: flex;
     flex-direction: column;
   }
@@ -26,7 +23,7 @@
 
     .link-navbar {
       display: block;
-      color: white;
+      color: rgb(0, 0, 0);
       text-align: center;
       padding: 14px 16px;
       text-decoration: none;
@@ -34,9 +31,9 @@
       font-family: $headers-font;
 
       .link-navbar:hover {
-        background-color: #616161;
+        background-color: #0000006e;
         text-decoration: none;
-        color: rgb(255, 176, 7);
+        color: rgb(255, 252, 252);
       }
     }
 
