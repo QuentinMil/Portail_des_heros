@@ -9,7 +9,7 @@
     <h2>Personnages actifs dans cette partie</h2>
     <div class="character-cards-container">
       <% @party.characters.where(available_status: 'Active').each do |character| %>
-        <%= render 'characters/character_card', character: character %>
+        <%= render 'characters/card_index_character', character: character %>
       <% end %>
     </div>
   </div>
