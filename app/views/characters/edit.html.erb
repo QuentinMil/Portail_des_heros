@@ -10,6 +10,7 @@
   <%= simple_form_for @character do |f| %>
     <% case @character.completion_rate %>
     <% when 1 %>
+      <h3>Il est temps pour toi de choisir une race pour ton personnage</h3>
       <div class="options-wrapper">
         <% @character.universe.races.each do |race| %>
           <div class="option-item">
@@ -54,6 +55,7 @@
         <% end %>
       </div>
     <% when 2 %>
+      <h3>Maintenant décide de ta classe</h3>
       <div class="options-wrapper">
         <% @character.universe.univers_classes.each do |univers_class| %>
           <div class="option-item">
@@ -98,7 +100,7 @@
         <% end %>
       </div>
     <% when 3..8 %>
-      <h3>Il est maintenant temps de definir les caracteristiques de ton héros</h3>
+      <h3>Et pour finir, selectionne les caracteristiques de ton héros</h3>
       <h5>Pour chacune d'entre elles choisis un valeur unique</h5>
       <div class="caracteristiques-container" data-controller="character">
         <div class="caracteristiques-manager">
