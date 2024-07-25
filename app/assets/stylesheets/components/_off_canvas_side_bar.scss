@@ -12,26 +12,28 @@
 }
 
 .off-canvas {
-  transform: translateX(-100%);
-  transition: transform 0.3s ease;
+  transform: translatey(-100%);
+  transition: transform 0.4s ease;
   position: fixed;
   top: 0;
   left: 0;
   height: 100vh; /* Hauteur de l'écran entier */
-  width: 250px;
-  background-color: #494949; /* Couleur de fond sombre de l'ancienne navbar */
+  background-image: url("side-bar.png");
   z-index: 999; /* Assurez-vous que la barre de navigation est au-dessus des autres éléments */
   display: flex;
   flex-direction: column;
   justify-content: start;
-  box-shadow: 15px 8px 45px 7px rgba(56, 44, 44, 0.48); /* Ombre pour donner de la profondeur */
+  width: 330px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: -30px;
+  background-position: top;
 
   .off-canvas-toggle {
     display: none;
   }
-  
   &.show {
-    transform: translateX(0);
+    transform: translatey(0);
   }
 }
 
@@ -43,7 +45,7 @@
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .list-link-navbar {
@@ -68,23 +70,23 @@
   display: grid;
   padding: 14px 16px;
   margin-top: 10px;
-  border-bottom: 1px solid #838383;
 }
 
 .list-navbar {
   width: 100%;
-  
+
   .link-navbar {
     display: block;
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     transition: background-color 0.3s, color 0.3s;
-    
+    font-size: 20px;
+
     &:hover {
-      background-color: #616161;
-      color: rgb(255, 176, 7);
+      font-weight: bold;
+      color: rgb(0, 0, 0);
     }
   }
 }
@@ -95,7 +97,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid #838383;
 }
 
 .avatar {

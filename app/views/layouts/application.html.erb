@@ -13,17 +13,21 @@
 </head>
 
 <body class="<%= controller_name %>-<%= action_name %>">
+
+  <% if Rails.env.development? %>
     <%= render "shared/flashes" %>
+  <% end %>
+
     <div class="main-layout-container" style="display: flex">
 
         <% if action_name != "home" %>
         <%= render "shared/navbar" %>
         <% end %>
 
-        <div class="pages-content">
+        <div class="pages-content " data-controller="fading">
             <%= yield %>
         </div>
-    </div>    
+    </div>
 </body>
 
 </html>

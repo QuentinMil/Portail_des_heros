@@ -1,3 +1,4 @@
+    <div class="<%='overlay-transition-black 2nd' if URI(request.referrer).path == '/'%>"></div>
     <%# bouton a placer %>
     <button class="carousel-control-prev postion  control-" type="button" data-bs-target="#carousel-universes" data-bs-slide="prev" style="
     height: fit-content;
@@ -5,7 +6,7 @@
     margin-left: 31rem;
     opacity: 0.9;
 ">
-      <span class="carousel-control-prev"><%= image_tag 'left.png', alt: 'image de fleche  a gauche' %></span>
+      <span class="carousel-control-prev"><%= image_tag 'left-2.png', alt: 'image de fleche  a gauche' %></span>
     </button>
     <button class="carousel-control-next position" type="button" data-bs-target="#carousel-universes" data-bs-slide="next"style="
     height: fit-content;
@@ -13,7 +14,7 @@
     margin-right: 33rem;
     opacity: 0.9;
 ">
-      <span class="carousel-control-next"><%= image_tag 'right.png', alt: 'image  de fleche a droite' %></span>
+      <span class="carousel-control-next"><%= image_tag 'right-2.png', alt: 'image  de fleche a droite' %></span>
     </button>
 
 
