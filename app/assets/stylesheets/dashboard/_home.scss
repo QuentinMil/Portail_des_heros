@@ -1,0 +1,58 @@
+.dashboard {
+  background-image: url("universes_index_bg.jpg");
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .mes-personnages {
+    position: relative;
+
+    .boutton-mes-personnages{
+      position: absolute;
+      bottom: 325px;
+      left: -94px;
+    }
+
+
+  }
+
+  .mes-parties {
+    position: relative;
+
+    .boutton-mes-parties{
+      position: absolute;
+      top: 442px;
+      left: -192px;
+    }
+  }
+
+  .mes-messages {
+    position: relative;
+
+    .boutton-mes-messages{
+      position: absolute;
+      bottom: 660px;
+      left: 65px;
+      font-size: larger;
+      font-weight: bold;
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      border: 3px solid;
+      border-color: #fdda11;
+      border-radius: 30%;
+      color: white;
+      background-color: #00000073;
+
+      &:hover {
+        background-color: #a50606;
+        color: rgba(246, 211, 9, 0.882);
+      }
+    }
+  }
+}
