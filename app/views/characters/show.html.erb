@@ -53,7 +53,9 @@
     </div>
 
     <!-- Utilisation de la partial pour la backstory -->
-    <%= render 'backstory', character: @character %>
+    <div class="the_backstory_area">
+      <%= render 'backstory', character: @character %>
+    </div>
 
     <!-- Action Utilisateur -->
     <div class="btn-show-container">
