@@ -11,6 +11,7 @@ class ImageGeneratorJob < ApplicationJob
         model: "dall-e-3",
         prompt: prompt,
         size: "1024x1024",
+        quality: "standard",
         response_format: "url",
         n: 1
       }
@@ -32,7 +33,7 @@ class ImageGeneratorJob < ApplicationJob
 
   def generate_image_prompt(character)
     <<~PROMPT
-      Create a full-body portrait of a character named #{character.name} from the #{character.universe.name} universe. This character belongs to the #{character.race.name} race and the #{character.univers_class.name} class. The character should be in a heroic pose with a white background. Ensure there is 30% white space on the left side of the image.
+      Créez mon personnage de jeu de role, style fantasy. C'est un format portrait en couleurs, avec une seule vue du personnage à l'image. Son univers est #{character.universe.name}. Il appartient à la race #{character.race.name} et à la classe #{character.univers_class.name}. Le personnage doit être sur fond blanc. Il y a 30 % d'espace blanc sur le côté gauche de l'image. Les critères techniques sont impératifs.
     PROMPT
   end
 
