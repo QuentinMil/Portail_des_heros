@@ -1,5 +1,6 @@
+<div class="overlay-transition 1st"></div>
 <div class="hero-banner" style="background-image:url(<%= image_path "Hero_banner.png" %>)">
-  <%= link_to universes_path, style: "text-decoration: none;" do %>
+  <%= link_to universes_path, style: "text-decoration: none;", data:{action: "click->fading#fade"} do %>
     <div class="btn-cta">
     L'Aventure n'attend que toi !
     <span></span>

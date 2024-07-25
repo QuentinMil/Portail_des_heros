@@ -53,15 +53,16 @@
 }
 
 // Specific button with different styles
-.button-destin {
-   @extend .button-base;
-  border: 2px solid;
-  border-color: #edd86459;
-  box-shadow: 4px 5px 10px -6px #edd86459;
-
-  &:hover {
-    color: rgb(247, 231, 87);
+.btn-dice{
+  background-color: transparent;
+  border: none;
+  img{
+    height: 100px;
   }
+}
+.rotated {
+  transform: rotate(360deg);
+  transition: transform 1.5s;
 }
 
 // <!-- HTML !-->
