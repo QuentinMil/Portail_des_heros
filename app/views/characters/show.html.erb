@@ -17,7 +17,7 @@
 
         <!-- Utilisation de la partial loader en attendant l'arrivée de l'image -->
         <div id="character-picture" data-backstory-target='picture'>
-          <%= render @character.backstory ? "picture" : "loader" %>
+          <%= render @character.photo ? "picture" : "loader" %>
         </div>
 
       <div class="show-character-content">
