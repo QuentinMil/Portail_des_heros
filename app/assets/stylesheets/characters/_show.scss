@@ -22,8 +22,7 @@
 
 .show-character-image-div {
   flex: 1;
-  min-width: 200px; /* Assurer une largeur minimale pour le conteneur d'image */
-  object-fit: cover;
+  min-width: 300px; /* Assurer une largeur minimale pour le conteneur d'image */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,7 +30,8 @@
 
 .show-character-image {
   max-width: 100%; /* Assurer que l'image ne déborde pas de son conteneur */
-  height: auto;
+  width: 250px; /* Définir une largeur fixe pour agrandir l'image */
+  height: auto; /* Ajuster automatiquement la hauteur en fonction de la largeur */
   box-shadow: 28px 16px 15px -3px rgba(56, 44, 44, 0.49);
   border-radius: 7px;
 }
