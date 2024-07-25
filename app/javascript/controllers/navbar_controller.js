@@ -22,12 +22,14 @@ export default class extends Controller {
     event.stopPropagation();
     // console.log('Toggling navbar');
     this.navbarTarget.classList.toggle('show');
+    this.toggleTarget.classList.toggle('hidden');
   }
 
   closeNavbar(event) {
     if (!this.navbarTarget.contains(event.target) && !this.toggleTarget.contains(event.target)) {
       // console.log('Closing navbar');
       this.navbarTarget.classList.remove('show');
+      this.toggleTarget.classList.remove('hidden');
     }
   }
 }
