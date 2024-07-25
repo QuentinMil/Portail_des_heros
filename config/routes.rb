@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources :characters, path: 'mes_personnages' do
     member do
       get 'image' # route pour afficher l'image générée par IA
+      get :backstory_partial # route pour afficher le contenu de l'histoire générée par IA
     end
   end
 
@@ -38,4 +39,6 @@ Rails.application.routes.draw do
 
   # dashboard
   resources :dashboard
+  
+  mount ActionCable.server => '/cable'
 end

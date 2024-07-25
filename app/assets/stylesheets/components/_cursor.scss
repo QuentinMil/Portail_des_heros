@@ -1,0 +1,32 @@
+body {
+  cursor: url('auto.png'), url('pointer.png'), url('help.png'), auto !important;
+}
+
+div {
+  cursor: url('auto.png'), url('pointer.png'), url('help.png'), auto !important;
+}
+
+a {
+  cursor: url('pointer.png'), pointer !important;
+
+}
+
+button {
+  cursor: url('pointer.png'), pointer !important;
+}
+
+input {
+  cursor: url('pointer.png'), pointer !important;
+}
+
+.toggle-modal {
+  cursor: url('help.png'), help !important;
+}
+
+form {
+  cursor: url('pointer.png'), pointer !important;
+}
+
+select {
+  cursor: url('pointer.png'), pointer !important;
+}

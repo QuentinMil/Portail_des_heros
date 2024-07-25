@@ -3,6 +3,9 @@
     margin: 0 auto;
     padding: 20px;
     text-align: center;
+    max-height: 100vh; /* Fixer la hauteur maximale à celle de l'écran */
+    overflow-y: auto; /* Activer le défilement vertical si nécessaire */
+    box-sizing: border-box; /* Inclure le padding dans la hauteur totale */    
 
     .character_name {
       font-size: 24px;
@@ -33,7 +36,6 @@
       color: rgb(0, 0, 0);
     }
 
-
     .progress-bar {
       background: #ffffff;
       border-radius: 5px;
@@ -46,13 +48,9 @@
       }
     }
 
-
-
-
     .progression-text {
       color: #EBD18B; /* changer la couleur du progession %tage */
     }
-
 
     p {
       font-size: 16px;
@@ -76,10 +74,8 @@
 
       label{
           padding: 5px 5px 0 5px;
-          cursor: pointer;
         }
     }
-
 
     .option-item:hover {
       border-color: #76c7c0;
@@ -133,7 +129,6 @@
     }
 
     .modal-content {
-
       color: #000000;
 
       h5 {
@@ -155,11 +150,7 @@
         flex-direction: column;
         align-items: center;
         margin: 0 10px;
-
-
-
         color: #ffffff;
-
 
         label {
           font-size: 14px;
@@ -175,7 +166,6 @@
           margin: 0;
           border-radius: 5px;
           background: #76c7c0;
-          cursor: pointer;
         }
 
         input[type="range"]::-webkit-slider-runnable-track {
@@ -193,7 +183,6 @@
           height: 20px;
           background: #76c7c0;
           border-radius: 50%;
-          cursor: pointer;
           margin-top: -6px; /* Adjust thumb position */
         }
 
@@ -206,6 +195,7 @@
         }
       }
     }
+
     .toggle-modal{
     margin: -30px 10px 10px 0px;
     border-width: medium;
@@ -215,7 +205,6 @@
     width: 30px;
     height: 30px;
     text-align: center;
-    cursor: help;
     }
   }
 
@@ -225,10 +214,13 @@
 }
 
 .aleatoire {
-    display: flex;
-    flex-direction: column;
-    margin-top: 50px;
-    margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 60px;
+  align-content: center;
+  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
 }
 
 .caracteristiques-builder {
