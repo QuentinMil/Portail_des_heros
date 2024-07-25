@@ -37,6 +37,7 @@ export default class extends Controller {
     this.inputTargets.forEach((input) => {
       input.value = random.pop()
     })
+    event.target.classList.toggle('rotated')
     event.target.disabled = true
   }
 
@@ -47,4 +48,6 @@ export default class extends Controller {
     }
     return array;
   }
+
+
 }
