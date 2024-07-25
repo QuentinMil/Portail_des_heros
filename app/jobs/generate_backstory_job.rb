@@ -44,15 +44,6 @@ class GenerateBackstoryJob < ApplicationJob
 
   private
 
-  def notify_user(character)
-    CharacterChannel.broadcast_to(
-      character.user.id,
-      character_id: character.id,
-      backstory: character.backstory,
-      message: "Your character's backstory has been updated!"
-    )
-  end
-
   def generate_prompt(character)
     YAML.load_file(Rails.root.join('config/prompts.yml'))['generate_backstory']['template'] % {
       name: character.name,

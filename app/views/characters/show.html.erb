@@ -14,12 +14,11 @@
   <div class="show-character-container">
     <div class="show-character-img-content">
       <div class="show-character-image-div">
-        <% if @character.photo.attached? %>
-          <%= cl_image_tag @character.photo.key, alt: @character.univers_class.name, class: 'show-character-image', size: "200x200", data: { backstory_target: "photo" } %>
-        <% else %>
-          <i class="fa-solid fa-dragon" style="font-size: 200px; color: #ffffff;"></i>
-        <% end %>
-      </div>
+
+        <!-- Utilisation de la partial loader en attendant l'arrivée de l'image -->
+        <div id="character-picture" data-backstory-target='picture'>
+          <%= render @character.backstory ? "picture" : "loader" %>
+        </div>
 
       <div class="show-character-content">
         <div class="show-character-name-div">
@@ -58,8 +57,8 @@
       </div>
     </div>
 
-    <!-- Utilisation de la partial pour la backstory -->
-    <div id="backstory-content">
+    <!-- Utilisation de la partial loader en attendant la backstory -->
+    <div id="backstory-content" data-backstory-target='backstory'>
       <%= render @character.backstory ? "backstory" : "loader" %>
     </div>
 

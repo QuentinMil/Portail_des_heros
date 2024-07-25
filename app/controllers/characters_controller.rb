@@ -48,7 +48,7 @@ class CharactersController < ApplicationController
         assign_to_party(@character)
         
         # Générer une backstory pour le personnage si le taux de complétion est complet
-        # GenerateBackstoryJob.perform_later(@character.id)
+        GenerateBackstoryJob.perform_later(@character.id)
         
         redirect_to @character, notice: 'Votre personnage est maintenant complet et prêt !'
       else
@@ -72,7 +72,14 @@ class CharactersController < ApplicationController
 
   def backstory_partial
     @character = Character.find(params[:id])
-    render partial: 'backstory', locals: { character: @character }
+    respond_to do |format|
+      format.html
+      format.json { render json: {
+          html: render_to_string(partial: "backstory", locals: { character: @character }, formats: :html),
+          image_url: @character.photo.url
+        }
+      }
+    end
   end
 
   private

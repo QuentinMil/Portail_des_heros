@@ -43,6 +43,7 @@ class ImageGeneratorJob < ApplicationJob
       {
         message: "Votre personnage #{character.name} est prêt avec une nouvelle image",
         character_id: character.id,
+        backstory: character.backstory,
         photo_url: Rails.application.routes.url_helpers.url_for(character.photo)
       }
     )
