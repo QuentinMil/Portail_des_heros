@@ -60,7 +60,7 @@
 
     <!-- Utilisation de la partial pour la backstory -->
     <div id="backstory-content">
-      <%= render 'loader' %>
+      <%= render @character.backstory ? "backstory" : "loader" %>
     </div>
 
     <!-- Action Utilisateur -->
