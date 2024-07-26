@@ -2,13 +2,16 @@
 <div class="party_full_page">
   <!-- Main Content -->
   <div class="party-page">
+  <div class="titre-party-page"> 
     <h1><%= @party.name %></h1>
-    <p>Univers: <%= @party.universe.name %></p>
-    <p>Maître de jeu: <%= @party.user.pseudo %></p>
+    <h2><%= @party.universe.name %></h2>
+    <h3><strong>Maître de jeu: <%= @party.user.pseudo %></strong></h3>
+    <h4>Les personnages actifs dans cette partie</h4>
+  </div>
 
-    <h2>Personnages actifs dans cette partie</h2>
+    
     <div class="character-cards-container">
-      <% @party.characters.where(available_status: 'Active').each do |character| %>
+      <% @party.characters.where(available_status: 'Active', universe: @party.universe).order(created_at: :desc).each do |character| %>
         <%= render 'characters/card_index_character', character: character %>
       <% end %>
     </div>

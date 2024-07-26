@@ -4,7 +4,7 @@ import { createConsumer } from "@rails/actioncable"
 
 // Connects to data-controller="backstory"
 export default class extends Controller {
-  static targets = ["backstory", "photo"]
+  static targets = ["backstory", "picture"]
   static values = { characterId: Number }
 
   connect() {
@@ -17,8 +17,9 @@ export default class extends Controller {
         { channel: "CharacterChannel", character_id: this.characterIdValue }, {
         received: (data) => {
           console.log("Received data from ActionCable:", data);
+          
           // Verify the character ID matches and that backstory is present
-          if (data.character_id === this.characterIdValue && data.backstory) {
+          if (data.character_id === this.characterIdValue) {
             this.updateCharacterBackstory(data);
           } else {
             console.log("Data received does not meet the required conditions.");
@@ -48,10 +49,11 @@ export default class extends Controller {
     console.log("Updating character backstory with data:", data);
   
     if (data.character_id === this.characterIdValue) {
-      fetch(`/mes_personnages/${data.character_id}/backstory_partial`)
-        .then(response => response.text())
-        .then(html => {
-          this.backstoryTarget.outerHTML = html;
+      fetch(`/mes_personnages/${data.character_id}/backstory_partial`, {headers: {"Accept": "application/json"}})
+        .then(response => response.json())
+        .then(data => {
+          this.backstoryTarget.innerHTML = data.html;
+          this.pictureTarget.innerHTML = data.photo_url ? `<img src="${data.photo_url}" alt="Character Image" class="show-character-image" />` : '';
           console.log("Backstory updated successfully.");
         })
         .catch(error => {

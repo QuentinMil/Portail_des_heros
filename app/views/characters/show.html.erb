@@ -1,20 +1,24 @@
 <!-- app/views/characters/show.html.erb -->
 <div data-controller="backstory" data-backstory-character-id-value="<%= @character.id %>">
   <div class="text-affichage-show-character-div">
-    <h3 class="text-affichage-show-character">
-      Félicitations ! Votre personnage est prêt !
-    </h3>
+    <div class="other_title_color">
+      <h1 class="text-affichage-show-character">
+        Félicitations ! Votre personnage est prêt !
+      </h1>
+    </div>
     <p class="text-affichage-description">
-        Lancez une recherche de partie ou conservez-le pour plus tard. Retrouvez-le dans votre tableau de bord.
+      Lancez une recherche de partie ou conservez-le pour plus tard. Retrouvez-le dans votre tableau de bord.
     </p>
+  </div>
 
   <div class="show-character-container">
     <div class="show-character-img-content">
-      <div class="show-character-image-div">
+      <!-- Utilisation de la partial loader en attendant l'arrivée de l'image -->
+      <div class="show-character-image-div" data-backstory-target="picture">
         <% if @character.photo.attached? %>
-          <%= cl_image_tag @character.photo.key, alt: @character.univers_class.name, class: 'show-character-image', size: "200x200", data: { backstory_target: "photo" } %>
+          <%= render "picture" %>
         <% else %>
-          <i class="fa-solid fa-dragon" style="font-size: 200px; color: #ffffff;"></i>
+          <%= render "loader" %>
         <% end %>
       </div>
 
@@ -24,9 +28,9 @@
         </div>
         <div class="show-character-univers-race-class-available">
           <div class="show-character-univers-race-class-available-display">
-              <p><i class="fas fa-globe"></i></p>
-              <p><i class="fas fa-paw"></i></p>
-              <p><i class="fas fa-user-shield"></i></p>
+            <p><i class="fas fa-globe"></i></p>
+            <p><i class="fas fa-paw"></i></p>
+            <p><i class="fas fa-user-shield"></i></p>
           </div>
           <div class="show-character-univers-race-class-available-content">
             <p><%= @character.universe.name %></p>
@@ -55,9 +59,9 @@
       </div>
     </div>
 
-    <!-- Utilisation de la partial pour la backstory -->
-    <div class="the_backstory_area">
-      <%= render 'backstory', character: @character %>
+    <!-- Utilisation de la partial loader en attendant la backstory -->
+    <div id="backstory-content" data-backstory-target='backstory'>
+      <%= render @character.backstory ? "backstory" : "loader" %>
     </div>
 
     <!-- Action Utilisateur -->
@@ -70,4 +74,4 @@
       <% end %>
     </div>
   </div>
-</div>
+

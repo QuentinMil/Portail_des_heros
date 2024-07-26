@@ -6,19 +6,17 @@
       </div>
       <div class="character_card_container_content_race_class">
         <h5><%= character.race.name %></h5>
-        <h5><%= character.universe_class.name %> </h5>
+        <h5><%= character.univers_class.present? ? character.univers_class.name : '' %></h5>
         <h5><%= character.universe.name %></h5>
       </div>
     </div>
 
-    <div class="character_card_container_photo" >
-        <%= cl_image_tag character.photo.key, alt: character.name %>
+    <div class="character_card_container_photo">
+      <%= cl_image_tag character.photo.key, alt: character.name %>
     </div>
-
   </div>
 
   <div class="show-character-btn">
-    <button class="button-donjons-et-dragons">Afficher personnage</button>
+    <%= link_to 'Afficher personnage', character_path(character), class: 'button-donjons-et-dragons' %>
   </div>
-
 </div>

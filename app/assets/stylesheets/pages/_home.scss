@@ -4,8 +4,7 @@
   width: 100vw;
   background-attachment: fixed;
   position: relative;
-
-  height: 100vh;
+  min-height: 100vh;
 
   .overlay-transition {
     position: absolute;
@@ -29,7 +28,6 @@
     z-index: 5;
     transition: opacity 1s ease-in;
    }
-
 }
 
 // CSS HOME PAGE

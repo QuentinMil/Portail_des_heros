@@ -1,13 +1,23 @@
+.the_loader {
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
+
 .loader {
   transform: rotateZ(45deg);
   perspective: 1000px;
   border-radius: 50%;
-  width: 48px;
-  height: 48px;
+  width: 60px;
+  height: 60px;
   color: #fff;
-}
-  .loader:before,
-  .loader:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateZ(45deg);
+  
+  &:before,
+  &:after {
     content: '';
     display: block;
     position: absolute;
@@ -19,11 +29,13 @@
     transform: rotateX(70deg);
     animation: 1s spin linear infinite;
   }
-  .loader:after {
+  
+  &:after {
     color: #FF3D00;
     transform: rotateY(70deg);
     animation-delay: .4s;
   }
+}
 
 @keyframes rotate {
   0% {
