@@ -33,7 +33,7 @@ class ImageGeneratorJob < ApplicationJob
 
   def generate_image_prompt(character)
     <<~PROMPT
-      Créez mon personnage de jeu de role, style fantasy. C'est un format portrait en couleurs, avec une seule vue du personnage à l'image. Son univers est #{character.universe.name}. Il appartient à la race #{character.race.name} et à la classe #{character.univers_class.name}. Le personnage doit être sur fond blanc. Il y a 30 % d'espace blanc sur le côté gauche de l'image. Les critères techniques sont impératifs.
+      Créez mon personnage de jeu de rôle, style fantasy. C'est un format portrait en couleurs, avec une vue unique du personnage à l'image, de face. Son univers est #{character.universe.name}. Il appartient à la race #{character.race.name} et à la classe #{character.univers_class.name}. Le personnage doit être sur fond blanc. Il y a 30 % d'espace blanc sur le côté gauche de l'image. Les critères techniques sont impératifs.
     PROMPT
   end
 
