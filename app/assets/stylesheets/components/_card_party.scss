@@ -1,0 +1,90 @@
+.party-index{
+  display: flex;
+  background-image: url('bg-parties.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-around;
+
+h1{
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+}
+}
+.party-cards{
+  display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    top: -30px;
+    position: relative;
+    padding: 50px ;
+}
+.party-name{
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.party-card-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 15px 15px 35px;
+  margin-bottom: 60px;
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 450px;
+  border: 3px solid #000000a6;
+  border-radius: 2rem;
+  align-items: center;
+  justify-content: center;
+
+      .party-content{
+        position: relative;
+        z-index: 2;
+
+        .party-card-container-content{
+        color: burlywood;
+      }
+    }
+    .party-card-container-content-name{
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .btn-party-cards{
+    background: #f4ae30;
+    color: white;
+    letter-spacing: 1px;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    border-style: none;
+    font-weight: 400;
+    font-size: 19px !important;
+    transition-duration: 0.5s;
+    border-radius: 5px;
+    position: relative;
+    z-index: 3;
+    position: absolute;
+    bottom: -20px;
+    width: 60%;
+
+    &:hover {
+      background-color: #fffbfb94;
+    }
+
+    a{
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+<div class="party-card-container <%= "#{party.universe.name.parameterize}-bg" %>">
+<div class="bg-opacity"></div>
+  <div class="party-content">
+    <div class="party-card-container-content">
+      <div class="party-name">
+        <h4><%= party.name %></h4>
+      </div>
+      <div class="party-card-container-content-party">
+        <p><%= party.universe&.name.presence || 'Non défini' %></p>
+        <p><%= party.created_at.in_time_zone('Paris').strftime("%d/%m/%Y %H:%M") || 'Non défini' %></p>
+        <p>Aventurier - <%= party.user.pseudo.presence || 'Non défini' %></p>
+      </div>
+    </div>
+  </div>
+ <div class="btn-party-cards">
+    <%= link_to 'Show', party_path(party) %>
+    </div>
+</div>
