@@ -2,16 +2,16 @@
   <h1>Création de votre personnage</h1>
 
    <% 
-    step_percent = case @current_step
-                   when 1 then 25
-                   when 2 then 50
-                   when 3 then 75
-                   when 4 then 100
-                   else 0
-                   end
+    step_percent = case @character.completion_rate
+                    when 1 then 20
+                    when 2 then 40
+                    when 3 then 75
+                    when 4 then 90
+                    else 100
+                    end
   %>
   <div class="progress-bar">
-    <div class="progress" style="width: <%= @step_percent %>%;"></div>
+    <div class="progress" style="width: <%= step_percent %>%;"></div>
   </div>
   <div class="progression-wrapper">
     <p class="progression-text">Progression: <%= step_percent %> %</p>
