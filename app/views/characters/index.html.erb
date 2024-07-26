@@ -1,59 +1,8 @@
 <div class="characters-index">
-  <h1> Mes personnages</h1>
-  <table>
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Nom</th>
-        <th>Utilisateur</th>
-        <th>Univers</th>
-        <th>Race</th>
-        <th>Classe</th>
-        <th>Strength</th>
-        <th>Dexterity</th>
-        <th>Intelligence</th>
-        <th>Constitution</th>
-        <th>Wisdom</th>
-        <th>Charisma</th>
-        <th>Mis à jour le</th>
-        <th>Mes parties</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @characters.each_with_index do |character, index| %>
-        <tr>
-          <td><%= index + 1 %></td>
-          <td><%= character.name.presence || 'Non défini' %></td>
-          <td><%= character.user.pseudo.presence || 'Non défini' %></td>
-          <td><%= character.universe&.name.presence || 'Non défini' %></td>
-          <td><%= character.race&.name.presence || 'Non défini' %></td>
-          <td><%= character.univers_class&.name.presence || 'Non défini' %></td>
-          <td><%= character.strength.presence || 'Non défini' %></td>
-          <td><%= character.dexterity.presence || 'Non défini' %></td>
-          <td><%= character.intelligence.presence || 'Non défini' %></td>
-          <td><%= character.constitution.presence || 'Non défini' %></td>
-          <td><%= character.wisdom.presence || 'Non défini' %></td>
-          <td><%= character.charisma.presence || 'Non défini' %></td>
-          <td><%= character.updated_at.in_time_zone('Paris').strftime("%d/%m/%Y %H:%M") %></td>
-          <td>
-            <% if character.available_status == 'Active' %>
-              <% character.parties.each do |party| %>
-                <%= link_to party.id, party_path(party) %><br>
-              <% end %>
-            <% else %>
-              <p>Pas de partie active</p>
-            <% end %>
-          </td>
-          <td>
-            <% if character.name.present? %>
-              <%= link_to 'Show', character_path(character) %>
-            <% end %>
-            <%= link_to 'Edit', edit_character_path(character) %>
-            <%= button_to 'Delete', character_path(character), method: :delete, data: { confirm: 'Est-ce que vous en êtes sûr de vous ?' }, form: { class: 'inline-form' } %>
-          </td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+  <h1>Mes personnages</h1>
+  <div class="characters-cards">
+    <% @characters.each do |character| %>
+      <%= render partial: "card_index_character", locals: { character: character } %>
+    <% end %>
+  </div>
 </div>
