@@ -1,10 +1,20 @@
 <div class="character-edit <%= @character.universe.name.parameterize %>">
   <h1>Création de votre personnage</h1>
+
+   <% 
+    step_percent = case @current_step
+                   when 1 then 25
+                   when 2 then 50
+                   when 3 then 75
+                   when 4 then 100
+                   else 0
+                   end
+  %>
   <div class="progress-bar">
-    <div class="progress" style="width: <%= (@character.completion_rate.to_f / 10 * 100).round %>%;"></div>
+    <div class="progress" style="width: <%= @step_percent %>%;"></div>
   </div>
   <div class="progression-wrapper">
-    <p class="progression-text">Progression: <%= (@character.completion_rate.to_f / 10 * 100).round %> %</p>
+    <p class="progression-text">Progression: <%= step_percent %> %</p>
   </div>
 
   <%= simple_form_for @character do |f| %>
